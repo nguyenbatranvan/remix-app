@@ -1,4 +1,5 @@
 // root.tsx
+import {AnimatePresence} from "framer-motion";
 import React, {useContext, useEffect} from 'react'
 import {withEmotionCache} from '@emotion/react'
 import {ChakraProvider} from '@chakra-ui/react'
@@ -11,8 +12,11 @@ import {
     ScrollRestoration,
 } from '@remix-run/react'
 import {MetaFunction, LinksFunction, json} from '@remix-run/node'
+import VoxelDog from "~/components/dog";
+import DogLoader from "~/components/dog-loader";
+import {customTheme} from "~/theme/theme";
 import {fetcherJSON} from "~/utils/fetch-json"; // Depends on the runtime you choose
-
+import {motion} from "framer-motion";
 import {ServerStyleContext, ClientStyleContext} from './context'
 
 export const meta: MetaFunction = () => ({
@@ -27,7 +31,7 @@ export let links: LinksFunction = () => {
         {rel: 'preconnect', href: 'https://fonts.gstatic.com'},
         {
             rel: 'stylesheet',
-            href: 'https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap'
+            href: 'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&display=swap'
         },
     ]
 }
@@ -84,11 +88,21 @@ const Document = withEmotionCache(
         );
     }
 );
+
+
 export default function App() {
+
     return (
         <Document>
-            <ChakraProvider>
-                <Outlet/>
+            <ChakraProvider theme={customTheme}>
+                <AnimatePresence exitBeforeEnter initial={true} onExitComplete={() => {
+                    if (typeof window !== 'undefined') {
+                        window.scrollTo({top: 0})
+                    }
+                }}>
+                    <VoxelDog/>
+                    <Outlet/>
+                </AnimatePresence>
             </ChakraProvider>
         </Document>
     )
