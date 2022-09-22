@@ -12,7 +12,7 @@ export const loader = async () => {
 }
 export default function Blogs() {
     const {posts} = useLoaderData();
-    return ( <motion.div
+    return (<motion.div
         initial="hidden"
         animate="enter"
         exit="exit"
@@ -20,9 +20,9 @@ export default function Blogs() {
         transition={{duration: 0.4, type: 'easeInOut'}}
         style={{position: 'relative'}}>
         <Container><SimpleGrid columns={[1, 1, 2]} gap={6}>
-        {posts.map(post=><CardThumbnail key={post.id} thumbnail={post.image} title={post.title}>
-            {post.body}
-        </CardThumbnail>)}
+            {posts.map(post => <CardThumbnail key={post.id} thumbnail={post.image} title={post.title}>
+                {post.body}
+            </CardThumbnail>)}
         </SimpleGrid>
         </Container>
     </motion.div>)
@@ -33,6 +33,8 @@ export const meta: MetaFunction<typeof loader> = ({data}) => {
     return {
         title: "Blog page portfolio of nguyen ba tran van",
         description: `List of blogs: ${postTitles.join(',')}`,
-        image:`/images/blog-2.png`
+        "og:description": `List of blogs: ${postTitles.join(',')}`,
+        image: `/images/blog-2.png`,
+        "og:image": `/images/blog-2.png`
     }
 }

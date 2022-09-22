@@ -174,5 +174,6 @@ export default function Index() {
 export const meta: MetaFunction = () => ({
     title: "Portfolio of nguyen ba tran van",
     description: "This page is detail work of nguyen ba tran van from 2014 to now",
-    image: '/images/profile.png'
+    "og:description": "This page is detail work of nguyen ba tran van from 2014 to now",
+    "og:image": '/images/profile.png',
 });
