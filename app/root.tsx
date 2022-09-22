@@ -2,7 +2,7 @@
 import {AnimatePresence} from "framer-motion";
 import React, {useContext, useEffect} from 'react'
 import {withEmotionCache} from '@emotion/react'
-import {ChakraProvider} from '@chakra-ui/react'
+import {Box, ChakraProvider} from '@chakra-ui/react'
 import {
     Links,
     LiveReload,
@@ -14,6 +14,9 @@ import {
 import {MetaFunction, LinksFunction, json} from '@remix-run/node'
 import VoxelDog from "~/components/dog";
 import DogLoader from "~/components/dog-loader";
+import ThemeToggleButton from "~/components/theme-toggle-button";
+import Layout from "~/layout";
+import Navbar from "~/layout/navbar";
 import {customTheme} from "~/theme/theme";
 import {fetcherJSON} from "~/utils/fetch-json"; // Depends on the runtime you choose
 import {motion} from "framer-motion";
@@ -100,8 +103,12 @@ export default function App() {
                         window.scrollTo({top: 0})
                     }
                 }}>
-                    <VoxelDog/>
-                    <Outlet/>
+                    <Layout>
+                        <Box marginTop={"40px"}>
+                            <VoxelDog/>
+                        </Box>
+                        <Outlet/>
+                    </Layout>
                 </AnimatePresence>
             </ChakraProvider>
         </Document>

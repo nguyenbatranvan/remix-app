@@ -108,7 +108,7 @@ __export(root_exports, {
   loader: () => loader,
   meta: () => meta
 });
-var import_framer_motion = require("framer-motion"), import_react8 = require("react"), import_react9 = require("@emotion/react"), import_react10 = require("@chakra-ui/react"), import_react11 = require("@remix-run/react"), import_node = require("@remix-run/node");
+var import_framer_motion2 = require("framer-motion"), import_react15 = require("react"), import_react16 = require("@emotion/react"), import_react17 = require("@chakra-ui/react"), import_react18 = require("@remix-run/react"), import_node = require("@remix-run/node");
 
 // app/components/dog.tsx
 var import_react6 = require("react"), THREE = __toESM(require("three"));
@@ -141,7 +141,7 @@ var import_react4 = require("react"), import_react5 = require("@chakra-ui/react"
   columnNumber: 5
 }, this));
 
-// app/utils/gltf-loader.js
+// app/utils/gltf-loader.ts
 var import_three = require("three"), GltfLoader = class extends import_three.Loader {
   constructor(manager) {
     super(manager), this.dracoLoader = null, this.ktx2Loader = null, this.meshoptDecoder = null, this.pluginCallbacks = [], this.register(function(parser) {
@@ -1603,7 +1603,7 @@ function loadGLTFModel(scene, glbPath, options = { receiveShadow: !0, castShadow
   });
 }
 
-// app/utils/orbit-control.js
+// app/utils/orbit-control.ts
 var import_three2 = require("three"), _changeEvent = { type: "change" }, _startEvent = { type: "start" }, _endEvent = { type: "end" }, OrbitControls = class extends import_three2.EventDispatcher {
   constructor(object, domElement) {
     super(), this.object = object, this.domElement = domElement, this.domElement.style.touchAction = "none", this.enabled = !0, this.target = new import_three2.Vector3(), this.minDistance = 0, this.maxDistance = 1 / 0, this.minZoom = 0, this.maxZoom = 1 / 0, this.minPolarAngle = 0, this.maxPolarAngle = Math.PI, this.minAzimuthAngle = -1 / 0, this.maxAzimuthAngle = 1 / 0, this.enableDamping = !1, this.dampingFactor = 0.05, this.enableZoom = !0, this.zoomSpeed = 1, this.enableRotate = !0, this.rotateSpeed = 1, this.enablePan = !0, this.panSpeed = 1, this.screenSpacePanning = !0, this.keyPanSpeed = 7, this.autoRotate = !1, this.autoRotateSpeed = 2, this.keys = { LEFT: "ArrowLeft", UP: "ArrowUp", RIGHT: "ArrowRight", BOTTOM: "ArrowDown" }, this.mouseButtons = { LEFT: import_three2.MOUSE.ROTATE, MIDDLE: import_three2.MOUSE.DOLLY, RIGHT: import_three2.MOUSE.PAN }, this.touches = { ONE: import_three2.TOUCH.ROTATE, TWO: import_three2.TOUCH.DOLLY_PAN }, this.target0 = this.target.clone(), this.position0 = this.object.position.clone(), this.zoom0 = this.object.zoom, this._domElementKeyEvents = null, this.getPolarAngle = function() {
@@ -2028,23 +2028,457 @@ var VoxelDog = () => {
   }, this);
 }, dog_default = VoxelDog;
 
+// app/layout/index.tsx
+var import_react13 = require("@chakra-ui/react");
+
+// app/layout/footer.tsx
+var import_react7 = require("@chakra-ui/react"), import_jsx_dev_runtime = require("react/jsx-dev-runtime");
+function Footer() {
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react7.Box, {
+    align: "center",
+    opacity: 0.4,
+    marginY: 4,
+    fontSize: "sm",
+    children: [
+      "\xA9 ",
+      new Date().getFullYear(),
+      " Nguyen Ba Tran Van. All Rights Reserved."
+    ]
+  }, void 0, !0, {
+    fileName: "app/layout/footer.tsx",
+    lineNumber: 4,
+    columnNumber: 12
+  }, this);
+}
+
+// app/layout/navbar.tsx
+var import_icons2 = require("@chakra-ui/icons"), import_react11 = require("@chakra-ui/react"), import_react12 = require("@remix-run/react"), import_io5 = require("react-icons/io5");
+
+// app/components/logo.tsx
+var import_react8 = require("@chakra-ui/react"), import_styled = __toESM(require("@emotion/styled")), import_react9 = require("@remix-run/react"), import_jsx_dev_runtime = require("react/jsx-dev-runtime"), LogoBox = import_styled.default.span`
+  font-weight: bold;
+  font-size: 18px;
+  display: inline-flex;
+  align-items: center;
+  height: 30px;
+  line-height: 20px;
+  padding: 10px;
+
+  img {
+    transition: 200ms ease;
+  }
+
+  &:hover img {
+    transform: rotate(20deg);
+  }
+`;
+function Logo() {
+  let footPrintImg = `/images/footprint${(0, import_react8.useColorModeValue)("", "-dark")}.png`;
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react9.NavLink, {
+    to: "/",
+    children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(LogoBox, {
+      children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react8.Box, {
+        display: "flex",
+        alignItems: "center",
+        children: [
+          /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react8.Image, {
+            src: footPrintImg,
+            width: "20px",
+            height: "20px",
+            alt: "logo"
+          }, void 0, !1, {
+            fileName: "app/components/logo.tsx",
+            lineNumber: 29,
+            columnNumber: 17
+          }, this),
+          /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react8.Text, {
+            color: (0, import_react8.useColorModeValue)("gray.800", "whiteAlpha.900"),
+            fontWeight: "bold",
+            ml: 3,
+            children: "Van Nguyen"
+          }, void 0, !1, {
+            fileName: "app/components/logo.tsx",
+            lineNumber: 30,
+            columnNumber: 17
+          }, this)
+        ]
+      }, void 0, !0, {
+        fileName: "app/components/logo.tsx",
+        lineNumber: 27,
+        columnNumber: 13
+      }, this)
+    }, void 0, !1, {
+      fileName: "app/components/logo.tsx",
+      lineNumber: 26,
+      columnNumber: 9
+    }, this)
+  }, void 0, !1, {
+    fileName: "app/components/logo.tsx",
+    lineNumber: 25,
+    columnNumber: 13
+  }, this);
+}
+
+// app/components/theme-toggle-button.tsx
+var import_framer_motion = require("framer-motion"), import_react10 = require("@chakra-ui/react"), import_icons = require("@chakra-ui/icons"), import_jsx_dev_runtime = require("react/jsx-dev-runtime"), ThemeToggleButton = () => {
+  let { toggleColorMode } = (0, import_react10.useColorMode)();
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_framer_motion.AnimatePresence, {
+    exitBeforeEnter: !0,
+    initial: !1,
+    children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_framer_motion.motion.div, {
+      style: { display: "inline-block" },
+      initial: { y: -20, opacity: 0 },
+      animate: { y: 0, opacity: 1 },
+      exit: { y: 20, opacity: 0 },
+      transition: { duration: 0.2 },
+      children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react10.IconButton, {
+        "aria-label": "Toggle theme",
+        colorScheme: (0, import_react10.useColorModeValue)("purple", "orange"),
+        icon: (0, import_react10.useColorModeValue)(/* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_icons.MoonIcon, {}, void 0, !1, {
+          fileName: "app/components/theme-toggle-button.tsx",
+          lineNumber: 21,
+          columnNumber: 45
+        }, this), /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_icons.SunIcon, {}, void 0, !1, {
+          fileName: "app/components/theme-toggle-button.tsx",
+          lineNumber: 21,
+          columnNumber: 59
+        }, this)),
+        onClick: toggleColorMode
+      }, void 0, !1, {
+        fileName: "app/components/theme-toggle-button.tsx",
+        lineNumber: 18,
+        columnNumber: 17
+      }, this)
+    }, (0, import_react10.useColorModeValue)("light", "dark"), !1, {
+      fileName: "app/components/theme-toggle-button.tsx",
+      lineNumber: 10,
+      columnNumber: 13
+    }, this)
+  }, void 0, !1, {
+    fileName: "app/components/theme-toggle-button.tsx",
+    lineNumber: 9,
+    columnNumber: 9
+  }, this);
+}, theme_toggle_button_default = ThemeToggleButton;
+
+// app/layout/navbar.tsx
+var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), LinkItem = ({ path, children, ...props }) => {
+  let inactiveColor = (0, import_react11.useColorModeValue)("gray200", "whiteAlpha.900");
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react11.Box, {
+    p: 2,
+    children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react12.NavLink, {
+      to: path,
+      style: ({ isActive }) => isActive ? {
+        padding: "0.5rem",
+        color: isActive ? "#202023" : inactiveColor,
+        backgroundColor: isActive ? "#88ccca" : void 0
+      } : { padding: "0.5rem" },
+      children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react11.Box, {
+        display: "inline-flex",
+        alignItems: "center",
+        style: { gap: 4 },
+        pl: 2,
+        children
+      }, void 0, !1, {
+        fileName: "app/layout/navbar.tsx",
+        lineNumber: 33,
+        columnNumber: 9
+      }, this)
+    }, void 0, !1, {
+      fileName: "app/layout/navbar.tsx",
+      lineNumber: 21,
+      columnNumber: 24
+    }, this)
+  }, void 0, !1, {
+    fileName: "app/layout/navbar.tsx",
+    lineNumber: 21,
+    columnNumber: 13
+  }, this);
+};
+function Navbar() {
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react11.Box, {
+    position: "fixed",
+    bg: (0, import_react11.useColorModeValue)("#ffffff40", "#20202380"),
+    zIndex: 2,
+    top: 0,
+    w: "100%",
+    as: "nav",
+    css: { backdropFilter: "blur(10px)" },
+    children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react11.Container, {
+      display: "flex",
+      p: 2,
+      maxW: "container.md",
+      wrap: "wrap",
+      align: "center",
+      justify: "space-between",
+      children: [
+        /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react11.Flex, {
+          align: "center",
+          mr: 5,
+          children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react11.Heading, {
+            as: "h1",
+            size: "lg",
+            letterSpacing: "tighter",
+            children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(Logo, {}, void 0, !1, {
+              fileName: "app/layout/navbar.tsx",
+              lineNumber: 58,
+              columnNumber: 21
+            }, this)
+          }, void 0, !1, {
+            fileName: "app/layout/navbar.tsx",
+            lineNumber: 57,
+            columnNumber: 17
+          }, this)
+        }, void 0, !1, {
+          fileName: "app/layout/navbar.tsx",
+          lineNumber: 56,
+          columnNumber: 13
+        }, this),
+        /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react11.Stack, {
+          direction: { base: "column", md: "row" },
+          display: { base: "none", md: "flex" },
+          width: { base: "full", md: "auto" },
+          alignItems: "center",
+          flexGrow: 1,
+          mt: { base: 4, md: 0 },
+          children: [
+            /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(LinkItem, {
+              path: "/blogs",
+              children: "Blogs"
+            }, void 0, !1, {
+              fileName: "app/layout/navbar.tsx",
+              lineNumber: 68,
+              columnNumber: 17
+            }, this),
+            /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(LinkItem, {
+              path: "/product",
+              children: "Product"
+            }, void 0, !1, {
+              fileName: "app/layout/navbar.tsx",
+              lineNumber: 71,
+              columnNumber: 17
+            }, this),
+            /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react11.Link, {
+              target: "_blank",
+              href: "https://github.com/nguyenbatranvan/remix-app",
+              display: "flex",
+              alignItems: "center",
+              style: { gap: 4 },
+              pl: 2,
+              children: [
+                /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_io5.IoLogoGithub, {}, void 0, !1, {
+                  fileName: "app/layout/navbar.tsx",
+                  lineNumber: 82,
+                  columnNumber: 21
+                }, this),
+                "Source"
+              ]
+            }, void 0, !0, {
+              fileName: "app/layout/navbar.tsx",
+              lineNumber: 74,
+              columnNumber: 17
+            }, this)
+          ]
+        }, void 0, !0, {
+          fileName: "app/layout/navbar.tsx",
+          lineNumber: 61,
+          columnNumber: 13
+        }, this),
+        /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react11.Box, {
+          flex: 1,
+          align: "right",
+          children: [
+            /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(theme_toggle_button_default, {}, void 0, !1, {
+              fileName: "app/layout/navbar.tsx",
+              lineNumber: 87,
+              columnNumber: 17
+            }, this),
+            /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react11.Box, {
+              ml: 2,
+              display: { base: "inline-block", md: "none" },
+              children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react11.Menu, {
+                isLazy: !0,
+                id: "navbar-menu",
+                children: [
+                  /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react11.MenuButton, {
+                    as: import_react11.IconButton,
+                    icon: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_icons2.HamburgerIcon, {}, void 0, !1, {
+                      fileName: "app/layout/navbar.tsx",
+                      lineNumber: 92,
+                      columnNumber: 35
+                    }, this),
+                    variant: "outline",
+                    "aria-label": "Options"
+                  }, void 0, !1, {
+                    fileName: "app/layout/navbar.tsx",
+                    lineNumber: 90,
+                    columnNumber: 25
+                  }, this),
+                  /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react11.MenuList, {
+                    children: [
+                      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react12.NavLink, {
+                        to: "/",
+                        children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react11.MenuItem, {
+                          as: import_react11.Link,
+                          children: "About"
+                        }, void 0, !1, {
+                          fileName: "app/layout/navbar.tsx",
+                          lineNumber: 98,
+                          columnNumber: 33
+                        }, this)
+                      }, void 0, !1, {
+                        fileName: "app/layout/navbar.tsx",
+                        lineNumber: 97,
+                        columnNumber: 29
+                      }, this),
+                      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react12.NavLink, {
+                        to: "/blogs",
+                        children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react11.MenuItem, {
+                          as: import_react11.Link,
+                          children: "Blogs"
+                        }, void 0, !1, {
+                          fileName: "app/layout/navbar.tsx",
+                          lineNumber: 101,
+                          columnNumber: 33
+                        }, this)
+                      }, void 0, !1, {
+                        fileName: "app/layout/navbar.tsx",
+                        lineNumber: 100,
+                        columnNumber: 29
+                      }, this),
+                      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react12.NavLink, {
+                        to: "/product",
+                        children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react11.MenuItem, {
+                          as: import_react11.Link,
+                          children: "Product"
+                        }, void 0, !1, {
+                          fileName: "app/layout/navbar.tsx",
+                          lineNumber: 104,
+                          columnNumber: 33
+                        }, this)
+                      }, void 0, !1, {
+                        fileName: "app/layout/navbar.tsx",
+                        lineNumber: 103,
+                        columnNumber: 29
+                      }, this),
+                      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react11.MenuItem, {
+                        as: import_react11.Link,
+                        href: "https://github.com/nguyenbatranvan/remix-app",
+                        children: "View Source"
+                      }, void 0, !1, {
+                        fileName: "app/layout/navbar.tsx",
+                        lineNumber: 106,
+                        columnNumber: 29
+                      }, this)
+                    ]
+                  }, void 0, !0, {
+                    fileName: "app/layout/navbar.tsx",
+                    lineNumber: 96,
+                    columnNumber: 25
+                  }, this)
+                ]
+              }, void 0, !0, {
+                fileName: "app/layout/navbar.tsx",
+                lineNumber: 89,
+                columnNumber: 21
+              }, this)
+            }, void 0, !1, {
+              fileName: "app/layout/navbar.tsx",
+              lineNumber: 88,
+              columnNumber: 17
+            }, this)
+          ]
+        }, void 0, !0, {
+          fileName: "app/layout/navbar.tsx",
+          lineNumber: 86,
+          columnNumber: 13
+        }, this)
+      ]
+    }, void 0, !0, {
+      fileName: "app/layout/navbar.tsx",
+      lineNumber: 48,
+      columnNumber: 9
+    }, this)
+  }, void 0, !1, {
+    fileName: "app/layout/navbar.tsx",
+    lineNumber: 42,
+    columnNumber: 12
+  }, this);
+}
+
+// app/layout/index.tsx
+var import_jsx_dev_runtime = require("react/jsx-dev-runtime");
+function Layout({ children }) {
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react13.Box, {
+    children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(Navbar, {}, void 0, !1, {
+        fileName: "app/layout/index.tsx",
+        lineNumber: 7,
+        columnNumber: 9
+      }, this),
+      children,
+      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(Footer, {}, void 0, !1, {
+        fileName: "app/layout/index.tsx",
+        lineNumber: 9,
+        columnNumber: 9
+      }, this)
+    ]
+  }, void 0, !0, {
+    fileName: "app/layout/index.tsx",
+    lineNumber: 6,
+    columnNumber: 12
+  }, this);
+}
+
 // app/theme/theme.ts
-var import_react7 = require("@chakra-ui/react"), customTheme = (0, import_react7.extendTheme)({
+var import_react14 = require("@chakra-ui/react"), import_theme_tools = require("@chakra-ui/theme-tools"), config = {
+  initialColorMode: "dark",
+  useSystemColorMode: !1
+}, customTheme = (0, import_react14.extendTheme)({
+  components: {
+    Heading: {
+      defaultProps: {},
+      variants: {
+        title: {
+          fontSize: "4xl"
+        },
+        "title-under-line": (props) => ({
+          textDecoration: "underline",
+          fontSize: 20,
+          textUnderlineOffset: 6,
+          textDecorationColor: "#525252",
+          textDecorationThickness: 4,
+          marginTop: 3,
+          marginBottom: 4
+        })
+      },
+      baseStyle: (props) => ({
+        lineHeight: 1.2,
+        color: (0, import_theme_tools.mode)("blackAlpha.900", "#fff")(props),
+        fontWeight: 700
+      })
+    }
+  },
   fonts: {
     heading: "Montserrat, sans-serif",
     body: "Montserrat, sans-serif"
   },
+  config,
   styles: {
-    global: {
+    global: (props) => ({
+      " .grid-item-thumbnail": {
+        "border-radius": "12px"
+      },
       "html,body": {
+        bg: (0, import_theme_tools.mode)("#f0e7db", "#202023")(props),
         fontFamily: "Montserrat, sans-serif"
       }
-    }
+    })
   }
 });
 
 // app/utils/fetch-json.ts
-var fetcherJSON = (url, config) => fetch(url, config).then((res) => res.json());
+var fetcherJSON = (url, config2) => fetch(url, config2).then((res) => res.json());
 
 // app/root.tsx
 var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), meta = () => ({
@@ -2059,12 +2493,12 @@ var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), meta = () => ({
     href: "https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&display=swap"
   }
 ], loader = async ({ request }) => {
-  let location = new URL(request.url), config = await fetcherJSON(location.origin + "/config.json");
-  return (0, import_node.json)(config);
-}, Document = (0, import_react9.withEmotionCache)(
+  let location = new URL(request.url), config2 = await fetcherJSON(location.origin + "/config.json");
+  return (0, import_node.json)(config2);
+}, Document = (0, import_react16.withEmotionCache)(
   ({ children }, emotionCache) => {
-    let serverStyleData = (0, import_react8.useContext)(ServerStyleContext), clientStyleData = (0, import_react8.useContext)(ClientStyleContext);
-    return (0, import_react8.useEffect)(() => {
+    let serverStyleData = (0, import_react15.useContext)(ServerStyleContext), clientStyleData = (0, import_react15.useContext)(ClientStyleContext);
+    return (0, import_react15.useEffect)(() => {
       emotionCache.sheet.container = document.head;
       let tags = emotionCache.sheet.tags;
       emotionCache.sheet.flush(), tags.forEach((tag) => {
@@ -2075,14 +2509,14 @@ var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), meta = () => ({
       children: [
         /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("head", {
           children: [
-            /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react11.Meta, {}, void 0, !1, {
+            /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react18.Meta, {}, void 0, !1, {
               fileName: "app/root.tsx",
-              lineNumber: 71,
+              lineNumber: 74,
               columnNumber: 17
             }, this),
-            /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react11.Links, {}, void 0, !1, {
+            /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react18.Links, {}, void 0, !1, {
               fileName: "app/root.tsx",
-              lineNumber: 72,
+              lineNumber: 75,
               columnNumber: 17
             }, this),
             serverStyleData == null ? void 0 : serverStyleData.map(({ key, ids, css }) => /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("style", {
@@ -2090,82 +2524,95 @@ var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), meta = () => ({
               dangerouslySetInnerHTML: { __html: css }
             }, key, !1, {
               fileName: "app/root.tsx",
-              lineNumber: 74,
+              lineNumber: 77,
               columnNumber: 21
             }, this))
           ]
         }, void 0, !0, {
           fileName: "app/root.tsx",
-          lineNumber: 70,
+          lineNumber: 73,
           columnNumber: 13
         }, this),
         /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("body", {
           children: [
             children,
-            /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react11.ScrollRestoration, {}, void 0, !1, {
+            /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react18.ScrollRestoration, {}, void 0, !1, {
               fileName: "app/root.tsx",
-              lineNumber: 83,
+              lineNumber: 86,
               columnNumber: 13
             }, this),
-            /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react11.Scripts, {}, void 0, !1, {
+            /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react18.Scripts, {}, void 0, !1, {
               fileName: "app/root.tsx",
-              lineNumber: 84,
+              lineNumber: 87,
               columnNumber: 13
             }, this),
-            /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react11.LiveReload, {}, void 0, !1, {
+            /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react18.LiveReload, {}, void 0, !1, {
               fileName: "app/root.tsx",
-              lineNumber: 85,
+              lineNumber: 88,
               columnNumber: 13
             }, this)
           ]
         }, void 0, !0, {
           fileName: "app/root.tsx",
-          lineNumber: 81,
+          lineNumber: 84,
           columnNumber: 13
         }, this)
       ]
     }, void 0, !0, {
       fileName: "app/root.tsx",
-      lineNumber: 69,
+      lineNumber: 72,
       columnNumber: 13
     }, this);
   }
 );
 function App() {
   return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(Document, {
-    children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react10.ChakraProvider, {
+    children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react17.ChakraProvider, {
       theme: customTheme,
-      children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_framer_motion.AnimatePresence, {
+      children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_framer_motion2.AnimatePresence, {
         exitBeforeEnter: !0,
         initial: !0,
         onExitComplete: () => {
           typeof window < "u" && window.scrollTo({ top: 0 });
         },
-        children: [
-          /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(dog_default, {}, void 0, !1, {
-            fileName: "app/root.tsx",
-            lineNumber: 103,
-            columnNumber: 21
-          }, this),
-          /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react11.Outlet, {}, void 0, !1, {
-            fileName: "app/root.tsx",
-            lineNumber: 104,
-            columnNumber: 21
-          }, this)
-        ]
-      }, void 0, !0, {
+        children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(Layout, {
+          children: [
+            /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react17.Box, {
+              marginTop: "40px",
+              children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(dog_default, {}, void 0, !1, {
+                fileName: "app/root.tsx",
+                lineNumber: 108,
+                columnNumber: 29
+              }, this)
+            }, void 0, !1, {
+              fileName: "app/root.tsx",
+              lineNumber: 107,
+              columnNumber: 25
+            }, this),
+            /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react18.Outlet, {}, void 0, !1, {
+              fileName: "app/root.tsx",
+              lineNumber: 110,
+              columnNumber: 25
+            }, this)
+          ]
+        }, void 0, !0, {
+          fileName: "app/root.tsx",
+          lineNumber: 106,
+          columnNumber: 21
+        }, this)
+      }, void 0, !1, {
         fileName: "app/root.tsx",
-        lineNumber: 98,
+        lineNumber: 101,
         columnNumber: 17
       }, this)
     }, void 0, !1, {
       fileName: "app/root.tsx",
-      lineNumber: 97,
+      lineNumber: 100,
       columnNumber: 13
     }, this)
   }, void 0, !1, {
     fileName: "app/root.tsx",
-    lineNumber: 96,
+    lineNumber: 99,
     columnNumber: 9
   }, this);
 }
@@ -2177,7 +2624,7 @@ __export(product_exports, {
   loader: () => loader2,
   meta: () => meta2
 });
-var import_node2 = require("@remix-run/node"), import_react12 = require("@remix-run/react");
+var import_node2 = require("@remix-run/node"), import_react19 = require("@remix-run/react");
 
 // app/utils/variants-motion.ts
 var variants = {
@@ -2187,16 +2634,16 @@ var variants = {
 };
 
 // app/routes/product.tsx
-var import_framer_motion2 = require("framer-motion"), import_jsx_dev_runtime = require("react/jsx-dev-runtime"), loader2 = async (dataa) => {
+var import_framer_motion3 = require("framer-motion"), import_jsx_dev_runtime = require("react/jsx-dev-runtime"), loader2 = async (dataa) => {
   console.log("data", dataa);
   let data = await (await fetch("https://dummyjson.com/products")).json();
   return (0, import_node2.json)(data);
 };
 function Product() {
-  let { products } = (0, import_react12.useLoaderData)(), loadProduct = async () => {
+  let { products } = (0, import_react19.useLoaderData)(), loadProduct = async () => {
     let data = await (await fetch("https://dummyjson.com/products")).json();
   };
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_framer_motion2.motion.div, {
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_framer_motion3.motion.div, {
     initial: "hidden",
     animate: "enter",
     exit: "exit",
@@ -2248,15 +2695,72 @@ __export(blogs_exports, {
   loader: () => loader3,
   meta: () => meta3
 });
-var import_node3 = require("@remix-run/node"), import_react13 = require("@remix-run/react");
+var import_react21 = require("@chakra-ui/react"), import_node3 = require("@remix-run/node"), import_react22 = require("@remix-run/react");
+
+// app/components/card.tsx
+var import_react20 = require("@chakra-ui/react"), import_jsx_dev_runtime = require("react/jsx-dev-runtime");
+function CardThumbnail({ thumbnail, title, children }) {
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react20.Box, {
+    w: "100%",
+    textAlign: "center",
+    children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react20.LinkBox, {
+      cursor: "pointer",
+      children: [
+        /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react20.Image, {
+          src: thumbnail,
+          alt: title,
+          className: "grid-item-thumbnail",
+          placeholder: "blur"
+        }, void 0, !1, {
+          fileName: "app/components/card.tsx",
+          lineNumber: 6,
+          columnNumber: 13
+        }, this),
+        /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react20.LinkOverlay, {
+          children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react20.Text, {
+            mt: 2,
+            fontSize: 20,
+            children: title
+          }, void 0, !1, {
+            fileName: "app/components/card.tsx",
+            lineNumber: 13,
+            columnNumber: 17
+          }, this)
+        }, void 0, !1, {
+          fileName: "app/components/card.tsx",
+          lineNumber: 12,
+          columnNumber: 13
+        }, this),
+        /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react20.Text, {
+          fontSize: 14,
+          children
+        }, void 0, !1, {
+          fileName: "app/components/card.tsx",
+          lineNumber: 17,
+          columnNumber: 13
+        }, this)
+      ]
+    }, void 0, !0, {
+      fileName: "app/components/card.tsx",
+      lineNumber: 5,
+      columnNumber: 9
+    }, this)
+  }, void 0, !1, {
+    fileName: "app/components/card.tsx",
+    lineNumber: 4,
+    columnNumber: 13
+  }, this);
+}
+var card_default = CardThumbnail;
 
 // app/json/json-blog.json
 var json_blog_default = {
   posts: [
     {
+      image: "/images/blogs/inkdrop.png",
       id: 1,
-      title: "His mother had always taught him",
-      body: "His mother had always taught him not to ever think of himself as better than others. He'd tried to live by this motto. He never looked down on those who were less fortunate or who had less money than him. But the stupidity of the group of people he was talking to made him change his mind.",
+      title: "His mother ",
+      body: "But the stupidity of the group of people he was talking to made him change his mind.",
       userId: 9,
       tags: [
         "history",
@@ -2266,9 +2770,10 @@ var json_blog_default = {
       reactions: 2
     },
     {
+      image: "/images/blogs/blog-2.png",
       id: 2,
-      title: "He was an expert but not in a discipline",
-      body: "He was an expert but not in a discipline that anyone could fully appreciate. He knew how to hold the cone just right so that the soft server ice-cream fell into it at the precise angle to form a perfect cone each and every time. It had taken years to perfect and he could now do it without even putting any thought behind it.",
+      title: "a discipline",
+      body: "He was an expert but not in a discipline that anyone could fully appreciate.",
       userId: 13,
       tags: [
         "french",
@@ -2279,8 +2784,9 @@ var json_blog_default = {
     },
     {
       id: 3,
-      title: "Dave watched as the forest burned up on the hill.",
-      body: "Dave watched as the forest burned up on the hill, only a few miles from her house. The car had been hastily packed and Marta was inside trying to round up the last of the pets. Dave went through his mental list of the most important papers and documents that they couldn't leave behind. He scolded himself for not having prepared these better in advance and hoped that he had remembered everything that was needed. He continued to wait for Marta to appear with the pets, but she still was nowhere to be seen.",
+      image: "/images/blogs/blog-3.png",
+      title: "Dave watched ",
+      body: "Dave watched as the forest burned up on the hill",
       userId: 32,
       tags: [
         "magical",
@@ -2291,8 +2797,9 @@ var json_blog_default = {
     },
     {
       id: 4,
-      title: "All he wanted was a candy bar.",
-      body: "All he wanted was a candy bar. It didn't seem like a difficult request to comprehend, but the clerk remained frozen and didn't seem to want to honor the request. It might have had something to do with the gun pointed at his face.",
+      image: "/images/blogs/blog-4.png",
+      title: "All he wanted",
+      body: "All he wanted was a candy bar.",
       userId: 12,
       tags: [
         "mystery",
@@ -2302,9 +2809,10 @@ var json_blog_default = {
       reactions: 1
     },
     {
+      image: "/images/blogs/blog-5.png",
       id: 5,
-      title: "Hopes and dreams were dashed that day.",
-      body: "Hopes and dreams were dashed that day. It should have been expected, but it still came as a shock. The warning signs had been ignored in favor of the possibility, however remote, that it could actually happen. That possibility had grown from hope to an undeniable belief it must be destiny. That was until it wasn't and the hopes and dreams came crashing down.",
+      title: "Hopes and dreams",
+      body: "Hopes and dreams were dashed that day.",
       userId: 41,
       tags: [
         "crime",
@@ -2314,9 +2822,10 @@ var json_blog_default = {
       reactions: 2
     },
     {
+      image: "/images/blogs/blog-6.png",
       id: 6,
-      title: "Dave wasn't exactly sure how he had ended up",
-      body: "Dave wasn't exactly sure how he had ended up in this predicament. He ran through all the events that had lead to this current situation and it still didn't make sense. He wanted to spend some time to try and make sense of it all, but he had higher priorities at the moment. The first was how to get out of his current situation of being naked in a tree with snow falling all around and no way for him to get down.",
+      title: "Dave wasn't",
+      body: "Dave wasn't exactly sure how he had ended up in this predicament.",
       userId: 47,
       tags: [
         "english",
@@ -2329,52 +2838,10 @@ var json_blog_default = {
 };
 
 // app/routes/blogs.tsx
-var import_framer_motion3 = require("framer-motion");
+var import_framer_motion4 = require("framer-motion");
 var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), loader3 = async () => (0, import_node3.json)(json_blog_default);
 function Blogs() {
-  let { posts } = (0, import_react13.useLoaderData)();
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_framer_motion3.motion.div, {
-    initial: "hidden",
-    animate: "enter",
-    exit: "exit",
-    variants,
-    transition: { duration: 0.4, type: "easeInOut" },
-    style: { position: "relative" },
-    children: posts.map((item) => /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("p", {
-      children: item.title
-    }, item.id, !1, {
-      fileName: "app/routes/blogs.tsx",
-      lineNumber: 20,
-      columnNumber: 28
-    }, this))
-  }, void 0, !1, {
-    fileName: "app/routes/blogs.tsx",
-    lineNumber: 13,
-    columnNumber: 14
-  }, this);
-}
-var meta3 = ({ data }) => {
-  let postTitles = data.posts.map((post) => post.title);
-  return {
-    title: "Blog page app",
-    description: `${postTitles.join(",")}`
-  };
-};
-
-// app/routes/index.tsx
-var routes_exports = {};
-__export(routes_exports, {
-  default: () => Index,
-  meta: () => meta4
-});
-var import_react14 = require("@chakra-ui/react"), import_react15 = require("@remix-run/react");
-var import_framer_motion4 = require("framer-motion"), import_jsx_dev_runtime = require("react/jsx-dev-runtime");
-function Index() {
-  let navigate = (0, import_react15.useNavigate)(), onProducts = () => {
-    navigate("/product");
-  }, onBlogs = () => {
-    navigate("/blogs");
-  };
+  let { posts } = (0, import_react22.useLoaderData)();
   return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_framer_motion4.motion.div, {
     initial: "hidden",
     animate: "enter",
@@ -2382,111 +2849,403 @@ function Index() {
     variants,
     transition: { duration: 0.4, type: "easeInOut" },
     style: { position: "relative" },
-    children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
-      style: { fontFamily: "system-ui, sans-serif", lineHeight: "1.4" },
+    children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react21.Container, {
+      children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react21.SimpleGrid, {
+        columns: [1, 1, 2],
+        gap: 6,
+        children: posts.map((post) => /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(card_default, {
+          thumbnail: post.image,
+          title: post.title,
+          children: post.body
+        }, post.id, !1, {
+          fileName: "app/routes/blogs.tsx",
+          lineNumber: 23,
+          columnNumber: 26
+        }, this))
+      }, void 0, !1, {
+        fileName: "app/routes/blogs.tsx",
+        lineNumber: 22,
+        columnNumber: 20
+      }, this)
+    }, void 0, !1, {
+      fileName: "app/routes/blogs.tsx",
+      lineNumber: 22,
+      columnNumber: 9
+    }, this)
+  }, void 0, !1, {
+    fileName: "app/routes/blogs.tsx",
+    lineNumber: 15,
+    columnNumber: 14
+  }, this);
+}
+var meta3 = ({ data }) => {
+  let postTitles = data.posts.map((post) => post.title);
+  return {
+    title: "Blog page portfolio of nguyen ba tran van",
+    description: `List of blogs: ${postTitles.join(",")}`,
+    image: "/images/blog-2.png"
+  };
+};
+
+// app/routes/index.tsx
+var routes_exports = {};
+__export(routes_exports, {
+  BioSection: () => BioSection,
+  BioYear: () => BioYear,
+  default: () => Index,
+  meta: () => meta4
+});
+var import_react23 = require("@chakra-ui/react"), import_styled3 = __toESM(require("@emotion/styled")), import_react24 = require("@remix-run/react"), import_io52 = require("react-icons/io5");
+var import_framer_motion5 = require("framer-motion");
+
+// app/components/paragrapth.ts
+var import_styled2 = __toESM(require("@emotion/styled")), Paragraph = import_styled2.default.p`
+  text-align: justify;
+  text-indent: 1em;
+`, paragrapth_default = Paragraph;
+
+// app/routes/index.tsx
+var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), ProfileImage = (0, import_react23.chakra)(import_react23.Image, {
+  shouldForwardProp: (prop) => ["width", "height", "src", "alt"].includes(prop)
+}), BioSection = (0, import_styled3.default)(import_react23.Box)`
+  padding-left: 3.4em;
+  text-indent: -3.4em;
+`, BioYear = import_styled3.default.span`
+  font-weight: bold;
+  margin-right: 1em;
+`;
+function Index() {
+  let navigate = (0, import_react24.useNavigate)(), onProducts = () => {
+    navigate("/product");
+  }, onBlogs = () => {
+    navigate("/blogs");
+  };
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_framer_motion5.motion.div, {
+    initial: "hidden",
+    animate: "enter",
+    exit: "exit",
+    variants,
+    transition: { duration: 0.4, type: "easeInOut" },
+    style: { position: "relative" },
+    children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react23.Container, {
       children: [
-        /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("h1", {
-          children: "Welcome to Remix"
+        /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react23.Box, {
+          borderRadius: "lg",
+          mb: 6,
+          p: 3,
+          textAlign: "center",
+          bg: (0, import_react23.useColorModeValue)("whiteAlpha.500", "whiteAlpha.200"),
+          css: { backdropFilter: "blur(10px)" },
+          children: "Hello, I'm an indie app developer based in Vietnam!"
         }, void 0, !1, {
           fileName: "app/routes/index.tsx",
-          lineNumber: 25,
+          lineNumber: 52,
           columnNumber: 17
         }, this),
-        /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react14.Button, {
-          colorScheme: "blue",
-          onClick: onProducts,
-          type: "button",
-          children: "Products"
-        }, void 0, !1, {
-          fileName: "app/routes/index.tsx",
-          lineNumber: 26,
-          columnNumber: 17
-        }, this),
-        /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react14.Button, {
-          colorScheme: "blue",
-          onClick: onBlogs,
-          type: "button",
-          children: "Blogs"
-        }, void 0, !1, {
-          fileName: "app/routes/index.tsx",
-          lineNumber: 29,
-          columnNumber: 17
-        }, this),
-        /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("ul", {
+        /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react23.Box, {
+          display: { md: "flex" },
           children: [
-            /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("li", {
-              children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("a", {
-                target: "_blank",
-                href: "https://remix.run/tutorials/blog",
-                rel: "noreferrer",
-                children: "15m Quickstart Blog Tutorial"
-              }, void 0, !1, {
-                fileName: "app/routes/index.tsx",
-                lineNumber: 32,
-                columnNumber: 25
-              }, this)
-            }, void 0, !1, {
+            /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react23.Box, {
+              flexGrow: 1,
+              children: [
+                /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react23.Heading, {
+                  as: "h2",
+                  variant: "page-title",
+                  children: "Nguy\u1EC5n B\xE1 Tr\u1EA7n V\u0103n"
+                }, void 0, !1, {
+                  fileName: "app/routes/index.tsx",
+                  lineNumber: 65,
+                  columnNumber: 25
+                }, this),
+                /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("p", {
+                  children: "StageIT iCondo ( Front end developer )"
+                }, void 0, !1, {
+                  fileName: "app/routes/index.tsx",
+                  lineNumber: 68,
+                  columnNumber: 25
+                }, this)
+              ]
+            }, void 0, !0, {
               fileName: "app/routes/index.tsx",
-              lineNumber: 31,
+              lineNumber: 64,
               columnNumber: 21
             }, this),
-            /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("li", {
-              children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("a", {
-                target: "_blank",
-                href: "https://remix.run/tutorials/jokes",
-                rel: "noreferrer",
-                children: "Deep Dive Jokes App Tutorial"
+            /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react23.Box, {
+              flexShrink: 0,
+              mt: { base: 4, md: 0 },
+              ml: { md: 6 },
+              textAlign: "center",
+              children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react23.Box, {
+                borderColor: "whiteAlpha.800",
+                borderWidth: 2,
+                borderStyle: "solid",
+                w: "100px",
+                h: "100px",
+                display: "inline-block",
+                borderRadius: "full",
+                overflow: "hidden",
+                children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(ProfileImage, {
+                  src: "/images/profile.png",
+                  alt: "Profile image",
+                  borderRadius: "full",
+                  objectFit: "cover",
+                  width: "100%",
+                  height: "100%"
+                }, void 0, !1, {
+                  fileName: "app/routes/index.tsx",
+                  lineNumber: 86,
+                  columnNumber: 29
+                }, this)
               }, void 0, !1, {
                 fileName: "app/routes/index.tsx",
-                lineNumber: 41,
+                lineNumber: 76,
                 columnNumber: 25
               }, this)
             }, void 0, !1, {
               fileName: "app/routes/index.tsx",
-              lineNumber: 40,
-              columnNumber: 21
-            }, this),
-            /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("li", {
-              children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("a", {
-                target: "_blank",
-                href: "https://remix.run/docs",
-                rel: "noreferrer",
-                children: "Remix Docs"
-              }, void 0, !1, {
-                fileName: "app/routes/index.tsx",
-                lineNumber: 50,
-                columnNumber: 25
-              }, this)
-            }, void 0, !1, {
-              fileName: "app/routes/index.tsx",
-              lineNumber: 49,
+              lineNumber: 70,
               columnNumber: 21
             }, this)
           ]
         }, void 0, !0, {
           fileName: "app/routes/index.tsx",
-          lineNumber: 30,
+          lineNumber: 63,
+          columnNumber: 17
+        }, this),
+        /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react23.Box, {
+          marginY: 4,
+          children: [
+            /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react23.Heading, {
+              variant: "title-under-line",
+              children: "Work"
+            }, void 0, !1, {
+              fileName: "app/routes/index.tsx",
+              lineNumber: 98,
+              columnNumber: 21
+            }, this),
+            /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(paragrapth_default, {
+              children: "I am a project person on websites for product or outsource companies. My existing background is mainly on javascript language and strong support libraries for it like Reactjs, Nextjs, Remix and some frameworks like angular."
+            }, void 0, !1, {
+              fileName: "app/routes/index.tsx",
+              lineNumber: 101,
+              columnNumber: 21
+            }, this)
+          ]
+        }, void 0, !0, {
+          fileName: "app/routes/index.tsx",
+          lineNumber: 97,
+          columnNumber: 17
+        }, this),
+        /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react23.Box, {
+          marginY: 4,
+          children: [
+            /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react23.Heading, {
+              variant: "title-under-line",
+              children: "Bio"
+            }, void 0, !1, {
+              fileName: "app/routes/index.tsx",
+              lineNumber: 108,
+              columnNumber: 21
+            }, this),
+            /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(BioSection, {
+              children: [
+                /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(BioYear, {
+                  children: "1996"
+                }, void 0, !1, {
+                  fileName: "app/routes/index.tsx",
+                  lineNumber: 112,
+                  columnNumber: 25
+                }, this),
+                "Born in Binh Thuan, Vietnam."
+              ]
+            }, void 0, !0, {
+              fileName: "app/routes/index.tsx",
+              lineNumber: 111,
+              columnNumber: 21
+            }, this),
+            /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(BioSection, {
+              children: [
+                /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(BioYear, {
+                  children: "2014"
+                }, void 0, !1, {
+                  fileName: "app/routes/index.tsx",
+                  lineNumber: 116,
+                  columnNumber: 25
+                }, this),
+                "Study at university of natural sciences, Ho Chi Minh city, Vietnam"
+              ]
+            }, void 0, !0, {
+              fileName: "app/routes/index.tsx",
+              lineNumber: 115,
+              columnNumber: 21
+            }, this),
+            /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(BioSection, {
+              children: [
+                /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(BioYear, {
+                  children: "2017"
+                }, void 0, !1, {
+                  fileName: "app/routes/index.tsx",
+                  lineNumber: 120,
+                  columnNumber: 25
+                }, this),
+                "Got my first programming job at INet Solutions"
+              ]
+            }, void 0, !0, {
+              fileName: "app/routes/index.tsx",
+              lineNumber: 119,
+              columnNumber: 21
+            }, this),
+            /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(BioSection, {
+              children: [
+                /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(BioYear, {
+                  children: "2019"
+                }, void 0, !1, {
+                  fileName: "app/routes/index.tsx",
+                  lineNumber: 124,
+                  columnNumber: 25
+                }, this),
+                "Working at StageIt company"
+              ]
+            }, void 0, !0, {
+              fileName: "app/routes/index.tsx",
+              lineNumber: 123,
+              columnNumber: 21
+            }, this)
+          ]
+        }, void 0, !0, {
+          fileName: "app/routes/index.tsx",
+          lineNumber: 107,
+          columnNumber: 17
+        }, this),
+        /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react23.Box, {
+          marginY: 4,
+          children: [
+            /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react23.Heading, {
+              variant: "title-under-line",
+              children: "Contact Social"
+            }, void 0, !1, {
+              fileName: "app/routes/index.tsx",
+              lineNumber: 129,
+              columnNumber: 21
+            }, this),
+            /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react23.List, {
+              children: [
+                /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react23.ListItem, {
+                  children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react23.Link, {
+                    href: "https://github.com/nguyenbatranvan",
+                    target: "_blank",
+                    children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react23.Button, {
+                      variant: "ghost",
+                      colorScheme: "teal",
+                      leftIcon: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_io52.IoLogoGithub, {}, void 0, !1, {
+                        fileName: "app/routes/index.tsx",
+                        lineNumber: 138,
+                        columnNumber: 47
+                      }, this),
+                      children: "@nguyenbatranvan"
+                    }, void 0, !1, {
+                      fileName: "app/routes/index.tsx",
+                      lineNumber: 135,
+                      columnNumber: 33
+                    }, this)
+                  }, void 0, !1, {
+                    fileName: "app/routes/index.tsx",
+                    lineNumber: 134,
+                    columnNumber: 29
+                  }, this)
+                }, void 0, !1, {
+                  fileName: "app/routes/index.tsx",
+                  lineNumber: 133,
+                  columnNumber: 25
+                }, this),
+                /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react23.ListItem, {
+                  children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react23.Link, {
+                    href: "https://twitter.com/VnBKinh1",
+                    target: "_blank",
+                    children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react23.Button, {
+                      variant: "ghost",
+                      colorScheme: "teal",
+                      leftIcon: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_io52.IoLogoTwitter, {}, void 0, !1, {
+                        fileName: "app/routes/index.tsx",
+                        lineNumber: 149,
+                        columnNumber: 47
+                      }, this),
+                      children: "@VnBKinh1"
+                    }, void 0, !1, {
+                      fileName: "app/routes/index.tsx",
+                      lineNumber: 146,
+                      columnNumber: 33
+                    }, this)
+                  }, void 0, !1, {
+                    fileName: "app/routes/index.tsx",
+                    lineNumber: 145,
+                    columnNumber: 29
+                  }, this)
+                }, void 0, !1, {
+                  fileName: "app/routes/index.tsx",
+                  lineNumber: 144,
+                  columnNumber: 25
+                }, this),
+                /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react23.ListItem, {
+                  children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react23.Link, {
+                    href: "https://instagram.com/nguyenbatran",
+                    target: "_blank",
+                    children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react23.Button, {
+                      variant: "ghost",
+                      colorScheme: "teal",
+                      leftIcon: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_io52.IoLogoInstagram, {}, void 0, !1, {
+                        fileName: "app/routes/index.tsx",
+                        lineNumber: 161,
+                        columnNumber: 47
+                      }, this),
+                      children: "@nguyenbatran"
+                    }, void 0, !1, {
+                      fileName: "app/routes/index.tsx",
+                      lineNumber: 158,
+                      columnNumber: 33
+                    }, this)
+                  }, void 0, !1, {
+                    fileName: "app/routes/index.tsx",
+                    lineNumber: 157,
+                    columnNumber: 29
+                  }, this)
+                }, void 0, !1, {
+                  fileName: "app/routes/index.tsx",
+                  lineNumber: 156,
+                  columnNumber: 25
+                }, this)
+              ]
+            }, void 0, !0, {
+              fileName: "app/routes/index.tsx",
+              lineNumber: 132,
+              columnNumber: 21
+            }, this)
+          ]
+        }, void 0, !0, {
+          fileName: "app/routes/index.tsx",
+          lineNumber: 128,
           columnNumber: 17
         }, this)
       ]
     }, void 0, !0, {
       fileName: "app/routes/index.tsx",
-      lineNumber: 24,
+      lineNumber: 51,
       columnNumber: 13
     }, this)
   }, void 0, !1, {
     fileName: "app/routes/index.tsx",
-    lineNumber: 16,
+    lineNumber: 43,
     columnNumber: 13
   }, this);
 }
 var meta4 = () => ({
-  title: "Product app",
-  description: "page is seo product"
+  title: "Portfolio of nguyen ba tran van",
+  description: "This page is detail work of nguyen ba tran van from 2014 to now",
+  image: "/images/profile.png"
 });
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { version: "4c71d099", entry: { module: "/build/entry.client-G3QAAEIN.js", imports: ["/build/_shared/chunk-75HNOXMZ.js", "/build/_shared/chunk-NJU3FC3C.js", "/build/_shared/chunk-HQP2BH73.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-UMKOUYPH.js", imports: ["/build/_shared/chunk-7JGI2R6W.js", "/build/_shared/chunk-3CTLQZRD.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/blogs": { id: "routes/blogs", parentId: "root", path: "blogs", index: void 0, caseSensitive: void 0, module: "/build/routes/blogs-BMGN43WP.js", imports: ["/build/_shared/chunk-37IYNLDP.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/index": { id: "routes/index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/index-MHG54LWG.js", imports: ["/build/_shared/chunk-37IYNLDP.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/product": { id: "routes/product", parentId: "root", path: "product", index: void 0, caseSensitive: void 0, module: "/build/routes/product-2YSWNLIU.js", imports: ["/build/_shared/chunk-37IYNLDP.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, url: "/build/manifest-4C71D099.js" };
+var assets_manifest_default = { version: "a692bb55", entry: { module: "/build/entry.client-R7JFNHWL.js", imports: ["/build/_shared/chunk-NGIM7FMW.js", "/build/_shared/chunk-XFCJINCL.js", "/build/_shared/chunk-X4YEVXE7.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-OO7FHEZT.js", imports: ["/build/_shared/chunk-AF7JZ4YO.js", "/build/_shared/chunk-ZPH2HDSR.js", "/build/_shared/chunk-H7D5UGQV.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/blogs": { id: "routes/blogs", parentId: "root", path: "blogs", index: void 0, caseSensitive: void 0, module: "/build/routes/blogs-G7KSSRJV.js", imports: ["/build/_shared/chunk-37IYNLDP.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/index": { id: "routes/index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/index-3R6IDJAF.js", imports: ["/build/_shared/chunk-37IYNLDP.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/product": { id: "routes/product", parentId: "root", path: "product", index: void 0, caseSensitive: void 0, module: "/build/routes/product-QKNO5NDB.js", imports: ["/build/_shared/chunk-37IYNLDP.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, url: "/build/manifest-A692BB55.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var assetsBuildDirectory = "public/build", publicPath = "/build/", entry = { module: entry_server_exports }, routes = {

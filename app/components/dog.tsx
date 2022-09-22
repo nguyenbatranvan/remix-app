@@ -37,9 +37,7 @@ const VoxelDog = () => {
     /* eslint-disable react-hooks/exhaustive-deps */
     useEffect(() => {
         const {current: container} = refContainer
-        console.log('con', container, renderer)
         if (container && !renderer) {
-            console.log('1111')
             const scW = container['clientWidth']
             const scH = container['clientHeight']
 
@@ -108,9 +106,7 @@ const VoxelDog = () => {
 
                 renderer.render(scene, camera)
             }
-            console.log('1828')
             return () => {
-                console.log('unmount')
                 cancelAnimationFrame(req)
                 renderer.dispose()
             }
