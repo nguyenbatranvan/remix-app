@@ -1,3 +1,4 @@
+import {Button} from "@chakra-ui/react";
 import {MetaFunction} from "@remix-run/node";
 import {useNavigate} from "@remix-run/react"
 
@@ -13,10 +14,10 @@ export default function Index() {
     return (
         <div style={{fontFamily: "system-ui, sans-serif", lineHeight: "1.4"}}>
             <h1>Welcome to Remix</h1>
-            <button onClick={onProducts} type={"button"}>
+            <Button colorScheme={"blue"} onClick={onProducts} type={"button"}>
                 Products
-            </button>
-            <button onClick={onBlogs} type={"button"}>Blogs</button>
+            </Button>
+            <Button colorScheme={"blue"} onClick={onBlogs} type={"button"}>Blogs</Button>
             <ul>
                 <li>
                     <a
