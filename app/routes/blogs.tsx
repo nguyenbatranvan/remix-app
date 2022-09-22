@@ -34,7 +34,7 @@ export const meta: MetaFunction<typeof loader> = ({data}) => {
         title: "Blog page portfolio of nguyen ba tran van",
         description: `List of blogs: ${postTitles.join(',')}`,
         "og:description": `List of blogs: ${postTitles.join(',')}`,
-        image: `/images/blog-2.png`,
-        "og:image": `/images/blog-2.png`
+        image: `/images/blogs/blog-2.png`,
+        "og:image": `/images/blogs/blog-2.png`
     }
 }

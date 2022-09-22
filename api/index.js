@@ -3017,8 +3017,8 @@ var meta3 = ({ data }) => {
     title: "Blog page portfolio of nguyen ba tran van",
     description: `List of blogs: ${postTitles.join(",")}`,
     "og:description": `List of blogs: ${postTitles.join(",")}`,
-    image: "/images/blog-2.png",
-    "og:image": "/images/blog-2.png"
+    image: "/images/blogs/blog-2.png",
+    "og:image": "/images/blogs/blog-2.png"
   };
 };
 
@@ -3381,7 +3381,7 @@ var meta4 = () => ({
 });
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { version: "78eba070", entry: { module: "/build/entry.client-RDEIHKVX.js", imports: ["/build/_shared/chunk-ID3NW62X.js", "/build/_shared/chunk-Q5RR4RMZ.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-DOQWN6KM.js", imports: ["/build/_shared/chunk-CBSGOPOA.js", "/build/_shared/chunk-3NHHXNJK.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/blogs": { id: "routes/blogs", parentId: "root", path: "blogs", index: void 0, caseSensitive: void 0, module: "/build/routes/blogs-M5MTINEN.js", imports: ["/build/_shared/chunk-37IYNLDP.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/index": { id: "routes/index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/index-45DHC7TN.js", imports: ["/build/_shared/chunk-37IYNLDP.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/product": { id: "routes/product", parentId: "root", path: "product", index: void 0, caseSensitive: void 0, module: "/build/routes/product-GLOOKY25.js", imports: ["/build/_shared/chunk-37IYNLDP.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, url: "/build/manifest-78EBA070.js" };
+var assets_manifest_default = { version: "381760fa", entry: { module: "/build/entry.client-RDEIHKVX.js", imports: ["/build/_shared/chunk-ID3NW62X.js", "/build/_shared/chunk-Q5RR4RMZ.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-DOQWN6KM.js", imports: ["/build/_shared/chunk-CBSGOPOA.js", "/build/_shared/chunk-3NHHXNJK.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/blogs": { id: "routes/blogs", parentId: "root", path: "blogs", index: void 0, caseSensitive: void 0, module: "/build/routes/blogs-CFXSU5GG.js", imports: ["/build/_shared/chunk-37IYNLDP.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/index": { id: "routes/index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/index-45DHC7TN.js", imports: ["/build/_shared/chunk-37IYNLDP.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/product": { id: "routes/product", parentId: "root", path: "product", index: void 0, caseSensitive: void 0, module: "/build/routes/product-GLOOKY25.js", imports: ["/build/_shared/chunk-37IYNLDP.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, url: "/build/manifest-381760FA.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var assetsBuildDirectory = "public/build", publicPath = "/build/", entry = { module: entry_server_exports }, routes = {
