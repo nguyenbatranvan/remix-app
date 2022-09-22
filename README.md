@@ -1,7 +1,12 @@
-# Welcome to Remix!
+# Welcome to portfolio!
+- [Visit page](https://remix-app-kappa.vercel.app/)
+<div align="center">
+    <img src="public/images/readme-page.png" />
+</div>
 
-- [Remix Docs](https://remix.run/docs)
+# Dependency
 
+- Website built on [remix/react](https://remix.run/docs) and [chakra-ui](https://chakra-ui.com/)
 ## Development
 
 From your terminal:
