@@ -15,15 +15,15 @@ export const meta: MetaFunction = () => ({
     viewport: "width=device-width,initial-scale=1",
 });
 const fetcherJSON = (url: string, config?: RequestInit) => fetch(url, config).then((res) => res.json());
-//
-// export const loader = async ({request}) => {
-//     const location = new URL(request.url)
-//     const config = await fetcherJSON(location.origin + `/config.json`);
-//     return json(config);
-// }
+
+export const loader = async ({request}) => {
+    const location = new URL(request.url)
+    const config = await fetcherJSON(location.origin + `/config.json`);
+    return json(config);
+}
 
 export default function App() {
-    // const data = useLoaderData();
+    const data = useLoaderData();
     const transition = useTransition();
     const fetcher = useFetcher();
     return (
