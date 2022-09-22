@@ -2625,6 +2625,32 @@ __export(product_exports, {
 });
 var import_react20 = require("@chakra-ui/react"), import_node2 = require("@remix-run/node"), import_react21 = require("@remix-run/react");
 
+// app/utils/variants-motion.ts
+var variants = {
+  hidden: { opacity: 0, x: 0, y: 20 },
+  enter: { opacity: 1, x: 0, y: 0 },
+  exit: { opacity: 0, x: -0, y: 20 }
+};
+
+// app/components/motion-router.tsx
+var import_framer_motion3 = require("framer-motion"), import_jsx_dev_runtime = require("react/jsx-dev-runtime");
+function MotionRouter({ children }) {
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_framer_motion3.motion.div, {
+    initial: "hidden",
+    animate: "enter",
+    exit: "exit",
+    variants,
+    transition: { duration: 0.4, type: "easeInOut" },
+    style: { position: "relative" },
+    children
+  }, void 0, !1, {
+    fileName: "app/components/motion-router.tsx",
+    lineNumber: 5,
+    columnNumber: 13
+  }, this);
+}
+var motion_router_default = MotionRouter;
+
 // app/components/product-card.tsx
 var import_react19 = require("@chakra-ui/react"), import_jsx_dev_runtime = require("react/jsx-dev-runtime");
 function ProductCard({ image }) {
@@ -2751,29 +2777,16 @@ function ProductCard({ image }) {
 }
 var product_card_default = ProductCard;
 
-// app/utils/variants-motion.ts
-var variants = {
-  hidden: { opacity: 0, x: 0, y: 20 },
-  enter: { opacity: 1, x: 0, y: 0 },
-  exit: { opacity: 0, x: -0, y: 20 }
-};
-
 // app/routes/product.tsx
-var import_framer_motion3 = require("framer-motion"), import_jsx_dev_runtime = require("react/jsx-dev-runtime"), loader2 = async (dataa) => {
-  let data = await (await fetch("https://dummyjson.com/products")).json();
+var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), loader2 = async () => {
+  let data = await fetcherJSON("https://dummyjson.com/products");
   return (0, import_node2.json)(data);
 };
 function Product() {
   let { products } = (0, import_react21.useLoaderData)(), loadProduct = async () => {
     let data = await (await fetch("https://dummyjson.com/products")).json();
   };
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_framer_motion3.motion.div, {
-    initial: "hidden",
-    animate: "enter",
-    exit: "exit",
-    variants,
-    transition: { duration: 0.4, type: "easeInOut" },
-    style: { position: "relative" },
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(motion_router_default, {
     children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react20.Container, {
       children: [
         /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react20.Heading, {
@@ -2781,7 +2794,7 @@ function Product() {
           children: "Products"
         }, void 0, !1, {
           fileName: "app/routes/product.tsx",
-          lineNumber: 31,
+          lineNumber: 25,
           columnNumber: 13
         }, this),
         /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react20.SimpleGrid, {
@@ -2791,23 +2804,23 @@ function Product() {
             image: product.thumbnail
           }, product.id, !1, {
             fileName: "app/routes/product.tsx",
-            lineNumber: 35,
+            lineNumber: 29,
             columnNumber: 42
           }, this))
         }, void 0, !1, {
           fileName: "app/routes/product.tsx",
-          lineNumber: 34,
+          lineNumber: 28,
           columnNumber: 13
         }, this)
       ]
     }, void 0, !0, {
       fileName: "app/routes/product.tsx",
-      lineNumber: 30,
+      lineNumber: 24,
       columnNumber: 9
     }, this)
   }, void 0, !1, {
     fileName: "app/routes/product.tsx",
-    lineNumber: 22,
+    lineNumber: 23,
     columnNumber: 13
   }, this);
 }
@@ -2840,7 +2853,7 @@ function CardThumbnail({ thumbnail, title, children }) {
       cursor: "pointer",
       children: [
         /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react22.Image, {
-          src: thumbnail,
+          src: "https://media.istockphoto.com/vectors/coming-soon-lettering-coming-soon-for-promotion-advertisement-sale-vector-id1221240925?k=20&m=1221240925&s=612x612&w=0&h=HX77CIwJ34u7qUMpI_W5z4dDnEbHGv66mGXVTpIccv8=",
           alt: title,
           className: "grid-item-thumbnail",
           placeholder: "blur"
@@ -2971,17 +2984,10 @@ var json_blog_default = {
 };
 
 // app/routes/blogs.tsx
-var import_framer_motion4 = require("framer-motion");
 var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), loader3 = async () => (0, import_node3.json)(json_blog_default);
 function Blogs() {
   let { posts } = (0, import_react24.useLoaderData)();
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_framer_motion4.motion.div, {
-    initial: "hidden",
-    animate: "enter",
-    exit: "exit",
-    variants,
-    transition: { duration: 0.4, type: "easeInOut" },
-    style: { position: "relative" },
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(motion_router_default, {
     children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react23.Container, {
       children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react23.SimpleGrid, {
         columns: [1, 1, 2],
@@ -2992,22 +2998,22 @@ function Blogs() {
           children: post.body
         }, post.id, !1, {
           fileName: "app/routes/blogs.tsx",
-          lineNumber: 23,
+          lineNumber: 18,
           columnNumber: 32
         }, this))
       }, void 0, !1, {
         fileName: "app/routes/blogs.tsx",
-        lineNumber: 22,
+        lineNumber: 17,
         columnNumber: 20
       }, this)
     }, void 0, !1, {
       fileName: "app/routes/blogs.tsx",
-      lineNumber: 22,
+      lineNumber: 17,
       columnNumber: 9
     }, this)
   }, void 0, !1, {
     fileName: "app/routes/blogs.tsx",
-    lineNumber: 15,
+    lineNumber: 16,
     columnNumber: 13
   }, this);
 }
@@ -3031,7 +3037,6 @@ __export(routes_exports, {
   meta: () => meta4
 });
 var import_react25 = require("@chakra-ui/react"), import_styled3 = __toESM(require("@emotion/styled")), import_react26 = require("@remix-run/react"), import_io52 = require("react-icons/io5");
-var import_framer_motion5 = require("framer-motion");
 
 // app/components/paragrapth.ts
 var import_styled2 = __toESM(require("@emotion/styled")), Paragraph = import_styled2.default.p`
@@ -3055,13 +3060,7 @@ function Index() {
   }, onBlogs = () => {
     navigate("/blogs");
   };
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_framer_motion5.motion.div, {
-    initial: "hidden",
-    animate: "enter",
-    exit: "exit",
-    variants,
-    transition: { duration: 0.4, type: "easeInOut" },
-    style: { position: "relative" },
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(motion_router_default, {
     children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react25.Container, {
       children: [
         /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react25.Box, {
@@ -3074,7 +3073,7 @@ function Index() {
           children: "Hello, I'm an indie app developer based in Vietnam!"
         }, void 0, !1, {
           fileName: "app/routes/index.tsx",
-          lineNumber: 52,
+          lineNumber: 46,
           columnNumber: 17
         }, this),
         /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react25.Box, {
@@ -3089,20 +3088,20 @@ function Index() {
                   children: "Nguy\u1EC5n B\xE1 Tr\u1EA7n V\u0103n"
                 }, void 0, !1, {
                   fileName: "app/routes/index.tsx",
-                  lineNumber: 65,
+                  lineNumber: 59,
                   columnNumber: 25
                 }, this),
                 /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("p", {
                   children: "StageIT iCondo ( Front end developer )"
                 }, void 0, !1, {
                   fileName: "app/routes/index.tsx",
-                  lineNumber: 68,
+                  lineNumber: 62,
                   columnNumber: 25
                 }, this)
               ]
             }, void 0, !0, {
               fileName: "app/routes/index.tsx",
-              lineNumber: 64,
+              lineNumber: 58,
               columnNumber: 21
             }, this),
             /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react25.Box, {
@@ -3128,23 +3127,23 @@ function Index() {
                   height: "100%"
                 }, void 0, !1, {
                   fileName: "app/routes/index.tsx",
-                  lineNumber: 86,
+                  lineNumber: 80,
                   columnNumber: 29
                 }, this)
               }, void 0, !1, {
                 fileName: "app/routes/index.tsx",
-                lineNumber: 76,
+                lineNumber: 70,
                 columnNumber: 25
               }, this)
             }, void 0, !1, {
               fileName: "app/routes/index.tsx",
-              lineNumber: 70,
+              lineNumber: 64,
               columnNumber: 21
             }, this)
           ]
         }, void 0, !0, {
           fileName: "app/routes/index.tsx",
-          lineNumber: 63,
+          lineNumber: 57,
           columnNumber: 17
         }, this),
         /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react25.Box, {
@@ -3155,20 +3154,20 @@ function Index() {
               children: "Work"
             }, void 0, !1, {
               fileName: "app/routes/index.tsx",
-              lineNumber: 98,
+              lineNumber: 92,
               columnNumber: 21
             }, this),
             /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(paragrapth_default, {
               children: "I am a project person on websites for product or outsource companies. My existing background is mainly on javascript language and strong support libraries for it like Reactjs, Nextjs, Remix and some frameworks like angular."
             }, void 0, !1, {
               fileName: "app/routes/index.tsx",
-              lineNumber: 101,
+              lineNumber: 95,
               columnNumber: 21
             }, this)
           ]
         }, void 0, !0, {
           fileName: "app/routes/index.tsx",
-          lineNumber: 97,
+          lineNumber: 91,
           columnNumber: 17
         }, this),
         /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react25.Box, {
@@ -3179,7 +3178,7 @@ function Index() {
               children: "Bio"
             }, void 0, !1, {
               fileName: "app/routes/index.tsx",
-              lineNumber: 108,
+              lineNumber: 102,
               columnNumber: 21
             }, this),
             /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(BioSection, {
@@ -3188,14 +3187,14 @@ function Index() {
                   children: "1996"
                 }, void 0, !1, {
                   fileName: "app/routes/index.tsx",
-                  lineNumber: 112,
+                  lineNumber: 106,
                   columnNumber: 25
                 }, this),
                 "Born in Binh Thuan, Vietnam."
               ]
             }, void 0, !0, {
               fileName: "app/routes/index.tsx",
-              lineNumber: 111,
+              lineNumber: 105,
               columnNumber: 21
             }, this),
             /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(BioSection, {
@@ -3204,14 +3203,14 @@ function Index() {
                   children: "2014"
                 }, void 0, !1, {
                   fileName: "app/routes/index.tsx",
-                  lineNumber: 116,
+                  lineNumber: 110,
                   columnNumber: 25
                 }, this),
                 "Study at university of natural sciences, Ho Chi Minh city, Vietnam"
               ]
             }, void 0, !0, {
               fileName: "app/routes/index.tsx",
-              lineNumber: 115,
+              lineNumber: 109,
               columnNumber: 21
             }, this),
             /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(BioSection, {
@@ -3220,14 +3219,14 @@ function Index() {
                   children: "2017"
                 }, void 0, !1, {
                   fileName: "app/routes/index.tsx",
-                  lineNumber: 120,
+                  lineNumber: 114,
                   columnNumber: 25
                 }, this),
                 "Got my first programming job at INet Solutions"
               ]
             }, void 0, !0, {
               fileName: "app/routes/index.tsx",
-              lineNumber: 119,
+              lineNumber: 113,
               columnNumber: 21
             }, this),
             /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(BioSection, {
@@ -3236,20 +3235,20 @@ function Index() {
                   children: "2019"
                 }, void 0, !1, {
                   fileName: "app/routes/index.tsx",
-                  lineNumber: 124,
+                  lineNumber: 118,
                   columnNumber: 25
                 }, this),
                 "Working at StageIt company"
               ]
             }, void 0, !0, {
               fileName: "app/routes/index.tsx",
-              lineNumber: 123,
+              lineNumber: 117,
               columnNumber: 21
             }, this)
           ]
         }, void 0, !0, {
           fileName: "app/routes/index.tsx",
-          lineNumber: 107,
+          lineNumber: 101,
           columnNumber: 17
         }, this),
         /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react25.Box, {
@@ -3260,7 +3259,7 @@ function Index() {
               children: "Contact Social"
             }, void 0, !1, {
               fileName: "app/routes/index.tsx",
-              lineNumber: 129,
+              lineNumber: 123,
               columnNumber: 21
             }, this),
             /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react25.List, {
@@ -3274,23 +3273,23 @@ function Index() {
                       colorScheme: "teal",
                       leftIcon: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_io52.IoLogoGithub, {}, void 0, !1, {
                         fileName: "app/routes/index.tsx",
-                        lineNumber: 138,
+                        lineNumber: 132,
                         columnNumber: 47
                       }, this),
                       children: "@nguyenbatranvan"
                     }, void 0, !1, {
                       fileName: "app/routes/index.tsx",
-                      lineNumber: 135,
+                      lineNumber: 129,
                       columnNumber: 33
                     }, this)
                   }, void 0, !1, {
                     fileName: "app/routes/index.tsx",
-                    lineNumber: 134,
+                    lineNumber: 128,
                     columnNumber: 29
                   }, this)
                 }, void 0, !1, {
                   fileName: "app/routes/index.tsx",
-                  lineNumber: 133,
+                  lineNumber: 127,
                   columnNumber: 25
                 }, this),
                 /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react25.ListItem, {
@@ -3302,23 +3301,23 @@ function Index() {
                       colorScheme: "teal",
                       leftIcon: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_io52.IoLogoTwitter, {}, void 0, !1, {
                         fileName: "app/routes/index.tsx",
-                        lineNumber: 149,
+                        lineNumber: 143,
                         columnNumber: 47
                       }, this),
                       children: "@VnBKinh1"
                     }, void 0, !1, {
                       fileName: "app/routes/index.tsx",
-                      lineNumber: 146,
+                      lineNumber: 140,
                       columnNumber: 33
                     }, this)
                   }, void 0, !1, {
                     fileName: "app/routes/index.tsx",
-                    lineNumber: 145,
+                    lineNumber: 139,
                     columnNumber: 29
                   }, this)
                 }, void 0, !1, {
                   fileName: "app/routes/index.tsx",
-                  lineNumber: 144,
+                  lineNumber: 138,
                   columnNumber: 25
                 }, this),
                 /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react25.ListItem, {
@@ -3330,46 +3329,46 @@ function Index() {
                       colorScheme: "teal",
                       leftIcon: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_io52.IoLogoInstagram, {}, void 0, !1, {
                         fileName: "app/routes/index.tsx",
-                        lineNumber: 161,
+                        lineNumber: 155,
                         columnNumber: 47
                       }, this),
                       children: "@nguyenbatran"
                     }, void 0, !1, {
                       fileName: "app/routes/index.tsx",
-                      lineNumber: 158,
+                      lineNumber: 152,
                       columnNumber: 33
                     }, this)
                   }, void 0, !1, {
                     fileName: "app/routes/index.tsx",
-                    lineNumber: 157,
+                    lineNumber: 151,
                     columnNumber: 29
                   }, this)
                 }, void 0, !1, {
                   fileName: "app/routes/index.tsx",
-                  lineNumber: 156,
+                  lineNumber: 150,
                   columnNumber: 25
                 }, this)
               ]
             }, void 0, !0, {
               fileName: "app/routes/index.tsx",
-              lineNumber: 132,
+              lineNumber: 126,
               columnNumber: 21
             }, this)
           ]
         }, void 0, !0, {
           fileName: "app/routes/index.tsx",
-          lineNumber: 128,
+          lineNumber: 122,
           columnNumber: 17
         }, this)
       ]
     }, void 0, !0, {
       fileName: "app/routes/index.tsx",
-      lineNumber: 51,
+      lineNumber: 45,
       columnNumber: 13
     }, this)
   }, void 0, !1, {
     fileName: "app/routes/index.tsx",
-    lineNumber: 43,
+    lineNumber: 44,
     columnNumber: 13
   }, this);
 }
@@ -3381,7 +3380,7 @@ var meta4 = () => ({
 });
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { version: "381760fa", entry: { module: "/build/entry.client-RDEIHKVX.js", imports: ["/build/_shared/chunk-ID3NW62X.js", "/build/_shared/chunk-Q5RR4RMZ.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-DOQWN6KM.js", imports: ["/build/_shared/chunk-CBSGOPOA.js", "/build/_shared/chunk-3NHHXNJK.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/blogs": { id: "routes/blogs", parentId: "root", path: "blogs", index: void 0, caseSensitive: void 0, module: "/build/routes/blogs-CFXSU5GG.js", imports: ["/build/_shared/chunk-37IYNLDP.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/index": { id: "routes/index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/index-45DHC7TN.js", imports: ["/build/_shared/chunk-37IYNLDP.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/product": { id: "routes/product", parentId: "root", path: "product", index: void 0, caseSensitive: void 0, module: "/build/routes/product-GLOOKY25.js", imports: ["/build/_shared/chunk-37IYNLDP.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, url: "/build/manifest-381760FA.js" };
+var assets_manifest_default = { version: "369355ec", entry: { module: "/build/entry.client-RDEIHKVX.js", imports: ["/build/_shared/chunk-ID3NW62X.js", "/build/_shared/chunk-Q5RR4RMZ.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-6535PITA.js", imports: ["/build/_shared/chunk-CBSGOPOA.js", "/build/_shared/chunk-G3IKWUDJ.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/blogs": { id: "routes/blogs", parentId: "root", path: "blogs", index: void 0, caseSensitive: void 0, module: "/build/routes/blogs-A7A4WTQQ.js", imports: ["/build/_shared/chunk-7VSNLOX7.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/index": { id: "routes/index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/index-62O23FO2.js", imports: ["/build/_shared/chunk-7VSNLOX7.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/product": { id: "routes/product", parentId: "root", path: "product", index: void 0, caseSensitive: void 0, module: "/build/routes/product-TIAMWQW4.js", imports: ["/build/_shared/chunk-7VSNLOX7.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, url: "/build/manifest-369355EC.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var assetsBuildDirectory = "public/build", publicPath = "/build/", entry = { module: entry_server_exports }, routes = {

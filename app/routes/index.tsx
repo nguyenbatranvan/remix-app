@@ -14,6 +14,7 @@ import styled from "@emotion/styled";
 import {MetaFunction} from "@remix-run/node";
 import {useNavigate} from "@remix-run/react"
 import {IoLogoGithub, IoLogoInstagram, IoLogoTwitter} from "react-icons/io5";
+import MotionRouter from "~/components/motion-router";
 import {variants} from "~/utils/variants-motion";
 import {motion} from "framer-motion";
 import Paragraph from "~/components/paragrapth";
@@ -40,14 +41,7 @@ export default function Index() {
     const onBlogs = () => {
         navigate('/blogs');
     }
-    return (<motion.div
-            initial="hidden"
-            animate="enter"
-            exit="exit"
-            variants={variants}
-            transition={{duration: 0.4, type: 'easeInOut'}}
-            style={{position: 'relative'}}
-        >
+    return (<MotionRouter>
             <Container>
                 <Box
                     borderRadius="lg"
@@ -167,7 +161,7 @@ export default function Index() {
                     </List>
                 </Box>
             </Container>
-        </motion.div>
+        </MotionRouter>
     );
 }
 

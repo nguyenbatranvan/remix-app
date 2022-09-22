@@ -1,16 +1,17 @@
 import {Container, Heading, SimpleGrid} from "@chakra-ui/react";
 import {json, MetaFunction} from "@remix-run/node";
 import {useLoaderData} from "@remix-run/react";
+import MotionRouter from "~/components/motion-router";
 import ProductCard from "~/components/product-card";
+import {fetcherJSON} from "~/utils/fetch-json";
 import {variants} from "~/utils/variants-motion";
 import {motion} from "framer-motion";
 
 type Props = {
     products: any[]
 }
-export const loader = async (dataa) => {
-    const res = await fetch("https://dummyjson.com/products");
-    const data = await res.json();
+export const loader = async () => {
+    const data = await fetcherJSON("https://dummyjson.com/products")
     return json<Props>(data);
 };
 export default function Product() {
@@ -19,14 +20,7 @@ export default function Product() {
         const res = await fetch("https://dummyjson.com/products");
         const data = await res.json();
     }
-    return (<motion.div
-        initial="hidden"
-        animate="enter"
-        exit="exit"
-        variants={variants}
-        transition={{duration: 0.4, type: 'easeInOut'}}
-        style={{position: 'relative'}}
-    >
+    return (<MotionRouter>
         <Container>
             <Heading variant={"title-under-line"}>
                 Products
@@ -36,13 +30,7 @@ export default function Product() {
 
             </SimpleGrid>
         </Container>
-
-        {/*<h1>This is product</h1>*/}
-        {/*<button onClick={loadProduct}>*/}
-        {/*    Load product*/}
-        {/*</button>*/}
-        {/*{products.map(product => <p key={product.id}>{product.title}</p>)}*/}
-    </motion.div>)
+    </MotionRouter>)
 }
 export const meta: MetaFunction<typeof loader> = ({data, parentsData}) => {
     const description = data.products.map((product: any) => product.title);
