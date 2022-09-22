@@ -13,7 +13,7 @@
     "allowJs": true,
     "forceConsistentCasingInFileNames": true,
     "noImplicitAny": false,
-    "baseUrl": "./remix-app",
+    "baseUrl": "./",
     "paths": {
       "~/*": ["./app/*"]
     },
