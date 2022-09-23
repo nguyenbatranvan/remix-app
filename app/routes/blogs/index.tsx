@@ -1,25 +1,22 @@
-import {Container, SimpleGrid} from "@chakra-ui/react";
+import { SimpleGrid} from "@chakra-ui/react";
 import {json, MetaFunction} from "@remix-run/node";
-import {useLoaderData} from "@remix-run/react";
-import React, {lazy} from "react";
+import { useLoaderData} from "@remix-run/react";
+import React from "react";
 import CardThumbnail from "~/components/card";
 import MotionRouter from "~/components/motion-router";
 import data from '~/json/json-blog.json';
-import {motion} from "framer-motion";
-import {variants} from "~/utils/variants-motion";
 
 export const loader = async () => {
     return json(data);
 }
-export default function Blogs() {
+export default function Index() {
     const {posts} = useLoaderData();
     return (<MotionRouter>
-        <Container><SimpleGrid columns={[1, 1, 2]} gap={6}>
+        <SimpleGrid columns={[1, 1, 2]} gap={6}>
             {posts.map(post => <CardThumbnail key={post.id} thumbnail={post.image} title={post.title}>
                 {post.body}
             </CardThumbnail>)}
         </SimpleGrid>
-        </Container>
     </MotionRouter>)
 }
 

@@ -21,7 +21,6 @@ export default function Product() {
         const data = await res.json();
     }
     return (<MotionRouter>
-        <Container>
             <Heading variant={"title-under-line"}>
                 Products
             </Heading>
@@ -29,7 +28,6 @@ export default function Product() {
                 {products.map(product => <ProductCard key={product.id} image={product.thumbnail}/>)}
 
             </SimpleGrid>
-        </Container>
     </MotionRouter>)
 }
 export const meta: MetaFunction<typeof loader> = ({data, parentsData}) => {

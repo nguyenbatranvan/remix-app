@@ -2,7 +2,7 @@
 import {AnimatePresence} from "framer-motion";
 import React, {useContext, useEffect} from 'react'
 import {withEmotionCache} from '@emotion/react'
-import {Box, ChakraProvider} from '@chakra-ui/react'
+import {Box, ChakraProvider, Container} from '@chakra-ui/react'
 import {
     Links,
     LiveReload,
@@ -35,7 +35,7 @@ export let links: LinksFunction = () => {
         {
             rel: 'stylesheet',
             href: 'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&display=swap'
-        },
+        }
     ]
 }
 
@@ -107,7 +107,9 @@ export default function App() {
                         <Box marginTop={"40px"}>
                             <VoxelDog/>
                         </Box>
-                        <Outlet/>
+                        <Container position={"relative"} transform={"none"} opacity={1}>
+                            <Outlet/>
+                        </Container>
                     </Layout>
                 </AnimatePresence>
             </ChakraProvider>

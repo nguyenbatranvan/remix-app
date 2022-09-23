@@ -1,0 +1,212 @@
+---
+meta:
+    title: Axios with reactjs, axios call request
+    description: Promise based HTTP client for the browser and node.js, how to write axios with react most useful
+    image: '/images/blogs/axios-fist-blog.png'
+    og:image: '/images/blogs/axios-first-blog.png'
+headers:
+Cache-Control: no-cache
+---
+
+import {useLoaderData} from "@remix-run/react";
+import {Button, Heading, Badge, Box, Link, UnorderedList, ListItem} from "@chakra-ui/react";
+import styles from "highlight.js/styles/github-dark-dimmed.css";
+
+export const loader = async () => {
+    return {mamboNumber: 5};
+};
+
+export const links = () => [
+    { rel: "stylesheet", href: styles },
+];
+
+
+export function ComponentUsingData() {
+    const {mamboNumber} = useLoaderData();
+    return <>
+        <div id="loader">Mambo Number: {mamboNumber}</div>
+        <Button>KKK</Button></>;
+}
+
+<Heading marginBottom={4}>Làm thế nào để viết axios một cách tiện ích với reactjs</Heading>
+<Box marginY={4}>
+    Nếu làm việc với tư cách là 1 front-end developer thì sự tương tác giữa client với server để lấy data và xử lý là
+    chuyện không còn xa lạ với các bạn. Và một thư viện mạnh mẽ và phổ biến để làm điều này là
+
+
+</Box>
+<Link href="https://www.npmjs.com/package/axios">
+    <Badge colorScheme='green' mr={2}>Axios</Badge>
+    Axios npm packages
+</Link>
+<Heading variant={"title-under-line"}>1. Cách sử dụng</Heading>
+<Box marginY={4}>
+    Đầu tiên bạn sẽ tạo ra một instance của axios
+</Box>
+
+```js
+import axios from "axios";
+export const instance = axios.create({
+    headers: {
+        'content-type': 'application/json; charset=UTF-8'
+    },
+    timeout: 300000,
+    timeoutErrorMessage: `Connection is timeout exceeded`
+});
+```
+<Box marginY={2}>
+    Tiếp theo sẽ dùng instance này để gọi request
+</Box>
+
+```js
+instance.get('link request....')
+  .then(function (response) {
+    // handle success
+    console.log(response);
+  })
+  .catch(function (error) {
+    // handle error
+    console.log(error);
+  })
+  .then(function () {
+    // always executed
+  });
+```
+
+<Box marginY={4}>
+    Tới đây bạn có thể đặt câu hỏi
+    <UnorderedList my={2}>
+        <ListItem>
+            Nếu như có nhiều tương tác giữa client và server thì bạn sẽ phải viết đi viết lại điều này nhiều lần, trong
+            code thì đây bạn đã vi phạm một lỗi được gọi là <Badge colorScheme={"green"}>DRY</Badge> (Don’t Repeat
+            Yourself)
+        </ListItem>
+        <ListItem>
+            Và với vấn đề code lặp đi lặp lại như vậy, khi có 1 sự thay đổi code thì bạn sẽ phải tìm và sữ lại từng hàm
+            trên
+        </ListItem>
+    </UnorderedList>
+    <p>Nếu bạn có đặt câu hỏi như vậy thì phần tiếp theo sẽ dành cho bạn.</p>
+</Box>
+
+<Heading variant={"title-under-line"}>2. Viết axios để tái sử dụng</Heading>
+<Box marginY={4}>
+    Đầu tiên bạn sẽ tạo 1 thư mục ví dụ <Badge>src/api/core.ts</Badge> và cũng như phần 1 bạn sẽ tạo instance của axios
+</Box>
+
+```js
+import axios from "axios";
+export const instance = axios.create({
+    headers: {
+        'content-type': 'application/json; charset=UTF-8'
+    },
+    timeout: 300000,
+    timeoutErrorMessage: `Connection is timeout exceeded`
+});
+```
+<Box marginY={4}>
+    Theo đó bạn sẽ tạo 1 model để truyền params vào các hàm của axios mà mình sẽ hướng dẫn sắp tới
+    <UnorderedList my={2}>
+        <ListItem>
+            <Badge colorScheme={"green"}>isLoading</Badge> - show loading khi call request
+        </ListItem>
+        <ListItem>
+            <Badge colorScheme={"green"}>payload, headers</Badge> - để truyền xuống khi call request (như
+            Authorization...)
+        </ListItem>
+        <ListItem>
+            <Badge colorScheme={"green"}>url</Badge> - đường dẫn tương tác với server
+        </ListItem>
+    </UnorderedList>
+</Box>
+
+```ts
+   export interface IRequest<T = any> {
+    isLoading: boolean;
+    payload: T;
+    headers: {
+        [key: string]: string | number;
+    };
+    url: string;
+}
+```
+
+<Box marginY={4}>
+    Ok!! Và bây giờ hãy viết những hàm tương tác với server bằng axios nào
+</Box>
+
+```ts
+import {AxiosResponse} from "axios";
+export interface PromiseState<T = unknown> extends AxiosResponse<T> {
+    totalItem: number;
+}
+
+export const BaseService = {
+    get<T = any>({
+                     url,
+                     isLoading,
+                     payload,
+                     headers
+                 }: Partial<IRequest>): Promise<PromiseState<T>> {
+        if (isLoading)
+           // todo show loading
+        return instance.get<T, PromiseState<T>>(url, {
+            params: payload,
+            baseURL: 'link base url',
+            headers: headers || {}
+        })
+    }
+}
+```
+
+<Box marginY={4}>
+    Và với các hàn <Badge colorScheme={"green"}>put</Badge> <Badge colorScheme={"green"}>post</Badge> <Badge
+    colorScheme={"green"}>delete</Badge>
+    bạn cũng có thể tham khảo và làm tương tự như vây
+</Box>
+
+<Heading variant={"title-under-line"}>3. Sử dụng</Heading>
+
+<Box marginY={4}>Mình sẽ tạo 1 model về response</Box>
+
+```ts
+export interface ProductDetail{
+  id: number;
+  "title": string;
+  "description": string;
+  "price": number;
+  "discountPercentage": number;
+  "rating":number;
+  "stock": number;
+  "brand": string;
+  "category": string;
+  "thumbnail": string;
+  "images": string[];
+}
+```
+<Box marginY={4}>
+    Bây giờ áp dụng những gì đã viết từ phần 2 dùng để gọi một request chi tiết sản phẩm
+</Box>
+
+```ts
+import {useEffect} from "react";
+const getDetailProduct=async ()=>{
+   const response= await BaseService.get<ProductDetail>({
+        url:'https://dummyjson.com/products/1',
+        isLoading:true
+   })
+    // reponse.data sẽ có kiểu là ProductDetail
+    console.log('data',response.data);
+}
+useEffect(()=>{
+    (async ()=>{
+        await getDetailProduct();
+    })()
+},[])
+```
+<Heading variant={"title-under-line"}>4. Lời kết</Heading>
+Trong bài viết này mình chỉ hướng dẫn về cách viết tương tác giữa client và server, trong các phần tới mình sẽ ra thêm về cache, xử lý lỗi, mapper dữ liệu từ reponse với axios.
+
+
+
+

@@ -42,7 +42,6 @@ export default function Index() {
         navigate('/blogs');
     }
     return (<MotionRouter>
-            <Container>
                 <Box
                     borderRadius="lg"
                     mb={6}
@@ -160,7 +159,6 @@ export default function Index() {
                         </ListItem>
                     </List>
                 </Box>
-            </Container>
         </MotionRouter>
     );
 }

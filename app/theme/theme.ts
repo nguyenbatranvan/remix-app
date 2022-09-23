@@ -1,6 +1,5 @@
 import {extendTheme} from "@chakra-ui/react";
 import {mode} from "@chakra-ui/theme-tools";
-import {CustomHeading} from "~/theme/components/custom-heading";
 
 const config = {
     initialColorMode: 'dark',
@@ -9,6 +8,12 @@ const config = {
 
 export const customTheme = extendTheme({
     components: {
+        Link: {
+            baseStyle: props => ({
+                color: mode('#3d7aed', '#ff63c3')(props),
+                textUnderlineOffset: 3
+            })
+        },
         Heading: {
             defaultProps: {},
             variants: {
@@ -45,6 +50,10 @@ export const customTheme = extendTheme({
             'html,body': {
                 bg: mode('#f0e7db', '#202023')(props),
                 fontFamily: 'Montserrat, sans-serif'
+            },
+            h1: {
+                fontSize: '3xl',
+                fontWeight: '500'
             }
         })
     }
