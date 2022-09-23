@@ -2505,6 +2505,9 @@ var import_react14 = require("@chakra-ui/react"), import_theme_tools = require("
 // app/utils/fetch-json.ts
 var fetcherJSON = (url, config2) => fetch(url, config2).then((res) => res.json());
 
+// app/styles/global.css
+var global_default = "/build/_assets/global-VMGNAI7G.css";
+
 // app/root.tsx
 var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), meta = () => ({
   charset: "utf-8",
@@ -2516,7 +2519,8 @@ var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), meta = () => ({
   {
     rel: "stylesheet",
     href: "https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&display=swap"
-  }
+  },
+  { rel: "stylesheet", href: global_default }
 ], loader = async ({ request }) => {
   let location = new URL(request.url), config2 = await fetcherJSON(location.origin + "/config.json");
   return (0, import_node.json)(config2);
@@ -2536,12 +2540,12 @@ var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), meta = () => ({
           children: [
             /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react18.Meta, {}, void 0, !1, {
               fileName: "app/root.tsx",
-              lineNumber: 75,
+              lineNumber: 77,
               columnNumber: 17
             }, this),
             /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react18.Links, {}, void 0, !1, {
               fileName: "app/root.tsx",
-              lineNumber: 76,
+              lineNumber: 78,
               columnNumber: 17
             }, this),
             serverStyleData == null ? void 0 : serverStyleData.map(({ key, ids, css }) => /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("style", {
@@ -2549,13 +2553,13 @@ var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), meta = () => ({
               dangerouslySetInnerHTML: { __html: css }
             }, key, !1, {
               fileName: "app/root.tsx",
-              lineNumber: 78,
+              lineNumber: 80,
               columnNumber: 21
             }, this))
           ]
         }, void 0, !0, {
           fileName: "app/root.tsx",
-          lineNumber: 74,
+          lineNumber: 75,
           columnNumber: 13
         }, this),
         /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("body", {
@@ -2563,29 +2567,29 @@ var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), meta = () => ({
             children,
             /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react18.ScrollRestoration, {}, void 0, !1, {
               fileName: "app/root.tsx",
-              lineNumber: 87,
+              lineNumber: 89,
               columnNumber: 13
             }, this),
             /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react18.Scripts, {}, void 0, !1, {
               fileName: "app/root.tsx",
-              lineNumber: 88,
+              lineNumber: 90,
               columnNumber: 13
             }, this),
             /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react18.LiveReload, {}, void 0, !1, {
               fileName: "app/root.tsx",
-              lineNumber: 89,
+              lineNumber: 91,
               columnNumber: 13
             }, this)
           ]
         }, void 0, !0, {
           fileName: "app/root.tsx",
-          lineNumber: 85,
+          lineNumber: 87,
           columnNumber: 13
         }, this)
       ]
     }, void 0, !0, {
       fileName: "app/root.tsx",
-      lineNumber: 73,
+      lineNumber: 74,
       columnNumber: 13
     }, this);
   }
@@ -2606,12 +2610,12 @@ function App() {
               marginTop: "40px",
               children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(dog_default, {}, void 0, !1, {
                 fileName: "app/root.tsx",
-                lineNumber: 109,
+                lineNumber: 111,
                 columnNumber: 29
               }, this)
             }, void 0, !1, {
               fileName: "app/root.tsx",
-              lineNumber: 108,
+              lineNumber: 110,
               columnNumber: 25
             }, this),
             /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react17.Container, {
@@ -2621,33 +2625,33 @@ function App() {
               opacity: 1,
               children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react18.Outlet, {}, void 0, !1, {
                 fileName: "app/root.tsx",
-                lineNumber: 112,
+                lineNumber: 114,
                 columnNumber: 29
               }, this)
             }, void 0, !1, {
               fileName: "app/root.tsx",
-              lineNumber: 111,
+              lineNumber: 113,
               columnNumber: 25
             }, this)
           ]
         }, void 0, !0, {
           fileName: "app/root.tsx",
-          lineNumber: 107,
+          lineNumber: 109,
           columnNumber: 21
         }, this)
       }, void 0, !1, {
         fileName: "app/root.tsx",
-        lineNumber: 102,
+        lineNumber: 104,
         columnNumber: 17
       }, this)
     }, void 0, !1, {
       fileName: "app/root.tsx",
-      lineNumber: 101,
+      lineNumber: 103,
       columnNumber: 13
     }, this)
   }, void 0, !1, {
     fileName: "app/root.tsx",
-    lineNumber: 100,
+    lineNumber: 102,
     columnNumber: 9
   }, this);
 }
@@ -2701,97 +2705,245 @@ Axios npm packages`)), `
 `, /* @__PURE__ */ import_react19.default.createElement(import_react20.Box, {
     marginY: 4
   }, /* @__PURE__ */ import_react19.default.createElement(_components.p, null, "\u0110\u1EA7u ti\xEAn b\u1EA1n s\u1EBD t\u1EA1o ra m\u1ED9t instance c\u1EE7a axios")), `
-`, /* @__PURE__ */ import_react19.default.createElement(_components.pre, null, /* @__PURE__ */ import_react19.default.createElement(_components.code, {
-    className: "hljs language-js"
+`, /* @__PURE__ */ import_react19.default.createElement(_components.pre, {
+    className: "language-js"
+  }, /* @__PURE__ */ import_react19.default.createElement(_components.code, {
+    className: "hljs language-js code-highlight"
   }, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-keyword"
-  }, "import"), " axios ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-keyword"
+    className: "code-line"
+  }, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token keyword module"
+  }, "import"), " ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token imports"
+  }, "axios"), " ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token keyword module"
   }, "from"), " ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-string"
-  }, '"axios"'), `;
-`, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-keyword"
+    className: "token string"
+  }, '"axios"'), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ";"), `
+`), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "code-line"
+  }, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token keyword module"
   }, "export"), " ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-keyword"
-  }, "const"), " instance = axios.", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-title function_"
-  }, "create"), `({
-    `, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-attr"
-  }, "headers"), `: {
-        `, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-string"
-  }, "'content-type'"), ": ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-string"
+    className: "token keyword"
+  }, "const"), " instance ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token operator"
+  }, "="), " axios", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "."), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token method function property-access"
+  }, "create"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "("), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "{"), `
+`), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "code-line"
+  }, "    ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token literal-property property"
+  }, "headers"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token operator"
+  }, ":"), " ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "{"), `
+`), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "code-line"
+  }, "        ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token string-property property"
+  }, "'content-type'"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token operator"
+  }, ":"), " ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token string"
   }, "'application/json; charset=UTF-8'"), `
-    },
-    `, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-attr"
-  }, "timeout"), ": ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-number"
-  }, "300000"), `,
-    `, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-attr"
-  }, "timeoutErrorMessage"), ": ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-string"
-  }, "`Connection is timeout exceeded`"), `
-});
-`)), `
+`), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "code-line"
+  }, "    ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "}"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ","), `
+`), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "code-line"
+  }, "    ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token literal-property property"
+  }, "timeout"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token operator"
+  }, ":"), " ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token number"
+  }, "300000"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ","), `
+`), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "code-line"
+  }, "    ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token literal-property property"
+  }, "timeoutErrorMessage"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token operator"
+  }, ":"), " ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token template-string"
+  }, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token template-punctuation string"
+  }, "`"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token string"
+  }, "Connection is timeout exceeded"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token template-punctuation string"
+  }, "`")), `
+`), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "code-line"
+  }, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "}"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ")"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ";"), `
+`))), `
 `, /* @__PURE__ */ import_react19.default.createElement(import_react20.Box, {
     marginY: 2
   }, /* @__PURE__ */ import_react19.default.createElement(_components.p, null, "Ti\u1EBFp theo s\u1EBD d\xF9ng instance n\xE0y \u0111\u1EC3 g\u1ECDi request")), `
-`, /* @__PURE__ */ import_react19.default.createElement(_components.pre, null, /* @__PURE__ */ import_react19.default.createElement(_components.code, {
-    className: "hljs language-js"
-  }, "instance.", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-title function_"
-  }, "get"), "(", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-string"
-  }, "'link request....'"), `)
-  .`, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-title function_"
-  }, "then"), "(", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-keyword"
-  }, "function"), " (", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-params"
-  }, "response"), `) {
-    `, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-comment"
+`, /* @__PURE__ */ import_react19.default.createElement(_components.pre, {
+    className: "language-js"
+  }, /* @__PURE__ */ import_react19.default.createElement(_components.code, {
+    className: "hljs language-js code-highlight"
+  }, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "code-line"
+  }, "instance", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "."), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token method function property-access"
+  }, "get"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "("), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token string"
+  }, "'link request....'"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ")"), `
+`), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "code-line"
+  }, "  ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "."), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token method function property-access"
+  }, "then"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "("), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token keyword"
+  }, "function"), " ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "("), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token parameter"
+  }, "response"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ")"), " ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "{"), `
+`), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "code-line"
+  }, "    ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token comment"
   }, "// handle success"), `
-    `, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-variable language_"
-  }, "console"), ".", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-title function_"
-  }, "log"), `(response);
-  })
-  .`, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-title function_"
-  }, "catch"), "(", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-keyword"
-  }, "function"), " (", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-params"
-  }, "error"), `) {
-    `, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-comment"
+`), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "code-line"
+  }, "    ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token console class-name"
+  }, "console"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "."), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token method function property-access"
+  }, "log"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "("), "response", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ")"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ";"), `
+`), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "code-line"
+  }, "  ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "}"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ")"), `
+`), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "code-line"
+  }, "  ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "."), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token keyword control-flow"
+  }, "catch"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "("), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token keyword"
+  }, "function"), " ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "("), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token parameter"
+  }, "error"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ")"), " ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "{"), `
+`), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "code-line"
+  }, "    ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token comment"
   }, "// handle error"), `
-    `, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-variable language_"
-  }, "console"), ".", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-title function_"
-  }, "log"), `(error);
-  })
-  .`, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-title function_"
-  }, "then"), "(", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-keyword"
-  }, "function"), " (", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-params"
-  }), `) {
-    `, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-comment"
+`), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "code-line"
+  }, "    ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token console class-name"
+  }, "console"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "."), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token method function property-access"
+  }, "log"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "("), "error", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ")"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ";"), `
+`), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "code-line"
+  }, "  ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "}"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ")"), `
+`), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "code-line"
+  }, "  ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "."), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token method function property-access"
+  }, "then"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "("), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token keyword"
+  }, "function"), " ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "("), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ")"), " ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "{"), `
+`), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "code-line"
+  }, "    ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token comment"
   }, "// always executed"), `
-  });
-`)), `
+`), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "code-line"
+  }, "  ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "}"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ")"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ";"), `
+`))), `
 `, /* @__PURE__ */ import_react19.default.createElement(import_react20.Box, {
     marginY: 4
   }, /* @__PURE__ */ import_react19.default.createElement(_components.p, null, "T\u1EDBi \u0111\xE2y b\u1EA1n c\xF3 th\u1EC3 \u0111\u1EB7t c\xE2u h\u1ECFi"), /* @__PURE__ */ import_react19.default.createElement(import_react20.UnorderedList, {
@@ -2808,43 +2960,101 @@ tr\xEAn`))), /* @__PURE__ */ import_react19.default.createElement("p", null, "N\
 `, /* @__PURE__ */ import_react19.default.createElement(import_react20.Box, {
     marginY: 4
   }, /* @__PURE__ */ import_react19.default.createElement(_components.p, null, "\u0110\u1EA7u ti\xEAn b\u1EA1n s\u1EBD t\u1EA1o 1 th\u01B0 m\u1EE5c v\xED d\u1EE5 ", /* @__PURE__ */ import_react19.default.createElement(import_react20.Badge, null, "src/api/core.ts"), " v\xE0 c\u0169ng nh\u01B0 ph\u1EA7n 1 b\u1EA1n s\u1EBD t\u1EA1o instance c\u1EE7a axios")), `
-`, /* @__PURE__ */ import_react19.default.createElement(_components.pre, null, /* @__PURE__ */ import_react19.default.createElement(_components.code, {
-    className: "hljs language-js"
+`, /* @__PURE__ */ import_react19.default.createElement(_components.pre, {
+    className: "language-js"
+  }, /* @__PURE__ */ import_react19.default.createElement(_components.code, {
+    className: "hljs language-js code-highlight"
   }, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-keyword"
-  }, "import"), " axios ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-keyword"
+    className: "code-line"
+  }, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token keyword module"
+  }, "import"), " ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token imports"
+  }, "axios"), " ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token keyword module"
   }, "from"), " ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-string"
-  }, '"axios"'), `;
-`, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-keyword"
+    className: "token string"
+  }, '"axios"'), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ";"), `
+`), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "code-line"
+  }, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token keyword module"
   }, "export"), " ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-keyword"
-  }, "const"), " instance = axios.", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-title function_"
-  }, "create"), `({
-    `, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-attr"
-  }, "headers"), `: {
-        `, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-string"
-  }, "'content-type'"), ": ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-string"
+    className: "token keyword"
+  }, "const"), " instance ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token operator"
+  }, "="), " axios", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "."), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token method function property-access"
+  }, "create"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "("), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "{"), `
+`), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "code-line"
+  }, "    ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token literal-property property"
+  }, "headers"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token operator"
+  }, ":"), " ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "{"), `
+`), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "code-line"
+  }, "        ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token string-property property"
+  }, "'content-type'"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token operator"
+  }, ":"), " ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token string"
   }, "'application/json; charset=UTF-8'"), `
-    },
-    `, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-attr"
-  }, "timeout"), ": ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-number"
-  }, "300000"), `,
-    `, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-attr"
-  }, "timeoutErrorMessage"), ": ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-string"
-  }, "`Connection is timeout exceeded`"), `
-});
-`)), `
+`), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "code-line"
+  }, "    ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "}"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ","), `
+`), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "code-line"
+  }, "    ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token literal-property property"
+  }, "timeout"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token operator"
+  }, ":"), " ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token number"
+  }, "300000"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ","), `
+`), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "code-line"
+  }, "    ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token literal-property property"
+  }, "timeoutErrorMessage"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token operator"
+  }, ":"), " ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token template-string"
+  }, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token template-punctuation string"
+  }, "`"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token string"
+  }, "Connection is timeout exceeded"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token template-punctuation string"
+  }, "`")), `
+`), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "code-line"
+  }, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "}"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ")"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ";"), `
+`))), `
 `, /* @__PURE__ */ import_react19.default.createElement(import_react20.Box, {
     marginY: 4
   }, /* @__PURE__ */ import_react19.default.createElement(_components.p, null, "Theo \u0111\xF3 b\u1EA1n s\u1EBD t\u1EA1o 1 model \u0111\u1EC3 truy\u1EC1n params v\xE0o c\xE1c h\xE0m c\u1EE7a axios m\xE0 m\xECnh s\u1EBD h\u01B0\u1EDBng d\u1EABn s\u1EAFp t\u1EDBi"), /* @__PURE__ */ import_react19.default.createElement(import_react20.UnorderedList, {
@@ -2857,130 +3067,338 @@ tr\xEAn`))), /* @__PURE__ */ import_react19.default.createElement("p", null, "N\
 Authorization...)`)), /* @__PURE__ */ import_react19.default.createElement(import_react20.ListItem, null, /* @__PURE__ */ import_react19.default.createElement(_components.p, null, /* @__PURE__ */ import_react19.default.createElement(import_react20.Badge, {
     colorScheme: "green"
   }, "url"), " - \u0111\u01B0\u1EDDng d\u1EABn t\u01B0\u01A1ng t\xE1c v\u1EDBi server")))), `
-`, /* @__PURE__ */ import_react19.default.createElement(_components.pre, null, /* @__PURE__ */ import_react19.default.createElement(_components.code, {
-    className: "hljs language-ts"
+`, /* @__PURE__ */ import_react19.default.createElement(_components.pre, {
+    className: "language-ts"
+  }, /* @__PURE__ */ import_react19.default.createElement(_components.code, {
+    className: "hljs language-ts code-highlight"
+  }, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "code-line"
   }, "   ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-keyword"
+    className: "token keyword"
   }, "export"), " ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-keyword"
+    className: "token keyword"
   }, "interface"), " ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-title class_"
-  }, "IRequest"), "<T = ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-built_in"
-  }, "any"), `> {
-    `, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-attr"
-  }, "isLoading"), ": ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-built_in"
-  }, "boolean"), `;
-    `, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-attr"
-  }, "payload"), `: T;
-    `, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-attr"
-  }, "headers"), `: {
-        [`, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-attr"
-  }, "key"), ": ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-built_in"
-  }, "string"), "]: ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-built_in"
-  }, "string"), " | ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-built_in"
-  }, "number"), `;
-    };
-    `, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-attr"
-  }, "url"), ": ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-built_in"
-  }, "string"), `;
-}
-`)), `
+    className: "token class-name"
+  }, "IRequest", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token operator"
+  }, "<"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token constant"
+  }, "T"), " ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token operator"
+  }, "="), " ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token builtin"
+  }, "any"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token operator"
+  }, ">")), " ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "{"), `
+`), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "code-line"
+  }, "    isLoading", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token operator"
+  }, ":"), " ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token builtin"
+  }, "boolean"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ";"), `
+`), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "code-line"
+  }, "    payload", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token operator"
+  }, ":"), " ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token constant"
+  }, "T"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ";"), `
+`), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "code-line"
+  }, "    headers", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token operator"
+  }, ":"), " ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "{"), `
+`), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "code-line"
+  }, "        ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "["), "key", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token operator"
+  }, ":"), " ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token builtin"
+  }, "string"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "]"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token operator"
+  }, ":"), " ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token builtin"
+  }, "string"), " ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token operator"
+  }, "|"), " ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token builtin"
+  }, "number"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ";"), `
+`), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "code-line"
+  }, "    ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "}"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ";"), `
+`), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "code-line"
+  }, "    url", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token operator"
+  }, ":"), " ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token builtin"
+  }, "string"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ";"), `
+`), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "code-line"
+  }, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "}"), `
+`))), `
 `, /* @__PURE__ */ import_react19.default.createElement(import_react20.Box, {
     marginY: 4
   }, /* @__PURE__ */ import_react19.default.createElement(_components.p, null, "Ok!! V\xE0 b\xE2y gi\u1EDD h\xE3y vi\u1EBFt nh\u1EEFng h\xE0m t\u01B0\u01A1ng t\xE1c v\u1EDBi server b\u1EB1ng axios n\xE0o")), `
-`, /* @__PURE__ */ import_react19.default.createElement(_components.pre, null, /* @__PURE__ */ import_react19.default.createElement(_components.code, {
-    className: "hljs language-ts"
+`, /* @__PURE__ */ import_react19.default.createElement(_components.pre, {
+    className: "language-ts"
+  }, /* @__PURE__ */ import_react19.default.createElement(_components.code, {
+    className: "hljs language-ts code-highlight"
   }, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-keyword"
-  }, "import"), " {", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-title class_"
-  }, "AxiosResponse"), "} ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-keyword"
+    className: "code-line"
+  }, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token keyword"
+  }, "import"), " ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "{"), "AxiosResponse", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "}"), " ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token keyword"
   }, "from"), " ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-string"
-  }, '"axios"'), `;
-`, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-keyword"
+    className: "token string"
+  }, '"axios"'), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ";"), `
+`), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "code-line"
+  }, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token keyword"
   }, "export"), " ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-keyword"
+    className: "token keyword"
   }, "interface"), " ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-title class_"
-  }, "PromiseState"), "<T = ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-built_in"
-  }, "unknown"), "> ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-keyword"
+    className: "token class-name"
+  }, "PromiseState", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token operator"
+  }, "<"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token constant"
+  }, "T"), " ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token operator"
+  }, "="), " ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token builtin"
+  }, "unknown"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token operator"
+  }, ">")), " ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token keyword"
   }, "extends"), " ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-title class_"
-  }, "AxiosResponse"), `<T> {
-    `, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-attr"
-  }, "totalItem"), ": ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-built_in"
-  }, "number"), `;
-}
-
-`, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-keyword"
+    className: "token class-name"
+  }, "AxiosResponse", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token operator"
+  }, "<"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token constant"
+  }, "T"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token operator"
+  }, ">")), " ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "{"), `
+`), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "code-line"
+  }, "    totalItem", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token operator"
+  }, ":"), " ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token builtin"
+  }, "number"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ";"), `
+`), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "code-line"
+  }, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "}"), `
+`), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "code-line"
+  }, `
+`), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "code-line"
+  }, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token keyword"
   }, "export"), " ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-keyword"
-  }, "const"), " ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-title class_"
-  }, "BaseService"), ` = {
-    get<T = `, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-built_in"
-  }, "any"), `>({
-                     url,
-                     isLoading,
-                     payload,
-                     headers
-                 }: `, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-title class_"
-  }, "Partial"), "<", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-title class_"
-  }, "IRequest"), ">): ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-title class_"
-  }, "Promise"), "<", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-title class_"
-  }, "PromiseState"), `<T>> {
-        `, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-keyword"
-  }, "if"), ` (isLoading)
-           `, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-comment"
+    className: "token keyword"
+  }, "const"), " BaseService ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token operator"
+  }, "="), " ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "{"), `
+`), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "code-line"
+  }, "    ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token generic-function"
+  }, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token function"
+  }, "get"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token generic class-name"
+  }, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token operator"
+  }, "<"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token constant"
+  }, "T"), " ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token operator"
+  }, "="), " ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token builtin"
+  }, "any"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token operator"
+  }, ">"))), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "("), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "{"), `
+`), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "code-line"
+  }, "                     url", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ","), `
+`), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "code-line"
+  }, "                     isLoading", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ","), `
+`), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "code-line"
+  }, "                     payload", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ","), `
+`), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "code-line"
+  }, `                     headers
+`), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "code-line"
+  }, "                 ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "}"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token operator"
+  }, ":"), " Partial", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token operator"
+  }, "<"), "IRequest", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token operator"
+  }, ">"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ")"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token operator"
+  }, ":"), " ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token builtin"
+  }, "Promise"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token operator"
+  }, "<"), "PromiseState", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token operator"
+  }, "<"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token constant"
+  }, "T"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token operator"
+  }, ">>"), " ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "{"), `
+`), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "code-line"
+  }, "        ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token keyword"
+  }, "if"), " ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "("), "isLoading", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ")"), `
+`), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "code-line"
+  }, "           ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token comment"
   }, "// todo show loading"), `
-        `, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-keyword"
-  }, "return"), " instance.", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-property"
-  }, "get"), "<T, ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-title class_"
-  }, "PromiseState"), `<T>>(url, {
-            `, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-attr"
-  }, "params"), `: payload,
-            `, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-attr"
-  }, "baseURL"), ": ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-string"
-  }, "'link base url'"), `,
-            `, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-attr"
-  }, "headers"), `: headers || {}
-        })
-    }
-}
-`)), `
+`), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "code-line"
+  }, "        ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token keyword"
+  }, "return"), " instance", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "."), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token generic-function"
+  }, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token function"
+  }, "get"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token generic class-name"
+  }, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token operator"
+  }, "<"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token constant"
+  }, "T"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ","), " PromiseState", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token operator"
+  }, "<"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token constant"
+  }, "T"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token operator"
+  }, ">>"))), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "("), "url", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ","), " ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "{"), `
+`), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "code-line"
+  }, "            params", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token operator"
+  }, ":"), " payload", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ","), `
+`), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "code-line"
+  }, "            baseURL", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token operator"
+  }, ":"), " ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token string"
+  }, "'link base url'"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ","), `
+`), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "code-line"
+  }, "            headers", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token operator"
+  }, ":"), " headers ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token operator"
+  }, "||"), " ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "{"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "}"), `
+`), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "code-line"
+  }, "        ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "}"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ")"), `
+`), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "code-line"
+  }, "    ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "}"), `
+`), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "code-line"
+  }, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "}"), `
+`))), `
 `, /* @__PURE__ */ import_react19.default.createElement(import_react20.Box, {
     marginY: 4
   }, /* @__PURE__ */ import_react19.default.createElement(_components.p, null, "V\xE0 v\u1EDBi c\xE1c h\xE0n ", /* @__PURE__ */ import_react19.default.createElement(import_react20.Badge, {
@@ -2997,144 +3415,338 @@ b\u1EA1n c\u0169ng c\xF3 th\u1EC3 tham kh\u1EA3o v\xE0 l\xE0m t\u01B0\u01A1ng t\
 `, /* @__PURE__ */ import_react19.default.createElement(import_react20.Box, {
     marginY: 4
   }, "M\xECnh s\u1EBD t\u1EA1o 1 model v\u1EC1 response"), `
-`, /* @__PURE__ */ import_react19.default.createElement(_components.pre, null, /* @__PURE__ */ import_react19.default.createElement(_components.code, {
-    className: "hljs language-ts"
+`, /* @__PURE__ */ import_react19.default.createElement(_components.pre, {
+    className: "language-ts"
+  }, /* @__PURE__ */ import_react19.default.createElement(_components.code, {
+    className: "hljs language-ts code-highlight"
   }, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-keyword"
+    className: "code-line"
+  }, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token keyword"
   }, "export"), " ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-keyword"
+    className: "token keyword"
   }, "interface"), " ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-title class_"
-  }, "ProductDetail"), `{
-  `, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-attr"
-  }, "id"), ": ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-built_in"
-  }, "number"), `;
-  `, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-string"
-  }, '"title"'), ": ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-built_in"
-  }, "string"), `;
-  `, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-string"
-  }, '"description"'), ": ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-built_in"
-  }, "string"), `;
-  `, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-string"
-  }, '"price"'), ": ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-built_in"
-  }, "number"), `;
-  `, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-string"
-  }, '"discountPercentage"'), ": ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-built_in"
-  }, "number"), `;
-  `, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-string"
-  }, '"rating"'), ":", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-built_in"
-  }, "number"), `;
-  `, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-string"
-  }, '"stock"'), ": ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-built_in"
-  }, "number"), `;
-  `, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-string"
-  }, '"brand"'), ": ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-built_in"
-  }, "string"), `;
-  `, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-string"
-  }, '"category"'), ": ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-built_in"
-  }, "string"), `;
-  `, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-string"
-  }, '"thumbnail"'), ": ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-built_in"
-  }, "string"), `;
-  `, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-string"
-  }, '"images"'), ": ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-built_in"
-  }, "string"), `[];
-}
-`)), `
+    className: "token class-name"
+  }, "ProductDetail"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "{"), `
+`), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "code-line"
+  }, "  id", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token operator"
+  }, ":"), " ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token builtin"
+  }, "number"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ";"), `
+`), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "code-line"
+  }, "  ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token string-property property"
+  }, '"title"'), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token operator"
+  }, ":"), " ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token builtin"
+  }, "string"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ";"), `
+`), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "code-line"
+  }, "  ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token string-property property"
+  }, '"description"'), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token operator"
+  }, ":"), " ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token builtin"
+  }, "string"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ";"), `
+`), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "code-line"
+  }, "  ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token string-property property"
+  }, '"price"'), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token operator"
+  }, ":"), " ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token builtin"
+  }, "number"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ";"), `
+`), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "code-line"
+  }, "  ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token string-property property"
+  }, '"discountPercentage"'), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token operator"
+  }, ":"), " ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token builtin"
+  }, "number"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ";"), `
+`), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "code-line"
+  }, "  ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token string-property property"
+  }, '"rating"'), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token operator"
+  }, ":"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token builtin"
+  }, "number"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ";"), `
+`), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "code-line"
+  }, "  ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token string-property property"
+  }, '"stock"'), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token operator"
+  }, ":"), " ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token builtin"
+  }, "number"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ";"), `
+`), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "code-line"
+  }, "  ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token string-property property"
+  }, '"brand"'), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token operator"
+  }, ":"), " ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token builtin"
+  }, "string"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ";"), `
+`), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "code-line"
+  }, "  ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token string-property property"
+  }, '"category"'), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token operator"
+  }, ":"), " ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token builtin"
+  }, "string"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ";"), `
+`), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "code-line"
+  }, "  ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token string-property property"
+  }, '"thumbnail"'), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token operator"
+  }, ":"), " ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token builtin"
+  }, "string"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ";"), `
+`), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "code-line"
+  }, "  ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token string-property property"
+  }, '"images"'), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token operator"
+  }, ":"), " ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token builtin"
+  }, "string"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "["), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "]"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ";"), `
+`), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "code-line"
+  }, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "}"), `
+`))), `
 `, /* @__PURE__ */ import_react19.default.createElement(import_react20.Box, {
     marginY: 4
   }, /* @__PURE__ */ import_react19.default.createElement(_components.p, null, "B\xE2y gi\u1EDD \xE1p d\u1EE5ng nh\u1EEFng g\xEC \u0111\xE3 vi\u1EBFt t\u1EEB ph\u1EA7n 2 d\xF9ng \u0111\u1EC3 g\u1ECDi m\u1ED9t request chi ti\u1EBFt s\u1EA3n ph\u1EA9m")), `
-`, /* @__PURE__ */ import_react19.default.createElement(_components.pre, null, /* @__PURE__ */ import_react19.default.createElement(_components.code, {
-    className: "hljs language-ts"
+`, /* @__PURE__ */ import_react19.default.createElement(_components.pre, {
+    className: "language-ts"
+  }, /* @__PURE__ */ import_react19.default.createElement(_components.code, {
+    className: "hljs language-ts code-highlight"
   }, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-keyword"
-  }, "import"), " {useEffect} ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-keyword"
+    className: "code-line"
+  }, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token keyword"
+  }, "import"), " ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "{"), "useEffect", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "}"), " ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token keyword"
   }, "from"), " ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-string"
-  }, '"react"'), `;
-`, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-keyword"
+    className: "token string"
+  }, '"react"'), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ";"), `
+`), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "code-line"
+  }, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token keyword"
   }, "const"), " ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-title function_"
-  }, "getDetailProduct"), "=", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-keyword"
-  }, "async"), " (", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-params"
-  }), `)=>{
-   `, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-keyword"
-  }, "const"), " response= ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-keyword"
-  }, "await"), " ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-title class_"
-  }, "BaseService"), ".", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-property"
-  }, "get"), "<", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-title class_"
-  }, "ProductDetail"), `>({
-        `, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-attr"
-  }, "url"), ":", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-string"
-  }, "'https://dummyjson.com/products/1'"), `,
-        `, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-attr"
-  }, "isLoading"), ":", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-literal"
+    className: "token function-variable function"
+  }, "getDetailProduct"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token operator"
+  }, "="), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token keyword"
+  }, "async"), " ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "("), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ")"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token operator"
+  }, "=>"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "{"), `
+`), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "code-line"
+  }, "   ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token keyword"
+  }, "const"), " response", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token operator"
+  }, "="), " ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token keyword"
+  }, "await"), " BaseService", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "."), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token generic-function"
+  }, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token function"
+  }, "get"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token generic class-name"
+  }, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token operator"
+  }, "<"), "ProductDetail", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token operator"
+  }, ">"))), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "("), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "{"), `
+`), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "code-line"
+  }, "        url", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token operator"
+  }, ":"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token string"
+  }, "'https://dummyjson.com/products/1'"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ","), `
+`), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "code-line"
+  }, "        isLoading", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token operator"
+  }, ":"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token boolean"
   }, "true"), `
-   })
-    `, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-comment"
+`), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "code-line"
+  }, "   ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "}"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ")"), `
+`), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "code-line"
+  }, "    ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token comment"
   }, "// reponse.data s\u1EBD c\xF3 ki\u1EC3u l\xE0 ProductDetail"), `
-    `, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-variable language_"
-  }, "console"), ".", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-title function_"
-  }, "log"), "(", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-string"
-  }, "'data'"), ",response.", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-property"
-  }, "data"), `);
-}
-`, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-title function_"
-  }, "useEffect"), "(", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-function"
-  }, "()=>"), `{
-    (`, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-keyword"
-  }, "async"), ` ()=>{
-        `, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-keyword"
+`), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "code-line"
+  }, "    ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token builtin"
+  }, "console"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "."), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token function"
+  }, "log"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "("), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token string"
+  }, "'data'"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ","), "response", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "."), "data", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ")"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ";"), `
+`), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "code-line"
+  }, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "}"), `
+`), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "code-line"
+  }, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token function"
+  }, "useEffect"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "("), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "("), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ")"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token operator"
+  }, "=>"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "{"), `
+`), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "code-line"
+  }, "    ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "("), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token keyword"
+  }, "async"), " ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "("), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ")"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token operator"
+  }, "=>"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "{"), `
+`), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "code-line"
+  }, "        ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token keyword"
   }, "await"), " ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
-    className: "hljs-title function_"
-  }, "getDetailProduct"), `();
-    })()
-},[])
-`)), `
+    className: "token function"
+  }, "getDetailProduct"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "("), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ")"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ";"), `
+`), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "code-line"
+  }, "    ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "}"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ")"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "("), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ")"), `
+`), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "code-line"
+  }, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "}"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ","), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "["), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "]"), /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ")"), `
+`))), `
 `, /* @__PURE__ */ import_react19.default.createElement(_components.p, null, /* @__PURE__ */ import_react19.default.createElement(import_react20.Heading, {
     variant: "title-under-line"
   }, "4. L\u1EDDi k\u1EBFt"), `
@@ -3188,31 +3800,67 @@ function MDXContent2(props = {}) {
     textTransform: "lowercase",
     mr: 2
   }, ".env"), " v\xE0 sau \u0111\xF3 s\u1EBD \u0111\u01B0\u1EE3c \u0111em ra s\u1EED d\u1EE5ng nh\u01B0 d\u01B0\u1EDBi \u0111\xE2y")), `
-`, /* @__PURE__ */ import_react21.default.createElement(_components.pre, null, /* @__PURE__ */ import_react21.default.createElement(_components.code, {
-    className: "hljs language-js"
+`, /* @__PURE__ */ import_react21.default.createElement(_components.pre, {
+    className: "language-js"
+  }, /* @__PURE__ */ import_react21.default.createElement(_components.code, {
+    className: "hljs language-js code-highlight"
   }, /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-variable constant_"
-  }, "DB_HOST"), "=", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-attr"
-  }, "https"), ":", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-comment"
-  }, "//services.sandbox.icondo.asia/"), `
-`)), `
+    className: "code-line line-number",
+    line: "1"
+  }, /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token constant"
+  }, "DB_HOST"), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token operator"
+  }, "="), "https", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token operator"
+  }, ":"), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token operator"
+  }, "/"), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token regex"
+  }, /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token regex-delimiter"
+  }, "/"), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token regex-source language-regex"
+  }, "services", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token char-set class-name"
+  }, "."), "sandbox", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token char-set class-name"
+  }, "."), "icondo", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token char-set class-name"
+  }, "."), "asia"), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token regex-delimiter"
+  }, "/")), `
+`))), `
 `, /* @__PURE__ */ import_react21.default.createElement(import_react22.Box, {
     marginY: 4
   }, /* @__PURE__ */ import_react21.default.createElement(_components.p, null, "v\xE0 sau \u0111\xF3 s\u1EBD g\u1ECDi ra v\xE0 s\u1EED d\u1EE5ng")), `
-`, /* @__PURE__ */ import_react21.default.createElement(_components.pre, null, /* @__PURE__ */ import_react21.default.createElement(_components.code, {
-    className: "hljs language-js"
+`, /* @__PURE__ */ import_react21.default.createElement(_components.pre, {
+    className: "language-js"
+  }, /* @__PURE__ */ import_react21.default.createElement(_components.code, {
+    className: "hljs language-js code-highlight"
   }, /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-variable language_"
-  }, "console"), ".", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-title function_"
-  }, "log"), "(proccess.", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-property"
-  }, "env"), ".", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-property"
-  }, "DB_HOST"), `)
-`)), `
+    className: "code-line line-number",
+    line: "1"
+  }, /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token console class-name"
+  }, "console"), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "."), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token method function property-access"
+  }, "log"), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "("), "proccess", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "."), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token property-access"
+  }, "env"), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "."), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token constant"
+  }, "DB_HOST"), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ")"), `
+`))), `
 `, /* @__PURE__ */ import_react21.default.createElement(import_react22.Box, {
     marginY: 4
   }, /* @__PURE__ */ import_react21.default.createElement(_components.p, null, "M\u1ECDi chuy\u1EC7n v\u1EABn \u0111\xFAng v\xE0 ch\u1EE9c n\u0103ng v\u1EABn ho\u1EA1t \u0111\u1ED9ng b\xECnh th\u01B0\u1EDDng, nh\u01B0ng s\u1EBD c\xF3 nh\u1EEFng b\u1EA5t c\u1EADp d\u01B0\u1EDBi \u0111\xE2y:"), /* @__PURE__ */ import_react21.default.createElement(import_react22.UnorderedList, {
@@ -3230,30 +3878,71 @@ h\u01B0\u1EDBng d\u1EABn cho b\u1EA1n`)), `
 `, /* @__PURE__ */ import_react21.default.createElement(import_react22.Box, {
     marginY: 4
   }, /* @__PURE__ */ import_react21.default.createElement(_components.p, null, "Ch\xFAng ta s\u1EBD t\u1EA1o 1 function \u0111\u1EC3 fetch data t\u1EEB api")), `
-`, /* @__PURE__ */ import_react21.default.createElement(_components.pre, null, /* @__PURE__ */ import_react21.default.createElement(_components.code, {
-    className: "hljs language-ts"
+`, /* @__PURE__ */ import_react21.default.createElement(_components.pre, {
+    className: "language-ts"
+  }, /* @__PURE__ */ import_react21.default.createElement(_components.code, {
+    className: "hljs language-ts code-highlight"
   }, /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-keyword"
+    className: "code-line line-number",
+    line: "1"
+  }, /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token keyword"
   }, "export"), " ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-keyword"
+    className: "token keyword"
   }, "const"), " ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-title function_"
-  }, "fetcherJSON"), " = (", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-params"
-  }, "url: ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-built_in"
-  }, "string"), ", config?: RequestInit"), ") => ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-title function_"
-  }, "fetch"), "(url, config).", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-title function_"
-  }, "then"), "(", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-function"
-  }, "(", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-params"
-  }, "res"), ") =>"), " res.", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-title function_"
-  }, "json"), `());
-`)), `
+    className: "token function-variable function"
+  }, "fetcherJSON"), " ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token operator"
+  }, "="), " ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "("), "url", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token operator"
+  }, ":"), " ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token builtin"
+  }, "string"), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ","), " config", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token operator"
+  }, "?"), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token operator"
+  }, ":"), " RequestInit", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ")"), " ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token operator"
+  }, "=>"), " ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token function"
+  }, "fetch"), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "("), "url", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ","), " config", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ")"), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "."), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token function"
+  }, "then"), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "("), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "("), "res", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ")"), " ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token operator"
+  }, "=>"), " res", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "."), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token function"
+  }, "json"), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "("), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ")"), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ")"), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ";"), `
+`))), `
 `, /* @__PURE__ */ import_react21.default.createElement(import_react22.Box, {
     marginY: 4
   }, "V\u1EDBi ", /* @__PURE__ */ import_react21.default.createElement(import_react22.Badge, {
@@ -3261,74 +3950,195 @@ h\u01B0\u1EDBng d\u1EABn cho b\u1EA1n`)), `
   }, "Angular"), " \u1EDF file ", /* @__PURE__ */ import_react21.default.createElement(import_react22.Badge, {
     textTransform: "lowercase"
   }, "main.ts")), `
-`, /* @__PURE__ */ import_react21.default.createElement(_components.pre, null, /* @__PURE__ */ import_react21.default.createElement(_components.code, {
-    className: "hljs language-ts"
-  }, "(", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-keyword"
-  }, "async"), ` () => {
-  `, /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-keyword"
-  }, "const"), " data = ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-keyword"
-  }, "await"), " ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-title function_"
-  }, "fetcherJSON"), "(", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-string"
-  }, "'link json here...'"), `)
-`, /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-comment"
-  }, "// todo with json config data"), `
-  `, /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-keyword"
-  }, "function"), " ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-title function_"
-  }, "bootstrap"), "(", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-params"
-  }), `) {
-    `, /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-title function_"
-  }, "platformBrowserDynamic"), "().", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-title function_"
-  }, "bootstrapModule"), "(", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-title class_"
-  }, "AppModule"), `)
-      .`, /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-title function_"
-  }, "catch"), "(", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-function"
+`, /* @__PURE__ */ import_react21.default.createElement(_components.pre, {
+    className: "language-ts"
+  }, /* @__PURE__ */ import_react21.default.createElement(_components.code, {
+    className: "hljs language-ts code-highlight"
   }, /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-params"
-  }, "err"), " =>"), " ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-variable language_"
-  }, "console"), ".", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-title function_"
-  }, "error"), `(err));
-  };
-  `, /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-keyword"
-  }, "if"), " (", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-variable language_"
-  }, "document"), ".", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-property"
-  }, "readyState"), " === ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-string"
-  }, "'complete'"), `) {
-    `, /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-title function_"
-  }, "bootstrap"), `();
-  } `, /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-keyword"
-  }, "else"), ` {
-    `, /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-variable language_"
-  }, "document"), ".", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-title function_"
-  }, "addEventListener"), "(", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-string"
-  }, "'DOMContentLoaded'"), `, bootstrap);
-  }
-})();
-`)), `
+    className: "code-line line-number",
+    line: "1"
+  }, /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "("), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token keyword"
+  }, "async"), " ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "("), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ")"), " ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token operator"
+  }, "=>"), " ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "{"), `
+`), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "code-line line-number",
+    line: "2"
+  }, "  ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token keyword"
+  }, "const"), " data ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token operator"
+  }, "="), " ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token keyword"
+  }, "await"), " ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token function"
+  }, "fetcherJSON"), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "("), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token string"
+  }, "'link json here...'"), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ")"), `
+`), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "code-line line-number",
+    line: "3"
+  }, /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token comment"
+  }, "// todo with json config data"), `
+`), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "code-line line-number",
+    line: "4"
+  }, "  ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token keyword"
+  }, "function"), " ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token function"
+  }, "bootstrap"), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "("), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ")"), " ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "{"), `
+`), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "code-line line-number",
+    line: "5"
+  }, "    ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token function"
+  }, "platformBrowserDynamic"), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "("), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ")"), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "."), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token function"
+  }, "bootstrapModule"), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "("), "AppModule", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ")"), `
+`), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "code-line line-number",
+    line: "6"
+  }, "      ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "."), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token function"
+  }, "catch"), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "("), "err ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token operator"
+  }, "=>"), " ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token builtin"
+  }, "console"), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "."), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token function"
+  }, "error"), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "("), "err", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ")"), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ")"), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ";"), `
+`), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "code-line line-number",
+    line: "7"
+  }, "  ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "}"), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ";"), `
+`), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "code-line line-number",
+    line: "8"
+  }, "  ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token keyword"
+  }, "if"), " ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "("), "document", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "."), "readyState ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token operator"
+  }, "==="), " ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token string"
+  }, "'complete'"), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ")"), " ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "{"), `
+`), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "code-line line-number",
+    line: "9"
+  }, "    ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token function"
+  }, "bootstrap"), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "("), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ")"), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ";"), `
+`), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "code-line line-number",
+    line: "10"
+  }, "  ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "}"), " ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token keyword"
+  }, "else"), " ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "{"), `
+`), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "code-line line-number",
+    line: "11"
+  }, "    document", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "."), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token function"
+  }, "addEventListener"), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "("), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token string"
+  }, "'DOMContentLoaded'"), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ","), " bootstrap", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ")"), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ";"), `
+`), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "code-line line-number",
+    line: "12"
+  }, "  ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "}"), `
+`), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "code-line line-number",
+    line: "13"
+  }, /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "}"), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ")"), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "("), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ")"), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ";"), `
+`))), `
 `, /* @__PURE__ */ import_react21.default.createElement(import_react22.Box, {
     marginY: 4
   }, "V\u1EDBi ", /* @__PURE__ */ import_react21.default.createElement(import_react22.Badge, {
@@ -3336,111 +4146,285 @@ h\u01B0\u1EDBng d\u1EABn cho b\u1EA1n`)), `
   }, "React"), " \u1EDF file ", /* @__PURE__ */ import_react21.default.createElement(import_react22.Badge, {
     textTransform: "lowercase"
   }, "index.tsx")), `
-`, /* @__PURE__ */ import_react21.default.createElement(_components.pre, null, /* @__PURE__ */ import_react21.default.createElement(_components.code, {
-    className: "hljs language-ts"
-  }, "(", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-keyword"
-  }, "async"), ` () => {
-    `, /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-keyword"
-  }, "try"), ` {
-
-        `, /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-keyword"
-  }, "const"), " container = ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-variable language_"
-  }, "document"), ".", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-title function_"
-  }, "getElementById"), "(", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-string"
-  }, "'main-condo'"), `);
-        `, /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-keyword"
-  }, "const"), " root = ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-title function_"
-  }, "createRoot"), `(container);
-        `, /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-keyword"
-  }, "const"), " config = ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-keyword"
-  }, "await"), " ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-title function_"
-  }, "fetcherJSON"), "(", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-string"
-  }, "'/assets/config.json'"), `);
-        root.`, /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-title function_"
-  }, "render"), "(", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "xml"
+`, /* @__PURE__ */ import_react21.default.createElement(_components.pre, {
+    className: "language-ts"
+  }, /* @__PURE__ */ import_react21.default.createElement(_components.code, {
+    className: "hljs language-ts code-highlight"
   }, /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-tag"
-  }, "<", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-name"
-  }, "Provider"), ">"), `
-                `, /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-tag"
-  }, "<", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-name"
-  }, "App"), " ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-attr"
-  }, "config"), "=", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-string"
-  }, "{data}/"), ">"), `
-        `, /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-tag"
-  }, "</", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-name"
-  }, "Provider"), ">")), `);
-    } `, /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-keyword"
-  }, "catch"), ` (e) {
-        `, /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-comment"
+    className: "code-line line-number",
+    line: "1"
+  }, /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "("), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token keyword"
+  }, "async"), " ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "("), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ")"), " ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token operator"
+  }, "=>"), " ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "{"), `
+`), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "code-line line-number",
+    line: "2"
+  }, "    ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token keyword"
+  }, "try"), " ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "{"), `
+`), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "code-line line-number",
+    line: "3"
+  }, `
+`), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "code-line line-number",
+    line: "4"
+  }, "        ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token keyword"
+  }, "const"), " container ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token operator"
+  }, "="), " document", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "."), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token function"
+  }, "getElementById"), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "("), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token string"
+  }, "'main-condo'"), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ")"), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ";"), `
+`), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "code-line line-number",
+    line: "5"
+  }, "        ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token keyword"
+  }, "const"), " root ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token operator"
+  }, "="), " ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token function"
+  }, "createRoot"), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "("), "container", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ")"), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ";"), `
+`), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "code-line line-number",
+    line: "6"
+  }, "        ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token keyword"
+  }, "const"), " config ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token operator"
+  }, "="), " ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token keyword"
+  }, "await"), " ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token function"
+  }, "fetcherJSON"), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "("), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token string"
+  }, "'/assets/config.json'"), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ")"), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ";"), `
+`), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "code-line line-number",
+    line: "7"
+  }, "        root", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "."), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token function"
+  }, "render"), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "("), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token operator"
+  }, "<"), "Provider", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token operator"
+  }, ">"), `
+`), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "code-line line-number",
+    line: "8"
+  }, "                ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token operator"
+  }, "<"), "App config", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token operator"
+  }, "="), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "{"), "data", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "}"), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token operator"
+  }, "/"), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token operator"
+  }, ">"), `
+`), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "code-line line-number",
+    line: "9"
+  }, "        ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token operator"
+  }, "<"), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token operator"
+  }, "/"), "Provider", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token operator"
+  }, ">"), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ")"), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ";"), `
+`), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "code-line line-number",
+    line: "10"
+  }, "    ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "}"), " ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token keyword"
+  }, "catch"), " ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "("), "e", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ")"), " ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "{"), `
+`), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "code-line line-number",
+    line: "11"
+  }, "        ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token comment"
   }, "// todo error"), `
-    }
-})();
-`)), `
+`), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "code-line line-number",
+    line: "12"
+  }, "    ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "}"), `
+`), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "code-line line-number",
+    line: "13"
+  }, /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "}"), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ")"), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "("), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ")"), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ";"), `
+`))), `
 `, /* @__PURE__ */ import_react21.default.createElement(import_react22.Box, {
     marginY: 4
   }, "\u1EDE file ", /* @__PURE__ */ import_react21.default.createElement(import_react22.Badge, {
     textTransform: "lowercase"
   }, "App.tsx")), `
-`, /* @__PURE__ */ import_react21.default.createElement(_components.pre, null, /* @__PURE__ */ import_react21.default.createElement(_components.code, {
-    className: "hljs language-ts"
+`, /* @__PURE__ */ import_react21.default.createElement(_components.pre, {
+    className: "language-ts"
+  }, /* @__PURE__ */ import_react21.default.createElement(_components.code, {
+    className: "hljs language-ts code-highlight"
   }, /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-keyword"
+    className: "code-line line-number",
+    line: "1"
+  }, /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token keyword"
   }, "function"), " ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-title function_"
-  }, "App"), "(", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-params"
-  }, "props"), `) {
-    `, /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-title function_"
-  }, "useEffect"), "(", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-function"
-  }, "() =>"), ` {
-        `, /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-variable language_"
-  }, "console"), ".", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-title function_"
-  }, "log"), "(props.", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-property"
-  }, "config"), `)
-        `, /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-comment"
+    className: "token function"
+  }, "App"), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "("), "props", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ")"), " ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "{"), `
+`), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "code-line line-number",
+    line: "2"
+  }, "    ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token function"
+  }, "useEffect"), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "("), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "("), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ")"), " ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token operator"
+  }, "=>"), " ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "{"), `
+`), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "code-line line-number",
+    line: "3"
+  }, "        ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token builtin"
+  }, "console"), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "."), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token function"
+  }, "log"), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "("), "props", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "."), "config", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ")"), `
+`), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "code-line line-number",
+    line: "4"
+  }, "        ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token comment"
   }, "// todo with props.config"), `
-    }, []);
-    `, /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-keyword"
-  }, "return"), " (", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "xml"
+`), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "code-line line-number",
+    line: "5"
+  }, "    ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "}"), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ","), " ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "["), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "]"), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ")"), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ";"), `
+`), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "code-line line-number",
+    line: "6"
+  }, "    ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token keyword"
+  }, "return"), " ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "("), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token operator"
+  }, "<"), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token operator"
+  }, ">"), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token operator"
+  }, "..."), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token operator"
+  }, "<"), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token operator"
+  }, "/"), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token operator"
+  }, ">"), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ")"), `
+`), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "code-line line-number",
+    line: "7"
   }, /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-tag"
-  }, "<>"), "...", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-tag"
-  }, "</>")), `)
-}
-`)), `
+    className: "token punctuation"
+  }, "}"), `
+`))), `
 `, /* @__PURE__ */ import_react21.default.createElement(import_react22.Box, {
     marginY: 4
   }, "V\u1EDBi ", /* @__PURE__ */ import_react21.default.createElement(import_react22.Badge, {
@@ -3448,89 +4432,221 @@ h\u01B0\u1EDBng d\u1EABn cho b\u1EA1n`)), `
   }, "Remix"), " \u1EDF file ", /* @__PURE__ */ import_react21.default.createElement(import_react22.Badge, {
     textTransform: "lowercase"
   }, "root.tsx")), `
-`, /* @__PURE__ */ import_react21.default.createElement(_components.pre, null, /* @__PURE__ */ import_react21.default.createElement(_components.code, {
-    className: "hljs language-ts"
+`, /* @__PURE__ */ import_react21.default.createElement(_components.pre, {
+    className: "language-js"
+  }, /* @__PURE__ */ import_react21.default.createElement(_components.code, {
+    className: "hljs language-js code-highlight"
   }, /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-keyword"
-  }, "import"), " {useLoaderData} ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-keyword"
+    className: "code-line line-number",
+    line: "1"
+  }, /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token keyword module"
+  }, "import"), " ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token imports"
+  }, /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "{"), "useLoaderData", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "}")), " ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token keyword module"
   }, "from"), " ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-string"
-  }, '"@remix-run/react"'), `;
-`, /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-keyword"
-  }, "export"), " ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-keyword"
-  }, "const"), " ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-title function_"
-  }, "loader"), " = ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-keyword"
-  }, "async"), " (", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-params"
-  }, "{request}"), `) => {
-    `, /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-keyword"
-  }, "const"), " location = ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-keyword"
-  }, "new"), " ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-title function_"
-  }, "URL"), "(request.", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-property"
-  }, "url"), `)
-    `, /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-keyword"
-  }, "const"), " config = ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-keyword"
-  }, "await"), " ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-title function_"
-  }, "fetcherJSON"), "(location.", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-property"
-  }, "origin"), " + ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-string"
-  }, "`/config.json`"), `);
-    `, /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-keyword"
-  }, "return"), " ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-title function_"
-  }, "json"), `(config);
-}
-
-`, /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-keyword"
-  }, "export"), " ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-keyword"
-  }, "default"), " ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-keyword"
-  }, "function"), " ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-title function_"
-  }, "App"), "(", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-params"
-  }), `) {
-    `, /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-keyword"
-  }, "const"), " config= ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-title function_"
-  }, "useLoaderData"), `();
-    `, /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-comment"
-  }, "// todo config"), `
-    `, /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-keyword"
-  }, "return"), ` (
-       `, /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "xml"
+    className: "token string"
+  }, '"@remix-run/react"'), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ";"), `
+`), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "code-line line-number",
+    line: "2"
   }, /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-tag"
-  }, "<>"), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-tag"
-  }, "<", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-name"
-  }, "Outlet"), "/>"), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
-    className: "hljs-tag"
-  }, "</>")), `
-    )
-}
-`)), `
+    className: "token keyword module"
+  }, "export"), " ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token keyword"
+  }, "const"), " ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token function-variable function"
+  }, "loader"), " ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token operator"
+  }, "="), " ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token keyword"
+  }, "async"), " ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "("), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token parameter"
+  }, /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "{"), "request", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "}")), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ")"), " ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token arrow operator"
+  }, "=>"), " ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "{"), `
+`), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "code-line line-number",
+    line: "3"
+  }, "    ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token keyword"
+  }, "const"), " ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token dom variable"
+  }, "location"), " ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token operator"
+  }, "="), " ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token keyword"
+  }, "new"), " ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token class-name"
+  }, "URL"), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "("), "request", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "."), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token property-access"
+  }, "url"), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ")"), `
+`), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "code-line line-number",
+    line: "4"
+  }, "    ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token keyword"
+  }, "const"), " config ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token operator"
+  }, "="), " ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token keyword control-flow"
+  }, "await"), " ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token function"
+  }, "fetcherJSON"), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "("), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token dom variable"
+  }, "location"), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "."), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token property-access"
+  }, "origin"), " ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token operator"
+  }, "+"), " ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token template-string"
+  }, /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token template-punctuation string"
+  }, "`"), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token string"
+  }, "/config.json"), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token template-punctuation string"
+  }, "`")), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ")"), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ";"), `
+`), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "code-line line-number",
+    line: "5"
+  }, "    ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token keyword control-flow"
+  }, "return"), " ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token function"
+  }, "json"), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "("), "config", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ")"), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ";"), `
+`), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "code-line line-number",
+    line: "6"
+  }, /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "}"), `
+`), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "code-line line-number",
+    line: "7"
+  }, `
+`), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "code-line line-number",
+    line: "8"
+  }, /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token keyword module"
+  }, "export"), " ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token keyword module"
+  }, "default"), " ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token keyword"
+  }, "function"), " ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token function"
+  }, /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token maybe-class-name"
+  }, "App")), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "("), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ")"), " ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "{"), `
+`), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "code-line line-number",
+    line: "9"
+  }, "    ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token keyword"
+  }, "const"), " config", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token operator"
+  }, "="), " ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token function"
+  }, "useLoaderData"), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "("), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ")"), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ";"), `
+`), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "code-line line-number",
+    line: "10"
+  }, "    ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token comment"
+  }, "// todo config"), `
+`), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "code-line line-number",
+    line: "11"
+  }, "    ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token keyword control-flow"
+  }, "return"), " ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "("), `
+`), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "code-line line-number",
+    line: "12"
+  }, "       ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token operator"
+  }, "<"), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token operator"
+  }, ">"), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token operator"
+  }, "<"), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token maybe-class-name"
+  }, "Outlet"), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token operator"
+  }, "/"), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token operator"
+  }, ">"), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token operator"
+  }, "<"), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token operator"
+  }, "/"), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token operator"
+  }, ">"), `
+`), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "code-line line-number",
+    line: "13"
+  }, "    ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, ")"), `
+`), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "code-line line-number",
+    line: "14"
+  }, /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "token punctuation"
+  }, "}"), `
+`))), `
 `, /* @__PURE__ */ import_react21.default.createElement(import_react22.Heading, {
     variant: "title-under-line"
   }, "3. L\u1EDDi k\u1EBFt"), `
@@ -3574,27 +4690,21 @@ function CardThumbnail({ thumbnail, title, children, href }) {
           lineNumber: 7,
           columnNumber: 13
         }, this),
-        /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react23.LinkOverlay, {
-          children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react23.Text, {
-            mt: 2,
-            fontSize: 20,
-            children: title
-          }, void 0, !1, {
-            fileName: "app/components/card.tsx",
-            lineNumber: 14,
-            columnNumber: 17
-          }, this)
+        /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react23.Text, {
+          mt: 2,
+          fontSize: 20,
+          children: title
         }, void 0, !1, {
           fileName: "app/components/card.tsx",
           lineNumber: 13,
-          columnNumber: 13
+          columnNumber: 17
         }, this),
         /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react23.Text, {
           fontSize: 14,
           children
         }, void 0, !1, {
           fileName: "app/components/card.tsx",
-          lineNumber: 18,
+          lineNumber: 16,
           columnNumber: 13
         }, this)
       ]
@@ -3662,17 +4772,17 @@ function Index() {
         children: post.description
       }, `blog-${index}`, !1, {
         fileName: "app/routes/blogs/index.tsx",
-        lineNumber: 28,
+        lineNumber: 27,
         columnNumber: 40
       }, this))
     }, void 0, !1, {
       fileName: "app/routes/blogs/index.tsx",
-      lineNumber: 27,
+      lineNumber: 26,
       columnNumber: 9
     }, this)
   }, void 0, !1, {
     fileName: "app/routes/blogs/index.tsx",
-    lineNumber: 26,
+    lineNumber: 25,
     columnNumber: 13
   }, this);
 }
@@ -4219,7 +5329,7 @@ var meta6 = () => ({
 });
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { version: "0f0449ac", entry: { module: "/build/entry.client-QJWTOPRP.js", imports: ["/build/_shared/chunk-QULECMS6.js", "/build/_shared/chunk-FGJQ4NGA.js", "/build/_shared/chunk-ZIYPFG5E.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-KHBXYM3H.js", imports: ["/build/_shared/chunk-35VL3SGE.js", "/build/_shared/chunk-ZSWBXDCE.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/blogs/axios-first-blog": { id: "routes/blogs/axios-first-blog", parentId: "root", path: "blogs/axios-first-blog", index: void 0, caseSensitive: void 0, module: "/build/routes/blogs/axios-first-blog-IOT5GYD6.js", imports: ["/build/_shared/chunk-IL3GWHV7.js", "/build/_shared/chunk-QE364FJP.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/blogs/index": { id: "routes/blogs/index", parentId: "root", path: "blogs", index: !0, caseSensitive: void 0, module: "/build/routes/blogs/index-Z7ILZ43P.js", imports: ["/build/_shared/chunk-IL3GWHV7.js", "/build/_shared/chunk-Y4J2TSSR.js", "/build/_shared/chunk-QE364FJP.js", "/build/_shared/chunk-C5RLUXAJ.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/blogs/load-config": { id: "routes/blogs/load-config", parentId: "root", path: "blogs/load-config", index: void 0, caseSensitive: void 0, module: "/build/routes/blogs/load-config-NA2VX76C.js", imports: ["/build/_shared/chunk-Y4J2TSSR.js", "/build/_shared/chunk-QE364FJP.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/index": { id: "routes/index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/index-4S6RGTYG.js", imports: ["/build/_shared/chunk-C5RLUXAJ.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/product": { id: "routes/product", parentId: "root", path: "product", index: void 0, caseSensitive: void 0, module: "/build/routes/product-6JMN7YHZ.js", imports: ["/build/_shared/chunk-C5RLUXAJ.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, url: "/build/manifest-0F0449AC.js" };
+var assets_manifest_default = { version: "e08f815e", entry: { module: "/build/entry.client-QJWTOPRP.js", imports: ["/build/_shared/chunk-QULECMS6.js", "/build/_shared/chunk-FGJQ4NGA.js", "/build/_shared/chunk-ZIYPFG5E.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-NRU6LPEP.js", imports: ["/build/_shared/chunk-35VL3SGE.js", "/build/_shared/chunk-W2XPOMI4.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/blogs/axios-first-blog": { id: "routes/blogs/axios-first-blog", parentId: "root", path: "blogs/axios-first-blog", index: void 0, caseSensitive: void 0, module: "/build/routes/blogs/axios-first-blog-NQBBQDVV.js", imports: ["/build/_shared/chunk-IQM5JXZC.js", "/build/_shared/chunk-QE364FJP.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/blogs/index": { id: "routes/blogs/index", parentId: "root", path: "blogs", index: !0, caseSensitive: void 0, module: "/build/routes/blogs/index-VURICCGW.js", imports: ["/build/_shared/chunk-IQM5JXZC.js", "/build/_shared/chunk-W4EM672R.js", "/build/_shared/chunk-QE364FJP.js", "/build/_shared/chunk-3ZAMJJLI.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/blogs/load-config": { id: "routes/blogs/load-config", parentId: "root", path: "blogs/load-config", index: void 0, caseSensitive: void 0, module: "/build/routes/blogs/load-config-FPWS4UFB.js", imports: ["/build/_shared/chunk-W4EM672R.js", "/build/_shared/chunk-QE364FJP.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/index": { id: "routes/index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/index-UBWAM6PI.js", imports: ["/build/_shared/chunk-3ZAMJJLI.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/product": { id: "routes/product", parentId: "root", path: "product", index: void 0, caseSensitive: void 0, module: "/build/routes/product-HFWT4LZR.js", imports: ["/build/_shared/chunk-3ZAMJJLI.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, url: "/build/manifest-E08F815E.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var assetsBuildDirectory = "public/build", publicPath = "/build/", entry = { module: entry_server_exports }, routes = {

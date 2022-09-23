@@ -10,11 +10,9 @@ Cache-Control: no-cache
 import {Heading, Badge, Box, Link, UnorderedList, ListItem} from "@chakra-ui/react";
 import styles from "highlight.js/styles/github-dark-dimmed.css";
 
-
 export const links = () => [
     {rel: "stylesheet", href: styles},
 ];
-
 
 <Heading marginBottom={4}>Làm thế nào để tải trước một file json trước khi page được kết xuất?</Heading>
 <Heading variant={"title-under-line"}>1.Vấn đề</Heading>
@@ -23,7 +21,7 @@ export const links = () => [
     textTransform={"lowercase"} mr={2}>.env</Badge> và sau đó sẽ được đem ra sử dụng như dưới đây
 </Box>
 
-```js
+```js showLineNumbers copy title="index.tsx"
 DB_HOST=https://services.sandbox.icondo.asia/
 ```
 
@@ -32,7 +30,7 @@ DB_HOST=https://services.sandbox.icondo.asia/
 </Box>
 
 
-```js
+```js showLineNumbers copy
 console.log(proccess.env.DB_HOST)
 ```
 <Box marginY={4}>
@@ -54,14 +52,14 @@ console.log(proccess.env.DB_HOST)
     Chúng ta sẽ tạo 1 function để fetch data từ api
 </Box>
 
-```ts
+```ts filename="hi123.js" showLineNumbers copy
 export const fetcherJSON = (url: string, config?: RequestInit) => fetch(url, config).then((res) => res.json());
 ```
 
 <Box marginY={4}>Với <Badge colorScheme={"green"}>Angular</Badge> ở file <Badge
     textTransform={"lowercase"}>main.ts</Badge></Box>
 
-```ts
+```ts showLineNumbers copy
 (async () => {
   const data = await fetcherJSON('link json here...')
 // todo with json config data
@@ -80,7 +78,7 @@ export const fetcherJSON = (url: string, config?: RequestInit) => fetch(url, con
 <Box marginY={4}>Với <Badge colorScheme={"green"}>React</Badge> ở file <Badge
     textTransform={"lowercase"}>index.tsx</Badge></Box>
 
-```ts
+```ts filename="index.tsx" showLineNumbers
 (async () => {
     try {
 
@@ -98,7 +96,7 @@ export const fetcherJSON = (url: string, config?: RequestInit) => fetch(url, con
 <Box marginY={4}>Ở file <Badge
     textTransform={"lowercase"}>App.tsx</Badge></Box>
 
-```ts
+```ts showLineNumbers copy
 function App(props) {
     useEffect(() => {
         console.log(props.config)
@@ -111,7 +109,7 @@ function App(props) {
 <Box marginY={4}>Với <Badge colorScheme={"green"}>Remix</Badge> ở file <Badge
     textTransform={"lowercase"}>root.tsx</Badge></Box>
 
-```ts
+```js showLineNumbers copy
 import {useLoaderData} from "@remix-run/react";
 export const loader = async ({request}) => {
     const location = new URL(request.url)

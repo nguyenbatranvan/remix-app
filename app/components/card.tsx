@@ -10,11 +10,9 @@ function CardThumbnail({thumbnail,title,children,href}){
                 className="grid-item-thumbnail"
                 placeholder="blur"
             />
-            <LinkOverlay>
                 <Text mt={2} fontSize={20}>
                     {title}
                 </Text>
-            </LinkOverlay>
             <Text fontSize={14}>{children}</Text>
         </NavLink>
     </Box>)
