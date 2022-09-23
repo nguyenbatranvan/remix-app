@@ -118,7 +118,7 @@ __export(root_exports, {
   loader: () => loader,
   meta: () => meta
 });
-var import_framer_motion2 = require("framer-motion"), import_react15 = require("react"), import_react16 = require("@emotion/react"), import_react17 = require("@chakra-ui/react"), import_react18 = require("@remix-run/react"), import_node = require("@remix-run/node");
+var import_framer_motion2 = require("framer-motion"), import_react14 = require("react"), import_react15 = require("@emotion/react"), import_react16 = require("@chakra-ui/react"), import_react17 = require("@remix-run/react"), import_node = require("@remix-run/node");
 
 // app/components/dog.tsx
 var import_react6 = require("react"), THREE = __toESM(require("three"));
@@ -2038,33 +2038,13 @@ var VoxelDog = () => {
 }, dog_default = VoxelDog;
 
 // app/layout/index.tsx
-var import_react13 = require("@chakra-ui/react");
-
-// app/layout/footer.tsx
-var import_react7 = require("@chakra-ui/react"), import_jsx_dev_runtime = require("react/jsx-dev-runtime");
-function Footer() {
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react7.Box, {
-    align: "center",
-    opacity: 0.4,
-    marginY: 4,
-    fontSize: "sm",
-    children: [
-      "\xA9 ",
-      new Date().getFullYear(),
-      " Nguyen Ba Tran Van. All Rights Reserved."
-    ]
-  }, void 0, !0, {
-    fileName: "app/layout/footer.tsx",
-    lineNumber: 4,
-    columnNumber: 12
-  }, this);
-}
+var import_react12 = require("@chakra-ui/react");
 
 // app/layout/navbar.tsx
-var import_icons2 = require("@chakra-ui/icons"), import_react11 = require("@chakra-ui/react"), import_react12 = require("@remix-run/react"), import_io5 = require("react-icons/io5");
+var import_icons2 = require("@chakra-ui/icons"), import_react10 = require("@chakra-ui/react"), import_react11 = require("@remix-run/react"), import_io5 = require("react-icons/io5");
 
 // app/components/logo.tsx
-var import_react8 = require("@chakra-ui/react"), import_styled = __toESM(require("@emotion/styled")), import_react9 = require("@remix-run/react"), import_jsx_dev_runtime = require("react/jsx-dev-runtime"), LogoBox = import_styled.default.span`
+var import_react7 = require("@chakra-ui/react"), import_styled = __toESM(require("@emotion/styled")), import_react8 = require("@remix-run/react"), import_jsx_dev_runtime = require("react/jsx-dev-runtime"), LogoBox = import_styled.default.span`
   font-weight: bold;
   font-size: 18px;
   display: inline-flex;
@@ -2082,15 +2062,15 @@ var import_react8 = require("@chakra-ui/react"), import_styled = __toESM(require
   }
 `;
 function Logo() {
-  let footPrintImg = `/images/footprint${(0, import_react8.useColorModeValue)("", "-dark")}.png`;
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react9.NavLink, {
+  let footPrintImg = `/images/footprint${(0, import_react7.useColorModeValue)("", "-dark")}.png`;
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react8.NavLink, {
     to: "/",
     children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(LogoBox, {
-      children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react8.Box, {
+      children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react7.Box, {
         display: "flex",
         alignItems: "center",
         children: [
-          /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react8.Image, {
+          /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react7.Image, {
             src: footPrintImg,
             width: "20px",
             height: "20px",
@@ -2100,8 +2080,8 @@ function Logo() {
             lineNumber: 29,
             columnNumber: 17
           }, this),
-          /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react8.Text, {
-            color: (0, import_react8.useColorModeValue)("gray.800", "whiteAlpha.900"),
+          /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react7.Text, {
+            color: (0, import_react7.useColorModeValue)("gray.800", "whiteAlpha.900"),
             fontWeight: "bold",
             ml: 3,
             children: "Van Nguyen"
@@ -2129,8 +2109,8 @@ function Logo() {
 }
 
 // app/components/theme-toggle-button.tsx
-var import_framer_motion = require("framer-motion"), import_react10 = require("@chakra-ui/react"), import_icons = require("@chakra-ui/icons"), import_jsx_dev_runtime = require("react/jsx-dev-runtime"), ThemeToggleButton = () => {
-  let { toggleColorMode } = (0, import_react10.useColorMode)();
+var import_framer_motion = require("framer-motion"), import_react9 = require("@chakra-ui/react"), import_icons = require("@chakra-ui/icons"), import_jsx_dev_runtime = require("react/jsx-dev-runtime"), ThemeToggleButton = () => {
+  let { toggleColorMode } = (0, import_react9.useColorMode)();
   return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_framer_motion.AnimatePresence, {
     exitBeforeEnter: !0,
     initial: !1,
@@ -2140,10 +2120,10 @@ var import_framer_motion = require("framer-motion"), import_react10 = require("@
       animate: { y: 0, opacity: 1 },
       exit: { y: 20, opacity: 0 },
       transition: { duration: 0.2 },
-      children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react10.IconButton, {
+      children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react9.IconButton, {
         "aria-label": "Toggle theme",
-        colorScheme: (0, import_react10.useColorModeValue)("purple", "orange"),
-        icon: (0, import_react10.useColorModeValue)(/* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_icons.MoonIcon, {}, void 0, !1, {
+        colorScheme: (0, import_react9.useColorModeValue)("purple", "orange"),
+        icon: (0, import_react9.useColorModeValue)(/* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_icons.MoonIcon, {}, void 0, !1, {
           fileName: "app/components/theme-toggle-button.tsx",
           lineNumber: 21,
           columnNumber: 45
@@ -2158,7 +2138,7 @@ var import_framer_motion = require("framer-motion"), import_react10 = require("@
         lineNumber: 18,
         columnNumber: 17
       }, this)
-    }, (0, import_react10.useColorModeValue)("light", "dark"), !1, {
+    }, (0, import_react9.useColorModeValue)("light", "dark"), !1, {
       fileName: "app/components/theme-toggle-button.tsx",
       lineNumber: 10,
       columnNumber: 13
@@ -2172,17 +2152,17 @@ var import_framer_motion = require("framer-motion"), import_react10 = require("@
 
 // app/layout/navbar.tsx
 var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), LinkItem = ({ path, children, ...props }) => {
-  let inactiveColor = (0, import_react11.useColorModeValue)("gray200", "whiteAlpha.900");
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react11.Box, {
+  let inactiveColor = (0, import_react10.useColorModeValue)("gray200", "whiteAlpha.900");
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react10.Box, {
     p: 2,
-    children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react12.NavLink, {
+    children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react11.NavLink, {
       to: path,
       style: ({ isActive }) => isActive ? {
         padding: "0.5rem",
         color: isActive ? "#202023" : inactiveColor,
         backgroundColor: isActive ? "#88ccca" : void 0
       } : { padding: "0.5rem" },
-      children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react11.Box, {
+      children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react10.Box, {
         display: "inline-flex",
         alignItems: "center",
         style: { gap: 4 },
@@ -2205,15 +2185,15 @@ var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), LinkItem = ({ pat
   }, this);
 };
 function Navbar() {
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react11.Box, {
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react10.Box, {
     position: "fixed",
-    bg: (0, import_react11.useColorModeValue)("#ffffff40", "#20202380"),
+    bg: (0, import_react10.useColorModeValue)("#ffffff40", "#20202380"),
     zIndex: 2,
     top: 0,
     w: "100%",
     as: "nav",
     css: { backdropFilter: "blur(10px)" },
-    children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react11.Container, {
+    children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react10.Container, {
       display: "flex",
       p: 2,
       maxW: "container.md",
@@ -2221,10 +2201,10 @@ function Navbar() {
       align: "center",
       justify: "space-between",
       children: [
-        /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react11.Flex, {
+        /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react10.Flex, {
           align: "center",
           mr: 5,
-          children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react11.Heading, {
+          children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react10.Heading, {
             as: "h1",
             size: "lg",
             letterSpacing: "tighter",
@@ -2243,7 +2223,7 @@ function Navbar() {
           lineNumber: 56,
           columnNumber: 13
         }, this),
-        /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react11.Stack, {
+        /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react10.Stack, {
           direction: { base: "column", md: "row" },
           display: { base: "none", md: "flex" },
           width: { base: "full", md: "auto" },
@@ -2267,7 +2247,7 @@ function Navbar() {
               lineNumber: 71,
               columnNumber: 17
             }, this),
-            /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react11.Link, {
+            /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react10.Link, {
               target: "_blank",
               href: "https://github.com/nguyenbatranvan/remix-app",
               display: "flex",
@@ -2293,7 +2273,7 @@ function Navbar() {
           lineNumber: 61,
           columnNumber: 13
         }, this),
-        /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react11.Box, {
+        /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react10.Box, {
           flex: 1,
           align: "right",
           children: [
@@ -2302,15 +2282,15 @@ function Navbar() {
               lineNumber: 87,
               columnNumber: 17
             }, this),
-            /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react11.Box, {
+            /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react10.Box, {
               ml: 2,
               display: { base: "inline-block", md: "none" },
-              children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react11.Menu, {
+              children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react10.Menu, {
                 isLazy: !0,
                 id: "navbar-menu",
                 children: [
-                  /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react11.MenuButton, {
-                    as: import_react11.IconButton,
+                  /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react10.MenuButton, {
+                    as: import_react10.IconButton,
                     icon: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_icons2.HamburgerIcon, {}, void 0, !1, {
                       fileName: "app/layout/navbar.tsx",
                       lineNumber: 92,
@@ -2323,12 +2303,12 @@ function Navbar() {
                     lineNumber: 90,
                     columnNumber: 25
                   }, this),
-                  /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react11.MenuList, {
+                  /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react10.MenuList, {
                     children: [
-                      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react12.NavLink, {
+                      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react11.NavLink, {
                         to: "/",
-                        children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react11.MenuItem, {
-                          as: import_react11.Link,
+                        children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react10.MenuItem, {
+                          as: import_react10.Link,
                           children: "About"
                         }, void 0, !1, {
                           fileName: "app/layout/navbar.tsx",
@@ -2340,10 +2320,10 @@ function Navbar() {
                         lineNumber: 97,
                         columnNumber: 29
                       }, this),
-                      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react12.NavLink, {
+                      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react11.NavLink, {
                         to: "/blogs",
-                        children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react11.MenuItem, {
-                          as: import_react11.Link,
+                        children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react10.MenuItem, {
+                          as: import_react10.Link,
                           children: "Blogs"
                         }, void 0, !1, {
                           fileName: "app/layout/navbar.tsx",
@@ -2355,10 +2335,10 @@ function Navbar() {
                         lineNumber: 100,
                         columnNumber: 29
                       }, this),
-                      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react12.NavLink, {
+                      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react11.NavLink, {
                         to: "/product",
-                        children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react11.MenuItem, {
-                          as: import_react11.Link,
+                        children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react10.MenuItem, {
+                          as: import_react10.Link,
                           children: "Product"
                         }, void 0, !1, {
                           fileName: "app/layout/navbar.tsx",
@@ -2370,8 +2350,8 @@ function Navbar() {
                         lineNumber: 103,
                         columnNumber: 29
                       }, this),
-                      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react11.MenuItem, {
-                        as: import_react11.Link,
+                      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react10.MenuItem, {
+                        as: import_react10.Link,
                         href: "https://github.com/nguyenbatranvan/remix-app",
                         children: "View Source"
                       }, void 0, !1, {
@@ -2418,19 +2398,14 @@ function Navbar() {
 // app/layout/index.tsx
 var import_jsx_dev_runtime = require("react/jsx-dev-runtime");
 function Layout({ children }) {
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react13.Box, {
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react12.Box, {
     children: [
       /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(Navbar, {}, void 0, !1, {
         fileName: "app/layout/index.tsx",
         lineNumber: 7,
         columnNumber: 9
       }, this),
-      children,
-      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(Footer, {}, void 0, !1, {
-        fileName: "app/layout/index.tsx",
-        lineNumber: 9,
-        columnNumber: 9
-      }, this)
+      children
     ]
   }, void 0, !0, {
     fileName: "app/layout/index.tsx",
@@ -2440,10 +2415,10 @@ function Layout({ children }) {
 }
 
 // app/theme/theme.ts
-var import_react14 = require("@chakra-ui/react"), import_theme_tools = require("@chakra-ui/theme-tools"), config = {
+var import_react13 = require("@chakra-ui/react"), import_theme_tools = require("@chakra-ui/theme-tools"), config = {
   initialColorMode: "dark",
   useSystemColorMode: !1
-}, customTheme = (0, import_react14.extendTheme)({
+}, customTheme = (0, import_react13.extendTheme)({
   components: {
     Link: {
       baseStyle: (props) => ({
@@ -2514,10 +2489,10 @@ var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), meta = () => ({
 ], loader = async ({ request }) => {
   let location = new URL(request.url), config2 = await fetcherJSON(location.origin + "/config.json");
   return (0, import_node.json)(config2);
-}, Document = (0, import_react16.withEmotionCache)(
+}, Document = (0, import_react15.withEmotionCache)(
   ({ children }, emotionCache) => {
-    let serverStyleData = (0, import_react15.useContext)(ServerStyleContext), clientStyleData = (0, import_react15.useContext)(ClientStyleContext);
-    return (0, import_react15.useEffect)(() => {
+    let serverStyleData = (0, import_react14.useContext)(ServerStyleContext), clientStyleData = (0, import_react14.useContext)(ClientStyleContext);
+    return (0, import_react14.useEffect)(() => {
       emotionCache.sheet.container = document.head;
       let tags = emotionCache.sheet.tags;
       emotionCache.sheet.flush(), tags.forEach((tag) => {
@@ -2528,12 +2503,12 @@ var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), meta = () => ({
       children: [
         /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("head", {
           children: [
-            /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react18.Meta, {}, void 0, !1, {
+            /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react17.Meta, {}, void 0, !1, {
               fileName: "app/root.tsx",
               lineNumber: 74,
               columnNumber: 17
             }, this),
-            /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react18.Links, {}, void 0, !1, {
+            /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react17.Links, {}, void 0, !1, {
               fileName: "app/root.tsx",
               lineNumber: 75,
               columnNumber: 17
@@ -2555,17 +2530,17 @@ var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), meta = () => ({
         /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("body", {
           children: [
             children,
-            /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react18.ScrollRestoration, {}, void 0, !1, {
+            /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react17.ScrollRestoration, {}, void 0, !1, {
               fileName: "app/root.tsx",
               lineNumber: 86,
               columnNumber: 13
             }, this),
-            /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react18.Scripts, {}, void 0, !1, {
+            /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react17.Scripts, {}, void 0, !1, {
               fileName: "app/root.tsx",
               lineNumber: 87,
               columnNumber: 13
             }, this),
-            /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react18.LiveReload, {}, void 0, !1, {
+            /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react17.LiveReload, {}, void 0, !1, {
               fileName: "app/root.tsx",
               lineNumber: 88,
               columnNumber: 13
@@ -2586,7 +2561,7 @@ var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), meta = () => ({
 );
 function App() {
   return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(Document, {
-    children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react17.ChakraProvider, {
+    children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react16.ChakraProvider, {
       theme: customTheme,
       children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_framer_motion2.AnimatePresence, {
         exitBeforeEnter: !0,
@@ -2596,7 +2571,7 @@ function App() {
         },
         children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(Layout, {
           children: [
-            /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react17.Box, {
+            /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react16.Box, {
               marginTop: "40px",
               children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(dog_default, {}, void 0, !1, {
                 fileName: "app/root.tsx",
@@ -2608,11 +2583,11 @@ function App() {
               lineNumber: 107,
               columnNumber: 25
             }, this),
-            /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react17.Container, {
+            /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react16.Container, {
               position: "relative",
               transform: "none",
               opacity: 1,
-              children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react18.Outlet, {}, void 0, !1, {
+              children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react17.Outlet, {}, void 0, !1, {
                 fileName: "app/root.tsx",
                 lineNumber: 111,
                 columnNumber: 29
@@ -2657,11 +2632,11 @@ __export(axios_first_blog_exports, {
   loader: () => loader2,
   meta: () => meta2
 });
-var import_react19 = __toESM(require("react")), import_react20 = require("@remix-run/react"), import_react21 = require("@chakra-ui/react"), import_github_dark_dimmed = __toESM(require_github_dark_dimmed()), attributes = {
+var import_react18 = __toESM(require("react")), import_react19 = require("@remix-run/react"), import_react20 = require("@chakra-ui/react"), import_github_dark_dimmed = __toESM(require_github_dark_dimmed()), attributes = {
   meta: {
     title: "Axios with reactjs, axios call request",
     description: "Promise based HTTP client for the browser and node.js, how to write axios with react most useful",
-    image: "/images/blogs/axios-fist-blog.png",
+    image: "/images/blogs/axios-first-blog.png",
     "og:image": "/images/blogs/axios-first-blog.png"
   },
   headers: null,
@@ -2673,10 +2648,10 @@ var import_react19 = __toESM(require("react")), import_react20 = require("@remix
   href: import_github_dark_dimmed.default
 }];
 function ComponentUsingData() {
-  let { mamboNumber } = (0, import_react20.useLoaderData)();
-  return /* @__PURE__ */ import_react19.default.createElement(import_react19.default.Fragment, null, /* @__PURE__ */ import_react19.default.createElement("div", {
+  let { mamboNumber } = (0, import_react19.useLoaderData)();
+  return /* @__PURE__ */ import_react18.default.createElement(import_react18.default.Fragment, null, /* @__PURE__ */ import_react18.default.createElement("div", {
     id: "loader"
-  }, "Mambo Number: ", mamboNumber), /* @__PURE__ */ import_react19.default.createElement(import_react21.Button, null, "KKK"));
+  }, "Mambo Number: ", mamboNumber), /* @__PURE__ */ import_react18.default.createElement(import_react20.Button, null, "KKK"));
 }
 function MDXContent(props = {}) {
   let _components = Object.assign({
@@ -2684,465 +2659,465 @@ function MDXContent(props = {}) {
     pre: "pre",
     code: "code",
     span: "span"
-  }, props.components), { wrapper: MDXLayout } = _components, _content = /* @__PURE__ */ import_react19.default.createElement(import_react19.default.Fragment, null, /* @__PURE__ */ import_react19.default.createElement(import_react21.Heading, {
+  }, props.components), { wrapper: MDXLayout } = _components, _content = /* @__PURE__ */ import_react18.default.createElement(import_react18.default.Fragment, null, /* @__PURE__ */ import_react18.default.createElement(import_react20.Heading, {
     marginBottom: 4
   }, "L\xE0m th\u1EBF n\xE0o \u0111\u1EC3 vi\u1EBFt axios m\u1ED9t c\xE1ch ti\u1EC7n \xEDch v\u1EDBi reactjs"), `
-`, /* @__PURE__ */ import_react19.default.createElement(import_react21.Box, {
+`, /* @__PURE__ */ import_react18.default.createElement(import_react20.Box, {
     marginY: 4
-  }, /* @__PURE__ */ import_react19.default.createElement(_components.p, null, `N\u1EBFu l\xE0m vi\u1EC7c v\u1EDBi t\u01B0 c\xE1ch l\xE0 1 front-end developer th\xEC s\u1EF1 t\u01B0\u01A1ng t\xE1c gi\u1EEFa client v\u1EDBi server \u0111\u1EC3 l\u1EA5y data v\xE0 x\u1EED l\xFD l\xE0
+  }, /* @__PURE__ */ import_react18.default.createElement(_components.p, null, `N\u1EBFu l\xE0m vi\u1EC7c v\u1EDBi t\u01B0 c\xE1ch l\xE0 1 front-end developer th\xEC s\u1EF1 t\u01B0\u01A1ng t\xE1c gi\u1EEFa client v\u1EDBi server \u0111\u1EC3 l\u1EA5y data v\xE0 x\u1EED l\xFD l\xE0
 chuy\u1EC7n kh\xF4ng c\xF2n xa l\u1EA1 v\u1EDBi c\xE1c b\u1EA1n. V\xE0 m\u1ED9t th\u01B0 vi\u1EC7n m\u1EA1nh m\u1EBD v\xE0 ph\u1ED5 bi\u1EBFn \u0111\u1EC3 l\xE0m \u0111i\u1EC1u n\xE0y l\xE0`)), `
-`, /* @__PURE__ */ import_react19.default.createElement(import_react21.Link, {
+`, /* @__PURE__ */ import_react18.default.createElement(import_react20.Link, {
     href: "https://www.npmjs.com/package/axios"
-  }, /* @__PURE__ */ import_react19.default.createElement(_components.p, null, /* @__PURE__ */ import_react19.default.createElement(import_react21.Badge, {
+  }, /* @__PURE__ */ import_react18.default.createElement(_components.p, null, /* @__PURE__ */ import_react18.default.createElement(import_react20.Badge, {
     colorScheme: "green",
     mr: 2
   }, "Axios"), `
 Axios npm packages`)), `
-`, /* @__PURE__ */ import_react19.default.createElement(import_react21.Heading, {
+`, /* @__PURE__ */ import_react18.default.createElement(import_react20.Heading, {
     variant: "title-under-line"
   }, "1. C\xE1ch s\u1EED d\u1EE5ng"), `
-`, /* @__PURE__ */ import_react19.default.createElement(import_react21.Box, {
+`, /* @__PURE__ */ import_react18.default.createElement(import_react20.Box, {
     marginY: 4
-  }, /* @__PURE__ */ import_react19.default.createElement(_components.p, null, "\u0110\u1EA7u ti\xEAn b\u1EA1n s\u1EBD t\u1EA1o ra m\u1ED9t instance c\u1EE7a axios")), `
-`, /* @__PURE__ */ import_react19.default.createElement(_components.pre, null, /* @__PURE__ */ import_react19.default.createElement(_components.code, {
+  }, /* @__PURE__ */ import_react18.default.createElement(_components.p, null, "\u0110\u1EA7u ti\xEAn b\u1EA1n s\u1EBD t\u1EA1o ra m\u1ED9t instance c\u1EE7a axios")), `
+`, /* @__PURE__ */ import_react18.default.createElement(_components.pre, null, /* @__PURE__ */ import_react18.default.createElement(_components.code, {
     className: "hljs language-js"
-  }, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+  }, /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-keyword"
-  }, "import"), " axios ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+  }, "import"), " axios ", /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-keyword"
-  }, "from"), " ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+  }, "from"), " ", /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-string"
   }, '"axios"'), `;
-`, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+`, /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-keyword"
-  }, "export"), " ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+  }, "export"), " ", /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-keyword"
-  }, "const"), " instance = axios.", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+  }, "const"), " instance = axios.", /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-title function_"
   }, "create"), `({
-    `, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    `, /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-attr"
   }, "headers"), `: {
-        `, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+        `, /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-string"
-  }, "'content-type'"), ": ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+  }, "'content-type'"), ": ", /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-string"
   }, "'application/json; charset=UTF-8'"), `
     },
-    `, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    `, /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-attr"
-  }, "timeout"), ": ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+  }, "timeout"), ": ", /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-number"
   }, "300000"), `,
-    `, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    `, /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-attr"
-  }, "timeoutErrorMessage"), ": ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+  }, "timeoutErrorMessage"), ": ", /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-string"
   }, "`Connection is timeout exceeded`"), `
 });
 `)), `
-`, /* @__PURE__ */ import_react19.default.createElement(import_react21.Box, {
+`, /* @__PURE__ */ import_react18.default.createElement(import_react20.Box, {
     marginY: 2
-  }, /* @__PURE__ */ import_react19.default.createElement(_components.p, null, "Ti\u1EBFp theo s\u1EBD d\xF9ng instance n\xE0y \u0111\u1EC3 g\u1ECDi request")), `
-`, /* @__PURE__ */ import_react19.default.createElement(_components.pre, null, /* @__PURE__ */ import_react19.default.createElement(_components.code, {
+  }, /* @__PURE__ */ import_react18.default.createElement(_components.p, null, "Ti\u1EBFp theo s\u1EBD d\xF9ng instance n\xE0y \u0111\u1EC3 g\u1ECDi request")), `
+`, /* @__PURE__ */ import_react18.default.createElement(_components.pre, null, /* @__PURE__ */ import_react18.default.createElement(_components.code, {
     className: "hljs language-js"
-  }, "instance.", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+  }, "instance.", /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-title function_"
-  }, "get"), "(", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+  }, "get"), "(", /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-string"
   }, "'link request....'"), `)
-  .`, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+  .`, /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-title function_"
-  }, "then"), "(", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+  }, "then"), "(", /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-keyword"
-  }, "function"), " (", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+  }, "function"), " (", /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-params"
   }, "response"), `) {
-    `, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    `, /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-comment"
   }, "// handle success"), `
-    `, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    `, /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-variable language_"
-  }, "console"), ".", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+  }, "console"), ".", /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-title function_"
   }, "log"), `(response);
   })
-  .`, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+  .`, /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-title function_"
-  }, "catch"), "(", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+  }, "catch"), "(", /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-keyword"
-  }, "function"), " (", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+  }, "function"), " (", /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-params"
   }, "error"), `) {
-    `, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    `, /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-comment"
   }, "// handle error"), `
-    `, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    `, /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-variable language_"
-  }, "console"), ".", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+  }, "console"), ".", /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-title function_"
   }, "log"), `(error);
   })
-  .`, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+  .`, /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-title function_"
-  }, "then"), "(", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+  }, "then"), "(", /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-keyword"
-  }, "function"), " (", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+  }, "function"), " (", /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-params"
   }), `) {
-    `, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    `, /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-comment"
   }, "// always executed"), `
   });
 `)), `
-`, /* @__PURE__ */ import_react19.default.createElement(import_react21.Box, {
+`, /* @__PURE__ */ import_react18.default.createElement(import_react20.Box, {
     marginY: 4
-  }, /* @__PURE__ */ import_react19.default.createElement(_components.p, null, "T\u1EDBi \u0111\xE2y b\u1EA1n c\xF3 th\u1EC3 \u0111\u1EB7t c\xE2u h\u1ECFi"), /* @__PURE__ */ import_react19.default.createElement(import_react21.UnorderedList, {
+  }, /* @__PURE__ */ import_react18.default.createElement(_components.p, null, "T\u1EDBi \u0111\xE2y b\u1EA1n c\xF3 th\u1EC3 \u0111\u1EB7t c\xE2u h\u1ECFi"), /* @__PURE__ */ import_react18.default.createElement(import_react20.UnorderedList, {
     my: 2
-  }, /* @__PURE__ */ import_react19.default.createElement(import_react21.ListItem, null, /* @__PURE__ */ import_react19.default.createElement(_components.p, null, `N\u1EBFu nh\u01B0 c\xF3 nhi\u1EC1u t\u01B0\u01A1ng t\xE1c gi\u1EEFa client v\xE0 server th\xEC b\u1EA1n s\u1EBD ph\u1EA3i vi\u1EBFt \u0111i vi\u1EBFt l\u1EA1i \u0111i\u1EC1u n\xE0y nhi\u1EC1u l\u1EA7n, trong
-code th\xEC \u0111\xE2y b\u1EA1n \u0111\xE3 vi ph\u1EA1m m\u1ED9t l\u1ED7i \u0111\u01B0\u1EE3c g\u1ECDi l\xE0 `, /* @__PURE__ */ import_react19.default.createElement(import_react21.Badge, {
+  }, /* @__PURE__ */ import_react18.default.createElement(import_react20.ListItem, null, /* @__PURE__ */ import_react18.default.createElement(_components.p, null, `N\u1EBFu nh\u01B0 c\xF3 nhi\u1EC1u t\u01B0\u01A1ng t\xE1c gi\u1EEFa client v\xE0 server th\xEC b\u1EA1n s\u1EBD ph\u1EA3i vi\u1EBFt \u0111i vi\u1EBFt l\u1EA1i \u0111i\u1EC1u n\xE0y nhi\u1EC1u l\u1EA7n, trong
+code th\xEC \u0111\xE2y b\u1EA1n \u0111\xE3 vi ph\u1EA1m m\u1ED9t l\u1ED7i \u0111\u01B0\u1EE3c g\u1ECDi l\xE0 `, /* @__PURE__ */ import_react18.default.createElement(import_react20.Badge, {
     colorScheme: "green"
   }, "DRY"), ` (Don\u2019t Repeat
-Yourself)`)), /* @__PURE__ */ import_react19.default.createElement(import_react21.ListItem, null, /* @__PURE__ */ import_react19.default.createElement(_components.p, null, `V\xE0 v\u1EDBi v\u1EA5n \u0111\u1EC1 code l\u1EB7p \u0111i l\u1EB7p l\u1EA1i nh\u01B0 v\u1EADy, khi c\xF3 1 s\u1EF1 thay \u0111\u1ED5i code th\xEC b\u1EA1n s\u1EBD ph\u1EA3i t\xECm v\xE0 s\u1EEF l\u1EA1i t\u1EEBng h\xE0m
-tr\xEAn`))), /* @__PURE__ */ import_react19.default.createElement("p", null, "N\u1EBFu b\u1EA1n c\xF3 \u0111\u1EB7t c\xE2u h\u1ECFi nh\u01B0 v\u1EADy th\xEC ph\u1EA7n ti\u1EBFp theo s\u1EBD d\xE0nh cho b\u1EA1n.")), `
-`, /* @__PURE__ */ import_react19.default.createElement(import_react21.Heading, {
+Yourself)`)), /* @__PURE__ */ import_react18.default.createElement(import_react20.ListItem, null, /* @__PURE__ */ import_react18.default.createElement(_components.p, null, `V\xE0 v\u1EDBi v\u1EA5n \u0111\u1EC1 code l\u1EB7p \u0111i l\u1EB7p l\u1EA1i nh\u01B0 v\u1EADy, khi c\xF3 1 s\u1EF1 thay \u0111\u1ED5i code th\xEC b\u1EA1n s\u1EBD ph\u1EA3i t\xECm v\xE0 s\u1EEF l\u1EA1i t\u1EEBng h\xE0m
+tr\xEAn`))), /* @__PURE__ */ import_react18.default.createElement("p", null, "N\u1EBFu b\u1EA1n c\xF3 \u0111\u1EB7t c\xE2u h\u1ECFi nh\u01B0 v\u1EADy th\xEC ph\u1EA7n ti\u1EBFp theo s\u1EBD d\xE0nh cho b\u1EA1n.")), `
+`, /* @__PURE__ */ import_react18.default.createElement(import_react20.Heading, {
     variant: "title-under-line"
   }, "2. Vi\u1EBFt axios \u0111\u1EC3 t\xE1i s\u1EED d\u1EE5ng"), `
-`, /* @__PURE__ */ import_react19.default.createElement(import_react21.Box, {
+`, /* @__PURE__ */ import_react18.default.createElement(import_react20.Box, {
     marginY: 4
-  }, /* @__PURE__ */ import_react19.default.createElement(_components.p, null, "\u0110\u1EA7u ti\xEAn b\u1EA1n s\u1EBD t\u1EA1o 1 th\u01B0 m\u1EE5c v\xED d\u1EE5 ", /* @__PURE__ */ import_react19.default.createElement(import_react21.Badge, null, "src/api/core.ts"), " v\xE0 c\u0169ng nh\u01B0 ph\u1EA7n 1 b\u1EA1n s\u1EBD t\u1EA1o instance c\u1EE7a axios")), `
-`, /* @__PURE__ */ import_react19.default.createElement(_components.pre, null, /* @__PURE__ */ import_react19.default.createElement(_components.code, {
+  }, /* @__PURE__ */ import_react18.default.createElement(_components.p, null, "\u0110\u1EA7u ti\xEAn b\u1EA1n s\u1EBD t\u1EA1o 1 th\u01B0 m\u1EE5c v\xED d\u1EE5 ", /* @__PURE__ */ import_react18.default.createElement(import_react20.Badge, null, "src/api/core.ts"), " v\xE0 c\u0169ng nh\u01B0 ph\u1EA7n 1 b\u1EA1n s\u1EBD t\u1EA1o instance c\u1EE7a axios")), `
+`, /* @__PURE__ */ import_react18.default.createElement(_components.pre, null, /* @__PURE__ */ import_react18.default.createElement(_components.code, {
     className: "hljs language-js"
-  }, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+  }, /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-keyword"
-  }, "import"), " axios ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+  }, "import"), " axios ", /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-keyword"
-  }, "from"), " ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+  }, "from"), " ", /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-string"
   }, '"axios"'), `;
-`, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+`, /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-keyword"
-  }, "export"), " ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+  }, "export"), " ", /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-keyword"
-  }, "const"), " instance = axios.", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+  }, "const"), " instance = axios.", /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-title function_"
   }, "create"), `({
-    `, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    `, /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-attr"
   }, "headers"), `: {
-        `, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+        `, /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-string"
-  }, "'content-type'"), ": ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+  }, "'content-type'"), ": ", /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-string"
   }, "'application/json; charset=UTF-8'"), `
     },
-    `, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    `, /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-attr"
-  }, "timeout"), ": ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+  }, "timeout"), ": ", /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-number"
   }, "300000"), `,
-    `, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    `, /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-attr"
-  }, "timeoutErrorMessage"), ": ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+  }, "timeoutErrorMessage"), ": ", /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-string"
   }, "`Connection is timeout exceeded`"), `
 });
 `)), `
-`, /* @__PURE__ */ import_react19.default.createElement(import_react21.Box, {
+`, /* @__PURE__ */ import_react18.default.createElement(import_react20.Box, {
     marginY: 4
-  }, /* @__PURE__ */ import_react19.default.createElement(_components.p, null, "Theo \u0111\xF3 b\u1EA1n s\u1EBD t\u1EA1o 1 model \u0111\u1EC3 truy\u1EC1n params v\xE0o c\xE1c h\xE0m c\u1EE7a axios m\xE0 m\xECnh s\u1EBD h\u01B0\u1EDBng d\u1EABn s\u1EAFp t\u1EDBi"), /* @__PURE__ */ import_react19.default.createElement(import_react21.UnorderedList, {
+  }, /* @__PURE__ */ import_react18.default.createElement(_components.p, null, "Theo \u0111\xF3 b\u1EA1n s\u1EBD t\u1EA1o 1 model \u0111\u1EC3 truy\u1EC1n params v\xE0o c\xE1c h\xE0m c\u1EE7a axios m\xE0 m\xECnh s\u1EBD h\u01B0\u1EDBng d\u1EABn s\u1EAFp t\u1EDBi"), /* @__PURE__ */ import_react18.default.createElement(import_react20.UnorderedList, {
     my: 2
-  }, /* @__PURE__ */ import_react19.default.createElement(import_react21.ListItem, null, /* @__PURE__ */ import_react19.default.createElement(_components.p, null, /* @__PURE__ */ import_react19.default.createElement(import_react21.Badge, {
+  }, /* @__PURE__ */ import_react18.default.createElement(import_react20.ListItem, null, /* @__PURE__ */ import_react18.default.createElement(_components.p, null, /* @__PURE__ */ import_react18.default.createElement(import_react20.Badge, {
     colorScheme: "green"
-  }, "isLoading"), " - show loading khi call request")), /* @__PURE__ */ import_react19.default.createElement(import_react21.ListItem, null, /* @__PURE__ */ import_react19.default.createElement(_components.p, null, /* @__PURE__ */ import_react19.default.createElement(import_react21.Badge, {
+  }, "isLoading"), " - show loading khi call request")), /* @__PURE__ */ import_react18.default.createElement(import_react20.ListItem, null, /* @__PURE__ */ import_react18.default.createElement(_components.p, null, /* @__PURE__ */ import_react18.default.createElement(import_react20.Badge, {
     colorScheme: "green"
   }, "payload, headers"), ` - \u0111\u1EC3 truy\u1EC1n xu\u1ED1ng khi call request (nh\u01B0
-Authorization...)`)), /* @__PURE__ */ import_react19.default.createElement(import_react21.ListItem, null, /* @__PURE__ */ import_react19.default.createElement(_components.p, null, /* @__PURE__ */ import_react19.default.createElement(import_react21.Badge, {
+Authorization...)`)), /* @__PURE__ */ import_react18.default.createElement(import_react20.ListItem, null, /* @__PURE__ */ import_react18.default.createElement(_components.p, null, /* @__PURE__ */ import_react18.default.createElement(import_react20.Badge, {
     colorScheme: "green"
   }, "url"), " - \u0111\u01B0\u1EDDng d\u1EABn t\u01B0\u01A1ng t\xE1c v\u1EDBi server")))), `
-`, /* @__PURE__ */ import_react19.default.createElement(_components.pre, null, /* @__PURE__ */ import_react19.default.createElement(_components.code, {
+`, /* @__PURE__ */ import_react18.default.createElement(_components.pre, null, /* @__PURE__ */ import_react18.default.createElement(_components.code, {
     className: "hljs language-ts"
-  }, "   ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+  }, "   ", /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-keyword"
-  }, "export"), " ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+  }, "export"), " ", /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-keyword"
-  }, "interface"), " ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+  }, "interface"), " ", /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-title class_"
-  }, "IRequest"), "<T = ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+  }, "IRequest"), "<T = ", /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-built_in"
   }, "any"), `> {
-    `, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    `, /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-attr"
-  }, "isLoading"), ": ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+  }, "isLoading"), ": ", /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-built_in"
   }, "boolean"), `;
-    `, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    `, /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-attr"
   }, "payload"), `: T;
-    `, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    `, /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-attr"
   }, "headers"), `: {
-        [`, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+        [`, /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-attr"
-  }, "key"), ": ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+  }, "key"), ": ", /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-built_in"
-  }, "string"), "]: ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+  }, "string"), "]: ", /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-built_in"
-  }, "string"), " | ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+  }, "string"), " | ", /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-built_in"
   }, "number"), `;
     };
-    `, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    `, /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-attr"
-  }, "url"), ": ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+  }, "url"), ": ", /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-built_in"
   }, "string"), `;
 }
 `)), `
-`, /* @__PURE__ */ import_react19.default.createElement(import_react21.Box, {
+`, /* @__PURE__ */ import_react18.default.createElement(import_react20.Box, {
     marginY: 4
-  }, /* @__PURE__ */ import_react19.default.createElement(_components.p, null, "Ok!! V\xE0 b\xE2y gi\u1EDD h\xE3y vi\u1EBFt nh\u1EEFng h\xE0m t\u01B0\u01A1ng t\xE1c v\u1EDBi server b\u1EB1ng axios n\xE0o")), `
-`, /* @__PURE__ */ import_react19.default.createElement(_components.pre, null, /* @__PURE__ */ import_react19.default.createElement(_components.code, {
+  }, /* @__PURE__ */ import_react18.default.createElement(_components.p, null, "Ok!! V\xE0 b\xE2y gi\u1EDD h\xE3y vi\u1EBFt nh\u1EEFng h\xE0m t\u01B0\u01A1ng t\xE1c v\u1EDBi server b\u1EB1ng axios n\xE0o")), `
+`, /* @__PURE__ */ import_react18.default.createElement(_components.pre, null, /* @__PURE__ */ import_react18.default.createElement(_components.code, {
     className: "hljs language-ts"
-  }, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+  }, /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-keyword"
-  }, "import"), " {", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+  }, "import"), " {", /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-title class_"
-  }, "AxiosResponse"), "} ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+  }, "AxiosResponse"), "} ", /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-keyword"
-  }, "from"), " ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+  }, "from"), " ", /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-string"
   }, '"axios"'), `;
-`, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+`, /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-keyword"
-  }, "export"), " ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+  }, "export"), " ", /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-keyword"
-  }, "interface"), " ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+  }, "interface"), " ", /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-title class_"
-  }, "PromiseState"), "<T = ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+  }, "PromiseState"), "<T = ", /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-built_in"
-  }, "unknown"), "> ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+  }, "unknown"), "> ", /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-keyword"
-  }, "extends"), " ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+  }, "extends"), " ", /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-title class_"
   }, "AxiosResponse"), `<T> {
-    `, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    `, /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-attr"
-  }, "totalItem"), ": ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+  }, "totalItem"), ": ", /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-built_in"
   }, "number"), `;
 }
 
-`, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+`, /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-keyword"
-  }, "export"), " ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+  }, "export"), " ", /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-keyword"
-  }, "const"), " ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+  }, "const"), " ", /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-title class_"
   }, "BaseService"), ` = {
-    get<T = `, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    get<T = `, /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-built_in"
   }, "any"), `>({
                      url,
                      isLoading,
                      payload,
                      headers
-                 }: `, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+                 }: `, /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-title class_"
-  }, "Partial"), "<", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+  }, "Partial"), "<", /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-title class_"
-  }, "IRequest"), ">): ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+  }, "IRequest"), ">): ", /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-title class_"
-  }, "Promise"), "<", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+  }, "Promise"), "<", /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-title class_"
   }, "PromiseState"), `<T>> {
-        `, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+        `, /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-keyword"
   }, "if"), ` (isLoading)
-           `, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+           `, /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-comment"
   }, "// todo show loading"), `
-        `, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+        `, /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-keyword"
-  }, "return"), " instance.", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+  }, "return"), " instance.", /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-property"
-  }, "get"), "<T, ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+  }, "get"), "<T, ", /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-title class_"
   }, "PromiseState"), `<T>>(url, {
-            `, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+            `, /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-attr"
   }, "params"), `: payload,
-            `, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+            `, /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-attr"
-  }, "baseURL"), ": ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+  }, "baseURL"), ": ", /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-string"
   }, "'link base url'"), `,
-            `, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+            `, /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-attr"
   }, "headers"), `: headers || {}
         })
     }
 }
 `)), `
-`, /* @__PURE__ */ import_react19.default.createElement(import_react21.Box, {
+`, /* @__PURE__ */ import_react18.default.createElement(import_react20.Box, {
     marginY: 4
-  }, /* @__PURE__ */ import_react19.default.createElement(_components.p, null, "V\xE0 v\u1EDBi c\xE1c h\xE0n ", /* @__PURE__ */ import_react19.default.createElement(import_react21.Badge, {
+  }, /* @__PURE__ */ import_react18.default.createElement(_components.p, null, "V\xE0 v\u1EDBi c\xE1c h\xE0n ", /* @__PURE__ */ import_react18.default.createElement(import_react20.Badge, {
     colorScheme: "green"
-  }, "put"), " ", /* @__PURE__ */ import_react19.default.createElement(import_react21.Badge, {
+  }, "put"), " ", /* @__PURE__ */ import_react18.default.createElement(import_react20.Badge, {
     colorScheme: "green"
-  }, "post"), " ", /* @__PURE__ */ import_react19.default.createElement(import_react21.Badge, {
+  }, "post"), " ", /* @__PURE__ */ import_react18.default.createElement(import_react20.Badge, {
     colorScheme: "green"
   }, "delete"), `
 b\u1EA1n c\u0169ng c\xF3 th\u1EC3 tham kh\u1EA3o v\xE0 l\xE0m t\u01B0\u01A1ng t\u1EF1 nh\u01B0 v\xE2y`)), `
-`, /* @__PURE__ */ import_react19.default.createElement(import_react21.Heading, {
+`, /* @__PURE__ */ import_react18.default.createElement(import_react20.Heading, {
     variant: "title-under-line"
   }, "3. S\u1EED d\u1EE5ng"), `
-`, /* @__PURE__ */ import_react19.default.createElement(import_react21.Box, {
+`, /* @__PURE__ */ import_react18.default.createElement(import_react20.Box, {
     marginY: 4
   }, "M\xECnh s\u1EBD t\u1EA1o 1 model v\u1EC1 response"), `
-`, /* @__PURE__ */ import_react19.default.createElement(_components.pre, null, /* @__PURE__ */ import_react19.default.createElement(_components.code, {
+`, /* @__PURE__ */ import_react18.default.createElement(_components.pre, null, /* @__PURE__ */ import_react18.default.createElement(_components.code, {
     className: "hljs language-ts"
-  }, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+  }, /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-keyword"
-  }, "export"), " ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+  }, "export"), " ", /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-keyword"
-  }, "interface"), " ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+  }, "interface"), " ", /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-title class_"
   }, "ProductDetail"), `{
-  `, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+  `, /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-attr"
-  }, "id"), ": ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+  }, "id"), ": ", /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-built_in"
   }, "number"), `;
-  `, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+  `, /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-string"
-  }, '"title"'), ": ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+  }, '"title"'), ": ", /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-built_in"
   }, "string"), `;
-  `, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+  `, /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-string"
-  }, '"description"'), ": ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+  }, '"description"'), ": ", /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-built_in"
   }, "string"), `;
-  `, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+  `, /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-string"
-  }, '"price"'), ": ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+  }, '"price"'), ": ", /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-built_in"
   }, "number"), `;
-  `, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+  `, /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-string"
-  }, '"discountPercentage"'), ": ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+  }, '"discountPercentage"'), ": ", /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-built_in"
   }, "number"), `;
-  `, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+  `, /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-string"
-  }, '"rating"'), ":", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+  }, '"rating"'), ":", /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-built_in"
   }, "number"), `;
-  `, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+  `, /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-string"
-  }, '"stock"'), ": ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+  }, '"stock"'), ": ", /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-built_in"
   }, "number"), `;
-  `, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+  `, /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-string"
-  }, '"brand"'), ": ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+  }, '"brand"'), ": ", /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-built_in"
   }, "string"), `;
-  `, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+  `, /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-string"
-  }, '"category"'), ": ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+  }, '"category"'), ": ", /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-built_in"
   }, "string"), `;
-  `, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+  `, /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-string"
-  }, '"thumbnail"'), ": ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+  }, '"thumbnail"'), ": ", /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-built_in"
   }, "string"), `;
-  `, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+  `, /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-string"
-  }, '"images"'), ": ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+  }, '"images"'), ": ", /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-built_in"
   }, "string"), `[];
 }
 `)), `
-`, /* @__PURE__ */ import_react19.default.createElement(import_react21.Box, {
+`, /* @__PURE__ */ import_react18.default.createElement(import_react20.Box, {
     marginY: 4
-  }, /* @__PURE__ */ import_react19.default.createElement(_components.p, null, "B\xE2y gi\u1EDD \xE1p d\u1EE5ng nh\u1EEFng g\xEC \u0111\xE3 vi\u1EBFt t\u1EEB ph\u1EA7n 2 d\xF9ng \u0111\u1EC3 g\u1ECDi m\u1ED9t request chi ti\u1EBFt s\u1EA3n ph\u1EA9m")), `
-`, /* @__PURE__ */ import_react19.default.createElement(_components.pre, null, /* @__PURE__ */ import_react19.default.createElement(_components.code, {
+  }, /* @__PURE__ */ import_react18.default.createElement(_components.p, null, "B\xE2y gi\u1EDD \xE1p d\u1EE5ng nh\u1EEFng g\xEC \u0111\xE3 vi\u1EBFt t\u1EEB ph\u1EA7n 2 d\xF9ng \u0111\u1EC3 g\u1ECDi m\u1ED9t request chi ti\u1EBFt s\u1EA3n ph\u1EA9m")), `
+`, /* @__PURE__ */ import_react18.default.createElement(_components.pre, null, /* @__PURE__ */ import_react18.default.createElement(_components.code, {
     className: "hljs language-ts"
-  }, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+  }, /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-keyword"
-  }, "import"), " {useEffect} ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+  }, "import"), " {useEffect} ", /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-keyword"
-  }, "from"), " ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+  }, "from"), " ", /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-string"
   }, '"react"'), `;
-`, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+`, /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-keyword"
-  }, "const"), " ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+  }, "const"), " ", /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-title function_"
-  }, "getDetailProduct"), "=", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+  }, "getDetailProduct"), "=", /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-keyword"
-  }, "async"), " (", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+  }, "async"), " (", /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-params"
   }), `)=>{
-   `, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+   `, /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-keyword"
-  }, "const"), " response= ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+  }, "const"), " response= ", /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-keyword"
-  }, "await"), " ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+  }, "await"), " ", /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-title class_"
-  }, "BaseService"), ".", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+  }, "BaseService"), ".", /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-property"
-  }, "get"), "<", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+  }, "get"), "<", /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-title class_"
   }, "ProductDetail"), `>({
-        `, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+        `, /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-attr"
-  }, "url"), ":", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+  }, "url"), ":", /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-string"
   }, "'https://dummyjson.com/products/1'"), `,
-        `, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+        `, /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-attr"
-  }, "isLoading"), ":", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+  }, "isLoading"), ":", /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-literal"
   }, "true"), `
    })
-    `, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    `, /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-comment"
   }, "// reponse.data s\u1EBD c\xF3 ki\u1EC3u l\xE0 ProductDetail"), `
-    `, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    `, /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-variable language_"
-  }, "console"), ".", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+  }, "console"), ".", /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-title function_"
-  }, "log"), "(", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+  }, "log"), "(", /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-string"
-  }, "'data'"), ",response.", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+  }, "'data'"), ",response.", /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-property"
   }, "data"), `);
 }
-`, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+`, /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-title function_"
-  }, "useEffect"), "(", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+  }, "useEffect"), "(", /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-function"
   }, "()=>"), `{
-    (`, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+    (`, /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-keyword"
   }, "async"), ` ()=>{
-        `, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+        `, /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-keyword"
-  }, "await"), " ", /* @__PURE__ */ import_react19.default.createElement(_components.span, {
+  }, "await"), " ", /* @__PURE__ */ import_react18.default.createElement(_components.span, {
     className: "hljs-title function_"
   }, "getDetailProduct"), `();
     })()
 },[])
 `)), `
-`, /* @__PURE__ */ import_react19.default.createElement(_components.p, null, /* @__PURE__ */ import_react19.default.createElement(import_react21.Heading, {
+`, /* @__PURE__ */ import_react18.default.createElement(_components.p, null, /* @__PURE__ */ import_react18.default.createElement(import_react20.Heading, {
     variant: "title-under-line"
   }, "4. L\u1EDDi k\u1EBFt"), `
 Trong b\xE0i vi\u1EBFt n\xE0y m\xECnh ch\u1EC9 h\u01B0\u1EDBng d\u1EABn v\u1EC1 c\xE1ch vi\u1EBFt t\u01B0\u01A1ng t\xE1c gi\u1EEFa client v\xE0 server, trong c\xE1c ph\u1EA7n t\u1EDBi m\xECnh s\u1EBD ra th\xEAm v\u1EC1 cache, x\u1EED l\xFD l\u1ED7i, mapper d\u1EEF li\u1EC7u t\u1EEB reponse v\u1EDBi axios.`));
-  return MDXLayout ? /* @__PURE__ */ import_react19.default.createElement(MDXLayout, {
+  return MDXLayout ? /* @__PURE__ */ import_react18.default.createElement(MDXLayout, {
     ...props
   }, _content) : _content;
 }
@@ -3158,56 +3133,57 @@ __export(blogs_exports, {
 var import_react23 = require("@chakra-ui/react"), import_node2 = require("@remix-run/node"), import_react24 = require("@remix-run/react");
 
 // app/components/card.tsx
-var import_react22 = require("@chakra-ui/react"), import_jsx_dev_runtime = require("react/jsx-dev-runtime");
-function CardThumbnail({ thumbnail, title, children }) {
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react22.Box, {
+var import_react21 = require("@chakra-ui/react"), import_react22 = require("@remix-run/react"), import_jsx_dev_runtime = require("react/jsx-dev-runtime");
+function CardThumbnail({ thumbnail, title, children, href }) {
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react21.Box, {
     w: "100%",
     textAlign: "center",
-    children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react22.LinkBox, {
-      cursor: "pointer",
+    cursor: "pointer",
+    children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react22.NavLink, {
+      to: href,
       children: [
-        /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react22.Image, {
-          src: "https://media.istockphoto.com/vectors/coming-soon-lettering-coming-soon-for-promotion-advertisement-sale-vector-id1221240925?k=20&m=1221240925&s=612x612&w=0&h=HX77CIwJ34u7qUMpI_W5z4dDnEbHGv66mGXVTpIccv8=",
+        /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react21.Image, {
+          src: thumbnail,
           alt: title,
           className: "grid-item-thumbnail",
           placeholder: "blur"
         }, void 0, !1, {
           fileName: "app/components/card.tsx",
-          lineNumber: 6,
+          lineNumber: 7,
           columnNumber: 13
         }, this),
-        /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react22.LinkOverlay, {
-          children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react22.Text, {
+        /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react21.LinkOverlay, {
+          children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react21.Text, {
             mt: 2,
             fontSize: 20,
             children: title
           }, void 0, !1, {
             fileName: "app/components/card.tsx",
-            lineNumber: 13,
+            lineNumber: 14,
             columnNumber: 17
           }, this)
         }, void 0, !1, {
           fileName: "app/components/card.tsx",
-          lineNumber: 12,
+          lineNumber: 13,
           columnNumber: 13
         }, this),
-        /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react22.Text, {
+        /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react21.Text, {
           fontSize: 14,
           children
         }, void 0, !1, {
           fileName: "app/components/card.tsx",
-          lineNumber: 17,
+          lineNumber: 18,
           columnNumber: 13
         }, this)
       ]
     }, void 0, !0, {
       fileName: "app/components/card.tsx",
-      lineNumber: 5,
+      lineNumber: 6,
       columnNumber: 9
     }, this)
   }, void 0, !1, {
     fileName: "app/components/card.tsx",
-    lineNumber: 4,
+    lineNumber: 5,
     columnNumber: 13
   }, this);
 }
@@ -3239,126 +3215,52 @@ function MotionRouter({ children }) {
 }
 var motion_router_default = MotionRouter;
 
-// app/json/json-blog.json
-var json_blog_default = {
-  posts: [
-    {
-      image: "/images/blogs/inkdrop.png",
-      id: 1,
-      title: "His mother ",
-      body: "But the stupidity of the group of people he was talking to made him change his mind.",
-      userId: 9,
-      tags: [
-        "history",
-        "american",
-        "crime"
-      ],
-      reactions: 2
-    },
-    {
-      image: "/images/blogs/blog-2.png",
-      id: 2,
-      title: "a discipline",
-      body: "He was an expert but not in a discipline that anyone could fully appreciate.",
-      userId: 13,
-      tags: [
-        "french",
-        "fiction",
-        "english"
-      ],
-      reactions: 2
-    },
-    {
-      id: 3,
-      image: "/images/blogs/blog-3.png",
-      title: "Dave watched ",
-      body: "Dave watched as the forest burned up on the hill",
-      userId: 32,
-      tags: [
-        "magical",
-        "history",
-        "french"
-      ],
-      reactions: 5
-    },
-    {
-      id: 4,
-      image: "/images/blogs/blog-4.png",
-      title: "All he wanted",
-      body: "All he wanted was a candy bar.",
-      userId: 12,
-      tags: [
-        "mystery",
-        "english",
-        "american"
-      ],
-      reactions: 1
-    },
-    {
-      image: "/images/blogs/blog-5.png",
-      id: 5,
-      title: "Hopes and dreams",
-      body: "Hopes and dreams were dashed that day.",
-      userId: 41,
-      tags: [
-        "crime",
-        "mystery",
-        "love"
-      ],
-      reactions: 2
-    },
-    {
-      image: "/images/blogs/blog-6.png",
-      id: 6,
-      title: "Dave wasn't",
-      body: "Dave wasn't exactly sure how he had ended up in this predicament.",
-      userId: 47,
-      tags: [
-        "english",
-        "classic",
-        "american"
-      ],
-      reactions: 3
-    }
-  ]
-};
-
 // app/routes/blogs/index.tsx
-var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), loader3 = async () => (0, import_node2.json)(json_blog_default);
+var import_jsx_dev_runtime = require("react/jsx-dev-runtime");
+function postFromModule(mod) {
+  return {
+    slug: mod.filename.replace(/\.mdx?$/, ""),
+    ...mod.attributes.meta
+  };
+}
+var loader3 = async () => (console.log("a", postFromModule(axios_first_blog_exports)), (0, import_node2.json)([
+  postFromModule(axios_first_blog_exports)
+]));
 function Index() {
-  let { posts } = (0, import_react24.useLoaderData)();
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(motion_router_default, {
+  let posts = (0, import_react24.useLoaderData)();
+  return console.log("post", posts), /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(motion_router_default, {
     children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react23.SimpleGrid, {
       columns: [1, 1, 2],
       gap: 6,
-      children: posts.map((post) => /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(card_default, {
+      children: posts.map((post, index) => /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(card_default, {
+        href: post.slug,
         thumbnail: post.image,
         title: post.title,
-        children: post.body
-      }, post.id, !1, {
+        children: post.description
+      }, `blog-${index}`, !1, {
         fileName: "app/routes/blogs/index.tsx",
-        lineNumber: 16,
-        columnNumber: 32
+        lineNumber: 28,
+        columnNumber: 40
       }, this))
     }, void 0, !1, {
       fileName: "app/routes/blogs/index.tsx",
-      lineNumber: 15,
+      lineNumber: 27,
       columnNumber: 9
     }, this)
   }, void 0, !1, {
     fileName: "app/routes/blogs/index.tsx",
-    lineNumber: 14,
+    lineNumber: 26,
     columnNumber: 13
   }, this);
 }
 var meta3 = ({ data }) => {
-  let postTitles = data.posts.map((post) => post.title);
+  let postTitles = data.map((post) => post.title);
   return {
     title: "Blog page portfolio of nguyen ba tran van",
     description: `List of blogs: ${postTitles.join(",")}`,
     "og:description": `List of blogs: ${postTitles.join(",")}`,
-    image: "/images/blogs/blog-2.png",
-    "og:image": "/images/blogs/blog-2.png"
+    image: `${data[0].image}`,
+    "og:image": `${data[0].image}`
   };
 };
 
@@ -3894,7 +3796,7 @@ var meta5 = () => ({
 });
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { version: "564467e1", entry: { module: "/build/entry.client-PRVYZ75S.js", imports: ["/build/_shared/chunk-DLTBJWIM.js", "/build/_shared/chunk-2KJVXWSX.js", "/build/_shared/chunk-OL2A2WX4.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-FTLKUJIU.js", imports: ["/build/_shared/chunk-TVFHIIFP.js", "/build/_shared/chunk-W4WRNW5Z.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/blogs/axios-first-blog": { id: "routes/blogs/axios-first-blog", parentId: "root", path: "blogs/axios-first-blog", index: void 0, caseSensitive: void 0, module: "/build/routes/blogs/axios-first-blog-WWLJ3QL3.js", imports: void 0, hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/blogs/index": { id: "routes/blogs/index", parentId: "root", path: "blogs", index: !0, caseSensitive: void 0, module: "/build/routes/blogs/index-WUQKADHC.js", imports: ["/build/_shared/chunk-I5KNNBPN.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/index": { id: "routes/index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/index-3YWGVMYL.js", imports: ["/build/_shared/chunk-I5KNNBPN.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/product": { id: "routes/product", parentId: "root", path: "product", index: void 0, caseSensitive: void 0, module: "/build/routes/product-47I56O72.js", imports: ["/build/_shared/chunk-I5KNNBPN.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, url: "/build/manifest-564467E1.js" };
+var assets_manifest_default = { version: "01d1cf66", entry: { module: "/build/entry.client-PRVYZ75S.js", imports: ["/build/_shared/chunk-DLTBJWIM.js", "/build/_shared/chunk-2KJVXWSX.js", "/build/_shared/chunk-OL2A2WX4.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-MUTCWEDF.js", imports: ["/build/_shared/chunk-TVFHIIFP.js", "/build/_shared/chunk-2ZUEBVN2.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/blogs/axios-first-blog": { id: "routes/blogs/axios-first-blog", parentId: "root", path: "blogs/axios-first-blog", index: void 0, caseSensitive: void 0, module: "/build/routes/blogs/axios-first-blog-A6UAPNGZ.js", imports: ["/build/_shared/chunk-7O75O6HR.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/blogs/index": { id: "routes/blogs/index", parentId: "root", path: "blogs", index: !0, caseSensitive: void 0, module: "/build/routes/blogs/index-SYY5EPFC.js", imports: ["/build/_shared/chunk-7O75O6HR.js", "/build/_shared/chunk-KGZSAFRJ.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/index": { id: "routes/index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/index-LG2RSXB5.js", imports: ["/build/_shared/chunk-KGZSAFRJ.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/product": { id: "routes/product", parentId: "root", path: "product", index: void 0, caseSensitive: void 0, module: "/build/routes/product-AZDM7GJI.js", imports: ["/build/_shared/chunk-KGZSAFRJ.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, url: "/build/manifest-01D1CF66.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var assetsBuildDirectory = "public/build", publicPath = "/build/", entry = { module: entry_server_exports }, routes = {

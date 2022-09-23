@@ -5,28 +5,38 @@ import React from "react";
 import CardThumbnail from "~/components/card";
 import MotionRouter from "~/components/motion-router";
 import data from '~/json/json-blog.json';
+import * as axiosFirstBlog from "./axios-first-blog.mdx";
+
+function postFromModule(mod) {
+    return {
+        slug: mod.filename.replace(/\.mdx?$/, ""),
+        ...mod.attributes.meta,
+    };
+}
 
 export const loader = async () => {
-    return json(data);
+    return json([
+        postFromModule(axiosFirstBlog),
+    ]);
 }
 export default function Index() {
-    const {posts} = useLoaderData();
+    const posts = useLoaderData();
     return (<MotionRouter>
         <SimpleGrid columns={[1, 1, 2]} gap={6}>
-            {posts.map(post => <CardThumbnail key={post.id} thumbnail={post.image} title={post.title}>
-                {post.body}
+            {posts.map((post,index) => <CardThumbnail href={post.slug} key={`blog-${index}`} thumbnail={post.image} title={post.title}>
+                {post.description}
             </CardThumbnail>)}
         </SimpleGrid>
     </MotionRouter>)
 }
 
 export const meta: MetaFunction<typeof loader> = ({data}) => {
-    const postTitles = data.posts.map(post => post.title);
+    const postTitles = data.map(post => post.title);
     return {
         title: "Blog page portfolio of nguyen ba tran van",
         description: `List of blogs: ${postTitles.join(',')}`,
         "og:description": `List of blogs: ${postTitles.join(',')}`,
-        image: `/images/blogs/blog-2.png`,
-        "og:image": `/images/blogs/blog-2.png`
+        image: `${data[0].image}`,
+        "og:image": `${data[0].image}`
     }
 }

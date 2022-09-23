@@ -6,6 +6,5 @@ export default function Layout({children}) {
     return <Box>
         <Navbar/>
         {children}
-        <Footer/>
     </Box>
 }
