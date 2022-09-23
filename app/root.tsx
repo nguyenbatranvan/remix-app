@@ -16,6 +16,7 @@ import VoxelDog from "~/components/dog";
 import DogLoader from "~/components/dog-loader";
 import ThemeToggleButton from "~/components/theme-toggle-button";
 import Layout from "~/layout";
+import Footer from "~/layout/footer";
 import Navbar from "~/layout/navbar";
 import {customTheme} from "~/theme/theme";
 import {fetcherJSON} from "~/utils/fetch-json"; // Depends on the runtime you choose
@@ -107,7 +108,7 @@ export default function App() {
                         <Box marginTop={"40px"}>
                             <VoxelDog/>
                         </Box>
-                        <Container position={"relative"} transform={"none"} opacity={1}>
+                        <Container paddingBottom={10} position={"relative"} transform={"none"} opacity={1}>
                             <Outlet/>
                         </Container>
                     </Layout>

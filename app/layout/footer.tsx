@@ -5,10 +5,10 @@ const BoxFooter = styled(Box)`
     left: 50%;
     bottom:0;
     margin-right: -50%;
-    transform: translate(-50%, -50%) 
+    transform: translate(-50%, 0) 
 `
 export default function Footer() {
-    return <BoxFooter align="center" opacity={0.4} marginY={4} fontSize="sm">
+    return <Box align="center" opacity={0.4} marginY={4} fontSize="sm">
         &copy; {new Date().getFullYear()} Nguyen Ba Tran Van. All Rights Reserved.
-    </BoxFooter>
+    </Box>
 }
