@@ -9,11 +9,12 @@ import {
     Meta,
     Outlet,
     Scripts,
-    ScrollRestoration,
+    ScrollRestoration, useTransition,
 } from '@remix-run/react'
 import {MetaFunction, LinksFunction, json} from '@remix-run/node'
 import VoxelDog from "~/components/dog";
 import DogLoader from "~/components/dog-loader";
+import CustomSpinner from "~/components/spinner";
 import ThemeToggleButton from "~/components/theme-toggle-button";
 import Layout from "~/layout";
 import Footer from "~/layout/footer";
@@ -23,6 +24,7 @@ import {fetcherJSON} from "~/utils/fetch-json"; // Depends on the runtime you ch
 import {motion} from "framer-motion";
 import {ServerStyleContext, ClientStyleContext} from './context'
 import styles from "~/styles/global.css";
+
 export const meta: MetaFunction = () => ({
     charset: 'utf-8',
     title: 'New Remix App',
@@ -37,7 +39,7 @@ export let links: LinksFunction = () => {
             rel: 'stylesheet',
             href: 'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&display=swap'
         },
-        {rel: 'stylesheet',href: styles}
+        {rel: 'stylesheet', href: styles}
     ]
 }
 
@@ -97,6 +99,10 @@ const Document = withEmotionCache(
 
 
 export default function App() {
+    const transition = useTransition();
+    useEffect(() => {
+        console.log('transition', transition.state);
+    }, [transition])
 
     return (
         <Document>
@@ -115,7 +121,9 @@ export default function App() {
                         </Container>
                     </Layout>
                 </AnimatePresence>
+                {transition.state === 'loading' && <CustomSpinner/>}
             </ChakraProvider>
+
         </Document>
     )
 }
