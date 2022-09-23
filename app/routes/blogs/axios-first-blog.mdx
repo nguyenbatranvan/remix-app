@@ -8,32 +8,19 @@ headers:
 Cache-Control: no-cache
 ---
 
-import {useLoaderData} from "@remix-run/react";
-import {Button, Heading, Badge, Box, Link, UnorderedList, ListItem} from "@chakra-ui/react";
+import {Heading, Badge, Box, Link, UnorderedList, ListItem} from "@chakra-ui/react";
 import styles from "highlight.js/styles/github-dark-dimmed.css";
 
-export const loader = async () => {
-    return {mamboNumber: 5};
-};
 
 export const links = () => [
-    { rel: "stylesheet", href: styles },
+    {rel: "stylesheet", href: styles},
 ];
 
-
-export function ComponentUsingData() {
-    const {mamboNumber} = useLoaderData();
-    return <>
-        <div id="loader">Mambo Number: {mamboNumber}</div>
-        <Button>KKK</Button></>;
-}
 
 <Heading marginBottom={4}>Làm thế nào để viết axios một cách tiện ích với reactjs</Heading>
 <Box marginY={4}>
     Nếu làm việc với tư cách là 1 front-end developer thì sự tương tác giữa client với server để lấy data và xử lý là
     chuyện không còn xa lạ với các bạn. Và một thư viện mạnh mẽ và phổ biến để làm điều này là
-
-
 </Box>
 <Link href="https://www.npmjs.com/package/axios">
     <Badge colorScheme='green' mr={2}>Axios</Badge>

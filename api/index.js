@@ -185,8 +185,8 @@ var import_three = require("three"), GltfLoader = class extends import_three.Loa
     this.resourcePath !== "" ? resourcePath = this.resourcePath : this.path !== "" ? resourcePath = this.path : resourcePath = import_three.LoaderUtils.extractUrlBase(url), this.manager.itemStart(url);
     let _onError = function(e) {
       onError ? onError(e) : console.error(e), scope.manager.itemError(url), scope.manager.itemEnd(url);
-    }, loader5 = new import_three.FileLoader(this.manager);
-    loader5.setPath(this.path), loader5.setResponseType("arraybuffer"), loader5.setRequestHeader(this.requestHeader), loader5.setWithCredentials(this.withCredentials), loader5.load(url, function(data) {
+    }, loader4 = new import_three.FileLoader(this.manager);
+    loader4.setPath(this.path), loader4.setResponseType("arraybuffer"), loader4.setRequestHeader(this.requestHeader), loader4.setWithCredentials(this.withCredentials), loader4.load(url, function(data) {
       try {
         scope.parse(data, resourcePath, function(gltf) {
           onLoad(gltf), scope.manager.itemEnd(url);
@@ -509,13 +509,13 @@ var EXTENSIONS = {
     let parser = this.parser, json4 = parser.json, textureDef = json4.textures[textureIndex];
     if (!textureDef.extensions || !textureDef.extensions[this.name])
       return null;
-    let extension = textureDef.extensions[this.name], loader5 = parser.options.ktx2Loader;
-    if (!loader5) {
+    let extension = textureDef.extensions[this.name], loader4 = parser.options.ktx2Loader;
+    if (!loader4) {
       if (json4.extensionsRequired && json4.extensionsRequired.indexOf(this.name) >= 0)
         throw new Error("THREE.GltfLoader: setKTX2Loader must be called before loading KTX2 textures");
       return null;
     }
-    return parser.loadTextureImage(textureIndex, extension.source, loader5);
+    return parser.loadTextureImage(textureIndex, extension.source, loader4);
   }
 }, GLTFTextureWebPExtension = class {
   constructor(parser) {
@@ -525,14 +525,14 @@ var EXTENSIONS = {
     let name = this.name, parser = this.parser, json4 = parser.json, textureDef = json4.textures[textureIndex];
     if (!textureDef.extensions || !textureDef.extensions[name])
       return null;
-    let extension = textureDef.extensions[name], source = json4.images[extension.source], loader5 = parser.textureLoader;
+    let extension = textureDef.extensions[name], source = json4.images[extension.source], loader4 = parser.textureLoader;
     if (source.uri) {
       let handler = parser.options.manager.getHandler(source.uri);
-      handler !== null && (loader5 = handler);
+      handler !== null && (loader4 = handler);
     }
     return this.detectSupport().then(function(isSupported) {
       if (isSupported)
-        return parser.loadTextureImage(textureIndex, extension.source, loader5);
+        return parser.loadTextureImage(textureIndex, extension.source, loader4);
       if (json4.extensionsRequired && json4.extensionsRequired.indexOf(name) >= 0)
         throw new Error("THREE.GltfLoader: WebP required by asset but unsupported.");
       return parser.loadTexture(textureIndex);
@@ -939,10 +939,10 @@ function createPrimitiveKey(primitiveDef) {
   let dracoExtension = primitiveDef.extensions && primitiveDef.extensions[EXTENSIONS.KHR_DRACO_MESH_COMPRESSION], geometryKey;
   return dracoExtension ? geometryKey = "draco:" + dracoExtension.bufferView + ":" + dracoExtension.indices + ":" + createAttributesKey(dracoExtension.attributes) : geometryKey = primitiveDef.indices + ":" + createAttributesKey(primitiveDef.attributes) + ":" + primitiveDef.mode, geometryKey;
 }
-function createAttributesKey(attributes2) {
-  let attributesKey = "", keys = Object.keys(attributes2).sort();
+function createAttributesKey(attributes3) {
+  let attributesKey = "", keys = Object.keys(attributes3).sort();
   for (let i = 0, il = keys.length; i < il; i++)
-    attributesKey += keys[i] + ":" + attributes2[keys[i]] + ";";
+    attributesKey += keys[i] + ":" + attributes3[keys[i]] + ";";
   return attributesKey;
 }
 function getNormalizedComponentScale(constructor) {
@@ -1114,14 +1114,14 @@ var GLTFParser = class {
     return dependencies;
   }
   loadBuffer(bufferIndex) {
-    let bufferDef = this.json.buffers[bufferIndex], loader5 = this.fileLoader;
+    let bufferDef = this.json.buffers[bufferIndex], loader4 = this.fileLoader;
     if (bufferDef.type && bufferDef.type !== "arraybuffer")
       throw new Error("THREE.GltfLoader: " + bufferDef.type + " buffer type is not supported.");
     if (bufferDef.uri === void 0 && bufferIndex === 0)
       return Promise.resolve(this.extensions[EXTENSIONS.KHR_BINARY_GLTF].body);
     let options = this.options;
     return new Promise(function(resolve, reject) {
-      loader5.load(import_three.LoaderUtils.resolveURL(bufferDef.uri, options.path), resolve, void 0, function() {
+      loader4.load(import_three.LoaderUtils.resolveURL(bufferDef.uri, options.path), resolve, void 0, function() {
         reject(new Error('THREE.GltfLoader: Failed to load buffer "' + bufferDef.uri + '".'));
       });
     });
@@ -1158,18 +1158,18 @@ var GLTFParser = class {
     });
   }
   loadTexture(textureIndex) {
-    let json4 = this.json, options = this.options, sourceIndex = json4.textures[textureIndex].source, sourceDef = json4.images[sourceIndex], loader5 = this.textureLoader;
+    let json4 = this.json, options = this.options, sourceIndex = json4.textures[textureIndex].source, sourceDef = json4.images[sourceIndex], loader4 = this.textureLoader;
     if (sourceDef.uri) {
       let handler = options.manager.getHandler(sourceDef.uri);
-      handler !== null && (loader5 = handler);
+      handler !== null && (loader4 = handler);
     }
-    return this.loadTextureImage(textureIndex, sourceIndex, loader5);
+    return this.loadTextureImage(textureIndex, sourceIndex, loader4);
   }
-  loadTextureImage(textureIndex, sourceIndex, loader5) {
+  loadTextureImage(textureIndex, sourceIndex, loader4) {
     let parser = this, json4 = this.json, textureDef = json4.textures[textureIndex], sourceDef = json4.images[sourceIndex], cacheKey = (sourceDef.uri || sourceDef.bufferView) + ":" + textureDef.sampler;
     if (this.textureCache[cacheKey])
       return this.textureCache[cacheKey];
-    let promise = this.loadImageSource(sourceIndex, loader5).then(function(texture) {
+    let promise = this.loadImageSource(sourceIndex, loader4).then(function(texture) {
       texture.flipY = !1, textureDef.name && (texture.name = textureDef.name);
       let sampler = (json4.samplers || {})[textureDef.sampler] || {};
       return texture.magFilter = WEBGL_FILTERS[sampler.magFilter] || import_three.LinearFilter, texture.minFilter = WEBGL_FILTERS[sampler.minFilter] || import_three.LinearMipmapLinearFilter, texture.wrapS = WEBGL_WRAPPINGS[sampler.wrapS] || import_three.RepeatWrapping, texture.wrapT = WEBGL_WRAPPINGS[sampler.wrapT] || import_three.RepeatWrapping, parser.associations.set(texture, { textures: textureIndex }), texture;
@@ -1178,7 +1178,7 @@ var GLTFParser = class {
     });
     return this.textureCache[cacheKey] = promise, promise;
   }
-  loadImageSource(sourceIndex, loader5) {
+  loadImageSource(sourceIndex, loader4) {
     let parser = this, json4 = this.json, options = this.options;
     if (this.sourceCache[sourceIndex] !== void 0)
       return this.sourceCache[sourceIndex].then((texture) => texture.clone());
@@ -1194,10 +1194,10 @@ var GLTFParser = class {
     let promise = Promise.resolve(sourceURI).then(function(sourceURI2) {
       return new Promise(function(resolve, reject) {
         let onLoad = resolve;
-        loader5.isImageBitmapLoader === !0 && (onLoad = function(imageBitmap) {
+        loader4.isImageBitmapLoader === !0 && (onLoad = function(imageBitmap) {
           let texture = new import_three.Texture(imageBitmap);
           texture.needsUpdate = !0, resolve(texture);
-        }), loader5.load(import_three.LoaderUtils.resolveURL(sourceURI2, options.path), onLoad, void 0, reject);
+        }), loader4.load(import_three.LoaderUtils.resolveURL(sourceURI2, options.path), onLoad, void 0, reject);
       });
     }).then(function(texture) {
       return isObjectURL === !0 && URL2.revokeObjectURL(sourceURI), texture.userData.mimeType = sourceDef.mimeType || getImageURIMimeType(sourceDef.uri), texture;
@@ -1508,9 +1508,9 @@ function buildNodeHierarchy(nodeId, parentObject, json4, parser) {
   });
 }
 function computeBounds(geometry, primitiveDef, parser) {
-  let attributes2 = primitiveDef.attributes, box = new import_three.Box3();
-  if (attributes2.POSITION !== void 0) {
-    let accessor = parser.json.accessors[attributes2.POSITION], min = accessor.min, max = accessor.max;
+  let attributes3 = primitiveDef.attributes, box = new import_three.Box3();
+  if (attributes3.POSITION !== void 0) {
+    let accessor = parser.json.accessors[attributes3.POSITION], min = accessor.min, max = accessor.max;
     if (min !== void 0 && max !== void 0) {
       if (box.set(
         new import_three.Vector3(min[0], min[1], min[2]),
@@ -1549,15 +1549,15 @@ function computeBounds(geometry, primitiveDef, parser) {
   box.getCenter(sphere.center), sphere.radius = box.min.distanceTo(box.max) / 2, geometry.boundingSphere = sphere;
 }
 function addPrimitiveAttributes(geometry, primitiveDef, parser) {
-  let attributes2 = primitiveDef.attributes, pending = [];
+  let attributes3 = primitiveDef.attributes, pending = [];
   function assignAttributeAccessor(accessorIndex, attributeName) {
     return parser.getDependency("accessor", accessorIndex).then(function(accessor) {
       geometry.setAttribute(attributeName, accessor);
     });
   }
-  for (let gltfAttributeName in attributes2) {
+  for (let gltfAttributeName in attributes3) {
     let threeAttributeName = ATTRIBUTES[gltfAttributeName] || gltfAttributeName.toLowerCase();
-    threeAttributeName in geometry.attributes || pending.push(assignAttributeAccessor(attributes2[gltfAttributeName], threeAttributeName));
+    threeAttributeName in geometry.attributes || pending.push(assignAttributeAccessor(attributes3[gltfAttributeName], threeAttributeName));
   }
   if (primitiveDef.indices !== void 0 && !geometry.index) {
     let accessor = parser.getDependency("accessor", primitiveDef.indices).then(function(accessor2) {
@@ -2655,16 +2655,14 @@ function App() {
 // mdx:routes/blogs/axios-first-blog.mdx
 var axios_first_blog_exports = {};
 __export(axios_first_blog_exports, {
-  ComponentUsingData: () => ComponentUsingData,
   attributes: () => attributes,
   default: () => axios_first_blog_default,
   filename: () => filename,
   headers: () => headers,
   links: () => links2,
-  loader: () => loader2,
   meta: () => meta2
 });
-var import_react19 = __toESM(require("react")), import_react20 = require("@remix-run/react"), import_react21 = require("@chakra-ui/react"), import_github_dark_dimmed = __toESM(require_github_dark_dimmed()), attributes = {
+var import_react19 = __toESM(require("react")), import_react20 = require("@chakra-ui/react"), import_github_dark_dimmed = __toESM(require_github_dark_dimmed()), attributes = {
   meta: {
     title: "Axios with reactjs, axios call request",
     description: "Promise based HTTP client for the browser and node.js, how to write axios with react most useful",
@@ -2673,42 +2671,34 @@ var import_react19 = __toESM(require("react")), import_react20 = require("@remix
   },
   headers: null,
   "Cache-Control": "no-cache"
-}, loader2 = async () => ({
-  mamboNumber: 5
-}), links2 = () => [{
+}, links2 = () => [{
   rel: "stylesheet",
   href: import_github_dark_dimmed.default
 }];
-function ComponentUsingData() {
-  let { mamboNumber } = (0, import_react20.useLoaderData)();
-  return /* @__PURE__ */ import_react19.default.createElement(import_react19.default.Fragment, null, /* @__PURE__ */ import_react19.default.createElement("div", {
-    id: "loader"
-  }, "Mambo Number: ", mamboNumber), /* @__PURE__ */ import_react19.default.createElement(import_react21.Button, null, "KKK"));
-}
 function MDXContent(props = {}) {
   let _components = Object.assign({
     p: "p",
     pre: "pre",
     code: "code",
     span: "span"
-  }, props.components), { wrapper: MDXLayout } = _components, _content = /* @__PURE__ */ import_react19.default.createElement(import_react19.default.Fragment, null, /* @__PURE__ */ import_react19.default.createElement(import_react21.Heading, {
+  }, props.components), { wrapper: MDXLayout } = _components, _content = /* @__PURE__ */ import_react19.default.createElement(import_react19.default.Fragment, null, /* @__PURE__ */ import_react19.default.createElement(import_react20.Heading, {
     marginBottom: 4
   }, "L\xE0m th\u1EBF n\xE0o \u0111\u1EC3 vi\u1EBFt axios m\u1ED9t c\xE1ch ti\u1EC7n \xEDch v\u1EDBi reactjs"), `
-`, /* @__PURE__ */ import_react19.default.createElement(import_react21.Box, {
+`, /* @__PURE__ */ import_react19.default.createElement(import_react20.Box, {
     marginY: 4
   }, /* @__PURE__ */ import_react19.default.createElement(_components.p, null, `N\u1EBFu l\xE0m vi\u1EC7c v\u1EDBi t\u01B0 c\xE1ch l\xE0 1 front-end developer th\xEC s\u1EF1 t\u01B0\u01A1ng t\xE1c gi\u1EEFa client v\u1EDBi server \u0111\u1EC3 l\u1EA5y data v\xE0 x\u1EED l\xFD l\xE0
 chuy\u1EC7n kh\xF4ng c\xF2n xa l\u1EA1 v\u1EDBi c\xE1c b\u1EA1n. V\xE0 m\u1ED9t th\u01B0 vi\u1EC7n m\u1EA1nh m\u1EBD v\xE0 ph\u1ED5 bi\u1EBFn \u0111\u1EC3 l\xE0m \u0111i\u1EC1u n\xE0y l\xE0`)), `
-`, /* @__PURE__ */ import_react19.default.createElement(import_react21.Link, {
+`, /* @__PURE__ */ import_react19.default.createElement(import_react20.Link, {
     href: "https://www.npmjs.com/package/axios"
-  }, /* @__PURE__ */ import_react19.default.createElement(_components.p, null, /* @__PURE__ */ import_react19.default.createElement(import_react21.Badge, {
+  }, /* @__PURE__ */ import_react19.default.createElement(_components.p, null, /* @__PURE__ */ import_react19.default.createElement(import_react20.Badge, {
     colorScheme: "green",
     mr: 2
   }, "Axios"), `
 Axios npm packages`)), `
-`, /* @__PURE__ */ import_react19.default.createElement(import_react21.Heading, {
+`, /* @__PURE__ */ import_react19.default.createElement(import_react20.Heading, {
     variant: "title-under-line"
   }, "1. C\xE1ch s\u1EED d\u1EE5ng"), `
-`, /* @__PURE__ */ import_react19.default.createElement(import_react21.Box, {
+`, /* @__PURE__ */ import_react19.default.createElement(import_react20.Box, {
     marginY: 4
   }, /* @__PURE__ */ import_react19.default.createElement(_components.p, null, "\u0110\u1EA7u ti\xEAn b\u1EA1n s\u1EBD t\u1EA1o ra m\u1ED9t instance c\u1EE7a axios")), `
 `, /* @__PURE__ */ import_react19.default.createElement(_components.pre, null, /* @__PURE__ */ import_react19.default.createElement(_components.code, {
@@ -2748,7 +2738,7 @@ Axios npm packages`)), `
   }, "`Connection is timeout exceeded`"), `
 });
 `)), `
-`, /* @__PURE__ */ import_react19.default.createElement(import_react21.Box, {
+`, /* @__PURE__ */ import_react19.default.createElement(import_react20.Box, {
     marginY: 2
   }, /* @__PURE__ */ import_react19.default.createElement(_components.p, null, "Ti\u1EBFp theo s\u1EBD d\xF9ng instance n\xE0y \u0111\u1EC3 g\u1ECDi request")), `
 `, /* @__PURE__ */ import_react19.default.createElement(_components.pre, null, /* @__PURE__ */ import_react19.default.createElement(_components.code, {
@@ -2802,22 +2792,22 @@ Axios npm packages`)), `
   }, "// always executed"), `
   });
 `)), `
-`, /* @__PURE__ */ import_react19.default.createElement(import_react21.Box, {
+`, /* @__PURE__ */ import_react19.default.createElement(import_react20.Box, {
     marginY: 4
-  }, /* @__PURE__ */ import_react19.default.createElement(_components.p, null, "T\u1EDBi \u0111\xE2y b\u1EA1n c\xF3 th\u1EC3 \u0111\u1EB7t c\xE2u h\u1ECFi"), /* @__PURE__ */ import_react19.default.createElement(import_react21.UnorderedList, {
+  }, /* @__PURE__ */ import_react19.default.createElement(_components.p, null, "T\u1EDBi \u0111\xE2y b\u1EA1n c\xF3 th\u1EC3 \u0111\u1EB7t c\xE2u h\u1ECFi"), /* @__PURE__ */ import_react19.default.createElement(import_react20.UnorderedList, {
     my: 2
-  }, /* @__PURE__ */ import_react19.default.createElement(import_react21.ListItem, null, /* @__PURE__ */ import_react19.default.createElement(_components.p, null, `N\u1EBFu nh\u01B0 c\xF3 nhi\u1EC1u t\u01B0\u01A1ng t\xE1c gi\u1EEFa client v\xE0 server th\xEC b\u1EA1n s\u1EBD ph\u1EA3i vi\u1EBFt \u0111i vi\u1EBFt l\u1EA1i \u0111i\u1EC1u n\xE0y nhi\u1EC1u l\u1EA7n, trong
-code th\xEC \u0111\xE2y b\u1EA1n \u0111\xE3 vi ph\u1EA1m m\u1ED9t l\u1ED7i \u0111\u01B0\u1EE3c g\u1ECDi l\xE0 `, /* @__PURE__ */ import_react19.default.createElement(import_react21.Badge, {
+  }, /* @__PURE__ */ import_react19.default.createElement(import_react20.ListItem, null, /* @__PURE__ */ import_react19.default.createElement(_components.p, null, `N\u1EBFu nh\u01B0 c\xF3 nhi\u1EC1u t\u01B0\u01A1ng t\xE1c gi\u1EEFa client v\xE0 server th\xEC b\u1EA1n s\u1EBD ph\u1EA3i vi\u1EBFt \u0111i vi\u1EBFt l\u1EA1i \u0111i\u1EC1u n\xE0y nhi\u1EC1u l\u1EA7n, trong
+code th\xEC \u0111\xE2y b\u1EA1n \u0111\xE3 vi ph\u1EA1m m\u1ED9t l\u1ED7i \u0111\u01B0\u1EE3c g\u1ECDi l\xE0 `, /* @__PURE__ */ import_react19.default.createElement(import_react20.Badge, {
     colorScheme: "green"
   }, "DRY"), ` (Don\u2019t Repeat
-Yourself)`)), /* @__PURE__ */ import_react19.default.createElement(import_react21.ListItem, null, /* @__PURE__ */ import_react19.default.createElement(_components.p, null, `V\xE0 v\u1EDBi v\u1EA5n \u0111\u1EC1 code l\u1EB7p \u0111i l\u1EB7p l\u1EA1i nh\u01B0 v\u1EADy, khi c\xF3 1 s\u1EF1 thay \u0111\u1ED5i code th\xEC b\u1EA1n s\u1EBD ph\u1EA3i t\xECm v\xE0 s\u1EEF l\u1EA1i t\u1EEBng h\xE0m
+Yourself)`)), /* @__PURE__ */ import_react19.default.createElement(import_react20.ListItem, null, /* @__PURE__ */ import_react19.default.createElement(_components.p, null, `V\xE0 v\u1EDBi v\u1EA5n \u0111\u1EC1 code l\u1EB7p \u0111i l\u1EB7p l\u1EA1i nh\u01B0 v\u1EADy, khi c\xF3 1 s\u1EF1 thay \u0111\u1ED5i code th\xEC b\u1EA1n s\u1EBD ph\u1EA3i t\xECm v\xE0 s\u1EEF l\u1EA1i t\u1EEBng h\xE0m
 tr\xEAn`))), /* @__PURE__ */ import_react19.default.createElement("p", null, "N\u1EBFu b\u1EA1n c\xF3 \u0111\u1EB7t c\xE2u h\u1ECFi nh\u01B0 v\u1EADy th\xEC ph\u1EA7n ti\u1EBFp theo s\u1EBD d\xE0nh cho b\u1EA1n.")), `
-`, /* @__PURE__ */ import_react19.default.createElement(import_react21.Heading, {
+`, /* @__PURE__ */ import_react19.default.createElement(import_react20.Heading, {
     variant: "title-under-line"
   }, "2. Vi\u1EBFt axios \u0111\u1EC3 t\xE1i s\u1EED d\u1EE5ng"), `
-`, /* @__PURE__ */ import_react19.default.createElement(import_react21.Box, {
+`, /* @__PURE__ */ import_react19.default.createElement(import_react20.Box, {
     marginY: 4
-  }, /* @__PURE__ */ import_react19.default.createElement(_components.p, null, "\u0110\u1EA7u ti\xEAn b\u1EA1n s\u1EBD t\u1EA1o 1 th\u01B0 m\u1EE5c v\xED d\u1EE5 ", /* @__PURE__ */ import_react19.default.createElement(import_react21.Badge, null, "src/api/core.ts"), " v\xE0 c\u0169ng nh\u01B0 ph\u1EA7n 1 b\u1EA1n s\u1EBD t\u1EA1o instance c\u1EE7a axios")), `
+  }, /* @__PURE__ */ import_react19.default.createElement(_components.p, null, "\u0110\u1EA7u ti\xEAn b\u1EA1n s\u1EBD t\u1EA1o 1 th\u01B0 m\u1EE5c v\xED d\u1EE5 ", /* @__PURE__ */ import_react19.default.createElement(import_react20.Badge, null, "src/api/core.ts"), " v\xE0 c\u0169ng nh\u01B0 ph\u1EA7n 1 b\u1EA1n s\u1EBD t\u1EA1o instance c\u1EE7a axios")), `
 `, /* @__PURE__ */ import_react19.default.createElement(_components.pre, null, /* @__PURE__ */ import_react19.default.createElement(_components.code, {
     className: "hljs language-js"
   }, /* @__PURE__ */ import_react19.default.createElement(_components.span, {
@@ -2855,16 +2845,16 @@ tr\xEAn`))), /* @__PURE__ */ import_react19.default.createElement("p", null, "N\
   }, "`Connection is timeout exceeded`"), `
 });
 `)), `
-`, /* @__PURE__ */ import_react19.default.createElement(import_react21.Box, {
+`, /* @__PURE__ */ import_react19.default.createElement(import_react20.Box, {
     marginY: 4
-  }, /* @__PURE__ */ import_react19.default.createElement(_components.p, null, "Theo \u0111\xF3 b\u1EA1n s\u1EBD t\u1EA1o 1 model \u0111\u1EC3 truy\u1EC1n params v\xE0o c\xE1c h\xE0m c\u1EE7a axios m\xE0 m\xECnh s\u1EBD h\u01B0\u1EDBng d\u1EABn s\u1EAFp t\u1EDBi"), /* @__PURE__ */ import_react19.default.createElement(import_react21.UnorderedList, {
+  }, /* @__PURE__ */ import_react19.default.createElement(_components.p, null, "Theo \u0111\xF3 b\u1EA1n s\u1EBD t\u1EA1o 1 model \u0111\u1EC3 truy\u1EC1n params v\xE0o c\xE1c h\xE0m c\u1EE7a axios m\xE0 m\xECnh s\u1EBD h\u01B0\u1EDBng d\u1EABn s\u1EAFp t\u1EDBi"), /* @__PURE__ */ import_react19.default.createElement(import_react20.UnorderedList, {
     my: 2
-  }, /* @__PURE__ */ import_react19.default.createElement(import_react21.ListItem, null, /* @__PURE__ */ import_react19.default.createElement(_components.p, null, /* @__PURE__ */ import_react19.default.createElement(import_react21.Badge, {
+  }, /* @__PURE__ */ import_react19.default.createElement(import_react20.ListItem, null, /* @__PURE__ */ import_react19.default.createElement(_components.p, null, /* @__PURE__ */ import_react19.default.createElement(import_react20.Badge, {
     colorScheme: "green"
-  }, "isLoading"), " - show loading khi call request")), /* @__PURE__ */ import_react19.default.createElement(import_react21.ListItem, null, /* @__PURE__ */ import_react19.default.createElement(_components.p, null, /* @__PURE__ */ import_react19.default.createElement(import_react21.Badge, {
+  }, "isLoading"), " - show loading khi call request")), /* @__PURE__ */ import_react19.default.createElement(import_react20.ListItem, null, /* @__PURE__ */ import_react19.default.createElement(_components.p, null, /* @__PURE__ */ import_react19.default.createElement(import_react20.Badge, {
     colorScheme: "green"
   }, "payload, headers"), ` - \u0111\u1EC3 truy\u1EC1n xu\u1ED1ng khi call request (nh\u01B0
-Authorization...)`)), /* @__PURE__ */ import_react19.default.createElement(import_react21.ListItem, null, /* @__PURE__ */ import_react19.default.createElement(_components.p, null, /* @__PURE__ */ import_react19.default.createElement(import_react21.Badge, {
+Authorization...)`)), /* @__PURE__ */ import_react19.default.createElement(import_react20.ListItem, null, /* @__PURE__ */ import_react19.default.createElement(_components.p, null, /* @__PURE__ */ import_react19.default.createElement(import_react20.Badge, {
     colorScheme: "green"
   }, "url"), " - \u0111\u01B0\u1EDDng d\u1EABn t\u01B0\u01A1ng t\xE1c v\u1EDBi server")))), `
 `, /* @__PURE__ */ import_react19.default.createElement(_components.pre, null, /* @__PURE__ */ import_react19.default.createElement(_components.code, {
@@ -2906,7 +2896,7 @@ Authorization...)`)), /* @__PURE__ */ import_react19.default.createElement(impor
   }, "string"), `;
 }
 `)), `
-`, /* @__PURE__ */ import_react19.default.createElement(import_react21.Box, {
+`, /* @__PURE__ */ import_react19.default.createElement(import_react20.Box, {
     marginY: 4
   }, /* @__PURE__ */ import_react19.default.createElement(_components.p, null, "Ok!! V\xE0 b\xE2y gi\u1EDD h\xE3y vi\u1EBFt nh\u1EEFng h\xE0m t\u01B0\u01A1ng t\xE1c v\u1EDBi server b\u1EB1ng axios n\xE0o")), `
 `, /* @__PURE__ */ import_react19.default.createElement(_components.pre, null, /* @__PURE__ */ import_react19.default.createElement(_components.code, {
@@ -2991,20 +2981,20 @@ Authorization...)`)), /* @__PURE__ */ import_react19.default.createElement(impor
     }
 }
 `)), `
-`, /* @__PURE__ */ import_react19.default.createElement(import_react21.Box, {
+`, /* @__PURE__ */ import_react19.default.createElement(import_react20.Box, {
     marginY: 4
-  }, /* @__PURE__ */ import_react19.default.createElement(_components.p, null, "V\xE0 v\u1EDBi c\xE1c h\xE0n ", /* @__PURE__ */ import_react19.default.createElement(import_react21.Badge, {
+  }, /* @__PURE__ */ import_react19.default.createElement(_components.p, null, "V\xE0 v\u1EDBi c\xE1c h\xE0n ", /* @__PURE__ */ import_react19.default.createElement(import_react20.Badge, {
     colorScheme: "green"
-  }, "put"), " ", /* @__PURE__ */ import_react19.default.createElement(import_react21.Badge, {
+  }, "put"), " ", /* @__PURE__ */ import_react19.default.createElement(import_react20.Badge, {
     colorScheme: "green"
-  }, "post"), " ", /* @__PURE__ */ import_react19.default.createElement(import_react21.Badge, {
+  }, "post"), " ", /* @__PURE__ */ import_react19.default.createElement(import_react20.Badge, {
     colorScheme: "green"
   }, "delete"), `
 b\u1EA1n c\u0169ng c\xF3 th\u1EC3 tham kh\u1EA3o v\xE0 l\xE0m t\u01B0\u01A1ng t\u1EF1 nh\u01B0 v\xE2y`)), `
-`, /* @__PURE__ */ import_react19.default.createElement(import_react21.Heading, {
+`, /* @__PURE__ */ import_react19.default.createElement(import_react20.Heading, {
     variant: "title-under-line"
   }, "3. S\u1EED d\u1EE5ng"), `
-`, /* @__PURE__ */ import_react19.default.createElement(import_react21.Box, {
+`, /* @__PURE__ */ import_react19.default.createElement(import_react20.Box, {
     marginY: 4
   }, "M\xECnh s\u1EBD t\u1EA1o 1 model v\u1EC1 response"), `
 `, /* @__PURE__ */ import_react19.default.createElement(_components.pre, null, /* @__PURE__ */ import_react19.default.createElement(_components.code, {
@@ -3073,7 +3063,7 @@ b\u1EA1n c\u0169ng c\xF3 th\u1EC3 tham kh\u1EA3o v\xE0 l\xE0m t\u01B0\u01A1ng t\
   }, "string"), `[];
 }
 `)), `
-`, /* @__PURE__ */ import_react19.default.createElement(import_react21.Box, {
+`, /* @__PURE__ */ import_react19.default.createElement(import_react20.Box, {
     marginY: 4
   }, /* @__PURE__ */ import_react19.default.createElement(_components.p, null, "B\xE2y gi\u1EDD \xE1p d\u1EE5ng nh\u1EEFng g\xEC \u0111\xE3 vi\u1EBFt t\u1EEB ph\u1EA7n 2 d\xF9ng \u0111\u1EC3 g\u1ECDi m\u1ED9t request chi ti\u1EBFt s\u1EA3n ph\u1EA9m")), `
 `, /* @__PURE__ */ import_react19.default.createElement(_components.pre, null, /* @__PURE__ */ import_react19.default.createElement(_components.code, {
@@ -3145,7 +3135,7 @@ b\u1EA1n c\u0169ng c\xF3 th\u1EC3 tham kh\u1EA3o v\xE0 l\xE0m t\u01B0\u01A1ng t\
     })()
 },[])
 `)), `
-`, /* @__PURE__ */ import_react19.default.createElement(_components.p, null, /* @__PURE__ */ import_react19.default.createElement(import_react21.Heading, {
+`, /* @__PURE__ */ import_react19.default.createElement(_components.p, null, /* @__PURE__ */ import_react19.default.createElement(import_react20.Heading, {
     variant: "title-under-line"
   }, "4. L\u1EDDi k\u1EBFt"), `
 Trong b\xE0i vi\u1EBFt n\xE0y m\xECnh ch\u1EC9 h\u01B0\u1EDBng d\u1EABn v\u1EC1 c\xE1ch vi\u1EBFt t\u01B0\u01A1ng t\xE1c gi\u1EEFa client v\xE0 server, trong c\xE1c ph\u1EA7n t\u1EDBi m\xECnh s\u1EBD ra th\xEAm v\u1EC1 cache, x\u1EED l\xFD l\u1ED7i, mapper d\u1EEF li\u1EC7u t\u1EEB reponse v\u1EDBi axios.`));
@@ -3155,26 +3145,426 @@ Trong b\xE0i vi\u1EBFt n\xE0y m\xECnh ch\u1EC9 h\u01B0\u1EDBng d\u1EABn v\u1EC1 
 }
 var axios_first_blog_default = MDXContent, filename = "axios-first-blog.mdx", headers = typeof attributes < "u" && attributes.headers, meta2 = typeof attributes < "u" && attributes.meta;
 
+// mdx:routes/blogs/load-config.mdx
+var load_config_exports = {};
+__export(load_config_exports, {
+  attributes: () => attributes2,
+  default: () => load_config_default,
+  filename: () => filename2,
+  headers: () => headers2,
+  links: () => links3,
+  meta: () => meta3
+});
+var import_react21 = __toESM(require("react")), import_react22 = require("@chakra-ui/react"), import_github_dark_dimmed2 = __toESM(require_github_dark_dimmed()), attributes2 = {
+  meta: {
+    title: "Load config json with Reactjs, Angular, Next, Remix",
+    description: "How to load json file before initial app in Angular, React, Next and Remix",
+    image: "/images/blogs/load-config.png",
+    "og:image": "/images/blogs/load-config.png"
+  },
+  headers: null,
+  "Cache-Control": "no-cache"
+}, links3 = () => [{
+  rel: "stylesheet",
+  href: import_github_dark_dimmed2.default
+}];
+function MDXContent2(props = {}) {
+  let _components = Object.assign({
+    p: "p",
+    pre: "pre",
+    code: "code",
+    span: "span"
+  }, props.components), { wrapper: MDXLayout } = _components, _content = /* @__PURE__ */ import_react21.default.createElement(import_react21.default.Fragment, null, /* @__PURE__ */ import_react21.default.createElement(import_react22.Heading, {
+    marginBottom: 4
+  }, "L\xE0m th\u1EBF n\xE0o \u0111\u1EC3 t\u1EA3i tr\u01B0\u1EDBc m\u1ED9t file json tr\u01B0\u1EDBc khi page \u0111\u01B0\u1EE3c k\u1EBFt xu\u1EA5t?"), `
+`, `
+`, `
+`, /* @__PURE__ */ import_react21.default.createElement(import_react22.Heading, {
+    variant: "title-under-line"
+  }, "1.V\u1EA5n \u0111\u1EC1"), `
+`, /* @__PURE__ */ import_react21.default.createElement(import_react22.Box, {
+    marginY: 4
+  }, /* @__PURE__ */ import_react21.default.createElement(_components.p, null, "Th\xF4ng th\u01B0\u1EDDng khi l\xE0m vi\u1EC7c trong 1 d\u1EF1 \xE1n, c\xE1c bi\u1EBFn v\u1EC1 config th\u01B0\u1EDDng s\u1EBD \u0111\u01B0\u1EE3c kh\u1EDFi t\u1EA1o trong file ", /* @__PURE__ */ import_react21.default.createElement(import_react22.Badge, {
+    textTransform: "lowercase",
+    mr: 2
+  }, ".env"), " v\xE0 sau \u0111\xF3 s\u1EBD \u0111\u01B0\u1EE3c \u0111em ra s\u1EED d\u1EE5ng nh\u01B0 d\u01B0\u1EDBi \u0111\xE2y")), `
+`, /* @__PURE__ */ import_react21.default.createElement(_components.pre, null, /* @__PURE__ */ import_react21.default.createElement(_components.code, {
+    className: "hljs language-js"
+  }, /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-variable constant_"
+  }, "DB_HOST"), "=", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-attr"
+  }, "https"), ":", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-comment"
+  }, "//services.sandbox.icondo.asia/"), `
+`)), `
+`, /* @__PURE__ */ import_react21.default.createElement(import_react22.Box, {
+    marginY: 4
+  }, /* @__PURE__ */ import_react21.default.createElement(_components.p, null, "v\xE0 sau \u0111\xF3 s\u1EBD g\u1ECDi ra v\xE0 s\u1EED d\u1EE5ng")), `
+`, /* @__PURE__ */ import_react21.default.createElement(_components.pre, null, /* @__PURE__ */ import_react21.default.createElement(_components.code, {
+    className: "hljs language-js"
+  }, /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-variable language_"
+  }, "console"), ".", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-title function_"
+  }, "log"), "(proccess.", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-property"
+  }, "env"), ".", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-property"
+  }, "DB_HOST"), `)
+`)), `
+`, /* @__PURE__ */ import_react21.default.createElement(import_react22.Box, {
+    marginY: 4
+  }, /* @__PURE__ */ import_react21.default.createElement(_components.p, null, "M\u1ECDi chuy\u1EC7n v\u1EABn \u0111\xFAng v\xE0 ch\u1EE9c n\u0103ng v\u1EABn ho\u1EA1t \u0111\u1ED9ng b\xECnh th\u01B0\u1EDDng, nh\u01B0ng s\u1EBD c\xF3 nh\u1EEFng b\u1EA5t c\u1EADp d\u01B0\u1EDBi \u0111\xE2y:"), /* @__PURE__ */ import_react21.default.createElement(import_react22.UnorderedList, {
+    my: 2
+  }, /* @__PURE__ */ import_react21.default.createElement(import_react22.ListItem, null, /* @__PURE__ */ import_react21.default.createElement(_components.p, null, `Khi nhu c\u1EA7u config thay \u0111\u1ED5i b\u1EA1n ph\u1EA3i ch\u1EC9nh s\u1EEDa l\u1EA1i file .env v\xE0 build l\u1EA1i d\u1EF1 \xE1n c\u1EE7a m\xECnh. V\xEC c\u0103n b\u1EA3n file
+.env
+n\xE0y s\u1EBD ch\u1EA1y v\xE0 l\u01B0u gi\xE1 tr\u1ECB trong qu\xE1 tr\xECnh `, /* @__PURE__ */ import_react21.default.createElement(import_react22.Badge, {
+    colorScheme: "green"
+  }, "compile time")))), /* @__PURE__ */ import_react21.default.createElement("p", null, `V\xEC nh\u1EEFng b\u1EA5t c\u1EADp \u0111\xF3, th\xEC ph\u1EA3i c\xF3 1 n\u01A1i s\u1EBD ch\u1EC9nh s\u1EEDa file config cho t\u1EEBng d\u1EF1 \xE1n, v\xE0 nhi\u1EC7m v\u1EE5 c\u1EE7a ph\xEDa client l\xE0
+load file config \u0111\xF3 l\xEAn v\xE0 s\u1EED d\u1EE5ng gi\xE1 tr\u1ECB \u0111\xF3 thay cho file env. D\u01B0\u1EDBi \u0111\xE2y l\xE0 nh\u1EEFng c\xE1ch ti\u1EBFp c\u1EADn m\xE0 m\xECnh s\u1EBD
+h\u01B0\u1EDBng d\u1EABn cho b\u1EA1n`)), `
+`, /* @__PURE__ */ import_react21.default.createElement(import_react22.Heading, {
+    variant: "title-under-line"
+  }, "2. \xC1p d\u1EE5ng"), `
+`, /* @__PURE__ */ import_react21.default.createElement(import_react22.Box, {
+    marginY: 4
+  }, /* @__PURE__ */ import_react21.default.createElement(_components.p, null, "Ch\xFAng ta s\u1EBD t\u1EA1o 1 function \u0111\u1EC3 fetch data t\u1EEB api")), `
+`, /* @__PURE__ */ import_react21.default.createElement(_components.pre, null, /* @__PURE__ */ import_react21.default.createElement(_components.code, {
+    className: "hljs language-ts"
+  }, /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-keyword"
+  }, "export"), " ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-keyword"
+  }, "const"), " ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-title function_"
+  }, "fetcherJSON"), " = (", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-params"
+  }, "url: ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-built_in"
+  }, "string"), ", config?: RequestInit"), ") => ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-title function_"
+  }, "fetch"), "(url, config).", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-title function_"
+  }, "then"), "(", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-function"
+  }, "(", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-params"
+  }, "res"), ") =>"), " res.", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-title function_"
+  }, "json"), `());
+`)), `
+`, /* @__PURE__ */ import_react21.default.createElement(import_react22.Box, {
+    marginY: 4
+  }, "V\u1EDBi ", /* @__PURE__ */ import_react21.default.createElement(import_react22.Badge, {
+    colorScheme: "green"
+  }, "Angular"), " \u1EDF file ", /* @__PURE__ */ import_react21.default.createElement(import_react22.Badge, {
+    textTransform: "lowercase"
+  }, "main.ts")), `
+`, /* @__PURE__ */ import_react21.default.createElement(_components.pre, null, /* @__PURE__ */ import_react21.default.createElement(_components.code, {
+    className: "hljs language-ts"
+  }, "(", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-keyword"
+  }, "async"), ` () => {
+  `, /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-keyword"
+  }, "const"), " data = ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-keyword"
+  }, "await"), " ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-title function_"
+  }, "fetcherJSON"), "(", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-string"
+  }, "'link json here...'"), `)
+`, /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-comment"
+  }, "// todo with json config data"), `
+  `, /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-keyword"
+  }, "function"), " ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-title function_"
+  }, "bootstrap"), "(", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-params"
+  }), `) {
+    `, /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-title function_"
+  }, "platformBrowserDynamic"), "().", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-title function_"
+  }, "bootstrapModule"), "(", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-title class_"
+  }, "AppModule"), `)
+      .`, /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-title function_"
+  }, "catch"), "(", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-function"
+  }, /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-params"
+  }, "err"), " =>"), " ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-variable language_"
+  }, "console"), ".", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-title function_"
+  }, "error"), `(err));
+  };
+  `, /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-keyword"
+  }, "if"), " (", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-variable language_"
+  }, "document"), ".", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-property"
+  }, "readyState"), " === ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-string"
+  }, "'complete'"), `) {
+    `, /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-title function_"
+  }, "bootstrap"), `();
+  } `, /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-keyword"
+  }, "else"), ` {
+    `, /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-variable language_"
+  }, "document"), ".", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-title function_"
+  }, "addEventListener"), "(", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-string"
+  }, "'DOMContentLoaded'"), `, bootstrap);
+  }
+})();
+`)), `
+`, /* @__PURE__ */ import_react21.default.createElement(import_react22.Box, {
+    marginY: 4
+  }, "V\u1EDBi ", /* @__PURE__ */ import_react21.default.createElement(import_react22.Badge, {
+    colorScheme: "green"
+  }, "React"), " \u1EDF file ", /* @__PURE__ */ import_react21.default.createElement(import_react22.Badge, {
+    textTransform: "lowercase"
+  }, "index.tsx")), `
+`, /* @__PURE__ */ import_react21.default.createElement(_components.pre, null, /* @__PURE__ */ import_react21.default.createElement(_components.code, {
+    className: "hljs language-ts"
+  }, "(", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-keyword"
+  }, "async"), ` () => {
+    `, /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-keyword"
+  }, "try"), ` {
+
+        `, /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-keyword"
+  }, "const"), " container = ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-variable language_"
+  }, "document"), ".", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-title function_"
+  }, "getElementById"), "(", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-string"
+  }, "'main-condo'"), `);
+        `, /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-keyword"
+  }, "const"), " root = ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-title function_"
+  }, "createRoot"), `(container);
+        `, /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-keyword"
+  }, "const"), " config = ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-keyword"
+  }, "await"), " ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-title function_"
+  }, "fetcherJSON"), "(", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-string"
+  }, "'/assets/config.json'"), `);
+        root.`, /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-title function_"
+  }, "render"), "(", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "xml"
+  }, /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-tag"
+  }, "<", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-name"
+  }, "Provider"), ">"), `
+                `, /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-tag"
+  }, "<", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-name"
+  }, "App"), " ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-attr"
+  }, "config"), "=", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-string"
+  }, "{data}/"), ">"), `
+        `, /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-tag"
+  }, "</", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-name"
+  }, "Provider"), ">")), `);
+    } `, /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-keyword"
+  }, "catch"), ` (e) {
+        `, /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-comment"
+  }, "// todo error"), `
+    }
+})();
+`)), `
+`, /* @__PURE__ */ import_react21.default.createElement(import_react22.Box, {
+    marginY: 4
+  }, "\u1EDE file ", /* @__PURE__ */ import_react21.default.createElement(import_react22.Badge, {
+    textTransform: "lowercase"
+  }, "App.tsx")), `
+`, /* @__PURE__ */ import_react21.default.createElement(_components.pre, null, /* @__PURE__ */ import_react21.default.createElement(_components.code, {
+    className: "hljs language-ts"
+  }, /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-keyword"
+  }, "function"), " ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-title function_"
+  }, "App"), "(", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-params"
+  }, "props"), `) {
+    `, /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-title function_"
+  }, "useEffect"), "(", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-function"
+  }, "() =>"), ` {
+        `, /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-variable language_"
+  }, "console"), ".", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-title function_"
+  }, "log"), "(props.", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-property"
+  }, "config"), `)
+        `, /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-comment"
+  }, "// todo with props.config"), `
+    }, []);
+    `, /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-keyword"
+  }, "return"), " (", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "xml"
+  }, /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-tag"
+  }, "<>"), "...", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-tag"
+  }, "</>")), `)
+}
+`)), `
+`, /* @__PURE__ */ import_react21.default.createElement(import_react22.Box, {
+    marginY: 4
+  }, "V\u1EDBi ", /* @__PURE__ */ import_react21.default.createElement(import_react22.Badge, {
+    colorScheme: "green"
+  }, "Remix"), " \u1EDF file ", /* @__PURE__ */ import_react21.default.createElement(import_react22.Badge, {
+    textTransform: "lowercase"
+  }, "root.tsx")), `
+`, /* @__PURE__ */ import_react21.default.createElement(_components.pre, null, /* @__PURE__ */ import_react21.default.createElement(_components.code, {
+    className: "hljs language-ts"
+  }, /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-keyword"
+  }, "import"), " {useLoaderData} ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-keyword"
+  }, "from"), " ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-string"
+  }, '"@remix-run/react"'), `;
+`, /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-keyword"
+  }, "export"), " ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-keyword"
+  }, "const"), " ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-title function_"
+  }, "loader"), " = ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-keyword"
+  }, "async"), " (", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-params"
+  }, "{request}"), `) => {
+    `, /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-keyword"
+  }, "const"), " location = ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-keyword"
+  }, "new"), " ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-title function_"
+  }, "URL"), "(request.", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-property"
+  }, "url"), `)
+    `, /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-keyword"
+  }, "const"), " config = ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-keyword"
+  }, "await"), " ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-title function_"
+  }, "fetcherJSON"), "(location.", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-property"
+  }, "origin"), " + ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-string"
+  }, "`/config.json`"), `);
+    `, /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-keyword"
+  }, "return"), " ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-title function_"
+  }, "json"), `(config);
+}
+
+`, /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-keyword"
+  }, "export"), " ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-keyword"
+  }, "default"), " ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-keyword"
+  }, "function"), " ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-title function_"
+  }, "App"), "(", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-params"
+  }), `) {
+    `, /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-keyword"
+  }, "const"), " config= ", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-title function_"
+  }, "useLoaderData"), `();
+    `, /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-comment"
+  }, "// todo config"), `
+    `, /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-keyword"
+  }, "return"), ` (
+       `, /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "xml"
+  }, /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-tag"
+  }, "<>"), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-tag"
+  }, "<", /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-name"
+  }, "Outlet"), "/>"), /* @__PURE__ */ import_react21.default.createElement(_components.span, {
+    className: "hljs-tag"
+  }, "</>")), `
+    )
+}
+`)), `
+`, /* @__PURE__ */ import_react21.default.createElement(import_react22.Heading, {
+    variant: "title-under-line"
+  }, "3. L\u1EDDi k\u1EBFt"), `
+`, /* @__PURE__ */ import_react21.default.createElement(import_react22.Box, {
+    marginY: 4
+  }, `V\u1EDBi nh\u1EEFng g\xEC m\xECnh gi\u1EDBi thi\u1EC7u \u1EDF tr\xEAn th\xEC s\u1EBD gi\xFAp \u0111\u01B0\u1EE3c c\xE1c b\u1EA1n trong v\u1EA5n \u0111\u1EC1 dynamic config v\u1EDBi t\u1EEBng m\xF4i
+tr\u01B0\u1EDDng dev c\u1EE7a m\xECnh. Nh\u01B0ng b\xEAn c\u1EA1nh \u0111\xF3 vi\u1EC7c s\u1EED d\u1EE5ng c\xE1ch n\xE0y s\u1EBD d\u1EABn \u0111\u1EBFn vi\u1EC7c c\xE1c data config s\u1EBD d\u1EC5 b\u1ECB l\u1ED9 h\u01A1n so v\u1EDBi
+d\xF9ng env file`));
+  return MDXLayout ? /* @__PURE__ */ import_react21.default.createElement(MDXLayout, {
+    ...props
+  }, _content) : _content;
+}
+var load_config_default = MDXContent2, filename2 = "load-config.mdx", headers2 = typeof attributes2 < "u" && attributes2.headers, meta3 = typeof attributes2 < "u" && attributes2.meta;
+
 // app/routes/blogs/index.tsx
 var blogs_exports = {};
 __export(blogs_exports, {
   default: () => Index,
-  loader: () => loader3,
-  meta: () => meta3
+  loader: () => loader2,
+  meta: () => meta4
 });
-var import_react24 = require("@chakra-ui/react"), import_node2 = require("@remix-run/node"), import_react25 = require("@remix-run/react");
+var import_react25 = require("@chakra-ui/react"), import_node2 = require("@remix-run/node"), import_react26 = require("@remix-run/react");
 
 // app/components/card.tsx
-var import_react22 = require("@chakra-ui/react"), import_react23 = require("@remix-run/react"), import_jsx_dev_runtime = require("react/jsx-dev-runtime");
+var import_react23 = require("@chakra-ui/react"), import_react24 = require("@remix-run/react"), import_jsx_dev_runtime = require("react/jsx-dev-runtime");
 function CardThumbnail({ thumbnail, title, children, href }) {
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react22.Box, {
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react23.Box, {
     w: "100%",
     textAlign: "center",
     cursor: "pointer",
-    children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react23.NavLink, {
+    children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react24.NavLink, {
       to: href,
       children: [
-        /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react22.Image, {
+        /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react23.Image, {
           src: thumbnail,
           alt: title,
           className: "grid-item-thumbnail",
@@ -3184,8 +3574,8 @@ function CardThumbnail({ thumbnail, title, children, href }) {
           lineNumber: 7,
           columnNumber: 13
         }, this),
-        /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react22.LinkOverlay, {
-          children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react22.Text, {
+        /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react23.LinkOverlay, {
+          children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react23.Text, {
             mt: 2,
             fontSize: 20,
             children: title
@@ -3199,7 +3589,7 @@ function CardThumbnail({ thumbnail, title, children, href }) {
           lineNumber: 13,
           columnNumber: 13
         }, this),
-        /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react22.Text, {
+        /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react23.Text, {
           fontSize: 14,
           children
         }, void 0, !1, {
@@ -3255,13 +3645,14 @@ function postFromModule(mod) {
     ...mod.attributes.meta
   };
 }
-var loader3 = async () => (0, import_node2.json)([
-  postFromModule(axios_first_blog_exports)
+var loader2 = async () => (0, import_node2.json)([
+  postFromModule(axios_first_blog_exports),
+  postFromModule(load_config_exports)
 ]);
 function Index() {
-  let posts = (0, import_react25.useLoaderData)();
+  let posts = (0, import_react26.useLoaderData)();
   return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(motion_router_default, {
-    children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react24.SimpleGrid, {
+    children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react25.SimpleGrid, {
       columns: [1, 1, 2],
       gap: 6,
       children: posts.map((post, index) => /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(card_default, {
@@ -3271,21 +3662,21 @@ function Index() {
         children: post.description
       }, `blog-${index}`, !1, {
         fileName: "app/routes/blogs/index.tsx",
-        lineNumber: 26,
+        lineNumber: 28,
         columnNumber: 40
       }, this))
     }, void 0, !1, {
       fileName: "app/routes/blogs/index.tsx",
-      lineNumber: 25,
+      lineNumber: 27,
       columnNumber: 9
     }, this)
   }, void 0, !1, {
     fileName: "app/routes/blogs/index.tsx",
-    lineNumber: 24,
+    lineNumber: 26,
     columnNumber: 13
   }, this);
 }
-var meta3 = ({ data }) => {
+var meta4 = ({ data }) => {
   let postTitles = data.map((post) => post.title);
   return {
     title: "Blog page portfolio of nguyen ba tran van",
@@ -3300,28 +3691,28 @@ var meta3 = ({ data }) => {
 var product_exports = {};
 __export(product_exports, {
   default: () => Product,
-  loader: () => loader4,
-  meta: () => meta4
+  loader: () => loader3,
+  meta: () => meta5
 });
-var import_react27 = require("@chakra-ui/react"), import_node3 = require("@remix-run/node"), import_react28 = require("@remix-run/react");
+var import_react28 = require("@chakra-ui/react"), import_node3 = require("@remix-run/node"), import_react29 = require("@remix-run/react");
 
 // app/components/product-card.tsx
-var import_react26 = require("@chakra-ui/react"), import_jsx_dev_runtime = require("react/jsx-dev-runtime");
+var import_react27 = require("@chakra-ui/react"), import_jsx_dev_runtime = require("react/jsx-dev-runtime");
 function ProductCard({ image }) {
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react26.Center, {
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react27.Center, {
     py: 12,
-    children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react26.Box, {
+    children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react27.Box, {
       role: "group",
       p: 6,
       maxW: "330px",
       w: "full",
-      bg: (0, import_react26.useColorModeValue)("white", "gray.800"),
+      bg: (0, import_react27.useColorModeValue)("white", "gray.800"),
       boxShadow: "2xl",
       rounded: "lg",
       pos: "relative",
       zIndex: 1,
       children: [
-        /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react26.Box, {
+        /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react27.Box, {
           rounded: "lg",
           mt: -12,
           pos: "relative",
@@ -3343,7 +3734,7 @@ function ProductCard({ image }) {
               filter: "blur(20px)"
             }
           },
-          children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react26.Image, {
+          children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react27.Image, {
             rounded: "lg",
             height: 230,
             width: 282,
@@ -3359,11 +3750,11 @@ function ProductCard({ image }) {
           lineNumber: 15,
           columnNumber: 13
         }, this),
-        /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react26.Stack, {
+        /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react27.Stack, {
           pt: 10,
           align: "center",
           children: [
-            /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react26.Text, {
+            /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react27.Text, {
               color: "gray.500",
               fontSize: "sm",
               textTransform: "uppercase",
@@ -3373,7 +3764,7 @@ function ProductCard({ image }) {
               lineNumber: 46,
               columnNumber: 17
             }, this),
-            /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react26.Heading, {
+            /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react27.Heading, {
               fontSize: "2xl",
               fontFamily: "body",
               fontWeight: 500,
@@ -3383,11 +3774,11 @@ function ProductCard({ image }) {
               lineNumber: 49,
               columnNumber: 17
             }, this),
-            /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react26.Stack, {
+            /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react27.Stack, {
               direction: "row",
               align: "center",
               children: [
-                /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react26.Text, {
+                /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react27.Text, {
                   fontWeight: 700,
                   fontSize: "xl",
                   children: "$57"
@@ -3396,7 +3787,7 @@ function ProductCard({ image }) {
                   lineNumber: 53,
                   columnNumber: 21
                 }, this),
-                /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react26.Text, {
+                /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react27.Text, {
                   textDecoration: "line-through",
                   color: "gray.600",
                   children: "$199"
@@ -3432,17 +3823,17 @@ function ProductCard({ image }) {
 var product_card_default = ProductCard;
 
 // app/routes/product.tsx
-var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), loader4 = async () => {
+var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), loader3 = async () => {
   let data = await fetcherJSON("https://dummyjson.com/products");
   return (0, import_node3.json)(data);
 };
 function Product() {
-  let { products } = (0, import_react28.useLoaderData)(), loadProduct = async () => {
+  let { products } = (0, import_react29.useLoaderData)(), loadProduct = async () => {
     let data = await (await fetch("https://dummyjson.com/products")).json();
   };
   return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(motion_router_default, {
     children: [
-      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react27.Heading, {
+      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react28.Heading, {
         variant: "title-under-line",
         children: "Products"
       }, void 0, !1, {
@@ -3450,7 +3841,7 @@ function Product() {
         lineNumber: 24,
         columnNumber: 13
       }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react27.SimpleGrid, {
+      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react28.SimpleGrid, {
         columns: [1, 1, 2],
         gap: 6,
         children: products.map((product) => /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(product_card_default, {
@@ -3472,7 +3863,7 @@ function Product() {
     columnNumber: 13
   }, this);
 }
-var meta4 = ({ data, parentsData }) => {
+var meta5 = ({ data, parentsData }) => {
   let description = data.products.map((product) => product.title);
   return {
     title: "Product app",
@@ -3488,9 +3879,9 @@ __export(routes_exports, {
   BioSection: () => BioSection,
   BioYear: () => BioYear,
   default: () => Index2,
-  meta: () => meta5
+  meta: () => meta6
 });
-var import_react29 = require("@chakra-ui/react"), import_styled4 = __toESM(require("@emotion/styled")), import_react30 = require("@remix-run/react"), import_io52 = require("react-icons/io5");
+var import_react30 = require("@chakra-ui/react"), import_styled4 = __toESM(require("@emotion/styled")), import_react31 = require("@remix-run/react"), import_io52 = require("react-icons/io5");
 
 // app/components/paragrapth.ts
 var import_styled3 = __toESM(require("@emotion/styled")), Paragraph = import_styled3.default.p`
@@ -3499,9 +3890,9 @@ var import_styled3 = __toESM(require("@emotion/styled")), Paragraph = import_sty
 `, paragrapth_default = Paragraph;
 
 // app/routes/index.tsx
-var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), ProfileImage = (0, import_react29.chakra)(import_react29.Image, {
+var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), ProfileImage = (0, import_react30.chakra)(import_react30.Image, {
   shouldForwardProp: (prop) => ["width", "height", "src", "alt"].includes(prop)
-}), BioSection = (0, import_styled4.default)(import_react29.Box)`
+}), BioSection = (0, import_styled4.default)(import_react30.Box)`
   padding-left: 3.4em;
   text-indent: -3.4em;
 `, BioYear = import_styled4.default.span`
@@ -3509,19 +3900,19 @@ var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), ProfileImage = (0
   margin-right: 1em;
 `;
 function Index2() {
-  let navigate = (0, import_react30.useNavigate)(), onProducts = () => {
+  let navigate = (0, import_react31.useNavigate)(), onProducts = () => {
     navigate("/product");
   }, onBlogs = () => {
     navigate("/blogs");
   };
   return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(motion_router_default, {
     children: [
-      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react29.Box, {
+      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react30.Box, {
         borderRadius: "lg",
         mb: 6,
         p: 3,
         textAlign: "center",
-        bg: (0, import_react29.useColorModeValue)("whiteAlpha.500", "whiteAlpha.200"),
+        bg: (0, import_react30.useColorModeValue)("whiteAlpha.500", "whiteAlpha.200"),
         css: { backdropFilter: "blur(10px)" },
         children: "Hello, I'm an indie app developer based in Vietnam!"
       }, void 0, !1, {
@@ -3529,13 +3920,13 @@ function Index2() {
         lineNumber: 45,
         columnNumber: 17
       }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react29.Box, {
+      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react30.Box, {
         display: { md: "flex" },
         children: [
-          /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react29.Box, {
+          /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react30.Box, {
             flexGrow: 1,
             children: [
-              /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react29.Heading, {
+              /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react30.Heading, {
                 as: "h2",
                 variant: "page-title",
                 children: "Nguy\u1EC5n B\xE1 Tr\u1EA7n V\u0103n"
@@ -3557,12 +3948,12 @@ function Index2() {
             lineNumber: 57,
             columnNumber: 21
           }, this),
-          /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react29.Box, {
+          /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react30.Box, {
             flexShrink: 0,
             mt: { base: 4, md: 0 },
             ml: { md: 6 },
             textAlign: "center",
-            children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react29.Box, {
+            children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react30.Box, {
               borderColor: "whiteAlpha.800",
               borderWidth: 2,
               borderStyle: "solid",
@@ -3599,10 +3990,10 @@ function Index2() {
         lineNumber: 56,
         columnNumber: 17
       }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react29.Box, {
+      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react30.Box, {
         marginY: 4,
         children: [
-          /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react29.Heading, {
+          /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react30.Heading, {
             variant: "title-under-line",
             children: "Work"
           }, void 0, !1, {
@@ -3623,10 +4014,10 @@ function Index2() {
         lineNumber: 90,
         columnNumber: 17
       }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react29.Box, {
+      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react30.Box, {
         marginY: 4,
         children: [
-          /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react29.Heading, {
+          /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react30.Heading, {
             variant: "title-under-line",
             children: "Bio"
           }, void 0, !1, {
@@ -3704,10 +4095,10 @@ function Index2() {
         lineNumber: 100,
         columnNumber: 17
       }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react29.Box, {
+      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react30.Box, {
         marginY: 4,
         children: [
-          /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react29.Heading, {
+          /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react30.Heading, {
             variant: "title-under-line",
             children: "Contact Social"
           }, void 0, !1, {
@@ -3715,13 +4106,13 @@ function Index2() {
             lineNumber: 122,
             columnNumber: 21
           }, this),
-          /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react29.List, {
+          /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react30.List, {
             children: [
-              /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react29.ListItem, {
-                children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react29.Link, {
+              /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react30.ListItem, {
+                children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react30.Link, {
                   href: "https://github.com/nguyenbatranvan",
                   target: "_blank",
-                  children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react29.Button, {
+                  children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react30.Button, {
                     variant: "ghost",
                     colorScheme: "teal",
                     leftIcon: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_io52.IoLogoGithub, {}, void 0, !1, {
@@ -3745,11 +4136,11 @@ function Index2() {
                 lineNumber: 126,
                 columnNumber: 25
               }, this),
-              /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react29.ListItem, {
-                children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react29.Link, {
+              /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react30.ListItem, {
+                children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react30.Link, {
                   href: "https://twitter.com/VnBKinh1",
                   target: "_blank",
-                  children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react29.Button, {
+                  children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react30.Button, {
                     variant: "ghost",
                     colorScheme: "teal",
                     leftIcon: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_io52.IoLogoTwitter, {}, void 0, !1, {
@@ -3773,11 +4164,11 @@ function Index2() {
                 lineNumber: 137,
                 columnNumber: 25
               }, this),
-              /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react29.ListItem, {
-                children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react29.Link, {
+              /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react30.ListItem, {
+                children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react30.Link, {
                   href: "https://instagram.com/nguyenbatran",
                   target: "_blank",
-                  children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react29.Button, {
+                  children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react30.Button, {
                     variant: "ghost",
                     colorScheme: "teal",
                     leftIcon: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_io52.IoLogoInstagram, {}, void 0, !1, {
@@ -3820,7 +4211,7 @@ function Index2() {
     columnNumber: 13
   }, this);
 }
-var meta5 = () => ({
+var meta6 = () => ({
   title: "Portfolio of nguyen ba tran van",
   description: "This page is detail work of nguyen ba tran van from 2014 to now",
   "og:description": "This page is detail work of nguyen ba tran van from 2014 to now",
@@ -3828,7 +4219,7 @@ var meta5 = () => ({
 });
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { version: "97224d74", entry: { module: "/build/entry.client-PRVYZ75S.js", imports: ["/build/_shared/chunk-DLTBJWIM.js", "/build/_shared/chunk-2KJVXWSX.js", "/build/_shared/chunk-OL2A2WX4.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-IDROFQUM.js", imports: ["/build/_shared/chunk-TVFHIIFP.js", "/build/_shared/chunk-2ZUEBVN2.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/blogs/axios-first-blog": { id: "routes/blogs/axios-first-blog", parentId: "root", path: "blogs/axios-first-blog", index: void 0, caseSensitive: void 0, module: "/build/routes/blogs/axios-first-blog-A6UAPNGZ.js", imports: ["/build/_shared/chunk-7O75O6HR.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/blogs/index": { id: "routes/blogs/index", parentId: "root", path: "blogs", index: !0, caseSensitive: void 0, module: "/build/routes/blogs/index-MCUGCVQR.js", imports: ["/build/_shared/chunk-7O75O6HR.js", "/build/_shared/chunk-KGZSAFRJ.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/index": { id: "routes/index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/index-LG2RSXB5.js", imports: ["/build/_shared/chunk-KGZSAFRJ.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/product": { id: "routes/product", parentId: "root", path: "product", index: void 0, caseSensitive: void 0, module: "/build/routes/product-AZDM7GJI.js", imports: ["/build/_shared/chunk-KGZSAFRJ.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, url: "/build/manifest-97224D74.js" };
+var assets_manifest_default = { version: "0f0449ac", entry: { module: "/build/entry.client-QJWTOPRP.js", imports: ["/build/_shared/chunk-QULECMS6.js", "/build/_shared/chunk-FGJQ4NGA.js", "/build/_shared/chunk-ZIYPFG5E.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-KHBXYM3H.js", imports: ["/build/_shared/chunk-35VL3SGE.js", "/build/_shared/chunk-ZSWBXDCE.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/blogs/axios-first-blog": { id: "routes/blogs/axios-first-blog", parentId: "root", path: "blogs/axios-first-blog", index: void 0, caseSensitive: void 0, module: "/build/routes/blogs/axios-first-blog-IOT5GYD6.js", imports: ["/build/_shared/chunk-IL3GWHV7.js", "/build/_shared/chunk-QE364FJP.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/blogs/index": { id: "routes/blogs/index", parentId: "root", path: "blogs", index: !0, caseSensitive: void 0, module: "/build/routes/blogs/index-Z7ILZ43P.js", imports: ["/build/_shared/chunk-IL3GWHV7.js", "/build/_shared/chunk-Y4J2TSSR.js", "/build/_shared/chunk-QE364FJP.js", "/build/_shared/chunk-C5RLUXAJ.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/blogs/load-config": { id: "routes/blogs/load-config", parentId: "root", path: "blogs/load-config", index: void 0, caseSensitive: void 0, module: "/build/routes/blogs/load-config-NA2VX76C.js", imports: ["/build/_shared/chunk-Y4J2TSSR.js", "/build/_shared/chunk-QE364FJP.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/index": { id: "routes/index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/index-4S6RGTYG.js", imports: ["/build/_shared/chunk-C5RLUXAJ.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/product": { id: "routes/product", parentId: "root", path: "product", index: void 0, caseSensitive: void 0, module: "/build/routes/product-6JMN7YHZ.js", imports: ["/build/_shared/chunk-C5RLUXAJ.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, url: "/build/manifest-0F0449AC.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var assetsBuildDirectory = "public/build", publicPath = "/build/", entry = { module: entry_server_exports }, routes = {
@@ -3847,6 +4238,14 @@ var assetsBuildDirectory = "public/build", publicPath = "/build/", entry = { mod
     index: void 0,
     caseSensitive: void 0,
     module: axios_first_blog_exports
+  },
+  "routes/blogs/load-config": {
+    id: "routes/blogs/load-config",
+    parentId: "root",
+    path: "blogs/load-config",
+    index: void 0,
+    caseSensitive: void 0,
+    module: load_config_exports
   },
   "routes/blogs/index": {
     id: "routes/blogs/index",

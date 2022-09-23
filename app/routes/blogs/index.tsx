@@ -4,8 +4,8 @@ import { useLoaderData} from "@remix-run/react";
 import React from "react";
 import CardThumbnail from "~/components/card";
 import MotionRouter from "~/components/motion-router";
-import data from '~/json/json-blog.json';
 import * as axiosFirstBlog from "./axios-first-blog.mdx";
+import * as loadConfigBlog from "./load-config.mdx";
 
 function postFromModule(mod) {
     return {
@@ -17,6 +17,7 @@ function postFromModule(mod) {
 export const loader = async () => {
     return json([
         postFromModule(axiosFirstBlog),
+        postFromModule(loadConfigBlog)
     ]);
 }
 export default function Index() {

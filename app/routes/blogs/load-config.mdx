@@ -1,0 +1,135 @@
+---
+meta:
+    title:  Load config json with Reactjs, Angular, Next, Remix
+    description: How to load json file before initial app in Angular, React, Next and Remix
+    image: '/images/blogs/load-config.png'
+    og:image: /images/blogs/load-config.png
+headers:
+Cache-Control: no-cache
+---
+import {Heading, Badge, Box, Link, UnorderedList, ListItem} from "@chakra-ui/react";
+import styles from "highlight.js/styles/github-dark-dimmed.css";
+
+
+export const links = () => [
+    {rel: "stylesheet", href: styles},
+];
+
+
+<Heading marginBottom={4}>Làm thế nào để tải trước một file json trước khi page được kết xuất?</Heading>
+<Heading variant={"title-under-line"}>1.Vấn đề</Heading>
+<Box marginY={4}>
+    Thông thường khi làm việc trong 1 dự án, các biến về config thường sẽ được khởi tạo trong file <Badge
+    textTransform={"lowercase"} mr={2}>.env</Badge> và sau đó sẽ được đem ra sử dụng như dưới đây
+</Box>
+
+```js
+DB_HOST=https://services.sandbox.icondo.asia/
+```
+
+<Box marginY={4}>
+    và sau đó sẽ gọi ra và sử dụng
+</Box>
+
+
+```js
+console.log(proccess.env.DB_HOST)
+```
+<Box marginY={4}>
+    Mọi chuyện vẫn đúng và chức năng vẫn hoạt động bình thường, nhưng sẽ có những bất cập dưới đây:
+    <UnorderedList my={2}>
+        <ListItem>
+            Khi nhu cầu config thay đổi bạn phải chỉnh sửa lại file .env và build lại dự án của mình. Vì căn bản file
+            .env
+            này sẽ chạy và lưu giá trị trong quá trình <Badge colorScheme={"green"}>compile time</Badge>
+        </ListItem>
+    </UnorderedList>
+    <p>Vì những bất cập đó, thì phải có 1 nơi sẽ chỉnh sửa file config cho từng dự án, và nhiệm vụ của phía client là
+        load file config đó lên và sử dụng giá trị đó thay cho file env. Dưới đây là những cách tiếp cận mà mình sẽ
+        hướng dẫn cho bạn</p>
+</Box>
+
+<Heading variant={"title-under-line"}>2. Áp dụng</Heading>
+<Box marginY={4}>
+    Chúng ta sẽ tạo 1 function để fetch data từ api
+</Box>
+
+```ts
+export const fetcherJSON = (url: string, config?: RequestInit) => fetch(url, config).then((res) => res.json());
+```
+
+<Box marginY={4}>Với <Badge colorScheme={"green"}>Angular</Badge> ở file <Badge
+    textTransform={"lowercase"}>main.ts</Badge></Box>
+
+```ts
+(async () => {
+  const data = await fetcherJSON('link json here...')
+// todo with json config data
+  function bootstrap() {
+    platformBrowserDynamic().bootstrapModule(AppModule)
+      .catch(err => console.error(err));
+  };
+  if (document.readyState === 'complete') {
+    bootstrap();
+  } else {
+    document.addEventListener('DOMContentLoaded', bootstrap);
+  }
+})();
+```
+
+<Box marginY={4}>Với <Badge colorScheme={"green"}>React</Badge> ở file <Badge
+    textTransform={"lowercase"}>index.tsx</Badge></Box>
+
+```ts
+(async () => {
+    try {
+
+        const container = document.getElementById('main-condo');
+        const root = createRoot(container);
+        const config = await fetcherJSON('/assets/config.json');
+        root.render(<Provider>
+                <App config={data}/>
+        </Provider>);
+    } catch (e) {
+        // todo error
+    }
+})();
+```
+<Box marginY={4}>Ở file <Badge
+    textTransform={"lowercase"}>App.tsx</Badge></Box>
+
+```ts
+function App(props) {
+    useEffect(() => {
+        console.log(props.config)
+        // todo with props.config
+    }, []);
+    return (<>...</>)
+}
+```
+
+<Box marginY={4}>Với <Badge colorScheme={"green"}>Remix</Badge> ở file <Badge
+    textTransform={"lowercase"}>root.tsx</Badge></Box>
+
+```ts
+import {useLoaderData} from "@remix-run/react";
+export const loader = async ({request}) => {
+    const location = new URL(request.url)
+    const config = await fetcherJSON(location.origin + `/config.json`);
+    return json(config);
+}
+
+export default function App() {
+    const config= useLoaderData();
+    // todo config
+    return (
+       <><Outlet/></>
+    )
+}
+```
+
+<Heading variant={"title-under-line"}>3. Lời kết</Heading>
+
+<Box marginY={4}>Với những gì mình giới thiệu ở trên thì sẽ giúp được các bạn trong vấn đề dynamic config với từng môi
+    trường dev của mình. Nhưng bên cạnh đó việc sử dụng cách này sẽ dẫn đến việc các data config sẽ dễ bị lộ hơn so với
+    dùng env file</Box>
