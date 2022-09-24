@@ -1,6 +1,5 @@
-// root.tsx
 import {AnimatePresence} from "framer-motion";
-import React, {useContext, useEffect} from 'react'
+import React, {useContext, useEffect, useState} from 'react'
 import {withEmotionCache} from '@emotion/react'
 import {Box, ChakraProvider, Container} from '@chakra-ui/react'
 import {
@@ -14,6 +13,7 @@ import {
 import {MetaFunction, LinksFunction, json} from '@remix-run/node'
 import VoxelDog from "~/components/dog";
 import CustomSpinner from "~/components/spinner";
+import ButtonScrollTop from "~/custom-components/button-scroll-top";
 import Layout from "~/layout";
 import {customTheme} from "~/theme/theme";
 import {fetcherJSON} from "~/utils/fetch-json"; // Depends on the runtime you choose
@@ -93,9 +93,15 @@ const Document = withEmotionCache(
 
 export default function App() {
     const transition = useTransition();
+    const [isShowScrollTop, setShow] = useState(false);
+
     useEffect(() => {
-        console.log('transition', transition.state);
-    }, [transition])
+        window.addEventListener('scroll', onWindowScroll);
+    }, [])
+
+    const onWindowScroll = (e) => {
+        setShow(window.scrollY > 200)
+    }
 
     return (
         <Document>
@@ -115,6 +121,7 @@ export default function App() {
                     </Layout>
                 </AnimatePresence>
                 {transition.state === 'loading' && <CustomSpinner/>}
+                <Box display={isShowScrollTop ? 'block' : 'none'}><ButtonScrollTop/></Box>
             </ChakraProvider>
 
         </Document>
