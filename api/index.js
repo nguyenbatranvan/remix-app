@@ -2613,12 +2613,12 @@ var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), meta = () => ({
           children: [
             /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react20.Meta, {}, void 0, !1, {
               fileName: "app/root.tsx",
-              lineNumber: 73,
+              lineNumber: 72,
               columnNumber: 17
             }, this),
             /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react20.Links, {}, void 0, !1, {
               fileName: "app/root.tsx",
-              lineNumber: 74,
+              lineNumber: 73,
               columnNumber: 17
             }, this),
             serverStyleData == null ? void 0 : serverStyleData.map(({ key, ids, css }) => /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("style", {
@@ -2626,13 +2626,13 @@ var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), meta = () => ({
               dangerouslySetInnerHTML: { __html: css }
             }, key, !1, {
               fileName: "app/root.tsx",
-              lineNumber: 76,
+              lineNumber: 75,
               columnNumber: 21
             }, this))
           ]
         }, void 0, !0, {
           fileName: "app/root.tsx",
-          lineNumber: 71,
+          lineNumber: 70,
           columnNumber: 13
         }, this),
         /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("body", {
@@ -2640,29 +2640,29 @@ var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), meta = () => ({
             children,
             /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react20.ScrollRestoration, {}, void 0, !1, {
               fileName: "app/root.tsx",
-              lineNumber: 85,
+              lineNumber: 84,
               columnNumber: 13
             }, this),
             /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react20.Scripts, {}, void 0, !1, {
               fileName: "app/root.tsx",
-              lineNumber: 86,
+              lineNumber: 85,
               columnNumber: 13
             }, this),
             /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react20.LiveReload, {}, void 0, !1, {
               fileName: "app/root.tsx",
-              lineNumber: 87,
+              lineNumber: 86,
               columnNumber: 13
             }, this)
           ]
         }, void 0, !0, {
           fileName: "app/root.tsx",
-          lineNumber: 83,
+          lineNumber: 82,
           columnNumber: 13
         }, this)
       ]
     }, void 0, !0, {
       fileName: "app/root.tsx",
-      lineNumber: 70,
+      lineNumber: 69,
       columnNumber: 13
     }, this);
   }
@@ -2691,12 +2691,12 @@ function App() {
                 marginTop: "40px",
                 children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(dog_default, {}, void 0, !1, {
                   fileName: "app/root.tsx",
-                  lineNumber: 117,
+                  lineNumber: 116,
                   columnNumber: 29
                 }, this)
               }, void 0, !1, {
                 fileName: "app/root.tsx",
-                lineNumber: 116,
+                lineNumber: 115,
                 columnNumber: 25
               }, this),
               /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react19.Container, {
@@ -2706,51 +2706,51 @@ function App() {
                 opacity: 1,
                 children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react20.Outlet, {}, void 0, !1, {
                   fileName: "app/root.tsx",
-                  lineNumber: 120,
+                  lineNumber: 119,
                   columnNumber: 29
                 }, this)
               }, void 0, !1, {
                 fileName: "app/root.tsx",
-                lineNumber: 119,
+                lineNumber: 118,
                 columnNumber: 25
               }, this)
             ]
           }, void 0, !0, {
             fileName: "app/root.tsx",
-            lineNumber: 115,
+            lineNumber: 114,
             columnNumber: 21
           }, this)
         }, void 0, !1, {
           fileName: "app/root.tsx",
-          lineNumber: 110,
+          lineNumber: 109,
           columnNumber: 17
         }, this),
         transition.state === "loading" && /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(spinner_default, {}, void 0, !1, {
           fileName: "app/root.tsx",
-          lineNumber: 124,
+          lineNumber: 123,
           columnNumber: 52
         }, this),
         /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react19.Box, {
           display: isShowScrollTop ? "block" : "none",
           children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(ButtonScrollTop, {}, void 0, !1, {
             fileName: "app/root.tsx",
-            lineNumber: 125,
+            lineNumber: 124,
             columnNumber: 67
           }, this)
         }, void 0, !1, {
           fileName: "app/root.tsx",
-          lineNumber: 125,
+          lineNumber: 124,
           columnNumber: 17
         }, this)
       ]
     }, void 0, !0, {
       fileName: "app/root.tsx",
-      lineNumber: 109,
+      lineNumber: 108,
       columnNumber: 13
     }, this)
   }, void 0, !1, {
     fileName: "app/root.tsx",
-    lineNumber: 108,
+    lineNumber: 107,
     columnNumber: 9
   }, this);
 }
@@ -5519,7 +5519,7 @@ function PageNotFound() {
 }
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { version: "5b7dd85c", entry: { module: "/build/entry.client-4X27QILR.js", imports: ["/build/_shared/chunk-52UQEXEJ.js", "/build/_shared/chunk-CWLYAGW4.js", "/build/_shared/chunk-VBX6GUDD.js", "/build/_shared/chunk-7XQODPBP.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-O6QDECLT.js", imports: ["/build/_shared/chunk-NDI65EYU.js", "/build/_shared/chunk-3V5YXNMQ.js", "/build/_shared/chunk-T7I4I5MQ.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/$": { id: "routes/$", parentId: "root", path: "*", index: void 0, caseSensitive: void 0, module: "/build/routes/$-YLNC7MQH.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/blog-detail": { id: "routes/blog-detail", parentId: "root", path: "blog-detail", index: void 0, caseSensitive: void 0, module: "/build/routes/blog-detail-7B6EBZ3X.js", imports: ["/build/_shared/chunk-LW22SQNR.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/blog-detail/axios-first-blog": { id: "routes/blog-detail/axios-first-blog", parentId: "routes/blog-detail", path: "axios-first-blog", index: void 0, caseSensitive: void 0, module: "/build/routes/blog-detail/axios-first-blog-DLN3MDOO.js", imports: ["/build/_shared/chunk-UQWTDPUM.js", "/build/_shared/chunk-3V5YXNMQ.js", "/build/_shared/chunk-T7I4I5MQ.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/blog-detail/load-config": { id: "routes/blog-detail/load-config", parentId: "routes/blog-detail", path: "load-config", index: void 0, caseSensitive: void 0, module: "/build/routes/blog-detail/load-config-ZBKH5VBR.js", imports: ["/build/_shared/chunk-CHMTNVAD.js", "/build/_shared/chunk-3V5YXNMQ.js", "/build/_shared/chunk-T7I4I5MQ.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/blogs": { id: "routes/blogs", parentId: "root", path: "blogs", index: void 0, caseSensitive: void 0, module: "/build/routes/blogs-JM4GC7B4.js", imports: ["/build/_shared/chunk-UQWTDPUM.js", "/build/_shared/chunk-CHMTNVAD.js", "/build/_shared/chunk-LW22SQNR.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/index": { id: "routes/index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/index-HKDEAQRW.js", imports: ["/build/_shared/chunk-LW22SQNR.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/product": { id: "routes/product", parentId: "root", path: "product", index: void 0, caseSensitive: void 0, module: "/build/routes/product-JLBUHBW4.js", imports: ["/build/_shared/chunk-LW22SQNR.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, url: "/build/manifest-5B7DD85C.js" };
+var assets_manifest_default = { version: "7a2572b2", entry: { module: "/build/entry.client-L5ZF2QXJ.js", imports: ["/build/_shared/chunk-52UQEXEJ.js", "/build/_shared/chunk-CWLYAGW4.js", "/build/_shared/chunk-VBX6GUDD.js", "/build/_shared/chunk-7XQODPBP.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-4C3NDBKS.js", imports: ["/build/_shared/chunk-NDI65EYU.js", "/build/_shared/chunk-3V5YXNMQ.js", "/build/_shared/chunk-T7I4I5MQ.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/$": { id: "routes/$", parentId: "root", path: "*", index: void 0, caseSensitive: void 0, module: "/build/routes/$-YLNC7MQH.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/blog-detail": { id: "routes/blog-detail", parentId: "root", path: "blog-detail", index: void 0, caseSensitive: void 0, module: "/build/routes/blog-detail-7B6EBZ3X.js", imports: ["/build/_shared/chunk-LW22SQNR.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/blog-detail/axios-first-blog": { id: "routes/blog-detail/axios-first-blog", parentId: "routes/blog-detail", path: "axios-first-blog", index: void 0, caseSensitive: void 0, module: "/build/routes/blog-detail/axios-first-blog-DLN3MDOO.js", imports: ["/build/_shared/chunk-UQWTDPUM.js", "/build/_shared/chunk-3V5YXNMQ.js", "/build/_shared/chunk-T7I4I5MQ.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/blog-detail/load-config": { id: "routes/blog-detail/load-config", parentId: "routes/blog-detail", path: "load-config", index: void 0, caseSensitive: void 0, module: "/build/routes/blog-detail/load-config-ZBKH5VBR.js", imports: ["/build/_shared/chunk-CHMTNVAD.js", "/build/_shared/chunk-3V5YXNMQ.js", "/build/_shared/chunk-T7I4I5MQ.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/blogs": { id: "routes/blogs", parentId: "root", path: "blogs", index: void 0, caseSensitive: void 0, module: "/build/routes/blogs-JM4GC7B4.js", imports: ["/build/_shared/chunk-UQWTDPUM.js", "/build/_shared/chunk-CHMTNVAD.js", "/build/_shared/chunk-LW22SQNR.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/index": { id: "routes/index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/index-HKDEAQRW.js", imports: ["/build/_shared/chunk-LW22SQNR.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/product": { id: "routes/product", parentId: "root", path: "product", index: void 0, caseSensitive: void 0, module: "/build/routes/product-JLBUHBW4.js", imports: ["/build/_shared/chunk-LW22SQNR.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, url: "/build/manifest-7A2572B2.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var assetsBuildDirectory = "public/build", publicPath = "/build/", entry = { module: entry_server_exports }, routes = {

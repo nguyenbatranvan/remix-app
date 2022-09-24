@@ -6,14 +6,15 @@ import { RemixBrowser } from '@remix-run/react'
 
 import { ClientStyleContext } from './context'
 import createEmotionCache from './createEmotionCache'
-
+import smoothscroll from 'smoothscroll-polyfill';
 interface ClientCacheProviderProps {
     children: React.ReactNode;
 }
 
 function ClientCacheProvider({ children }: ClientCacheProviderProps) {
     const [cache, setCache] = useState(createEmotionCache())
-
+    smoothscroll.polyfill();
+    window['__forceSmoothScrollPolyfill__'] = true;
     function reset() {
         setCache(createEmotionCache())
     }
