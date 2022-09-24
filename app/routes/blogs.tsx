@@ -31,12 +31,13 @@ export default function Blogs() {
 }
 
 export const meta: MetaFunction<typeof loader> = ({data}) => {
-    const postTitles = data.map(post => post.title);
+    const postTitles = data.map(post => post.meta.meta.title);
+    const {image} = data[0].meta.meta;
     return {
         title: "Blog page portfolio of nguyen ba tran van",
         description: `List of blogs: ${postTitles.join(',')}`,
         "og:description": `List of blogs: ${postTitles.join(',')}`,
-        image: `${data[0].image}`,
-        "og:image": `${data[0].image}`
+        image,
+        "og:image": image
     }
 }
