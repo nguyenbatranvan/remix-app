@@ -6,6 +6,7 @@ const BoxScrollTop = chakra(Box, {
     baseStyle: props => ({
         position: 'fixed',
         bottom: 4,
+        zIndex:99,
         right: 4,
         cursor: 'pointer',
         rounded: "full",
