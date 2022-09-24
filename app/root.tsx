@@ -13,17 +13,11 @@ import {
 } from '@remix-run/react'
 import {MetaFunction, LinksFunction, json} from '@remix-run/node'
 import VoxelDog from "~/components/dog";
-import DogLoader from "~/components/dog-loader";
 import CustomSpinner from "~/components/spinner";
-import ThemeToggleButton from "~/components/theme-toggle-button";
 import Layout from "~/layout";
-import Footer from "~/layout/footer";
-import Navbar from "~/layout/navbar";
 import {customTheme} from "~/theme/theme";
 import {fetcherJSON} from "~/utils/fetch-json"; // Depends on the runtime you choose
-import {motion} from "framer-motion";
 import {ServerStyleContext, ClientStyleContext} from './context'
-import styles from "~/styles/global.css";
 
 export const meta: MetaFunction = () => ({
     charset: 'utf-8',
@@ -38,8 +32,7 @@ export let links: LinksFunction = () => {
         {
             rel: 'stylesheet',
             href: 'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&display=swap'
-        },
-        {rel: 'stylesheet', href: styles}
+        }
     ]
 }
 

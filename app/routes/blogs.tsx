@@ -1,11 +1,11 @@
-import { SimpleGrid} from "@chakra-ui/react";
+import {SimpleGrid} from "@chakra-ui/react";
 import {json, MetaFunction} from "@remix-run/node";
-import { useLoaderData} from "@remix-run/react";
+import {useLoaderData} from "@remix-run/react";
 import React from "react";
 import CardThumbnail from "~/components/card";
 import MotionRouter from "~/components/motion-router";
-import * as axiosFirstBlog from "./axios-first-blog.mdx";
-import * as loadConfigBlog from "./load-config.mdx";
+import * as axiosFirstBlog from "~/routes/blog-detail/axios-first-blog.mdx";
+import * as loadConfigBlog from "~/routes/blog-detail/load-config.mdx";
 
 function postFromModule(mod) {
     return {
@@ -20,11 +20,12 @@ export const loader = async () => {
         postFromModule(loadConfigBlog)
     ]);
 }
-export default function Index() {
+export default function Blogs() {
     const posts = useLoaderData();
     return (<MotionRouter>
         <SimpleGrid columns={[1, 1, 2]} gap={6}>
-            {posts.map((post,index) => <CardThumbnail href={post.slug} key={`blog-${index}`} thumbnail={post.image} title={post.title}>
+            {posts.map((post, index) => <CardThumbnail href={`/blog-detail/${post.slug}`} key={`blog-${index}`}
+                                                       thumbnail={post.image} title={post.title}>
                 {post.description}
             </CardThumbnail>)}
         </SimpleGrid>
