@@ -1,32 +1,30 @@
 import {SimpleGrid} from "@chakra-ui/react";
 import {json, MetaFunction} from "@remix-run/node";
 import {useLoaderData} from "@remix-run/react";
+import * as fs from "fs";
+import matter from "gray-matter";
+import path from "path";
 import React from "react";
 import CardThumbnail from "~/components/card";
 import MotionRouter from "~/components/motion-router";
-import * as axiosFirstBlog from "~/routes/blog-detail/axios-first-blog.mdx";
-import * as loadConfigBlog from "~/routes/blog-detail/load-config.mdx";
-
-function postFromModule(mod) {
-    return {
-        slug: mod.filename.replace(/\.mdx?$/, ""),
-        ...mod.attributes.meta,
-    };
-}
 
 export const loader = async () => {
-    return json([
-        postFromModule(axiosFirstBlog),
-        postFromModule(loadConfigBlog)
-    ]);
+    const files = fs.readdirSync(path.resolve('app/routes/blog-detail'));
+    const posts = files.map(filename => {
+        const slug = filename.replace(/\.mdx?$/, "");
+        const markDownWithMeta = fs.readFileSync(path.resolve('app/routes/blog-detail', filename), 'utf-8');
+        const {data: meta} = matter(markDownWithMeta);
+        return {slug, meta}
+    });
+    return json(posts);
 }
 export default function Blogs() {
     const posts = useLoaderData();
     return (<MotionRouter>
         <SimpleGrid columns={[1, 1, 2]} gap={6}>
             {posts.map((post, index) => <CardThumbnail href={`/blog-detail/${post.slug}`} key={`blog-${index}`}
-                                                       thumbnail={post.image} title={post.title}>
-                {post.description}
+                                                       thumbnail={post.meta.meta.image} title={post.meta.meta.title}>
+                {post.meta.meta.description}
             </CardThumbnail>)}
         </SimpleGrid>
     </MotionRouter>)
