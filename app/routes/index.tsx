@@ -42,123 +42,123 @@ export default function Index() {
         navigate('/blogs');
     }
     return (<MotionRouter>
+            <Box
+                borderRadius="lg"
+                mb={6}
+                p={3}
+                textAlign="center"
+                bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
+                css={{backdropFilter: 'blur(10px)'}}
+            >
+                Hello, I&apos;m an indie app developer based in Vietnam!
+            </Box>
+
+            <Box display={{md: 'flex'}}>
+                <Box flexGrow={1}>
+                    <Heading as="h2" variant="page-title">
+                        Nguyễn Bá Trần Văn
+                    </Heading>
+                    <p>StageIT iCondo ( Front end developer )</p>
+                </Box>
                 <Box
-                    borderRadius="lg"
-                    mb={6}
-                    p={3}
+                    flexShrink={0}
+                    mt={{base: 4, md: 0}}
+                    ml={{md: 6}}
                     textAlign="center"
-                    bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
-                    css={{backdropFilter: 'blur(10px)'}}
                 >
-                    Hello, I&apos;m an indie app developer based in Vietnam!
-                </Box>
-
-                <Box display={{md: 'flex'}}>
-                    <Box flexGrow={1}>
-                        <Heading as="h2" variant="page-title">
-                            Nguyễn Bá Trần Văn
-                        </Heading>
-                        <p>StageIT iCondo ( Front end developer )</p>
-                    </Box>
                     <Box
-                        flexShrink={0}
-                        mt={{base: 4, md: 0}}
-                        ml={{md: 6}}
-                        textAlign="center"
+                        borderColor="whiteAlpha.800"
+                        borderWidth={2}
+                        borderStyle="solid"
+                        w="100px"
+                        h="100px"
+                        display="inline-block"
+                        borderRadius="full"
+                        overflow="hidden"
                     >
-                        <Box
-                            borderColor="whiteAlpha.800"
-                            borderWidth={2}
-                            borderStyle="solid"
-                            w="100px"
-                            h="100px"
-                            display="inline-block"
+                        <ProfileImage
+                            src="/images/profile.png"
+                            alt="Profile image"
                             borderRadius="full"
-                            overflow="hidden"
-                        >
-                            <ProfileImage
-                                src="/images/profile.png"
-                                alt="Profile image"
-                                borderRadius="full"
-                                objectFit={"cover"}
-                                width="100%"
-                                height="100%"
-                            />
-                        </Box>
+                            objectFit={"cover"}
+                            width="100%"
+                            height="100%"
+                        />
                     </Box>
                 </Box>
-                <Box marginY={4}>
-                    <Heading variant={"title-under-line"}>
-                        Work
-                    </Heading>
-                    <Paragraph>
-                        I am a project person on websites for product or outsource companies. My existing background is
-                        mainly on javascript language and strong support libraries for it like Reactjs, Nextjs, Remix
-                        and some frameworks like angular.
-                    </Paragraph>
-                </Box>
-                <Box marginY={4}>
-                    <Heading variant={"title-under-line"}>
-                        Bio
-                    </Heading>
-                    <BioSection>
-                        <BioYear>1996</BioYear>
-                        Born in Binh Thuan, Vietnam.
-                    </BioSection>
-                    <BioSection>
-                        <BioYear>2014</BioYear>
-                        Study at university of natural sciences, Ho Chi Minh city, Vietnam
-                    </BioSection>
-                    <BioSection>
-                        <BioYear>2017</BioYear>
-                        Got my first programming job at INet Solutions
-                    </BioSection>
-                    <BioSection>
-                        <BioYear>2019</BioYear>
-                        Working at StageIt company
-                    </BioSection>
-                </Box>
-                <Box marginY={4}>
-                    <Heading variant={"title-under-line"}>
-                        Contact Social
-                    </Heading>
-                    <List>
-                        <ListItem>
-                            <Link href="https://github.com/nguyenbatranvan" target="_blank">
-                                <Button
-                                    variant="ghost"
-                                    colorScheme="teal"
-                                    leftIcon={<IoLogoGithub/>}
-                                >
-                                    @nguyenbatranvan
-                                </Button>
-                            </Link>
-                        </ListItem>
-                        <ListItem>
-                            <Link href="https://twitter.com/VnBKinh1" target="_blank">
-                                <Button
-                                    variant="ghost"
-                                    colorScheme="teal"
-                                    leftIcon={<IoLogoTwitter/>}
-                                >
-                                    @VnBKinh1
-                                </Button>
-                            </Link>
-                        </ListItem>
+            </Box>
+            <Box marginY={4}>
+                <Heading variant={"title-under-line"}>
+                    Work
+                </Heading>
+                <Paragraph>
+                    I am a project person on websites for product or outsource companies. My existing background is
+                    mainly on javascript language and strong support libraries for it like Reactjs, Nextjs, Remix
+                    and some frameworks like angular.
+                </Paragraph>
+            </Box>
+            <Box marginY={4}>
+                <Heading variant={"title-under-line"}>
+                    Bio
+                </Heading>
+                <BioSection>
+                    <BioYear>1996</BioYear>
+                    Born in Binh Thuan, Vietnam.
+                </BioSection>
+                <BioSection>
+                    <BioYear>2014</BioYear>
+                    Study at university of natural sciences, Ho Chi Minh city, Vietnam
+                </BioSection>
+                <BioSection>
+                    <BioYear>2017</BioYear>
+                    Got my first programming job at INet Solutions
+                </BioSection>
+                <BioSection>
+                    <BioYear>2019</BioYear>
+                    Working at StageIt company
+                </BioSection>
+            </Box>
+            <Box marginY={4}>
+                <Heading variant={"title-under-line"}>
+                    Contact Social
+                </Heading>
+                <List>
+                    <ListItem>
+                        <Link href="https://github.com/nguyenbatranvan" target="_blank">
+                            <Button
+                                variant="ghost"
+                                colorScheme="teal"
+                                leftIcon={<IoLogoGithub/>}
+                            >
+                                @nguyenbatranvan
+                            </Button>
+                        </Link>
+                    </ListItem>
+                    <ListItem>
+                        <Link href="https://twitter.com/VnBKinh1" target="_blank">
+                            <Button
+                                variant="ghost"
+                                colorScheme="teal"
+                                leftIcon={<IoLogoTwitter/>}
+                            >
+                                @VnBKinh1
+                            </Button>
+                        </Link>
+                    </ListItem>
 
-                        <ListItem>
-                            <Link href="https://instagram.com/nguyenbatran" target="_blank">
-                                <Button
-                                    variant="ghost"
-                                    colorScheme="teal"
-                                    leftIcon={<IoLogoInstagram/>}
-                                >
-                                    @nguyenbatran
-                                </Button>
-                            </Link>
-                        </ListItem>
-                    </List>
-                </Box>
+                    <ListItem>
+                        <Link href="https://instagram.com/nguyenbatran" target="_blank">
+                            <Button
+                                variant="ghost"
+                                colorScheme="teal"
+                                leftIcon={<IoLogoInstagram/>}
+                            >
+                                @nguyenbatran
+                            </Button>
+                        </Link>
+                    </ListItem>
+                </List>
+            </Box>
         </MotionRouter>
     );
 }
@@ -168,4 +168,11 @@ export const meta: MetaFunction = () => ({
     description: "This page is detail work of nguyen ba tran van from 2014 to now",
     "og:description": "This page is detail work of nguyen ba tran van from 2014 to now",
     "og:image": '/images/profile.png',
+    "og:title": "Portfolio of nguyen ba tran van",
+    "og:site_name": "Blog page",
+    'twitter:site': "Blog page",
+    "twitter:description": "This page is detail work of nguyen ba tran van from 2014 to now",
+    "twitter:image": '/images/profile.png',
+    "twitter:title": "Portfolio of nguyen ba tran van",
+
 });
