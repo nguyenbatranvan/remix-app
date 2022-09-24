@@ -10,7 +10,7 @@ function CardThumbnail({thumbnail,title,children,href}){
                 className="grid-item-thumbnail"
                 placeholder="blur"
             />
-                <Text mt={2} fontSize={20}>
+                <Text mt={2} fontSize={17} fontWeight={500}>
                     {title}
                 </Text>
             <Text fontSize={14}>{children}</Text>

@@ -4971,7 +4971,8 @@ function CardThumbnail({ thumbnail, title, children, href }) {
         }, this),
         /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react28.Text, {
           mt: 2,
-          fontSize: 20,
+          fontSize: 17,
+          fontWeight: 500,
           children: title
         }, void 0, !1, {
           fileName: "app/components/card.tsx",
@@ -5395,8 +5396,70 @@ var meta6 = () => ({
   "og:image": "/images/profile.png"
 });
 
+// app/routes/$.tsx
+var __exports = {};
+__export(__exports, {
+  default: () => PageNotFound
+});
+var import_react34 = require("@chakra-ui/react"), import_react35 = require("@remix-run/react"), import_jsx_dev_runtime = require("react/jsx-dev-runtime");
+function PageNotFound() {
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_jsx_dev_runtime.Fragment, {
+    children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react34.Heading, {
+        as: "h1",
+        children: "Not found"
+      }, void 0, !1, {
+        fileName: "app/routes/$.tsx",
+        lineNumber: 5,
+        columnNumber: 14
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react34.Text, {
+        children: "The page you're looking for was not found."
+      }, void 0, !1, {
+        fileName: "app/routes/$.tsx",
+        lineNumber: 6,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react34.Divider, {
+        my: 6
+      }, void 0, !1, {
+        fileName: "app/routes/$.tsx",
+        lineNumber: 7,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react34.Box, {
+        my: 6,
+        align: "center",
+        children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react35.NavLink, {
+          to: "/",
+          children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react34.Button, {
+            colorScheme: "teal",
+            children: "Return to home"
+          }, void 0, !1, {
+            fileName: "app/routes/$.tsx",
+            lineNumber: 10,
+            columnNumber: 17
+          }, this)
+        }, void 0, !1, {
+          fileName: "app/routes/$.tsx",
+          lineNumber: 9,
+          columnNumber: 13
+        }, this)
+      }, void 0, !1, {
+        fileName: "app/routes/$.tsx",
+        lineNumber: 8,
+        columnNumber: 9
+      }, this)
+    ]
+  }, void 0, !0, {
+    fileName: "app/routes/$.tsx",
+    lineNumber: 5,
+    columnNumber: 12
+  }, this);
+}
+
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { version: "18507ffc", entry: { module: "/build/entry.client-4X27QILR.js", imports: ["/build/_shared/chunk-52UQEXEJ.js", "/build/_shared/chunk-CWLYAGW4.js", "/build/_shared/chunk-VBX6GUDD.js", "/build/_shared/chunk-7XQODPBP.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-TFSQFMXV.js", imports: ["/build/_shared/chunk-HEKFCAH7.js", "/build/_shared/chunk-SZ6ZZWIP.js", "/build/_shared/chunk-T7I4I5MQ.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/blog-detail": { id: "routes/blog-detail", parentId: "root", path: "blog-detail", index: void 0, caseSensitive: void 0, module: "/build/routes/blog-detail-7B6EBZ3X.js", imports: ["/build/_shared/chunk-LW22SQNR.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/blog-detail/axios-first-blog": { id: "routes/blog-detail/axios-first-blog", parentId: "routes/blog-detail", path: "axios-first-blog", index: void 0, caseSensitive: void 0, module: "/build/routes/blog-detail/axios-first-blog-XY6FBXI7.js", imports: ["/build/_shared/chunk-5YWKF2OE.js", "/build/_shared/chunk-SZ6ZZWIP.js", "/build/_shared/chunk-T7I4I5MQ.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/blog-detail/load-config": { id: "routes/blog-detail/load-config", parentId: "routes/blog-detail", path: "load-config", index: void 0, caseSensitive: void 0, module: "/build/routes/blog-detail/load-config-Z4TZR7R5.js", imports: ["/build/_shared/chunk-7UT2FUGF.js", "/build/_shared/chunk-SZ6ZZWIP.js", "/build/_shared/chunk-T7I4I5MQ.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/blogs": { id: "routes/blogs", parentId: "root", path: "blogs", index: void 0, caseSensitive: void 0, module: "/build/routes/blogs-DUKTYRKW.js", imports: ["/build/_shared/chunk-5YWKF2OE.js", "/build/_shared/chunk-7UT2FUGF.js", "/build/_shared/chunk-LW22SQNR.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/index": { id: "routes/index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/index-E5IM7VWH.js", imports: ["/build/_shared/chunk-LW22SQNR.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/product": { id: "routes/product", parentId: "root", path: "product", index: void 0, caseSensitive: void 0, module: "/build/routes/product-Z6D2VTOY.js", imports: ["/build/_shared/chunk-LW22SQNR.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, url: "/build/manifest-18507FFC.js" };
+var assets_manifest_default = { version: "bc96c04f", entry: { module: "/build/entry.client-4X27QILR.js", imports: ["/build/_shared/chunk-52UQEXEJ.js", "/build/_shared/chunk-CWLYAGW4.js", "/build/_shared/chunk-VBX6GUDD.js", "/build/_shared/chunk-7XQODPBP.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-HEFCPPLR.js", imports: ["/build/_shared/chunk-HEKFCAH7.js", "/build/_shared/chunk-3V5YXNMQ.js", "/build/_shared/chunk-T7I4I5MQ.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/$": { id: "routes/$", parentId: "root", path: "*", index: void 0, caseSensitive: void 0, module: "/build/routes/$-YLNC7MQH.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/blog-detail": { id: "routes/blog-detail", parentId: "root", path: "blog-detail", index: void 0, caseSensitive: void 0, module: "/build/routes/blog-detail-7B6EBZ3X.js", imports: ["/build/_shared/chunk-LW22SQNR.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/blog-detail/axios-first-blog": { id: "routes/blog-detail/axios-first-blog", parentId: "routes/blog-detail", path: "axios-first-blog", index: void 0, caseSensitive: void 0, module: "/build/routes/blog-detail/axios-first-blog-DLN3MDOO.js", imports: ["/build/_shared/chunk-UQWTDPUM.js", "/build/_shared/chunk-3V5YXNMQ.js", "/build/_shared/chunk-T7I4I5MQ.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/blog-detail/load-config": { id: "routes/blog-detail/load-config", parentId: "routes/blog-detail", path: "load-config", index: void 0, caseSensitive: void 0, module: "/build/routes/blog-detail/load-config-ZBKH5VBR.js", imports: ["/build/_shared/chunk-CHMTNVAD.js", "/build/_shared/chunk-3V5YXNMQ.js", "/build/_shared/chunk-T7I4I5MQ.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/blogs": { id: "routes/blogs", parentId: "root", path: "blogs", index: void 0, caseSensitive: void 0, module: "/build/routes/blogs-JM4GC7B4.js", imports: ["/build/_shared/chunk-UQWTDPUM.js", "/build/_shared/chunk-CHMTNVAD.js", "/build/_shared/chunk-LW22SQNR.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/index": { id: "routes/index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/index-JOGQ6VVJ.js", imports: ["/build/_shared/chunk-LW22SQNR.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/product": { id: "routes/product", parentId: "root", path: "product", index: void 0, caseSensitive: void 0, module: "/build/routes/product-JLBUHBW4.js", imports: ["/build/_shared/chunk-LW22SQNR.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, url: "/build/manifest-BC96C04F.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var assetsBuildDirectory = "public/build", publicPath = "/build/", entry = { module: entry_server_exports }, routes = {
@@ -5455,6 +5518,14 @@ var assetsBuildDirectory = "public/build", publicPath = "/build/", entry = { mod
     index: !0,
     caseSensitive: void 0,
     module: routes_exports
+  },
+  "routes/$": {
+    id: "routes/$",
+    parentId: "root",
+    path: "*",
+    index: void 0,
+    caseSensitive: void 0,
+    module: __exports
   }
 };
 // Annotate the CommonJS export names for ESM import in node:
