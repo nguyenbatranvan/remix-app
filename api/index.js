@@ -2761,7 +2761,7 @@ __export(blog_detail_exports, {
   default: () => BlogDetail,
   links: () => links2
 });
-var import_react21 = require("@remix-run/react"), import_github_dark_dimmed = __toESM(require_github_dark_dimmed());
+var import_react21 = __toESM(require("@giscus/react")), import_react22 = require("@remix-run/react"), import_github_dark_dimmed = __toESM(require_github_dark_dimmed());
 
 // app/utils/variants-motion.ts
 var variants = {
@@ -2799,14 +2799,26 @@ var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), links2 = () => [
 ];
 function BlogDetail() {
   return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(motion_router_default, {
-    children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react21.Outlet, {}, void 0, !1, {
-      fileName: "app/routes/blog-detail.tsx",
-      lineNumber: 13,
-      columnNumber: 9
-    }, this)
-  }, void 0, !1, {
+    children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react22.Outlet, {}, void 0, !1, {
+        fileName: "app/routes/blog-detail.tsx",
+        lineNumber: 14,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react21.default, {
+        category: "Announcements",
+        mapping: "pathname",
+        repo: "nguyenbatranvan/remix-app",
+        repoId: "R_kgDOICiicA"
+      }, void 0, !1, {
+        fileName: "app/routes/blog-detail.tsx",
+        lineNumber: 30,
+        columnNumber: 9
+      }, this)
+    ]
+  }, void 0, !0, {
     fileName: "app/routes/blog-detail.tsx",
-    lineNumber: 12,
+    lineNumber: 13,
     columnNumber: 13
   }, this);
 }
@@ -2820,7 +2832,7 @@ __export(axios_first_blog_exports, {
   headers: () => headers,
   meta: () => meta2
 });
-var import_react22 = __toESM(require("react")), import_react23 = require("@chakra-ui/react"), attributes = {
+var import_react23 = __toESM(require("react")), import_react24 = require("@chakra-ui/react"), attributes = {
   meta: {
     title: "Axios with reactjs, axios call request",
     description: "Promise based HTTP client for the browser and node.js, how to write axios with react most useful",
@@ -2836,1073 +2848,1073 @@ function MDXContent(props = {}) {
     pre: "pre",
     code: "code",
     span: "span"
-  }, props.components), { wrapper: MDXLayout } = _components, _content = /* @__PURE__ */ import_react22.default.createElement(import_react22.default.Fragment, null, /* @__PURE__ */ import_react22.default.createElement(import_react23.Heading, {
+  }, props.components), { wrapper: MDXLayout } = _components, _content = /* @__PURE__ */ import_react23.default.createElement(import_react23.default.Fragment, null, /* @__PURE__ */ import_react23.default.createElement(import_react24.Heading, {
     marginBottom: 4
   }, "L\xE0m th\u1EBF n\xE0o \u0111\u1EC3 vi\u1EBFt axios m\u1ED9t c\xE1ch ti\u1EC7n \xEDch v\u1EDBi reactjs"), `
-`, /* @__PURE__ */ import_react22.default.createElement(import_react23.Box, {
+`, /* @__PURE__ */ import_react23.default.createElement(import_react24.Box, {
     marginY: 4
-  }, /* @__PURE__ */ import_react22.default.createElement(_components.p, null, `N\u1EBFu l\xE0m vi\u1EC7c v\u1EDBi t\u01B0 c\xE1ch l\xE0 1 front-end developer th\xEC s\u1EF1 t\u01B0\u01A1ng t\xE1c gi\u1EEFa client v\u1EDBi server \u0111\u1EC3 l\u1EA5y data v\xE0 x\u1EED l\xFD l\xE0
+  }, /* @__PURE__ */ import_react23.default.createElement(_components.p, null, `N\u1EBFu l\xE0m vi\u1EC7c v\u1EDBi t\u01B0 c\xE1ch l\xE0 1 front-end developer th\xEC s\u1EF1 t\u01B0\u01A1ng t\xE1c gi\u1EEFa client v\u1EDBi server \u0111\u1EC3 l\u1EA5y data v\xE0 x\u1EED l\xFD l\xE0
 chuy\u1EC7n kh\xF4ng c\xF2n xa l\u1EA1 v\u1EDBi c\xE1c b\u1EA1n. V\xE0 m\u1ED9t th\u01B0 vi\u1EC7n m\u1EA1nh m\u1EBD v\xE0 ph\u1ED5 bi\u1EBFn \u0111\u1EC3 l\xE0m \u0111i\u1EC1u n\xE0y l\xE0`)), `
-`, /* @__PURE__ */ import_react22.default.createElement(import_react23.Link, {
+`, /* @__PURE__ */ import_react23.default.createElement(import_react24.Link, {
     href: "https://www.npmjs.com/package/axios"
-  }, /* @__PURE__ */ import_react22.default.createElement(_components.p, null, /* @__PURE__ */ import_react22.default.createElement(import_react23.Badge, {
+  }, /* @__PURE__ */ import_react23.default.createElement(_components.p, null, /* @__PURE__ */ import_react23.default.createElement(import_react24.Badge, {
     colorScheme: "green",
     mr: 2
   }, "Axios"), `
 Axios npm packages`)), `
-`, /* @__PURE__ */ import_react22.default.createElement(import_react23.Heading, {
+`, /* @__PURE__ */ import_react23.default.createElement(import_react24.Heading, {
     variant: "title-under-line"
   }, "1. C\xE1ch s\u1EED d\u1EE5ng"), `
-`, /* @__PURE__ */ import_react22.default.createElement(import_react23.Box, {
+`, /* @__PURE__ */ import_react23.default.createElement(import_react24.Box, {
     marginY: 4
-  }, /* @__PURE__ */ import_react22.default.createElement(_components.p, null, "\u0110\u1EA7u ti\xEAn b\u1EA1n s\u1EBD t\u1EA1o ra m\u1ED9t instance c\u1EE7a axios")), `
-`, /* @__PURE__ */ import_react22.default.createElement(_components.pre, {
+  }, /* @__PURE__ */ import_react23.default.createElement(_components.p, null, "\u0110\u1EA7u ti\xEAn b\u1EA1n s\u1EBD t\u1EA1o ra m\u1ED9t instance c\u1EE7a axios")), `
+`, /* @__PURE__ */ import_react23.default.createElement(_components.pre, {
     className: "language-js"
-  }, /* @__PURE__ */ import_react22.default.createElement(_components.code, {
+  }, /* @__PURE__ */ import_react23.default.createElement(_components.code, {
     className: "hljs language-js code-highlight"
-  }, /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "code-line"
-  }, /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token keyword module"
-  }, "import"), " ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "import"), " ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token imports"
-  }, "axios"), " ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "axios"), " ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token keyword module"
-  }, "from"), " ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "from"), " ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token string"
-  }, '"axios"'), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, '"axios"'), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
   }, ";"), `
-`), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "code-line"
-  }, /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token keyword module"
-  }, "export"), " ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "export"), " ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token keyword"
-  }, "const"), " instance ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "const"), " instance ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token operator"
-  }, "="), " axios", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "="), " axios", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "."), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "."), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token method function property-access"
-  }, "create"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "create"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "("), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "("), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
   }, "{"), `
-`), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "code-line"
-  }, "    ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "    ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token literal-property property"
-  }, "headers"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "headers"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token operator"
-  }, ":"), " ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, ":"), " ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
   }, "{"), `
-`), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "code-line"
-  }, "        ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "        ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token string-property property"
-  }, "'content-type'"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "'content-type'"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token operator"
-  }, ":"), " ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, ":"), " ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token string"
   }, "'application/json; charset=UTF-8'"), `
-`), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "code-line"
-  }, "    ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "    ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "}"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "}"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
   }, ","), `
-`), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "code-line"
-  }, "    ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "    ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token literal-property property"
-  }, "timeout"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "timeout"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token operator"
-  }, ":"), " ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, ":"), " ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token number"
-  }, "300000"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "300000"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
   }, ","), `
-`), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "code-line"
-  }, "    ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "    ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token literal-property property"
-  }, "timeoutErrorMessage"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "timeoutErrorMessage"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token operator"
-  }, ":"), " ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, ":"), " ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token template-string"
-  }, /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token template-punctuation string"
-  }, "`"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "`"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token string"
-  }, "Connection is timeout exceeded"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "Connection is timeout exceeded"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token template-punctuation string"
   }, "`")), `
-`), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "code-line"
-  }, /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "}"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "}"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
-  }, ")"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, ")"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
   }, ";"), `
 `))), `
-`, /* @__PURE__ */ import_react22.default.createElement(import_react23.Box, {
+`, /* @__PURE__ */ import_react23.default.createElement(import_react24.Box, {
     marginY: 2
-  }, /* @__PURE__ */ import_react22.default.createElement(_components.p, null, "Ti\u1EBFp theo s\u1EBD d\xF9ng instance n\xE0y \u0111\u1EC3 g\u1ECDi request")), `
-`, /* @__PURE__ */ import_react22.default.createElement(_components.pre, {
+  }, /* @__PURE__ */ import_react23.default.createElement(_components.p, null, "Ti\u1EBFp theo s\u1EBD d\xF9ng instance n\xE0y \u0111\u1EC3 g\u1ECDi request")), `
+`, /* @__PURE__ */ import_react23.default.createElement(_components.pre, {
     className: "language-js"
-  }, /* @__PURE__ */ import_react22.default.createElement(_components.code, {
+  }, /* @__PURE__ */ import_react23.default.createElement(_components.code, {
     className: "hljs language-js code-highlight"
-  }, /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "code-line"
-  }, "instance", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "instance", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "."), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "."), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token method function property-access"
-  }, "get"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "get"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "("), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "("), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token string"
-  }, "'link request....'"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "'link request....'"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
   }, ")"), `
-`), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "code-line"
-  }, "  ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "  ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "."), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "."), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token method function property-access"
-  }, "then"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "then"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "("), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "("), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token keyword"
-  }, "function"), " ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "function"), " ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "("), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "("), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token parameter"
-  }, "response"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "response"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
-  }, ")"), " ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, ")"), " ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
   }, "{"), `
-`), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "code-line"
-  }, "    ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "    ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token comment"
   }, "// handle success"), `
-`), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "code-line"
-  }, "    ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "    ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token console class-name"
-  }, "console"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "console"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "."), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "."), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token method function property-access"
-  }, "log"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "log"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "("), "response", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "("), "response", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
-  }, ")"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, ")"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
   }, ";"), `
-`), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "code-line"
-  }, "  ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "  ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "}"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "}"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
   }, ")"), `
-`), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "code-line"
-  }, "  ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "  ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "."), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "."), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token keyword control-flow"
-  }, "catch"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "catch"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "("), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "("), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token keyword"
-  }, "function"), " ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "function"), " ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "("), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "("), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token parameter"
-  }, "error"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "error"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
-  }, ")"), " ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, ")"), " ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
   }, "{"), `
-`), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "code-line"
-  }, "    ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "    ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token comment"
   }, "// handle error"), `
-`), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "code-line"
-  }, "    ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "    ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token console class-name"
-  }, "console"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "console"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "."), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "."), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token method function property-access"
-  }, "log"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "log"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "("), "error", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "("), "error", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
-  }, ")"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, ")"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
   }, ";"), `
-`), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "code-line"
-  }, "  ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "  ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "}"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "}"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
   }, ")"), `
-`), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "code-line"
-  }, "  ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "  ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "."), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "."), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token method function property-access"
-  }, "then"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "then"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "("), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "("), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token keyword"
-  }, "function"), " ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "function"), " ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "("), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "("), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
-  }, ")"), " ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, ")"), " ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
   }, "{"), `
-`), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "code-line"
-  }, "    ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "    ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token comment"
   }, "// always executed"), `
-`), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "code-line"
-  }, "  ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "  ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "}"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "}"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
-  }, ")"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, ")"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
   }, ";"), `
 `))), `
-`, /* @__PURE__ */ import_react22.default.createElement(import_react23.Box, {
+`, /* @__PURE__ */ import_react23.default.createElement(import_react24.Box, {
     marginY: 4
-  }, /* @__PURE__ */ import_react22.default.createElement(_components.p, null, "T\u1EDBi \u0111\xE2y b\u1EA1n c\xF3 th\u1EC3 \u0111\u1EB7t c\xE2u h\u1ECFi"), /* @__PURE__ */ import_react22.default.createElement(import_react23.UnorderedList, {
+  }, /* @__PURE__ */ import_react23.default.createElement(_components.p, null, "T\u1EDBi \u0111\xE2y b\u1EA1n c\xF3 th\u1EC3 \u0111\u1EB7t c\xE2u h\u1ECFi"), /* @__PURE__ */ import_react23.default.createElement(import_react24.UnorderedList, {
     my: 2
-  }, /* @__PURE__ */ import_react22.default.createElement(import_react23.ListItem, null, /* @__PURE__ */ import_react22.default.createElement(_components.p, null, `N\u1EBFu nh\u01B0 c\xF3 nhi\u1EC1u t\u01B0\u01A1ng t\xE1c gi\u1EEFa client v\xE0 server th\xEC b\u1EA1n s\u1EBD ph\u1EA3i vi\u1EBFt \u0111i vi\u1EBFt l\u1EA1i \u0111i\u1EC1u n\xE0y nhi\u1EC1u l\u1EA7n, trong
-code th\xEC \u0111\xE2y b\u1EA1n \u0111\xE3 vi ph\u1EA1m m\u1ED9t l\u1ED7i \u0111\u01B0\u1EE3c g\u1ECDi l\xE0 `, /* @__PURE__ */ import_react22.default.createElement(import_react23.Badge, {
+  }, /* @__PURE__ */ import_react23.default.createElement(import_react24.ListItem, null, /* @__PURE__ */ import_react23.default.createElement(_components.p, null, `N\u1EBFu nh\u01B0 c\xF3 nhi\u1EC1u t\u01B0\u01A1ng t\xE1c gi\u1EEFa client v\xE0 server th\xEC b\u1EA1n s\u1EBD ph\u1EA3i vi\u1EBFt \u0111i vi\u1EBFt l\u1EA1i \u0111i\u1EC1u n\xE0y nhi\u1EC1u l\u1EA7n, trong
+code th\xEC \u0111\xE2y b\u1EA1n \u0111\xE3 vi ph\u1EA1m m\u1ED9t l\u1ED7i \u0111\u01B0\u1EE3c g\u1ECDi l\xE0 `, /* @__PURE__ */ import_react23.default.createElement(import_react24.Badge, {
     colorScheme: "green"
   }, "DRY"), ` (Don\u2019t Repeat
-Yourself)`)), /* @__PURE__ */ import_react22.default.createElement(import_react23.ListItem, null, /* @__PURE__ */ import_react22.default.createElement(_components.p, null, `V\xE0 v\u1EDBi v\u1EA5n \u0111\u1EC1 code l\u1EB7p \u0111i l\u1EB7p l\u1EA1i nh\u01B0 v\u1EADy, khi c\xF3 1 s\u1EF1 thay \u0111\u1ED5i code th\xEC b\u1EA1n s\u1EBD ph\u1EA3i t\xECm v\xE0 s\u1EEF l\u1EA1i t\u1EEBng h\xE0m
-tr\xEAn`))), /* @__PURE__ */ import_react22.default.createElement("p", null, "N\u1EBFu b\u1EA1n c\xF3 \u0111\u1EB7t c\xE2u h\u1ECFi nh\u01B0 v\u1EADy th\xEC ph\u1EA7n ti\u1EBFp theo s\u1EBD d\xE0nh cho b\u1EA1n.")), `
-`, /* @__PURE__ */ import_react22.default.createElement(import_react23.Heading, {
+Yourself)`)), /* @__PURE__ */ import_react23.default.createElement(import_react24.ListItem, null, /* @__PURE__ */ import_react23.default.createElement(_components.p, null, `V\xE0 v\u1EDBi v\u1EA5n \u0111\u1EC1 code l\u1EB7p \u0111i l\u1EB7p l\u1EA1i nh\u01B0 v\u1EADy, khi c\xF3 1 s\u1EF1 thay \u0111\u1ED5i code th\xEC b\u1EA1n s\u1EBD ph\u1EA3i t\xECm v\xE0 s\u1EEF l\u1EA1i t\u1EEBng h\xE0m
+tr\xEAn`))), /* @__PURE__ */ import_react23.default.createElement("p", null, "N\u1EBFu b\u1EA1n c\xF3 \u0111\u1EB7t c\xE2u h\u1ECFi nh\u01B0 v\u1EADy th\xEC ph\u1EA7n ti\u1EBFp theo s\u1EBD d\xE0nh cho b\u1EA1n.")), `
+`, /* @__PURE__ */ import_react23.default.createElement(import_react24.Heading, {
     variant: "title-under-line"
   }, "2. Vi\u1EBFt axios \u0111\u1EC3 t\xE1i s\u1EED d\u1EE5ng"), `
-`, /* @__PURE__ */ import_react22.default.createElement(import_react23.Box, {
+`, /* @__PURE__ */ import_react23.default.createElement(import_react24.Box, {
     marginY: 4
-  }, /* @__PURE__ */ import_react22.default.createElement(_components.p, null, "\u0110\u1EA7u ti\xEAn b\u1EA1n s\u1EBD t\u1EA1o 1 th\u01B0 m\u1EE5c v\xED d\u1EE5 ", /* @__PURE__ */ import_react22.default.createElement(import_react23.Badge, null, "src/api/core.ts"), " v\xE0 c\u0169ng nh\u01B0 ph\u1EA7n 1 b\u1EA1n s\u1EBD t\u1EA1o instance c\u1EE7a axios")), `
-`, /* @__PURE__ */ import_react22.default.createElement(_components.pre, {
+  }, /* @__PURE__ */ import_react23.default.createElement(_components.p, null, "\u0110\u1EA7u ti\xEAn b\u1EA1n s\u1EBD t\u1EA1o 1 th\u01B0 m\u1EE5c v\xED d\u1EE5 ", /* @__PURE__ */ import_react23.default.createElement(import_react24.Badge, null, "src/api/core.ts"), " v\xE0 c\u0169ng nh\u01B0 ph\u1EA7n 1 b\u1EA1n s\u1EBD t\u1EA1o instance c\u1EE7a axios")), `
+`, /* @__PURE__ */ import_react23.default.createElement(_components.pre, {
     className: "language-js"
-  }, /* @__PURE__ */ import_react22.default.createElement(_components.code, {
+  }, /* @__PURE__ */ import_react23.default.createElement(_components.code, {
     className: "hljs language-js code-highlight"
-  }, /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "code-line"
-  }, /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token keyword module"
-  }, "import"), " ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "import"), " ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token imports"
-  }, "axios"), " ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "axios"), " ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token keyword module"
-  }, "from"), " ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "from"), " ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token string"
-  }, '"axios"'), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, '"axios"'), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
   }, ";"), `
-`), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "code-line"
-  }, /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token keyword module"
-  }, "export"), " ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "export"), " ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token keyword"
-  }, "const"), " instance ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "const"), " instance ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token operator"
-  }, "="), " axios", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "="), " axios", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "."), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "."), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token method function property-access"
-  }, "create"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "create"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "("), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "("), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
   }, "{"), `
-`), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "code-line"
-  }, "    ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "    ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token literal-property property"
-  }, "headers"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "headers"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token operator"
-  }, ":"), " ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, ":"), " ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
   }, "{"), `
-`), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "code-line"
-  }, "        ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "        ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token string-property property"
-  }, "'content-type'"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "'content-type'"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token operator"
-  }, ":"), " ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, ":"), " ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token string"
   }, "'application/json; charset=UTF-8'"), `
-`), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "code-line"
-  }, "    ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "    ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "}"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "}"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
   }, ","), `
-`), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "code-line"
-  }, "    ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "    ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token literal-property property"
-  }, "timeout"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "timeout"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token operator"
-  }, ":"), " ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, ":"), " ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token number"
-  }, "300000"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "300000"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
   }, ","), `
-`), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "code-line"
-  }, "    ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "    ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token literal-property property"
-  }, "timeoutErrorMessage"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "timeoutErrorMessage"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token operator"
-  }, ":"), " ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, ":"), " ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token template-string"
-  }, /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token template-punctuation string"
-  }, "`"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "`"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token string"
-  }, "Connection is timeout exceeded"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "Connection is timeout exceeded"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token template-punctuation string"
   }, "`")), `
-`), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "code-line"
-  }, /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "}"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "}"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
-  }, ")"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, ")"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
   }, ";"), `
 `))), `
-`, /* @__PURE__ */ import_react22.default.createElement(import_react23.Box, {
+`, /* @__PURE__ */ import_react23.default.createElement(import_react24.Box, {
     marginY: 4
-  }, /* @__PURE__ */ import_react22.default.createElement(_components.p, null, "Theo \u0111\xF3 b\u1EA1n s\u1EBD t\u1EA1o 1 model \u0111\u1EC3 truy\u1EC1n params v\xE0o c\xE1c h\xE0m c\u1EE7a axios m\xE0 m\xECnh s\u1EBD h\u01B0\u1EDBng d\u1EABn s\u1EAFp t\u1EDBi"), /* @__PURE__ */ import_react22.default.createElement(import_react23.UnorderedList, {
+  }, /* @__PURE__ */ import_react23.default.createElement(_components.p, null, "Theo \u0111\xF3 b\u1EA1n s\u1EBD t\u1EA1o 1 model \u0111\u1EC3 truy\u1EC1n params v\xE0o c\xE1c h\xE0m c\u1EE7a axios m\xE0 m\xECnh s\u1EBD h\u01B0\u1EDBng d\u1EABn s\u1EAFp t\u1EDBi"), /* @__PURE__ */ import_react23.default.createElement(import_react24.UnorderedList, {
     my: 2
-  }, /* @__PURE__ */ import_react22.default.createElement(import_react23.ListItem, null, /* @__PURE__ */ import_react22.default.createElement(_components.p, null, /* @__PURE__ */ import_react22.default.createElement(import_react23.Badge, {
+  }, /* @__PURE__ */ import_react23.default.createElement(import_react24.ListItem, null, /* @__PURE__ */ import_react23.default.createElement(_components.p, null, /* @__PURE__ */ import_react23.default.createElement(import_react24.Badge, {
     colorScheme: "green"
-  }, "isLoading"), " - show loading khi call request")), /* @__PURE__ */ import_react22.default.createElement(import_react23.ListItem, null, /* @__PURE__ */ import_react22.default.createElement(_components.p, null, /* @__PURE__ */ import_react22.default.createElement(import_react23.Badge, {
+  }, "isLoading"), " - show loading khi call request")), /* @__PURE__ */ import_react23.default.createElement(import_react24.ListItem, null, /* @__PURE__ */ import_react23.default.createElement(_components.p, null, /* @__PURE__ */ import_react23.default.createElement(import_react24.Badge, {
     colorScheme: "green"
   }, "payload, headers"), ` - \u0111\u1EC3 truy\u1EC1n xu\u1ED1ng khi call request (nh\u01B0
-Authorization...)`)), /* @__PURE__ */ import_react22.default.createElement(import_react23.ListItem, null, /* @__PURE__ */ import_react22.default.createElement(_components.p, null, /* @__PURE__ */ import_react22.default.createElement(import_react23.Badge, {
+Authorization...)`)), /* @__PURE__ */ import_react23.default.createElement(import_react24.ListItem, null, /* @__PURE__ */ import_react23.default.createElement(_components.p, null, /* @__PURE__ */ import_react23.default.createElement(import_react24.Badge, {
     colorScheme: "green"
   }, "url"), " - \u0111\u01B0\u1EDDng d\u1EABn t\u01B0\u01A1ng t\xE1c v\u1EDBi server")))), `
-`, /* @__PURE__ */ import_react22.default.createElement(_components.pre, {
+`, /* @__PURE__ */ import_react23.default.createElement(_components.pre, {
     className: "language-ts"
-  }, /* @__PURE__ */ import_react22.default.createElement(_components.code, {
+  }, /* @__PURE__ */ import_react23.default.createElement(_components.code, {
     className: "hljs language-ts code-highlight"
-  }, /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "code-line"
-  }, "   ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "   ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token keyword"
-  }, "export"), " ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "export"), " ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token keyword"
-  }, "interface"), " ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "interface"), " ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token class-name"
-  }, "IRequest", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "IRequest", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token operator"
-  }, "<"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "<"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token constant"
-  }, "T"), " ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "T"), " ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token operator"
-  }, "="), " ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "="), " ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token builtin"
-  }, "any"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "any"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token operator"
-  }, ">")), " ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, ">")), " ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
   }, "{"), `
-`), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "code-line"
-  }, "    isLoading", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "    isLoading", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token operator"
-  }, ":"), " ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, ":"), " ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token builtin"
-  }, "boolean"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "boolean"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
   }, ";"), `
-`), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "code-line"
-  }, "    payload", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "    payload", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token operator"
-  }, ":"), " ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, ":"), " ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token constant"
-  }, "T"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "T"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
   }, ";"), `
-`), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "code-line"
-  }, "    headers", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "    headers", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token operator"
-  }, ":"), " ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, ":"), " ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
   }, "{"), `
-`), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "code-line"
-  }, "        ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "        ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "["), "key", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "["), "key", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token operator"
-  }, ":"), " ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, ":"), " ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token builtin"
-  }, "string"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "string"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "]"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "]"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token operator"
-  }, ":"), " ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, ":"), " ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token builtin"
-  }, "string"), " ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "string"), " ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token operator"
-  }, "|"), " ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "|"), " ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token builtin"
-  }, "number"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "number"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
   }, ";"), `
-`), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "code-line"
-  }, "    ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "    ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "}"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "}"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
   }, ";"), `
-`), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "code-line"
-  }, "    url", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "    url", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token operator"
-  }, ":"), " ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, ":"), " ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token builtin"
-  }, "string"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "string"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
   }, ";"), `
-`), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "code-line"
-  }, /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
   }, "}"), `
 `))), `
-`, /* @__PURE__ */ import_react22.default.createElement(import_react23.Box, {
+`, /* @__PURE__ */ import_react23.default.createElement(import_react24.Box, {
     marginY: 4
-  }, /* @__PURE__ */ import_react22.default.createElement(_components.p, null, "Ok!! V\xE0 b\xE2y gi\u1EDD h\xE3y vi\u1EBFt nh\u1EEFng h\xE0m t\u01B0\u01A1ng t\xE1c v\u1EDBi server b\u1EB1ng axios n\xE0o")), `
-`, /* @__PURE__ */ import_react22.default.createElement(_components.pre, {
+  }, /* @__PURE__ */ import_react23.default.createElement(_components.p, null, "Ok!! V\xE0 b\xE2y gi\u1EDD h\xE3y vi\u1EBFt nh\u1EEFng h\xE0m t\u01B0\u01A1ng t\xE1c v\u1EDBi server b\u1EB1ng axios n\xE0o")), `
+`, /* @__PURE__ */ import_react23.default.createElement(_components.pre, {
     className: "language-ts"
-  }, /* @__PURE__ */ import_react22.default.createElement(_components.code, {
+  }, /* @__PURE__ */ import_react23.default.createElement(_components.code, {
     className: "hljs language-ts code-highlight"
-  }, /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "code-line"
-  }, /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token keyword"
-  }, "import"), " ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "import"), " ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "{"), "AxiosResponse", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "{"), "AxiosResponse", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "}"), " ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "}"), " ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token keyword"
-  }, "from"), " ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "from"), " ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token string"
-  }, '"axios"'), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, '"axios"'), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
   }, ";"), `
-`), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "code-line"
-  }, /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token keyword"
-  }, "export"), " ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "export"), " ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token keyword"
-  }, "interface"), " ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "interface"), " ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token class-name"
-  }, "PromiseState", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "PromiseState", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token operator"
-  }, "<"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "<"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token constant"
-  }, "T"), " ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "T"), " ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token operator"
-  }, "="), " ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "="), " ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token builtin"
-  }, "unknown"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "unknown"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token operator"
-  }, ">")), " ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, ">")), " ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token keyword"
-  }, "extends"), " ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "extends"), " ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token class-name"
-  }, "AxiosResponse", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "AxiosResponse", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token operator"
-  }, "<"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "<"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token constant"
-  }, "T"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "T"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token operator"
-  }, ">")), " ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, ">")), " ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
   }, "{"), `
-`), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "code-line"
-  }, "    totalItem", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "    totalItem", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token operator"
-  }, ":"), " ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, ":"), " ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token builtin"
-  }, "number"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "number"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
   }, ";"), `
-`), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "code-line"
-  }, /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
   }, "}"), `
-`), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "code-line"
   }, `
-`), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "code-line"
-  }, /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token keyword"
-  }, "export"), " ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "export"), " ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token keyword"
-  }, "const"), " BaseService ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "const"), " BaseService ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token operator"
-  }, "="), " ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "="), " ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
   }, "{"), `
-`), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "code-line"
-  }, "    ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "    ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token generic-function"
-  }, /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token function"
-  }, "get"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "get"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token generic class-name"
-  }, /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token operator"
-  }, "<"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "<"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token constant"
-  }, "T"), " ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "T"), " ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token operator"
-  }, "="), " ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "="), " ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token builtin"
-  }, "any"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "any"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token operator"
-  }, ">"))), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, ">"))), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "("), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "("), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
   }, "{"), `
-`), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "code-line"
-  }, "                     url", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "                     url", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
   }, ","), `
-`), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "code-line"
-  }, "                     isLoading", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "                     isLoading", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
   }, ","), `
-`), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "code-line"
-  }, "                     payload", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "                     payload", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
   }, ","), `
-`), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "code-line"
   }, `                     headers
-`), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "code-line"
-  }, "                 ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "                 ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "}"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "}"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token operator"
-  }, ":"), " Partial", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, ":"), " Partial", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token operator"
-  }, "<"), "IRequest", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "<"), "IRequest", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token operator"
-  }, ">"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, ">"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
-  }, ")"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, ")"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token operator"
-  }, ":"), " ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, ":"), " ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token builtin"
-  }, "Promise"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "Promise"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token operator"
-  }, "<"), "PromiseState", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "<"), "PromiseState", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token operator"
-  }, "<"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "<"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token constant"
-  }, "T"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "T"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token operator"
-  }, ">>"), " ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, ">>"), " ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
   }, "{"), `
-`), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "code-line"
-  }, "        ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "        ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token keyword"
-  }, "if"), " ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "if"), " ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "("), "isLoading", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "("), "isLoading", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
   }, ")"), `
-`), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "code-line"
-  }, "           ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "           ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token comment"
   }, "// todo show loading"), `
-`), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "code-line"
-  }, "        ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "        ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token keyword"
-  }, "return"), " instance", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "return"), " instance", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "."), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "."), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token generic-function"
-  }, /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token function"
-  }, "get"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "get"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token generic class-name"
-  }, /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token operator"
-  }, "<"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "<"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token constant"
-  }, "T"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "T"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
-  }, ","), " PromiseState", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, ","), " PromiseState", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token operator"
-  }, "<"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "<"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token constant"
-  }, "T"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "T"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token operator"
-  }, ">>"))), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, ">>"))), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "("), "url", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "("), "url", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
-  }, ","), " ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, ","), " ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
   }, "{"), `
-`), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "code-line"
-  }, "            params", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "            params", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token operator"
-  }, ":"), " payload", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, ":"), " payload", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
   }, ","), `
-`), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "code-line"
-  }, "            baseURL", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "            baseURL", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token operator"
-  }, ":"), " ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, ":"), " ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token string"
-  }, "'link base url'"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "'link base url'"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
   }, ","), `
-`), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "code-line"
-  }, "            headers", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "            headers", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token operator"
-  }, ":"), " headers ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, ":"), " headers ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token operator"
-  }, "||"), " ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "||"), " ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "{"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "{"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
   }, "}"), `
-`), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "code-line"
-  }, "        ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "        ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "}"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "}"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
   }, ")"), `
-`), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "code-line"
-  }, "    ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "    ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
   }, "}"), `
-`), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "code-line"
-  }, /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
   }, "}"), `
 `))), `
-`, /* @__PURE__ */ import_react22.default.createElement(import_react23.Box, {
+`, /* @__PURE__ */ import_react23.default.createElement(import_react24.Box, {
     marginY: 4
-  }, /* @__PURE__ */ import_react22.default.createElement(_components.p, null, "V\xE0 v\u1EDBi c\xE1c h\xE0n ", /* @__PURE__ */ import_react22.default.createElement(import_react23.Badge, {
+  }, /* @__PURE__ */ import_react23.default.createElement(_components.p, null, "V\xE0 v\u1EDBi c\xE1c h\xE0n ", /* @__PURE__ */ import_react23.default.createElement(import_react24.Badge, {
     colorScheme: "green"
-  }, "put"), " ", /* @__PURE__ */ import_react22.default.createElement(import_react23.Badge, {
+  }, "put"), " ", /* @__PURE__ */ import_react23.default.createElement(import_react24.Badge, {
     colorScheme: "green"
-  }, "post"), " ", /* @__PURE__ */ import_react22.default.createElement(import_react23.Badge, {
+  }, "post"), " ", /* @__PURE__ */ import_react23.default.createElement(import_react24.Badge, {
     colorScheme: "green"
   }, "delete"), `
 b\u1EA1n c\u0169ng c\xF3 th\u1EC3 tham kh\u1EA3o v\xE0 l\xE0m t\u01B0\u01A1ng t\u1EF1 nh\u01B0 v\xE2y`)), `
-`, /* @__PURE__ */ import_react22.default.createElement(import_react23.Heading, {
+`, /* @__PURE__ */ import_react23.default.createElement(import_react24.Heading, {
     variant: "title-under-line"
   }, "3. S\u1EED d\u1EE5ng"), `
-`, /* @__PURE__ */ import_react22.default.createElement(import_react23.Box, {
+`, /* @__PURE__ */ import_react23.default.createElement(import_react24.Box, {
     marginY: 4
   }, "M\xECnh s\u1EBD t\u1EA1o 1 model v\u1EC1 response"), `
-`, /* @__PURE__ */ import_react22.default.createElement(_components.pre, {
+`, /* @__PURE__ */ import_react23.default.createElement(_components.pre, {
     className: "language-ts"
-  }, /* @__PURE__ */ import_react22.default.createElement(_components.code, {
+  }, /* @__PURE__ */ import_react23.default.createElement(_components.code, {
     className: "hljs language-ts code-highlight"
-  }, /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "code-line"
-  }, /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token keyword"
-  }, "export"), " ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "export"), " ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token keyword"
-  }, "interface"), " ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "interface"), " ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token class-name"
-  }, "ProductDetail"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "ProductDetail"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
   }, "{"), `
-`), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "code-line"
-  }, "  id", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "  id", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token operator"
-  }, ":"), " ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, ":"), " ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token builtin"
-  }, "number"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "number"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
   }, ";"), `
-`), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "code-line"
-  }, "  ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "  ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token string-property property"
-  }, '"title"'), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, '"title"'), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token operator"
-  }, ":"), " ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, ":"), " ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token builtin"
-  }, "string"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "string"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
   }, ";"), `
-`), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "code-line"
-  }, "  ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "  ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token string-property property"
-  }, '"description"'), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, '"description"'), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token operator"
-  }, ":"), " ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, ":"), " ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token builtin"
-  }, "string"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "string"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
   }, ";"), `
-`), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "code-line"
-  }, "  ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "  ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token string-property property"
-  }, '"price"'), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, '"price"'), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token operator"
-  }, ":"), " ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, ":"), " ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token builtin"
-  }, "number"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "number"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
   }, ";"), `
-`), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "code-line"
-  }, "  ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "  ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token string-property property"
-  }, '"discountPercentage"'), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, '"discountPercentage"'), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token operator"
-  }, ":"), " ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, ":"), " ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token builtin"
-  }, "number"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "number"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
   }, ";"), `
-`), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "code-line"
-  }, "  ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "  ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token string-property property"
-  }, '"rating"'), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, '"rating"'), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token operator"
-  }, ":"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, ":"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token builtin"
-  }, "number"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "number"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
   }, ";"), `
-`), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "code-line"
-  }, "  ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "  ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token string-property property"
-  }, '"stock"'), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, '"stock"'), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token operator"
-  }, ":"), " ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, ":"), " ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token builtin"
-  }, "number"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "number"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
   }, ";"), `
-`), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "code-line"
-  }, "  ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "  ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token string-property property"
-  }, '"brand"'), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, '"brand"'), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token operator"
-  }, ":"), " ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, ":"), " ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token builtin"
-  }, "string"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "string"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
   }, ";"), `
-`), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "code-line"
-  }, "  ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "  ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token string-property property"
-  }, '"category"'), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, '"category"'), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token operator"
-  }, ":"), " ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, ":"), " ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token builtin"
-  }, "string"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "string"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
   }, ";"), `
-`), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "code-line"
-  }, "  ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "  ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token string-property property"
-  }, '"thumbnail"'), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, '"thumbnail"'), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token operator"
-  }, ":"), " ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, ":"), " ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token builtin"
-  }, "string"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "string"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
   }, ";"), `
-`), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "code-line"
-  }, "  ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "  ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token string-property property"
-  }, '"images"'), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, '"images"'), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token operator"
-  }, ":"), " ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, ":"), " ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token builtin"
-  }, "string"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "string"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "["), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "["), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "]"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "]"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
   }, ";"), `
-`), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "code-line"
-  }, /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
   }, "}"), `
 `))), `
-`, /* @__PURE__ */ import_react22.default.createElement(import_react23.Box, {
+`, /* @__PURE__ */ import_react23.default.createElement(import_react24.Box, {
     marginY: 4
-  }, /* @__PURE__ */ import_react22.default.createElement(_components.p, null, "B\xE2y gi\u1EDD \xE1p d\u1EE5ng nh\u1EEFng g\xEC \u0111\xE3 vi\u1EBFt t\u1EEB ph\u1EA7n 2 d\xF9ng \u0111\u1EC3 g\u1ECDi m\u1ED9t request chi ti\u1EBFt s\u1EA3n ph\u1EA9m")), `
-`, /* @__PURE__ */ import_react22.default.createElement(_components.pre, {
+  }, /* @__PURE__ */ import_react23.default.createElement(_components.p, null, "B\xE2y gi\u1EDD \xE1p d\u1EE5ng nh\u1EEFng g\xEC \u0111\xE3 vi\u1EBFt t\u1EEB ph\u1EA7n 2 d\xF9ng \u0111\u1EC3 g\u1ECDi m\u1ED9t request chi ti\u1EBFt s\u1EA3n ph\u1EA9m")), `
+`, /* @__PURE__ */ import_react23.default.createElement(_components.pre, {
     className: "language-ts"
-  }, /* @__PURE__ */ import_react22.default.createElement(_components.code, {
+  }, /* @__PURE__ */ import_react23.default.createElement(_components.code, {
     className: "hljs language-ts code-highlight"
-  }, /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "code-line"
-  }, /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token keyword"
-  }, "import"), " ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "import"), " ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "{"), "useEffect", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "{"), "useEffect", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "}"), " ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "}"), " ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token keyword"
-  }, "from"), " ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "from"), " ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token string"
-  }, '"react"'), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, '"react"'), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
   }, ";"), `
-`), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "code-line"
-  }, /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token keyword"
-  }, "const"), " ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "const"), " ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token function-variable function"
-  }, "getDetailProduct"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "getDetailProduct"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token operator"
-  }, "="), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "="), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token keyword"
-  }, "async"), " ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "async"), " ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "("), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "("), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
-  }, ")"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, ")"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token operator"
-  }, "=>"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "=>"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
   }, "{"), `
-`), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "code-line"
-  }, "   ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "   ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token keyword"
-  }, "const"), " response", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "const"), " response", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token operator"
-  }, "="), " ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "="), " ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token keyword"
-  }, "await"), " BaseService", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "await"), " BaseService", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "."), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "."), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token generic-function"
-  }, /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token function"
-  }, "get"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "get"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token generic class-name"
-  }, /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token operator"
-  }, "<"), "ProductDetail", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "<"), "ProductDetail", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token operator"
-  }, ">"))), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, ">"))), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "("), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "("), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
   }, "{"), `
-`), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "code-line"
-  }, "        url", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "        url", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token operator"
-  }, ":"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, ":"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token string"
-  }, "'https://dummyjson.com/products/1'"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "'https://dummyjson.com/products/1'"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
   }, ","), `
-`), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "code-line"
-  }, "        isLoading", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "        isLoading", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token operator"
-  }, ":"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, ":"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token boolean"
   }, "true"), `
-`), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "code-line"
-  }, "   ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "   ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "}"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "}"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
   }, ")"), `
-`), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "code-line"
-  }, "    ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "    ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token comment"
   }, "// reponse.data s\u1EBD c\xF3 ki\u1EC3u l\xE0 ProductDetail"), `
-`), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "code-line"
-  }, "    ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "    ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token builtin"
-  }, "console"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "console"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "."), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "."), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token function"
-  }, "log"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "log"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "("), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "("), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token string"
-  }, "'data'"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "'data'"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
-  }, ","), "response", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, ","), "response", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "."), "data", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "."), "data", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
-  }, ")"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, ")"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
   }, ";"), `
-`), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "code-line"
-  }, /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
   }, "}"), `
-`), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "code-line"
-  }, /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token function"
-  }, "useEffect"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "useEffect"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "("), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "("), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "("), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "("), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
-  }, ")"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, ")"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token operator"
-  }, "=>"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "=>"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
   }, "{"), `
-`), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "code-line"
-  }, "    ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "    ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "("), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "("), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token keyword"
-  }, "async"), " ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "async"), " ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "("), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "("), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
-  }, ")"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, ")"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token operator"
-  }, "=>"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "=>"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
   }, "{"), `
-`), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "code-line"
-  }, "        ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "        ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token keyword"
-  }, "await"), " ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "await"), " ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token function"
-  }, "getDetailProduct"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "getDetailProduct"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "("), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "("), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
-  }, ")"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, ")"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
   }, ";"), `
-`), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "code-line"
-  }, "    ", /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "    ", /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "}"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "}"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
-  }, ")"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, ")"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "("), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "("), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
   }, ")"), `
-`), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "code-line"
-  }, /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "}"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "}"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
-  }, ","), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, ","), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "["), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "["), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "]"), /* @__PURE__ */ import_react22.default.createElement(_components.span, {
+  }, "]"), /* @__PURE__ */ import_react23.default.createElement(_components.span, {
     className: "token punctuation"
   }, ")"), `
 `))), `
-`, /* @__PURE__ */ import_react22.default.createElement(_components.p, null, /* @__PURE__ */ import_react22.default.createElement(import_react23.Heading, {
+`, /* @__PURE__ */ import_react23.default.createElement(_components.p, null, /* @__PURE__ */ import_react23.default.createElement(import_react24.Heading, {
     variant: "title-under-line"
   }, "4. L\u1EDDi k\u1EBFt"), `
 Trong b\xE0i vi\u1EBFt n\xE0y m\xECnh ch\u1EC9 h\u01B0\u1EDBng d\u1EABn v\u1EC1 c\xE1ch vi\u1EBFt t\u01B0\u01A1ng t\xE1c gi\u1EEFa client v\xE0 server, trong c\xE1c ph\u1EA7n t\u1EDBi m\xECnh s\u1EBD ra th\xEAm v\u1EC1 cache, x\u1EED l\xFD l\u1ED7i, mapper d\u1EEF li\u1EC7u t\u1EEB reponse v\u1EDBi axios.`));
-  return MDXLayout ? /* @__PURE__ */ import_react22.default.createElement(MDXLayout, {
+  return MDXLayout ? /* @__PURE__ */ import_react23.default.createElement(MDXLayout, {
     ...props
   }, _content) : _content;
 }
@@ -3917,7 +3929,7 @@ __export(load_config_exports, {
   headers: () => headers2,
   meta: () => meta3
 });
-var import_react24 = __toESM(require("react")), import_react25 = require("@chakra-ui/react"), attributes2 = {
+var import_react25 = __toESM(require("react")), import_react26 = require("@chakra-ui/react"), attributes2 = {
   meta: {
     title: "Load config json with Reactjs, Angular, Next, Remix",
     description: "How to load json file before initial app in Angular, React, Next and Remix",
@@ -3933,876 +3945,876 @@ function MDXContent2(props = {}) {
     pre: "pre",
     code: "code",
     span: "span"
-  }, props.components), { wrapper: MDXLayout } = _components, _content = /* @__PURE__ */ import_react24.default.createElement(import_react24.default.Fragment, null, /* @__PURE__ */ import_react24.default.createElement(import_react25.Heading, {
+  }, props.components), { wrapper: MDXLayout } = _components, _content = /* @__PURE__ */ import_react25.default.createElement(import_react25.default.Fragment, null, /* @__PURE__ */ import_react25.default.createElement(import_react26.Heading, {
     marginBottom: 4
   }, "L\xE0m th\u1EBF n\xE0o \u0111\u1EC3 t\u1EA3i tr\u01B0\u1EDBc m\u1ED9t file json tr\u01B0\u1EDBc khi page \u0111\u01B0\u1EE3c k\u1EBFt xu\u1EA5t?"), `
 `, `
 `, `
-`, /* @__PURE__ */ import_react24.default.createElement(import_react25.Heading, {
+`, /* @__PURE__ */ import_react25.default.createElement(import_react26.Heading, {
     variant: "title-under-line"
   }, "1.V\u1EA5n \u0111\u1EC1"), `
-`, /* @__PURE__ */ import_react24.default.createElement(import_react25.Box, {
+`, /* @__PURE__ */ import_react25.default.createElement(import_react26.Box, {
     marginY: 4
-  }, /* @__PURE__ */ import_react24.default.createElement(_components.p, null, "Th\xF4ng th\u01B0\u1EDDng khi l\xE0m vi\u1EC7c trong 1 d\u1EF1 \xE1n, c\xE1c bi\u1EBFn v\u1EC1 config th\u01B0\u1EDDng s\u1EBD \u0111\u01B0\u1EE3c kh\u1EDFi t\u1EA1o trong file ", /* @__PURE__ */ import_react24.default.createElement(import_react25.Badge, {
+  }, /* @__PURE__ */ import_react25.default.createElement(_components.p, null, "Th\xF4ng th\u01B0\u1EDDng khi l\xE0m vi\u1EC7c trong 1 d\u1EF1 \xE1n, c\xE1c bi\u1EBFn v\u1EC1 config th\u01B0\u1EDDng s\u1EBD \u0111\u01B0\u1EE3c kh\u1EDFi t\u1EA1o trong file ", /* @__PURE__ */ import_react25.default.createElement(import_react26.Badge, {
     textTransform: "lowercase",
     mr: 2
   }, ".env"), " v\xE0 sau \u0111\xF3 s\u1EBD \u0111\u01B0\u1EE3c \u0111em ra s\u1EED d\u1EE5ng nh\u01B0 d\u01B0\u1EDBi \u0111\xE2y")), `
-`, /* @__PURE__ */ import_react24.default.createElement(_components.pre, {
+`, /* @__PURE__ */ import_react25.default.createElement(_components.pre, {
     className: "language-js"
-  }, /* @__PURE__ */ import_react24.default.createElement(_components.code, {
+  }, /* @__PURE__ */ import_react25.default.createElement(_components.code, {
     className: "hljs language-js code-highlight"
-  }, /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "code-line line-number",
     line: "1"
-  }, /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token constant"
-  }, "DB_HOST"), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "DB_HOST"), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token operator"
-  }, "="), "https", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "="), "https", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token operator"
-  }, ":"), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, ":"), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token operator"
-  }, "/"), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "/"), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token regex"
-  }, /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token regex-delimiter"
-  }, "/"), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "/"), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token regex-source language-regex"
-  }, "services", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "services", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token char-set class-name"
-  }, "."), "sandbox", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "."), "sandbox", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token char-set class-name"
-  }, "."), "icondo", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "."), "icondo", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token char-set class-name"
-  }, "."), "asia"), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "."), "asia"), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token regex-delimiter"
   }, "/")), `
 `))), `
-`, /* @__PURE__ */ import_react24.default.createElement(import_react25.Box, {
+`, /* @__PURE__ */ import_react25.default.createElement(import_react26.Box, {
     marginY: 4
-  }, /* @__PURE__ */ import_react24.default.createElement(_components.p, null, "v\xE0 sau \u0111\xF3 s\u1EBD g\u1ECDi ra v\xE0 s\u1EED d\u1EE5ng")), `
-`, /* @__PURE__ */ import_react24.default.createElement(_components.pre, {
+  }, /* @__PURE__ */ import_react25.default.createElement(_components.p, null, "v\xE0 sau \u0111\xF3 s\u1EBD g\u1ECDi ra v\xE0 s\u1EED d\u1EE5ng")), `
+`, /* @__PURE__ */ import_react25.default.createElement(_components.pre, {
     className: "language-js"
-  }, /* @__PURE__ */ import_react24.default.createElement(_components.code, {
+  }, /* @__PURE__ */ import_react25.default.createElement(_components.code, {
     className: "hljs language-js code-highlight"
-  }, /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "code-line line-number",
     line: "1"
-  }, /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token console class-name"
-  }, "console"), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "console"), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "."), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "."), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token method function property-access"
-  }, "log"), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "log"), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "("), "proccess", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "("), "proccess", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "."), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "."), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token property-access"
-  }, "env"), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "env"), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "."), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "."), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token constant"
-  }, "DB_HOST"), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "DB_HOST"), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
   }, ")"), `
 `))), `
-`, /* @__PURE__ */ import_react24.default.createElement(import_react25.Box, {
+`, /* @__PURE__ */ import_react25.default.createElement(import_react26.Box, {
     marginY: 4
-  }, /* @__PURE__ */ import_react24.default.createElement(_components.p, null, "M\u1ECDi chuy\u1EC7n v\u1EABn \u0111\xFAng v\xE0 ch\u1EE9c n\u0103ng v\u1EABn ho\u1EA1t \u0111\u1ED9ng b\xECnh th\u01B0\u1EDDng, nh\u01B0ng s\u1EBD c\xF3 nh\u1EEFng b\u1EA5t c\u1EADp d\u01B0\u1EDBi \u0111\xE2y:"), /* @__PURE__ */ import_react24.default.createElement(import_react25.UnorderedList, {
+  }, /* @__PURE__ */ import_react25.default.createElement(_components.p, null, "M\u1ECDi chuy\u1EC7n v\u1EABn \u0111\xFAng v\xE0 ch\u1EE9c n\u0103ng v\u1EABn ho\u1EA1t \u0111\u1ED9ng b\xECnh th\u01B0\u1EDDng, nh\u01B0ng s\u1EBD c\xF3 nh\u1EEFng b\u1EA5t c\u1EADp d\u01B0\u1EDBi \u0111\xE2y:"), /* @__PURE__ */ import_react25.default.createElement(import_react26.UnorderedList, {
     my: 2
-  }, /* @__PURE__ */ import_react24.default.createElement(import_react25.ListItem, null, /* @__PURE__ */ import_react24.default.createElement(_components.p, null, `Khi nhu c\u1EA7u config thay \u0111\u1ED5i b\u1EA1n ph\u1EA3i ch\u1EC9nh s\u1EEDa l\u1EA1i file .env v\xE0 build l\u1EA1i d\u1EF1 \xE1n c\u1EE7a m\xECnh. V\xEC c\u0103n b\u1EA3n file
+  }, /* @__PURE__ */ import_react25.default.createElement(import_react26.ListItem, null, /* @__PURE__ */ import_react25.default.createElement(_components.p, null, `Khi nhu c\u1EA7u config thay \u0111\u1ED5i b\u1EA1n ph\u1EA3i ch\u1EC9nh s\u1EEDa l\u1EA1i file .env v\xE0 build l\u1EA1i d\u1EF1 \xE1n c\u1EE7a m\xECnh. V\xEC c\u0103n b\u1EA3n file
 .env
-n\xE0y s\u1EBD ch\u1EA1y v\xE0 l\u01B0u gi\xE1 tr\u1ECB trong qu\xE1 tr\xECnh `, /* @__PURE__ */ import_react24.default.createElement(import_react25.Badge, {
+n\xE0y s\u1EBD ch\u1EA1y v\xE0 l\u01B0u gi\xE1 tr\u1ECB trong qu\xE1 tr\xECnh `, /* @__PURE__ */ import_react25.default.createElement(import_react26.Badge, {
     colorScheme: "green"
-  }, "compile time")))), /* @__PURE__ */ import_react24.default.createElement("p", null, `V\xEC nh\u1EEFng b\u1EA5t c\u1EADp \u0111\xF3, th\xEC ph\u1EA3i c\xF3 1 n\u01A1i s\u1EBD ch\u1EC9nh s\u1EEDa file config cho t\u1EEBng d\u1EF1 \xE1n, v\xE0 nhi\u1EC7m v\u1EE5 c\u1EE7a ph\xEDa client l\xE0
+  }, "compile time")))), /* @__PURE__ */ import_react25.default.createElement("p", null, `V\xEC nh\u1EEFng b\u1EA5t c\u1EADp \u0111\xF3, th\xEC ph\u1EA3i c\xF3 1 n\u01A1i s\u1EBD ch\u1EC9nh s\u1EEDa file config cho t\u1EEBng d\u1EF1 \xE1n, v\xE0 nhi\u1EC7m v\u1EE5 c\u1EE7a ph\xEDa client l\xE0
 load file config \u0111\xF3 l\xEAn v\xE0 s\u1EED d\u1EE5ng gi\xE1 tr\u1ECB \u0111\xF3 thay cho file env. D\u01B0\u1EDBi \u0111\xE2y l\xE0 nh\u1EEFng c\xE1ch ti\u1EBFp c\u1EADn m\xE0 m\xECnh s\u1EBD
 h\u01B0\u1EDBng d\u1EABn cho b\u1EA1n`)), `
-`, /* @__PURE__ */ import_react24.default.createElement(import_react25.Heading, {
+`, /* @__PURE__ */ import_react25.default.createElement(import_react26.Heading, {
     variant: "title-under-line"
   }, "2. \xC1p d\u1EE5ng"), `
-`, /* @__PURE__ */ import_react24.default.createElement(import_react25.Box, {
+`, /* @__PURE__ */ import_react25.default.createElement(import_react26.Box, {
     marginY: 4
-  }, /* @__PURE__ */ import_react24.default.createElement(_components.p, null, "Ch\xFAng ta s\u1EBD t\u1EA1o 1 function \u0111\u1EC3 fetch data t\u1EEB api")), `
-`, /* @__PURE__ */ import_react24.default.createElement(_components.pre, {
+  }, /* @__PURE__ */ import_react25.default.createElement(_components.p, null, "Ch\xFAng ta s\u1EBD t\u1EA1o 1 function \u0111\u1EC3 fetch data t\u1EEB api")), `
+`, /* @__PURE__ */ import_react25.default.createElement(_components.pre, {
     className: "language-ts"
-  }, /* @__PURE__ */ import_react24.default.createElement(_components.code, {
+  }, /* @__PURE__ */ import_react25.default.createElement(_components.code, {
     className: "hljs language-ts code-highlight"
-  }, /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "code-line line-number",
     line: "1"
-  }, /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token keyword"
-  }, "export"), " ", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "export"), " ", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token keyword"
-  }, "const"), " ", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "const"), " ", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token function-variable function"
-  }, "fetcherJSON"), " ", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "fetcherJSON"), " ", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token operator"
-  }, "="), " ", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "="), " ", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "("), "url", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "("), "url", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token operator"
-  }, ":"), " ", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, ":"), " ", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token builtin"
-  }, "string"), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "string"), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
-  }, ","), " config", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, ","), " config", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token operator"
-  }, "?"), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "?"), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token operator"
-  }, ":"), " RequestInit", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, ":"), " RequestInit", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
-  }, ")"), " ", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, ")"), " ", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token operator"
-  }, "=>"), " ", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "=>"), " ", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token function"
-  }, "fetch"), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "fetch"), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "("), "url", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "("), "url", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
-  }, ","), " config", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, ","), " config", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
-  }, ")"), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, ")"), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "."), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "."), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token function"
-  }, "then"), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "then"), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "("), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "("), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "("), "res", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "("), "res", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
-  }, ")"), " ", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, ")"), " ", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token operator"
-  }, "=>"), " res", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "=>"), " res", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "."), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "."), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token function"
-  }, "json"), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "json"), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "("), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "("), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
-  }, ")"), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, ")"), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
-  }, ")"), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, ")"), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
   }, ";"), `
 `))), `
-`, /* @__PURE__ */ import_react24.default.createElement(import_react25.Box, {
+`, /* @__PURE__ */ import_react25.default.createElement(import_react26.Box, {
     marginY: 4
-  }, "V\u1EDBi ", /* @__PURE__ */ import_react24.default.createElement(import_react25.Badge, {
+  }, "V\u1EDBi ", /* @__PURE__ */ import_react25.default.createElement(import_react26.Badge, {
     colorScheme: "green"
-  }, "Angular"), " \u1EDF file ", /* @__PURE__ */ import_react24.default.createElement(import_react25.Badge, {
+  }, "Angular"), " \u1EDF file ", /* @__PURE__ */ import_react25.default.createElement(import_react26.Badge, {
     textTransform: "lowercase"
   }, "main.ts")), `
-`, /* @__PURE__ */ import_react24.default.createElement(_components.pre, {
+`, /* @__PURE__ */ import_react25.default.createElement(_components.pre, {
     className: "language-ts"
-  }, /* @__PURE__ */ import_react24.default.createElement(_components.code, {
+  }, /* @__PURE__ */ import_react25.default.createElement(_components.code, {
     className: "hljs language-ts code-highlight"
-  }, /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "code-line line-number",
     line: "1"
-  }, /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "("), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "("), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token keyword"
-  }, "async"), " ", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "async"), " ", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "("), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "("), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
-  }, ")"), " ", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, ")"), " ", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token operator"
-  }, "=>"), " ", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "=>"), " ", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
   }, "{"), `
-`), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "code-line line-number",
     line: "2"
-  }, "  ", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "  ", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token keyword"
-  }, "const"), " data ", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "const"), " data ", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token operator"
-  }, "="), " ", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "="), " ", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token keyword"
-  }, "await"), " ", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "await"), " ", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token function"
-  }, "fetcherJSON"), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "fetcherJSON"), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "("), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "("), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token string"
-  }, "'link json here...'"), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "'link json here...'"), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
   }, ")"), `
-`), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "code-line line-number",
     line: "3"
-  }, /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token comment"
   }, "// todo with json config data"), `
-`), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "code-line line-number",
     line: "4"
-  }, "  ", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "  ", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token keyword"
-  }, "function"), " ", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "function"), " ", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token function"
-  }, "bootstrap"), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "bootstrap"), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "("), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "("), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
-  }, ")"), " ", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, ")"), " ", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
   }, "{"), `
-`), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "code-line line-number",
     line: "5"
-  }, "    ", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "    ", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token function"
-  }, "platformBrowserDynamic"), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "platformBrowserDynamic"), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "("), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "("), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
-  }, ")"), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, ")"), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "."), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "."), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token function"
-  }, "bootstrapModule"), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "bootstrapModule"), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "("), "AppModule", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "("), "AppModule", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
   }, ")"), `
-`), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "code-line line-number",
     line: "6"
-  }, "      ", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "      ", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "."), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "."), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token function"
-  }, "catch"), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "catch"), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "("), "err ", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "("), "err ", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token operator"
-  }, "=>"), " ", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "=>"), " ", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token builtin"
-  }, "console"), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "console"), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "."), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "."), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token function"
-  }, "error"), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "error"), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "("), "err", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "("), "err", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
-  }, ")"), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, ")"), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
-  }, ")"), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, ")"), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
   }, ";"), `
-`), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "code-line line-number",
     line: "7"
-  }, "  ", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "  ", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "}"), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "}"), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
   }, ";"), `
-`), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "code-line line-number",
     line: "8"
-  }, "  ", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "  ", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token keyword"
-  }, "if"), " ", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "if"), " ", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "("), "document", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "("), "document", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "."), "readyState ", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "."), "readyState ", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token operator"
-  }, "==="), " ", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "==="), " ", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token string"
-  }, "'complete'"), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "'complete'"), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
-  }, ")"), " ", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, ")"), " ", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
   }, "{"), `
-`), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "code-line line-number",
     line: "9"
-  }, "    ", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "    ", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token function"
-  }, "bootstrap"), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "bootstrap"), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "("), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "("), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
-  }, ")"), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, ")"), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
   }, ";"), `
-`), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "code-line line-number",
     line: "10"
-  }, "  ", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "  ", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "}"), " ", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "}"), " ", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token keyword"
-  }, "else"), " ", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "else"), " ", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
   }, "{"), `
-`), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "code-line line-number",
     line: "11"
-  }, "    document", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "    document", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "."), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "."), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token function"
-  }, "addEventListener"), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "addEventListener"), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "("), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "("), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token string"
-  }, "'DOMContentLoaded'"), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "'DOMContentLoaded'"), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
-  }, ","), " bootstrap", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, ","), " bootstrap", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
-  }, ")"), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, ")"), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
   }, ";"), `
-`), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "code-line line-number",
     line: "12"
-  }, "  ", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "  ", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
   }, "}"), `
-`), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "code-line line-number",
     line: "13"
-  }, /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "}"), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "}"), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
-  }, ")"), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, ")"), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "("), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "("), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
-  }, ")"), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, ")"), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
   }, ";"), `
 `))), `
-`, /* @__PURE__ */ import_react24.default.createElement(import_react25.Box, {
+`, /* @__PURE__ */ import_react25.default.createElement(import_react26.Box, {
     marginY: 4
-  }, "V\u1EDBi ", /* @__PURE__ */ import_react24.default.createElement(import_react25.Badge, {
+  }, "V\u1EDBi ", /* @__PURE__ */ import_react25.default.createElement(import_react26.Badge, {
     colorScheme: "green"
-  }, "React"), " \u1EDF file ", /* @__PURE__ */ import_react24.default.createElement(import_react25.Badge, {
+  }, "React"), " \u1EDF file ", /* @__PURE__ */ import_react25.default.createElement(import_react26.Badge, {
     textTransform: "lowercase"
   }, "index.tsx")), `
-`, /* @__PURE__ */ import_react24.default.createElement(_components.pre, {
+`, /* @__PURE__ */ import_react25.default.createElement(_components.pre, {
     className: "language-ts"
-  }, /* @__PURE__ */ import_react24.default.createElement(_components.code, {
+  }, /* @__PURE__ */ import_react25.default.createElement(_components.code, {
     className: "hljs language-ts code-highlight"
-  }, /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "code-line line-number",
     line: "1"
-  }, /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "("), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "("), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token keyword"
-  }, "async"), " ", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "async"), " ", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "("), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "("), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
-  }, ")"), " ", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, ")"), " ", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token operator"
-  }, "=>"), " ", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "=>"), " ", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
   }, "{"), `
-`), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "code-line line-number",
     line: "2"
-  }, "    ", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "    ", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token keyword"
-  }, "try"), " ", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "try"), " ", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
   }, "{"), `
-`), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "code-line line-number",
     line: "3"
   }, `
-`), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "code-line line-number",
     line: "4"
-  }, "        ", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "        ", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token keyword"
-  }, "const"), " container ", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "const"), " container ", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token operator"
-  }, "="), " document", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "="), " document", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "."), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "."), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token function"
-  }, "getElementById"), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "getElementById"), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "("), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "("), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token string"
-  }, "'main-condo'"), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "'main-condo'"), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
-  }, ")"), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, ")"), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
   }, ";"), `
-`), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "code-line line-number",
     line: "5"
-  }, "        ", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "        ", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token keyword"
-  }, "const"), " root ", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "const"), " root ", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token operator"
-  }, "="), " ", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "="), " ", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token function"
-  }, "createRoot"), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "createRoot"), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "("), "container", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "("), "container", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
-  }, ")"), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, ")"), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
   }, ";"), `
-`), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "code-line line-number",
     line: "6"
-  }, "        ", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "        ", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token keyword"
-  }, "const"), " config ", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "const"), " config ", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token operator"
-  }, "="), " ", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "="), " ", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token keyword"
-  }, "await"), " ", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "await"), " ", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token function"
-  }, "fetcherJSON"), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "fetcherJSON"), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "("), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "("), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token string"
-  }, "'/assets/config.json'"), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "'/assets/config.json'"), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
-  }, ")"), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, ")"), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
   }, ";"), `
-`), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "code-line line-number",
     line: "7"
-  }, "        root", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "        root", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "."), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "."), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token function"
-  }, "render"), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "render"), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "("), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "("), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token operator"
-  }, "<"), "Provider", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "<"), "Provider", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token operator"
   }, ">"), `
-`), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "code-line line-number",
     line: "8"
-  }, "                ", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "                ", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token operator"
-  }, "<"), "App config", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "<"), "App config", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token operator"
-  }, "="), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "="), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "{"), "data", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "{"), "data", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "}"), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "}"), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token operator"
-  }, "/"), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "/"), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token operator"
   }, ">"), `
-`), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "code-line line-number",
     line: "9"
-  }, "        ", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "        ", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token operator"
-  }, "<"), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "<"), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token operator"
-  }, "/"), "Provider", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "/"), "Provider", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token operator"
-  }, ">"), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, ">"), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
-  }, ")"), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, ")"), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
   }, ";"), `
-`), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "code-line line-number",
     line: "10"
-  }, "    ", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "    ", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "}"), " ", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "}"), " ", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token keyword"
-  }, "catch"), " ", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "catch"), " ", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "("), "e", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "("), "e", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
-  }, ")"), " ", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, ")"), " ", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
   }, "{"), `
-`), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "code-line line-number",
     line: "11"
-  }, "        ", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "        ", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token comment"
   }, "// todo error"), `
-`), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "code-line line-number",
     line: "12"
-  }, "    ", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "    ", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
   }, "}"), `
-`), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "code-line line-number",
     line: "13"
-  }, /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "}"), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "}"), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
-  }, ")"), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, ")"), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "("), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "("), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
-  }, ")"), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, ")"), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
   }, ";"), `
 `))), `
-`, /* @__PURE__ */ import_react24.default.createElement(import_react25.Box, {
+`, /* @__PURE__ */ import_react25.default.createElement(import_react26.Box, {
     marginY: 4
-  }, "\u1EDE file ", /* @__PURE__ */ import_react24.default.createElement(import_react25.Badge, {
+  }, "\u1EDE file ", /* @__PURE__ */ import_react25.default.createElement(import_react26.Badge, {
     textTransform: "lowercase"
   }, "App.tsx")), `
-`, /* @__PURE__ */ import_react24.default.createElement(_components.pre, {
+`, /* @__PURE__ */ import_react25.default.createElement(_components.pre, {
     className: "language-ts"
-  }, /* @__PURE__ */ import_react24.default.createElement(_components.code, {
+  }, /* @__PURE__ */ import_react25.default.createElement(_components.code, {
     className: "hljs language-ts code-highlight"
-  }, /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "code-line line-number",
     line: "1"
-  }, /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token keyword"
-  }, "function"), " ", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "function"), " ", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token function"
-  }, "App"), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "App"), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "("), "props", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "("), "props", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
-  }, ")"), " ", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, ")"), " ", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
   }, "{"), `
-`), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "code-line line-number",
     line: "2"
-  }, "    ", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "    ", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token function"
-  }, "useEffect"), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "useEffect"), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "("), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "("), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "("), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "("), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
-  }, ")"), " ", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, ")"), " ", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token operator"
-  }, "=>"), " ", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "=>"), " ", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
   }, "{"), `
-`), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "code-line line-number",
     line: "3"
-  }, "        ", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "        ", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token builtin"
-  }, "console"), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "console"), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "."), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "."), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token function"
-  }, "log"), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "log"), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "("), "props", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "("), "props", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "."), "config", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "."), "config", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
   }, ")"), `
-`), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "code-line line-number",
     line: "4"
-  }, "        ", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "        ", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token comment"
   }, "// todo with props.config"), `
-`), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "code-line line-number",
     line: "5"
-  }, "    ", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "    ", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "}"), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "}"), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
-  }, ","), " ", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, ","), " ", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "["), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "["), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "]"), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "]"), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
-  }, ")"), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, ")"), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
   }, ";"), `
-`), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "code-line line-number",
     line: "6"
-  }, "    ", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "    ", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token keyword"
-  }, "return"), " ", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "return"), " ", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "("), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "("), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token operator"
-  }, "<"), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "<"), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token operator"
-  }, ">"), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, ">"), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token operator"
-  }, "..."), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "..."), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token operator"
-  }, "<"), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "<"), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token operator"
-  }, "/"), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "/"), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token operator"
-  }, ">"), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, ">"), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
   }, ")"), `
-`), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "code-line line-number",
     line: "7"
-  }, /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
   }, "}"), `
 `))), `
-`, /* @__PURE__ */ import_react24.default.createElement(import_react25.Box, {
+`, /* @__PURE__ */ import_react25.default.createElement(import_react26.Box, {
     marginY: 4
-  }, "V\u1EDBi ", /* @__PURE__ */ import_react24.default.createElement(import_react25.Badge, {
+  }, "V\u1EDBi ", /* @__PURE__ */ import_react25.default.createElement(import_react26.Badge, {
     colorScheme: "green"
-  }, "Remix"), " \u1EDF file ", /* @__PURE__ */ import_react24.default.createElement(import_react25.Badge, {
+  }, "Remix"), " \u1EDF file ", /* @__PURE__ */ import_react25.default.createElement(import_react26.Badge, {
     textTransform: "lowercase"
   }, "root.tsx")), `
-`, /* @__PURE__ */ import_react24.default.createElement(_components.pre, {
+`, /* @__PURE__ */ import_react25.default.createElement(_components.pre, {
     className: "language-js"
-  }, /* @__PURE__ */ import_react24.default.createElement(_components.code, {
+  }, /* @__PURE__ */ import_react25.default.createElement(_components.code, {
     className: "hljs language-js code-highlight"
-  }, /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "code-line line-number",
     line: "1"
-  }, /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token keyword module"
-  }, "import"), " ", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "import"), " ", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token imports"
-  }, /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "{"), "useLoaderData", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "{"), "useLoaderData", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "}")), " ", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "}")), " ", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token keyword module"
-  }, "from"), " ", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "from"), " ", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token string"
-  }, '"@remix-run/react"'), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, '"@remix-run/react"'), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
   }, ";"), `
-`), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "code-line line-number",
     line: "2"
-  }, /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token keyword module"
-  }, "export"), " ", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "export"), " ", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token keyword"
-  }, "const"), " ", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "const"), " ", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token function-variable function"
-  }, "loader"), " ", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "loader"), " ", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token operator"
-  }, "="), " ", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "="), " ", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token keyword"
-  }, "async"), " ", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "async"), " ", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "("), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "("), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token parameter"
-  }, /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "{"), "request", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "{"), "request", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "}")), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "}")), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
-  }, ")"), " ", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, ")"), " ", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token arrow operator"
-  }, "=>"), " ", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "=>"), " ", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
   }, "{"), `
-`), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "code-line line-number",
     line: "3"
-  }, "    ", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "    ", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token keyword"
-  }, "const"), " ", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "const"), " ", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token dom variable"
-  }, "location"), " ", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "location"), " ", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token operator"
-  }, "="), " ", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "="), " ", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token keyword"
-  }, "new"), " ", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "new"), " ", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token class-name"
-  }, "URL"), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "URL"), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "("), "request", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "("), "request", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "."), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "."), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token property-access"
-  }, "url"), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "url"), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
   }, ")"), `
-`), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "code-line line-number",
     line: "4"
-  }, "    ", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "    ", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token keyword"
-  }, "const"), " config ", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "const"), " config ", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token operator"
-  }, "="), " ", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "="), " ", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token keyword control-flow"
-  }, "await"), " ", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "await"), " ", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token function"
-  }, "fetcherJSON"), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "fetcherJSON"), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "("), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "("), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token dom variable"
-  }, "location"), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "location"), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "."), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "."), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token property-access"
-  }, "origin"), " ", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "origin"), " ", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token operator"
-  }, "+"), " ", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "+"), " ", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token template-string"
-  }, /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token template-punctuation string"
-  }, "`"), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "`"), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token string"
-  }, "/config.json"), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "/config.json"), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token template-punctuation string"
-  }, "`")), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "`")), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
-  }, ")"), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, ")"), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
   }, ";"), `
-`), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "code-line line-number",
     line: "5"
-  }, "    ", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "    ", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token keyword control-flow"
-  }, "return"), " ", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "return"), " ", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token function"
-  }, "json"), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "json"), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "("), "config", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "("), "config", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
-  }, ")"), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, ")"), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
   }, ";"), `
-`), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "code-line line-number",
     line: "6"
-  }, /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
   }, "}"), `
-`), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "code-line line-number",
     line: "7"
   }, `
-`), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "code-line line-number",
     line: "8"
-  }, /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token keyword module"
-  }, "export"), " ", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "export"), " ", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token keyword module"
-  }, "default"), " ", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "default"), " ", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token keyword"
-  }, "function"), " ", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "function"), " ", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token function"
-  }, /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token maybe-class-name"
-  }, "App")), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "App")), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "("), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "("), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
-  }, ")"), " ", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, ")"), " ", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
   }, "{"), `
-`), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "code-line line-number",
     line: "9"
-  }, "    ", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "    ", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token keyword"
-  }, "const"), " config", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "const"), " config", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token operator"
-  }, "="), " ", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "="), " ", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token function"
-  }, "useLoaderData"), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "useLoaderData"), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
-  }, "("), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "("), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
-  }, ")"), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, ")"), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
   }, ";"), `
-`), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "code-line line-number",
     line: "10"
-  }, "    ", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "    ", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token comment"
   }, "// todo config"), `
-`), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "code-line line-number",
     line: "11"
-  }, "    ", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "    ", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token keyword control-flow"
-  }, "return"), " ", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "return"), " ", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
   }, "("), `
-`), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "code-line line-number",
     line: "12"
-  }, "       ", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "       ", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token operator"
-  }, "<"), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "<"), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token operator"
-  }, ">"), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, ">"), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token operator"
-  }, "<"), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "<"), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token maybe-class-name"
-  }, "Outlet"), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "Outlet"), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token operator"
-  }, "/"), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "/"), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token operator"
-  }, ">"), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, ">"), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token operator"
-  }, "<"), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "<"), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token operator"
-  }, "/"), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "/"), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token operator"
   }, ">"), `
-`), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "code-line line-number",
     line: "13"
-  }, "    ", /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, "    ", /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
   }, ")"), `
-`), /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+`), /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "code-line line-number",
     line: "14"
-  }, /* @__PURE__ */ import_react24.default.createElement(_components.span, {
+  }, /* @__PURE__ */ import_react25.default.createElement(_components.span, {
     className: "token punctuation"
   }, "}"), `
 `))), `
-`, /* @__PURE__ */ import_react24.default.createElement(import_react25.Heading, {
+`, /* @__PURE__ */ import_react25.default.createElement(import_react26.Heading, {
     variant: "title-under-line"
   }, "3. L\u1EDDi k\u1EBFt"), `
-`, /* @__PURE__ */ import_react24.default.createElement(import_react25.Box, {
+`, /* @__PURE__ */ import_react25.default.createElement(import_react26.Box, {
     marginY: 4
   }, `V\u1EDBi nh\u1EEFng g\xEC m\xECnh gi\u1EDBi thi\u1EC7u \u1EDF tr\xEAn th\xEC s\u1EBD gi\xFAp \u0111\u01B0\u1EE3c c\xE1c b\u1EA1n trong v\u1EA5n \u0111\u1EC1 dynamic config v\u1EDBi t\u1EEBng m\xF4i
 tr\u01B0\u1EDDng dev c\u1EE7a m\xECnh. Nh\u01B0ng b\xEAn c\u1EA1nh \u0111\xF3 vi\u1EC7c s\u1EED d\u1EE5ng c\xE1ch n\xE0y s\u1EBD d\u1EABn \u0111\u1EBFn vi\u1EC7c c\xE1c data config s\u1EBD d\u1EC5 b\u1ECB l\u1ED9 h\u01A1n so v\u1EDBi
 d\xF9ng env file`));
-  return MDXLayout ? /* @__PURE__ */ import_react24.default.createElement(MDXLayout, {
+  return MDXLayout ? /* @__PURE__ */ import_react25.default.createElement(MDXLayout, {
     ...props
   }, _content) : _content;
 }
@@ -4815,25 +4827,25 @@ __export(product_exports, {
   loader: () => loader2,
   meta: () => meta4
 });
-var import_react27 = require("@chakra-ui/react"), import_node2 = require("@remix-run/node"), import_react28 = require("@remix-run/react");
+var import_react28 = require("@chakra-ui/react"), import_node2 = require("@remix-run/node"), import_react29 = require("@remix-run/react");
 
 // app/components/product-card.tsx
-var import_react26 = require("@chakra-ui/react"), import_jsx_dev_runtime = require("react/jsx-dev-runtime");
+var import_react27 = require("@chakra-ui/react"), import_jsx_dev_runtime = require("react/jsx-dev-runtime");
 function ProductCard({ image }) {
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react26.Center, {
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react27.Center, {
     py: 12,
-    children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react26.Box, {
+    children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react27.Box, {
       role: "group",
       p: 6,
       maxW: "330px",
       w: "full",
-      bg: (0, import_react26.useColorModeValue)("white", "gray.800"),
+      bg: (0, import_react27.useColorModeValue)("white", "gray.800"),
       boxShadow: "2xl",
       rounded: "lg",
       pos: "relative",
       zIndex: 1,
       children: [
-        /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react26.Box, {
+        /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react27.Box, {
           rounded: "lg",
           mt: -12,
           pos: "relative",
@@ -4855,7 +4867,7 @@ function ProductCard({ image }) {
               filter: "blur(20px)"
             }
           },
-          children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react26.Image, {
+          children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react27.Image, {
             rounded: "lg",
             height: 230,
             width: 282,
@@ -4871,11 +4883,11 @@ function ProductCard({ image }) {
           lineNumber: 15,
           columnNumber: 13
         }, this),
-        /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react26.Stack, {
+        /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react27.Stack, {
           pt: 10,
           align: "center",
           children: [
-            /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react26.Text, {
+            /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react27.Text, {
               color: "gray.500",
               fontSize: "sm",
               textTransform: "uppercase",
@@ -4885,7 +4897,7 @@ function ProductCard({ image }) {
               lineNumber: 46,
               columnNumber: 17
             }, this),
-            /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react26.Heading, {
+            /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react27.Heading, {
               fontSize: "2xl",
               fontFamily: "body",
               fontWeight: 500,
@@ -4895,11 +4907,11 @@ function ProductCard({ image }) {
               lineNumber: 49,
               columnNumber: 17
             }, this),
-            /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react26.Stack, {
+            /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react27.Stack, {
               direction: "row",
               align: "center",
               children: [
-                /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react26.Text, {
+                /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react27.Text, {
                   fontWeight: 700,
                   fontSize: "xl",
                   children: "$57"
@@ -4908,7 +4920,7 @@ function ProductCard({ image }) {
                   lineNumber: 53,
                   columnNumber: 21
                 }, this),
-                /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react26.Text, {
+                /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react27.Text, {
                   textDecoration: "line-through",
                   color: "gray.600",
                   children: "$199"
@@ -4949,12 +4961,12 @@ var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), loader2 = async (
   return (0, import_node2.json)(data);
 };
 function Product() {
-  let { products } = (0, import_react28.useLoaderData)(), loadProduct = async () => {
+  let { products } = (0, import_react29.useLoaderData)(), loadProduct = async () => {
     let data = await (await fetch("https://dummyjson.com/products")).json();
   };
   return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(motion_router_default, {
     children: [
-      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react27.Heading, {
+      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react28.Heading, {
         variant: "title-under-line",
         children: "Products"
       }, void 0, !1, {
@@ -4962,7 +4974,7 @@ function Product() {
         lineNumber: 24,
         columnNumber: 13
       }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react27.SimpleGrid, {
+      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react28.SimpleGrid, {
         columns: [1, 1, 2],
         gap: 6,
         children: products.map((product) => /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(product_card_default, {
@@ -5001,19 +5013,19 @@ __export(blogs_exports, {
   loader: () => loader3,
   meta: () => meta5
 });
-var import_react31 = require("@chakra-ui/react"), import_node3 = require("@remix-run/node"), import_react32 = require("@remix-run/react");
+var import_react32 = require("@chakra-ui/react"), import_node3 = require("@remix-run/node"), import_react33 = require("@remix-run/react");
 
 // app/components/card.tsx
-var import_react29 = require("@chakra-ui/react"), import_react30 = require("@remix-run/react"), import_jsx_dev_runtime = require("react/jsx-dev-runtime");
+var import_react30 = require("@chakra-ui/react"), import_react31 = require("@remix-run/react"), import_jsx_dev_runtime = require("react/jsx-dev-runtime");
 function CardThumbnail({ thumbnail, title, children, href }) {
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react29.Box, {
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react30.Box, {
     w: "100%",
     textAlign: "center",
     cursor: "pointer",
-    children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react30.NavLink, {
+    children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react31.NavLink, {
       to: href,
       children: [
-        /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react29.Image, {
+        /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react30.Image, {
           src: thumbnail,
           alt: title,
           className: "grid-item-thumbnail",
@@ -5023,7 +5035,7 @@ function CardThumbnail({ thumbnail, title, children, href }) {
           lineNumber: 7,
           columnNumber: 13
         }, this),
-        /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react29.Text, {
+        /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react30.Text, {
           mt: 2,
           fontSize: 17,
           fontWeight: 500,
@@ -5033,7 +5045,7 @@ function CardThumbnail({ thumbnail, title, children, href }) {
           lineNumber: 13,
           columnNumber: 17
         }, this),
-        /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react29.Text, {
+        /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react30.Text, {
           fontSize: 14,
           children
         }, void 0, !1, {
@@ -5068,9 +5080,9 @@ var loader3 = async () => (0, import_node3.json)([
   postFromModule(load_config_exports)
 ]);
 function Blogs() {
-  let posts = (0, import_react32.useLoaderData)();
+  let posts = (0, import_react33.useLoaderData)();
   return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(motion_router_default, {
-    children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react31.SimpleGrid, {
+    children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react32.SimpleGrid, {
       columns: [1, 1, 2],
       gap: 6,
       children: posts.map((post, index) => /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(card_default, {
@@ -5113,7 +5125,7 @@ __export(routes_exports, {
   default: () => Index,
   meta: () => meta6
 });
-var import_react33 = require("@chakra-ui/react"), import_styled5 = __toESM(require("@emotion/styled")), import_react34 = require("@remix-run/react"), import_io53 = require("react-icons/io5");
+var import_react34 = require("@chakra-ui/react"), import_styled5 = __toESM(require("@emotion/styled")), import_react35 = require("@remix-run/react"), import_io53 = require("react-icons/io5");
 
 // app/components/paragrapth.ts
 var import_styled4 = __toESM(require("@emotion/styled")), Paragraph = import_styled4.default.p`
@@ -5122,9 +5134,9 @@ var import_styled4 = __toESM(require("@emotion/styled")), Paragraph = import_sty
 `, paragrapth_default = Paragraph;
 
 // app/routes/index.tsx
-var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), ProfileImage = (0, import_react33.chakra)(import_react33.Image, {
+var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), ProfileImage = (0, import_react34.chakra)(import_react34.Image, {
   shouldForwardProp: (prop) => ["width", "height", "src", "alt"].includes(prop)
-}), BioSection = (0, import_styled5.default)(import_react33.Box)`
+}), BioSection = (0, import_styled5.default)(import_react34.Box)`
   padding-left: 3.4em;
   text-indent: -3.4em;
 `, BioYear = import_styled5.default.span`
@@ -5132,19 +5144,19 @@ var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), ProfileImage = (0
   margin-right: 1em;
 `;
 function Index() {
-  let navigate = (0, import_react34.useNavigate)(), onProducts = () => {
+  let navigate = (0, import_react35.useNavigate)(), onProducts = () => {
     navigate("/product");
   }, onBlogs = () => {
     navigate("/blogs");
   };
   return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(motion_router_default, {
     children: [
-      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react33.Box, {
+      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react34.Box, {
         borderRadius: "lg",
         mb: 6,
         p: 3,
         textAlign: "center",
-        bg: (0, import_react33.useColorModeValue)("whiteAlpha.500", "whiteAlpha.200"),
+        bg: (0, import_react34.useColorModeValue)("whiteAlpha.500", "whiteAlpha.200"),
         css: { backdropFilter: "blur(10px)" },
         children: "Hello, I'm an indie app developer based in Vietnam!"
       }, void 0, !1, {
@@ -5152,13 +5164,13 @@ function Index() {
         lineNumber: 45,
         columnNumber: 13
       }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react33.Box, {
+      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react34.Box, {
         display: { md: "flex" },
         children: [
-          /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react33.Box, {
+          /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react34.Box, {
             flexGrow: 1,
             children: [
-              /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react33.Heading, {
+              /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react34.Heading, {
                 as: "h2",
                 variant: "page-title",
                 children: "Nguy\u1EC5n B\xE1 Tr\u1EA7n V\u0103n"
@@ -5180,12 +5192,12 @@ function Index() {
             lineNumber: 57,
             columnNumber: 17
           }, this),
-          /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react33.Box, {
+          /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react34.Box, {
             flexShrink: 0,
             mt: { base: 4, md: 0 },
             ml: { md: 6 },
             textAlign: "center",
-            children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react33.Box, {
+            children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react34.Box, {
               borderColor: "whiteAlpha.800",
               borderWidth: 2,
               borderStyle: "solid",
@@ -5222,10 +5234,10 @@ function Index() {
         lineNumber: 56,
         columnNumber: 13
       }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react33.Box, {
+      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react34.Box, {
         marginY: 4,
         children: [
-          /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react33.Heading, {
+          /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react34.Heading, {
             variant: "title-under-line",
             children: "Work"
           }, void 0, !1, {
@@ -5246,10 +5258,10 @@ function Index() {
         lineNumber: 90,
         columnNumber: 13
       }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react33.Box, {
+      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react34.Box, {
         marginY: 4,
         children: [
-          /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react33.Heading, {
+          /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react34.Heading, {
             variant: "title-under-line",
             children: "Bio"
           }, void 0, !1, {
@@ -5327,10 +5339,10 @@ function Index() {
         lineNumber: 100,
         columnNumber: 13
       }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react33.Box, {
+      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react34.Box, {
         marginY: 4,
         children: [
-          /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react33.Heading, {
+          /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react34.Heading, {
             variant: "title-under-line",
             children: "Contact Social"
           }, void 0, !1, {
@@ -5338,13 +5350,13 @@ function Index() {
             lineNumber: 122,
             columnNumber: 17
           }, this),
-          /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react33.List, {
+          /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react34.List, {
             children: [
-              /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react33.ListItem, {
-                children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react33.Link, {
+              /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react34.ListItem, {
+                children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react34.Link, {
                   href: "https://github.com/nguyenbatranvan",
                   target: "_blank",
-                  children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react33.Button, {
+                  children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react34.Button, {
                     variant: "ghost",
                     colorScheme: "teal",
                     leftIcon: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_io53.IoLogoGithub, {}, void 0, !1, {
@@ -5368,11 +5380,11 @@ function Index() {
                 lineNumber: 126,
                 columnNumber: 21
               }, this),
-              /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react33.ListItem, {
-                children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react33.Link, {
+              /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react34.ListItem, {
+                children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react34.Link, {
                   href: "https://twitter.com/VnBKinh1",
                   target: "_blank",
-                  children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react33.Button, {
+                  children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react34.Button, {
                     variant: "ghost",
                     colorScheme: "teal",
                     leftIcon: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_io53.IoLogoTwitter, {}, void 0, !1, {
@@ -5396,11 +5408,11 @@ function Index() {
                 lineNumber: 137,
                 columnNumber: 21
               }, this),
-              /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react33.ListItem, {
-                children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react33.Link, {
+              /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react34.ListItem, {
+                children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react34.Link, {
                   href: "https://instagram.com/nguyenbatran",
                   target: "_blank",
-                  children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react33.Button, {
+                  children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react34.Button, {
                     variant: "ghost",
                     colorScheme: "teal",
                     leftIcon: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_io53.IoLogoInstagram, {}, void 0, !1, {
@@ -5461,11 +5473,11 @@ var __exports = {};
 __export(__exports, {
   default: () => PageNotFound
 });
-var import_react35 = require("@chakra-ui/react"), import_react36 = require("@remix-run/react"), import_jsx_dev_runtime = require("react/jsx-dev-runtime");
+var import_react36 = require("@chakra-ui/react"), import_react37 = require("@remix-run/react"), import_jsx_dev_runtime = require("react/jsx-dev-runtime");
 function PageNotFound() {
   return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_jsx_dev_runtime.Fragment, {
     children: [
-      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react35.Heading, {
+      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react36.Heading, {
         as: "h1",
         children: "Not found"
       }, void 0, !1, {
@@ -5473,26 +5485,26 @@ function PageNotFound() {
         lineNumber: 5,
         columnNumber: 14
       }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react35.Text, {
+      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react36.Text, {
         children: "The page you're looking for was not found."
       }, void 0, !1, {
         fileName: "app/routes/$.tsx",
         lineNumber: 6,
         columnNumber: 9
       }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react35.Divider, {
+      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react36.Divider, {
         my: 6
       }, void 0, !1, {
         fileName: "app/routes/$.tsx",
         lineNumber: 7,
         columnNumber: 9
       }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react35.Box, {
+      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react36.Box, {
         my: 6,
         align: "center",
-        children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react36.NavLink, {
+        children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react37.NavLink, {
           to: "/",
-          children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react35.Button, {
+          children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react36.Button, {
             colorScheme: "teal",
             children: "Return to home"
           }, void 0, !1, {
@@ -5519,7 +5531,7 @@ function PageNotFound() {
 }
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { version: "7a2572b2", entry: { module: "/build/entry.client-L5ZF2QXJ.js", imports: ["/build/_shared/chunk-52UQEXEJ.js", "/build/_shared/chunk-CWLYAGW4.js", "/build/_shared/chunk-VBX6GUDD.js", "/build/_shared/chunk-7XQODPBP.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-4C3NDBKS.js", imports: ["/build/_shared/chunk-NDI65EYU.js", "/build/_shared/chunk-3V5YXNMQ.js", "/build/_shared/chunk-T7I4I5MQ.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/$": { id: "routes/$", parentId: "root", path: "*", index: void 0, caseSensitive: void 0, module: "/build/routes/$-YLNC7MQH.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/blog-detail": { id: "routes/blog-detail", parentId: "root", path: "blog-detail", index: void 0, caseSensitive: void 0, module: "/build/routes/blog-detail-7B6EBZ3X.js", imports: ["/build/_shared/chunk-LW22SQNR.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/blog-detail/axios-first-blog": { id: "routes/blog-detail/axios-first-blog", parentId: "routes/blog-detail", path: "axios-first-blog", index: void 0, caseSensitive: void 0, module: "/build/routes/blog-detail/axios-first-blog-DLN3MDOO.js", imports: ["/build/_shared/chunk-UQWTDPUM.js", "/build/_shared/chunk-3V5YXNMQ.js", "/build/_shared/chunk-T7I4I5MQ.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/blog-detail/load-config": { id: "routes/blog-detail/load-config", parentId: "routes/blog-detail", path: "load-config", index: void 0, caseSensitive: void 0, module: "/build/routes/blog-detail/load-config-ZBKH5VBR.js", imports: ["/build/_shared/chunk-CHMTNVAD.js", "/build/_shared/chunk-3V5YXNMQ.js", "/build/_shared/chunk-T7I4I5MQ.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/blogs": { id: "routes/blogs", parentId: "root", path: "blogs", index: void 0, caseSensitive: void 0, module: "/build/routes/blogs-JM4GC7B4.js", imports: ["/build/_shared/chunk-UQWTDPUM.js", "/build/_shared/chunk-CHMTNVAD.js", "/build/_shared/chunk-LW22SQNR.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/index": { id: "routes/index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/index-HKDEAQRW.js", imports: ["/build/_shared/chunk-LW22SQNR.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/product": { id: "routes/product", parentId: "root", path: "product", index: void 0, caseSensitive: void 0, module: "/build/routes/product-JLBUHBW4.js", imports: ["/build/_shared/chunk-LW22SQNR.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, url: "/build/manifest-7A2572B2.js" };
+var assets_manifest_default = { version: "5b131982", entry: { module: "/build/entry.client-S6EO6NOT.js", imports: ["/build/_shared/chunk-RRHVSYBO.js", "/build/_shared/chunk-6CIVHGLF.js", "/build/_shared/chunk-KD5M47NS.js", "/build/_shared/chunk-74G3C5CK.js", "/build/_shared/chunk-4IYZMDEG.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-ZQS2RL24.js", imports: ["/build/_shared/chunk-OTXAZDBK.js", "/build/_shared/chunk-VAKVKMOS.js", "/build/_shared/chunk-Q4BW5KXQ.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/$": { id: "routes/$", parentId: "root", path: "*", index: void 0, caseSensitive: void 0, module: "/build/routes/$-5INAET7A.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/blog-detail": { id: "routes/blog-detail", parentId: "root", path: "blog-detail", index: void 0, caseSensitive: void 0, module: "/build/routes/blog-detail-22OST4Y7.js", imports: ["/build/_shared/chunk-AVMFKWRO.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/blog-detail/axios-first-blog": { id: "routes/blog-detail/axios-first-blog", parentId: "routes/blog-detail", path: "axios-first-blog", index: void 0, caseSensitive: void 0, module: "/build/routes/blog-detail/axios-first-blog-FSU7FULO.js", imports: ["/build/_shared/chunk-CELMESQI.js", "/build/_shared/chunk-VAKVKMOS.js", "/build/_shared/chunk-Q4BW5KXQ.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/blog-detail/load-config": { id: "routes/blog-detail/load-config", parentId: "routes/blog-detail", path: "load-config", index: void 0, caseSensitive: void 0, module: "/build/routes/blog-detail/load-config-4EHYXCVH.js", imports: ["/build/_shared/chunk-XBM5EGDB.js", "/build/_shared/chunk-VAKVKMOS.js", "/build/_shared/chunk-Q4BW5KXQ.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/blogs": { id: "routes/blogs", parentId: "root", path: "blogs", index: void 0, caseSensitive: void 0, module: "/build/routes/blogs-LUPB6YU3.js", imports: ["/build/_shared/chunk-CELMESQI.js", "/build/_shared/chunk-XBM5EGDB.js", "/build/_shared/chunk-AVMFKWRO.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/index": { id: "routes/index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/index-IQU64GKB.js", imports: ["/build/_shared/chunk-AVMFKWRO.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/product": { id: "routes/product", parentId: "root", path: "product", index: void 0, caseSensitive: void 0, module: "/build/routes/product-E3O4O2BL.js", imports: ["/build/_shared/chunk-AVMFKWRO.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, url: "/build/manifest-5B131982.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var assetsBuildDirectory = "public/build", publicPath = "/build/", entry = { module: entry_server_exports }, routes = {
