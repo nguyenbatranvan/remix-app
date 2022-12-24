@@ -68,9 +68,9 @@ export default function Navbar() {
                 <LinkItem path={"/blogs"}>
                     Blogs
                 </LinkItem>
-                <LinkItem path={"/product"}>
-                    Product
-                </LinkItem>
+                {/*<LinkItem path={"/product"}>*/}
+                {/*    Product*/}
+                {/*</LinkItem>*/}
                 <Link
                     target="_blank"
                     href="https://github.com/nguyenbatranvan/remix-app"
@@ -100,9 +100,9 @@ export default function Navbar() {
                             <NavLink to="/blogs" >
                                 <MenuItem as={Link}>Blogs</MenuItem>
                             </NavLink>
-                            <NavLink to="/product" >
-                                <MenuItem as={Link}>Product</MenuItem>
-                            </NavLink>
+                            {/*<NavLink to="/product" >*/}
+                            {/*    <MenuItem as={Link}>Product</MenuItem>*/}
+                            {/*</NavLink>*/}
                             <MenuItem
                                 as={Link}
                                 href="https://github.com/nguyenbatranvan/remix-app"
